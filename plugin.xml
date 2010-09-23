@@ -1,0 +1,67 @@
+<plugin>
+	<nom>Mots</nom>
+	<auteur>Collectif SPIP</auteur>
+	<version>1.0</version>
+	<version_base>1.0</version_base>
+	<etat>test</etat>
+	<description>Mots et Groupes de mots</description>
+	<prefix>mots</prefix>
+	<install>base/mots_upgrade.php</install>
+
+	<bouton id='mots' parent="bando_edition">
+		<icone>images/mot-16.png</icone>
+		<titre>icone_mots_cles</titre>
+		<url>mots_tous</url>
+	</bouton>
+	<bouton id='mot_creer' parent="outils_rapides">
+		<icone>images/mot-new-16.png</icone>
+		<titre>icone_creation_mots_cles</titre>
+		<url>mots_edit</url>
+		<args>new=oui</args>
+	</bouton>
+
+	<pipeline><nom>mots_indexation</nom><action></action></pipeline>
+	<pipeline><nom>libelle_association_mots</nom><action></action></pipeline>
+
+	
+	<pipeline>
+		<nom>autoriser</nom>
+		<inclure>mots_autoriser.php</inclure>
+	</pipeline>
+
+	<pipeline>
+		<nom>declarer_tables_auxiliaires</nom>
+		<inclure>base/mots.php</inclure>
+	</pipeline>
+	<pipeline>
+		<nom>declarer_tables_principales</nom>
+		<inclure>base/mots.php</inclure>
+	</pipeline>
+	<pipeline>
+		<nom>declarer_tables_interfaces</nom>
+		<inclure>base/mots.php</inclure>
+	</pipeline>
+	<pipeline>
+		<nom>declarer_tables_objets_surnoms</nom>
+		<inclure>base/mots.php</inclure>
+	</pipeline>
+
+	<pipeline>
+		<nom>optimiser_base_disparus</nom>
+		<inclure>mots_pipelines.php</inclure>
+	</pipeline>
+
+	<pipeline>
+		<nom>configurer_liste_metas</nom>
+		<inclure>mots_pipelines.php</inclure>
+	</pipeline>
+	<pipeline>
+		<nom>affiche_milieu</nom>
+		<inclure>mots_pipelines.php</inclure>
+	</pipeline>
+
+	<pipeline>
+		<nom>rechercher_liste_des_champs</nom>
+		<inclure>mots_pipelines.php</inclure>
+	</pipeline>
+</plugin>
