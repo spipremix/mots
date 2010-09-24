@@ -227,6 +227,32 @@ function mots_rechercher_liste_des_champs($liste){
 
 
 /**
+ * Definir la liste des champs de jointure sur la table mots 
+ *
+ * @param array $liste
+ * @return array
+ */
+function mots_rechercher_liste_des_jointures($liste) {
+	$jointures = array(
+		'article' => array(
+			'mot' => array('titre' => 3),
+		),
+		'breve' => array(
+			'mot' => array('titre' => 3),
+		),
+		'rubrique' => array(
+			'mot' => array('titre' => 3),
+		),
+		'document' => array(
+			'mot' => array('titre' => 3)
+		)
+	);
+	
+	return array_merge_recursive($liste, $jointures);
+}
+
+
+/**
  * Copier le type des groupes sur la table spip_mots
  * a chaque changement d'un groupe.
  *

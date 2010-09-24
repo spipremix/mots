@@ -66,6 +66,11 @@
 	</pipeline>
 	
 	<pipeline>
+		<nom>rechercher_liste_des_jointures</nom>
+		<inclure>mots_pipelines.php</inclure>
+	</pipeline>
+	
+	<pipeline>
 		<nom>post_edition</nom>
 		<inclure>mots_pipelines.php</inclure>
 	</pipeline>
