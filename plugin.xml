@@ -71,6 +71,11 @@
 	</pipeline>
 	
 	<pipeline>
+		<nom>declarer_url_objets</nom>
+		<inclure>mots_pipelines.php</inclure>
+	</pipeline>
+	
+	<pipeline>
 		<nom>post_edition</nom>
 		<inclure>mots_pipelines.php</inclure>
 	</pipeline>

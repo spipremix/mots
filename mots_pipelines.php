@@ -271,4 +271,15 @@ function mots_post_edition($flux){
 }
 
 
+/**
+ * Permet des calculs de noms d'url sur les mots. 
+ *
+ * @param array $array liste des objets acceptant des urls
+ * @return array
+**/
+function mots_declarer_url_objets($array){
+	$array[] = 'mot';
+	return $array;
+}
+
 ?>

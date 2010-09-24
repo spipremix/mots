@@ -89,5 +89,10 @@ function autoriser_syndic_editermots_dist($faire,$quoi,$id,$qui,$opts){
 }
 
 
+// http://doc.spip.org/@autoriser_mot_iconifier_dist
+function autoriser_mot_iconifier_dist($faire,$quoi,$id,$qui,$opts){
+ return (($qui['statut'] == '0minirezo') AND !$qui['restreint']);
+}
+
 
 ?>
