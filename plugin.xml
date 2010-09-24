@@ -64,4 +64,10 @@
 		<nom>rechercher_liste_des_champs</nom>
 		<inclure>mots_pipelines.php</inclure>
 	</pipeline>
+	
+	<pipeline>
+		<nom>post_edition</nom>
+		<inclure>mots_pipelines.php</inclure>
+	</pipeline>
+
 </plugin>

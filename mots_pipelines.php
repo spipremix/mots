@@ -225,4 +225,24 @@ function mots_rechercher_liste_des_champs($liste){
 	return $liste;
 }
 
+
+/**
+ * Copier le type des groupes sur la table spip_mots
+ * a chaque changement d'un groupe.
+ *
+ * @param array $flux
+ * @return array
+ */
+function mots_post_edition($flux){
+	if (($flux['args']['table'] == 'spip_groupes_mots')
+		and isset($flux['data']['titre']))
+	{
+		sql_updateq('spip_mots', array('type' => $flux['data']['titre']),
+			'id_groupe=' . $flux['args']['id_objet']);
+	}
+
+	return $flux;
+}
+
+
 ?>
