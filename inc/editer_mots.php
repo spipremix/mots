@@ -118,7 +118,7 @@ function recherche_mot_cle($cherche_mots, $id_groupe, $objet, $id_objet, $table,
 
 	foreach (preg_split("/ *[,;] */", $cherche_mots) as $cherche_mot) {
 	  if  ($cherche_mot) {
-		include_spip('inc/rechercher');
+		include_spip('inc/ressembler');
 		$resultat = mots_ressemblants($cherche_mot, $table_mots, $table_ids);
 		$res .= "<br />" . debut_boite_info(true);
 		if (!$resultat) {
