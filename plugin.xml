@@ -45,6 +45,10 @@
 		<nom>declarer_tables_objets_surnoms</nom>
 		<inclure>base/mots.php</inclure>
 	</pipeline>
+	<pipeline>
+		<nom>declarer_type_surnoms</nom>
+		<inclure>base/mots.php</inclure>
+	</pipeline>
 
 	<pipeline>
 		<nom>optimiser_base_disparus</nom>

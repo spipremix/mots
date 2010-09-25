@@ -200,4 +200,14 @@ function mots_declarer_tables_objets_surnoms($table){
 	return $table;
 }
 
+/**
+ * Alias de type pour les groupes de mot
+ * @param array $table
+ * @return string
+ */
+function mots_declarer_type_surnoms($table) {
+	$table['groupes_mot'] = 'groupe_mots';
+	return $table;
+}
+
 ?>
