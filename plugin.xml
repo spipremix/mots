@@ -83,5 +83,10 @@
 		<nom>post_edition</nom>
 		<inclure>mots_pipelines.php</inclure>
 	</pipeline>
+	
+	<pipeline>
+		<nom>libeller_logo</nom>
+		<inclure>mots_pipelines.php</inclure>
+	</pipeline>
 
 </plugin>

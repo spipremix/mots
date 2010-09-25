@@ -282,4 +282,14 @@ function mots_declarer_url_objets($array){
 	return $array;
 }
 
+/**
+ * Libelle des logos de mot et de groupe
+ * @param <type> $logo_libelles
+ * @return string
+ */
+function mots_libeller_logo($logo_libelles) {
+	$logo_libelles['mot'] = _T('logo_mot_cle').aide("breveslogo");
+	$logo_libelles['groupe'] = _T('logo_groupe').aide("breveslogo");
+	return $logo_libelles;
+}
 ?>
