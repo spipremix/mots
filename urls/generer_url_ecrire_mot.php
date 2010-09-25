@@ -14,7 +14,7 @@ if (!defined("_ECRIRE_INC_VERSION")) return;
 
 
 // http://doc.spip.org/@generer_url_ecrire_mot
-function generer_url_ecrire_mot($id, $args='', $ancre='', $statut='', $connect='') {
+function urls_generer_url_ecrire_mot_dist($id, $args='', $ancre='', $statut='', $connect='') {
 	$a = "id_mot=" . intval($id);
 	$h = (!$statut OR $connect)
 	?  generer_url_entite_absolue($id, 'mot', $args, $ancre, $connect)
