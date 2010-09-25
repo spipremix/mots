@@ -207,6 +207,7 @@ function mots_declarer_tables_objets_surnoms($table){
  */
 function mots_declarer_type_surnoms($table) {
 	$table['groupes_mot'] = 'groupe_mots';
+	$table['mot-cle'] = 'mot'; // pour les icones...
 	return $table;
 }
 
