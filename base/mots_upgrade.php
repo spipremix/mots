@@ -48,6 +48,9 @@ function mots_vider_tables($nom_meta_base_version) {
 	sql_drop_table("spip_mots_syndic");
 	sql_drop_table("spip_mots_documents");
 
+	effacer_meta('articles_mots');
+	effacer_meta('config_precise_groupes');
+	
 	effacer_meta($nom_meta_base_version);
 }
 
