@@ -41,9 +41,8 @@ function mots_affiche_milieu($flux){
 		'sites'       => array('objet' => 'syndic'),
 	);
 	
-	if ($flux["args"]["exec"] == "configuration") {
-		$configuration_mots = charger_fonction('mots', 'configuration');
-		$flux["data"] .=  $configuration_mots();
+	if ($flux["args"]["exec"] == "configurer_contenu") {
+		$flux["data"] .=  recuperer_fond('prive/squelettes/inclure/configurer',array('configurer'=>'configurer_mots'));
 	}
 
 	// si on est sur une page ou il faut inserer les mots cles...
