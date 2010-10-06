@@ -55,7 +55,7 @@ function mots_affiche_milieu($flux){
 		
 		// on récupère l'identifiant de l'objet...
 		if ($id_objet = $flux['args'][ $_id_objet ]) {
-			$flux['data'] .= mots_ajouter_selecteur_mots($objet, $id_objet, $exec_retour, $opt);
+			$flux['data'] .= mots_ajouter_selecteur_mots($objet, $id_objet, $flux['args']['exec'], $opt);
 		}
 	}
 		

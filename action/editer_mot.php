@@ -49,7 +49,7 @@ function action_editer_mot_dist($arg=null)
 
 function supprimer_mot($id_mot) {
 	sql_delete("spip_mots", "id_mot=".intval($id_mot));
-	mot_dissocier($id_mot, array('*'=>'*'));
+	mot_dissocier($id_mot, '*');
 	pipeline('trig_supprimer_objets_lies',
 		array(
 			array('type'=>'mot','id'=>$id_mot)

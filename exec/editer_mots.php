@@ -50,6 +50,7 @@ function exec_editer_mots_args($id_objet, $objet)
 		$ch = _request('cherche_mot');
 		$id_groupe = _request('select_groupe');
 		$editer_mots = charger_fonction('editer_mots', 'inc');
+
 		ajax_retour($editer_mots($objet, $id_objet, $ch, $id_groupe, 'ajax',false,$base)); 
 	}
 }
