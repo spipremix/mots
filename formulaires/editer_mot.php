@@ -101,11 +101,8 @@ function ajouter_nouveau_mot($id_groupe, $table, $table_id, $id_mot, $id)
 			sql_in_select("id_mot", "id_mot", "spip_mots", "id_groupe = $id_groupe")
 		));
 	}
-	sql_insertq("spip_mots_liens", array(
-		"objet" => $type,
-		"id_mot" => $id_mot,
-		"id_objet" => $id)
-	);
+	include_spip('action/editer_mot');
+	mot_associer($id_mot, array($type=>$id));
 }
 
 // http://doc.spip.org/@un_seul_mot_dans_groupe

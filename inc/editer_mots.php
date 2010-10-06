@@ -65,10 +65,11 @@ function inc_editer_mots_dist($objet, $id_objet, $cherche_mot, $select_groupe, $
 function chercher_inserer_mot($cherche_mot, $select_groupe, $objet, $id_objet, $nom, $table_id, $url_base)
 {
 	$modifier = false;
-
+	#include_spip('action/editer_mot');
 	list($reponse, $nouveaux_mots) = recherche_mot_cle($cherche_mot, $select_groupe, $objet, $id_objet, $nom, $table_id, $url_base);
 	foreach($nouveaux_mots as $nouv_mot) {
 		if ($nouv_mot!='x') {
+			#$modifier |= mot_associer($nouv_mot, array($objet=>$id_objet));
 			$modifier |= inserer_mot($objet, $table_id, $id_objet, $nouv_mot);
 		}
 	}
@@ -86,9 +87,15 @@ function chercher_inserer_mot($cherche_mot, $select_groupe, $objet, $id_objet, $
 	}
 	return $reponse;
 }
+
 // http://doc.spip.org/@inserer_mot
+// pour compatibilite
 function inserer_mot($objet, $id_objet, $id_mot)
 {
+	/*
+	include_spip('action/editer_mot');
+	return mot_associer($id_mot, array($objet=>$id_objet));
+	*/
 	$r = sql_countsel('spip_mots_liens', array("id_mot=$id_mot", "objet=".sql_quote($objet), "id_objet=$id_objet"));
 	if (!$r) {
 		sql_insertq('spip_mots_liens', array('id_mot' =>$id_mot, 'objet' => $objet, 'id_objet' => $id_objet));

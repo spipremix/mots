@@ -49,11 +49,73 @@ function action_editer_mot_dist($arg=null)
 
 function supprimer_mot($id_mot) {
 	sql_delete("spip_mots", "id_mot=".intval($id_mot));
-	sql_delete("spip_mots_liens", "id_mot=".intval($id_mot));
+	mot_dissocier($id_mot, array('*'=>'*'));
 	pipeline('trig_supprimer_objets_lies',
 		array(
 			array('type'=>'mot','id'=>$id_mot)
 		)
 	);
 }
+
+
+
+/**
+ * Associer un mot a des objets listes sous forme
+ * array($objet=>$id_objets,...)
+ * $id_objets peut lui meme etre un scalaire ou un tableau pour une liste d'objets du meme type
+ *
+ * on peut passer optionnellement une qualification du (des) lien(s) qui sera
+ * alors appliquee dans la foulee.
+ * En cas de lot de liens, c'est la meme qualification qui est appliquee a tous
+ *
+ * Exemples:
+ * mot_associer(3, array('auteur'=>2));
+ * mot_associer(3, array('auteur'=>2), array('vu'=>'oui)); // ne fonctionnera pas ici car pas de champ 'vu' sur spip_mots_liens
+ * 
+ * @param int $id_mot
+ * @param array $objets
+ * @param array $qualif
+ * @return string
+ */
+function mot_associer($id_mot,$objets, $qualif = null){
+	include_spip('action/editer_liens');
+	return objet_associer(array('mot'=>$id_mot), $objets, $qualif);
+}
+
+
+
+/**
+ * Dossocier un mot des objets listes sous forme
+ * array($objet=>$id_objets,...)
+ * $id_objets peut lui meme etre un scalaire ou un tableau pour une liste d'objets du meme type
+ *
+ * un * pour $id_mot,$objet,$id_objet permet de traiter par lot
+ *
+ * @param int $id_mot
+ * @param array $objets
+ * @return string
+ */
+function mot_dissocier($id_mot,$objets){
+	include_spip('action/editer_liens');
+	return objet_dissocier(array('mot'=>$id_mot), $objets);
+}
+
+/**
+ * Qualifier le lien d'un mot avec les objets listes
+ * array($objet=>$id_objets,...)
+ * $id_objets peut lui meme etre un scalaire ou un tableau pour une liste d'objets du meme type
+ * exemple :
+ * $c = array('vu'=>'oui');
+ * un * pour $id_auteur,$objet,$id_objet permet de traiter par lot
+ *
+ * @param int $id_mot
+ * @param array $objets
+ * @param array $qualif
+ */
+function mot_qualifier($id_mot,$objets,$qualif){
+	include_spip('action/editer_liens');
+	return objet_qualifier(array('mot'=>$id_mot), $objets, $qualif);
+}
+
+
 ?>

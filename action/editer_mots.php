@@ -30,32 +30,19 @@ function action_editer_mots_post($r)
 	$cherche_mot = _request('cherche_mot');
 	$select_groupe = _request('select_groupe');
 
+	include_spip('action/editer_mot');
 	list($x, $id_objet, $id_mot, $table, $table_id, $objet, $nouv_mot) = $r;
 	if ($id_mot) {
 		if ($objet) {
 			// desassocier un/des mot d'un objet precis
-			$where = array(
-				"objet=" . sql_quote($objet),
-				"id_objet=$id_objet"
-			);
-			if ($id_mot > 0) {
-				$where[] = "id_mot=$id_mot";
-			}
-			sql_delete("spip_mots_liens", $where);
+			mot_dissocier($id_mot, array($objet=>$id_objet));
 		} else {
 			// disparition complete d'un mot
-			// on ne doit plus passer ici mais dans action/supprimer_mot
-			include_spip('action/editer_mot');
 			supprimer_mot($id_mot);
 		}
 	}
 	if ($nouv_mot ? $nouv_mot : ($nouv_mot = _request('nouv_mot'))) {
-		$result = sql_countsel("spip_mots_liens", array(
-			"objet=" . sql_quote($objet),
-			"id_mot=".intval($nouv_mot),
-			"id_objet=$id_objet"));
-		if (!$result)
-			sql_insertq("spip_mots_liens", array('objet'=> $objet, 'id_mot' => $nouv_mot,"id_objet" =>$id_objet));
+		mot_associer($nouv_mot, array($objet=>$id_objet));
 	}
 
 	// Notifications, gestion des revisions, reindexation...
