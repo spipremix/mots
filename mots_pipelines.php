@@ -118,90 +118,42 @@ function mots_ajouter_selecteur_mots($objet, $id_objet, $exec_retour='', $opt = 
 function mots_optimiser_base_disparus($flux){
 	$n = &$flux['data'];
 
-
-	# les liens des mots affectes a une id_rubrique inexistante
-	$res = sql_select("M.id_rubrique AS id",
-		      "spip_mots_rubriques AS M
-		        LEFT JOIN spip_rubriques AS R
-		          ON M.id_rubrique=R.id_rubrique",
-			"R.id_rubrique IS NULL");
-
-	$n+= optimiser_sansref('spip_mots_rubriques', 'id_rubrique', $res);
-
-
-	# les liens de mots affectes a des articles effaces
-	$res = sql_select("M.id_article AS id",
-		        "spip_mots_articles AS M
-		        LEFT JOIN spip_articles AS A
-		          ON M.id_article=A.id_article",
-			"A.id_article IS NULL");
-
-	$n+= optimiser_sansref('spip_mots_articles', 'id_article', $res);
-
-
-	# les liens de mots affectes a des breves effacees
-	$res = sql_select("M.id_breve AS id",
-		        "spip_mots_breves AS M
-		        LEFT JOIN spip_breves AS B
-		          ON M.id_breve=B.id_breve",
-			"B.id_breve IS NULL");
-
-	$n+= optimiser_sansref('spip_mots_breves', 'id_breve', $res);
-
-
-	# les liens de mots affectes a des sites effaces
-	$res = sql_select("M.id_syndic AS id",
-		        "spip_mots_syndic AS M
-		        LEFT JOIN spip_syndic AS syndic
-		          ON M.id_syndic=syndic.id_syndic",
-			"syndic.id_syndic IS NULL");
-
-	$n+= optimiser_sansref('spip_mots_syndic', 'id_syndic', $res);
-
-
-	//
-	// Mots-cles
-	//
-
 	$result = sql_delete("spip_mots", "length(titre)=0 AND maj < $mydate");
-
-
-	# les liens mots-articles sur des mots effaces
-	$res = sql_select("A.id_mot AS id",
-		        "spip_mots_articles AS A
-		        LEFT JOIN spip_mots AS M
-		          ON A.id_mot=M.id_mot",
-			"M.id_mot IS NULL");
-
-	$n+= optimiser_sansref('spip_mots_articles', 'id_mot', $res);
-
-	# les liens mots-breves sur des mots effaces
-	$res = sql_select("B.id_mot AS id",
-		        "spip_mots_breves AS B
-		        LEFT JOIN spip_mots AS M
-		          ON B.id_mot=M.id_mot",
-			"M.id_mot IS NULL");
-
-	$n+= optimiser_sansref('spip_mots_breves', 'id_mot', $res);
-
-	# les liens mots-rubriques sur des mots effaces
-	$res = sql_select("R.id_mot AS id",
-		      "spip_mots_rubriques AS R
-		        LEFT JOIN spip_mots AS M
-		          ON R.id_mot=M.id_mot",
-			"M.id_mot IS NULL");
-
-	$n+= optimiser_sansref('spip_mots_rubriques', 'id_mot', $res);
-
-	# les liens mots-syndic sur des mots effaces
-	$res = sql_select("S.id_mot AS id",
-		        "spip_mots_syndic AS S
-		        LEFT JOIN spip_mots AS M
-		          ON S.id_mot=M.id_mot",
-			"M.id_mot IS NULL");
-
-	$n+= optimiser_sansref('spip_mots_syndic', 'id_mot', $res);
-
+	
+	#[todo] optimiser_table_liens_objet_lie_inexistant('spip_mots_liens');
+	# les liens des mots qui sont lies a un objet inexistant
+	$objets = allfetsel("DISTINCT objet","spip_mots_liens");
+	foreach ($objets as $t){
+		$type = $t['objet'];
+		$spip_table_objet = table_objet_sql($type);
+		$id_table_objet = id_table_objet($type);
+		$res = sql_select("L.id_mot AS id,id_objet",
+			      "spip_mots_liens AS L
+			        LEFT JOIN $spip_table_objet AS O
+			          ON O.$id_table_objet=L.id_objet AND L.objet=".sql_quote($type),
+				"O.$id_table_objet IS NULL");
+		// sur une cle primaire composee, pas d'autres solutions que de virer un a un
+		while ($row = sql_fetch($sel)){
+			sql_delete("spip_mots_liens", array("id_mot=".$row['id'],"id_objet=".$row['id_objet'],"objet=".sql_quote($type)));
+			spip_log("Entree ".$row['id']."/".$row['id_objet']."/$type supprimee dans la table spip_mots_liens");
+		}
+	}
+	
+	#[todo] optimiser_table_liens_id_lie_inexistant('spip_mots_liens');
+	# les liens des mots qui sont lies a un mot inexistant
+	$table_origine = substr("spip_mots_liens", 0, -6);
+	$id_table_origine = id_table_objet($table_origine);
+	$res = sql_select("L.$id_table_origine AS id,id_objet",
+			  "spip_mots_liens AS L
+				LEFT JOIN $table_origine AS O
+				  ON O.$id_table_origine=L.$id_table_origine",
+			"O.$id_table_origine IS NULL");
+	// sur une cle primaire composee, pas d'autres solutions que de virer un a un
+	while ($row = sql_fetch($sel)){
+		sql_delete("spip_mots_liens", array("id_mot=".$row['id']));
+		spip_log("Entree id_mot=".$row['id']."/$type supprimee dans la table spip_mots_liens");
+	}
+	
 
 
 	return $flux;

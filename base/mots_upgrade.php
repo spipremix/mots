@@ -30,6 +30,16 @@ function mots_upgrade($nom_meta_base_version,$version_cible){
 			$config();
 			ecrire_meta($nom_meta_base_version,$current_version=$version_cible);
 		}
+		// passer a spip_mots_liens
+		if (version_compare($current_version, '2.0', '<')) {
+			// supprime par defaut les anciennes tables une fois le travail effectue
+			mots_maj_tables_liaisons(array(
+				'article', 'breve', 'rubrique', 'syndic', 'forum', // core
+				'auteur', 'document' // autres plugins ?
+			));
+			ecrire_meta($nom_meta_base_version,$current_version = '2.0');
+		}
+
 	}
 }
 
@@ -42,16 +52,68 @@ function mots_upgrade($nom_meta_base_version,$version_cible){
 function mots_vider_tables($nom_meta_base_version) {
 	sql_drop_table("spip_mots");
 	sql_drop_table("spip_groupes_mots");
-	sql_drop_table("spip_mots_articles");
-	sql_drop_table("spip_mots_breves");
-	sql_drop_table("spip_mots_rubriques");
-	sql_drop_table("spip_mots_syndic");
-	sql_drop_table("spip_mots_documents");
-
+	sql_drop_table("spip_mots_liens");
+	
 	effacer_meta('articles_mots');
 	effacer_meta('config_precise_groupes');
 	
 	effacer_meta($nom_meta_base_version);
 }
+
+
+
+/**
+  * Reunir en une seule table les liens de mots dans spip_mots_liens
+  * Passe spip_mots_xx(id_mot, id_xx) dans spip_mots_liens(objet, id_objet, id_mot)
+  * (peut fonctionner pour d'autres table spip_xx_liens).
+  *
+  * @param array $objets : liste d'objets à transférer.
+  * @param string $destination : table de destination (se terminant par _liens).
+  * @param bool $supprimer_ancienne_table : supprimer l'ancienne table une fois la copie réalisée ?.
+  * @return 
+ **/ 
+function mots_maj_tables_liaisons ($objets, $destination='spip_mots_liens', $supprimer_ancienne_table = true) {
+	// creer la table spip_mots_liens manquante
+	include_spip('base/create');
+	creer_base();
+
+	$trouver_table = charger_fonction('trouver_table','base');
+	
+	// Recopier les donnees
+	foreach ($objets as $objet) {
+		$table_objet = table_objet($objet);
+		if ($table_objet == 'forums') $table_objet = 'forum'; // #naze #bug #forum
+		$_id_objet = id_table_objet($objet);
+		$source = substr($destination, 0, -5) . $table_objet; // spip_mots_xx
+		spip_log("Transfert SQL de : '$source' vers '$destination'");
+		
+		if (!$trouver_table($source)) continue; // la source n'existe pas... ne rien tenter...
+		
+		if ($s = sql_select('*', $source)) {
+			$tampon = array();
+			while ($t = sql_fetch($s)) {
+				// transformer id_xx=N en (id_objet=N, objet=xx)
+				$t['id_objet'] = $t[$_id_objet];
+				$t['objet'] = $objet;
+				unset($t[$_id_objet]);
+				unset($t['maj']);
+				$tampon[] = $t;
+				if (count($tampon)>10000) {
+					sql_insertq_multi($destination, $tampon);
+					$tampon = array();
+				}
+			}
+			
+			if (count($tampon)) {
+				sql_insertq_multi($destination, $tampon);
+			}
+			
+			if ($supprimer_ancienne_table) {
+				sql_drop_table($source);
+			}
+		}
+	}
+}
+
 
 ?>

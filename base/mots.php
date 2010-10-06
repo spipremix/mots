@@ -27,34 +27,30 @@ function mots_declarer_tables_interfaces($interfaces){
 
 	$interfaces['table_titre']['mots'] = "titre, '' AS lang";
 
-	$interfaces['tables_jointures']['spip_articles'][]= 'mots_articles';
+	$interfaces['tables_jointures']['spip_articles'][]= 'mots_liens';
 	$interfaces['tables_jointures']['spip_articles'][]= 'mots';
 	
-	$interfaces['tables_jointures']['spip_breves'][]= 'mots_breves';
+	$interfaces['tables_jointures']['spip_breves'][]= 'mots_liens';
 	$interfaces['tables_jointures']['spip_breves'][]= 'mots';
 	
-	$interfaces['tables_jointures']['spip_documents'][]= 'mots_documents';
+	$interfaces['tables_jointures']['spip_documents'][]= 'mots_liens';
 	$interfaces['tables_jointures']['spip_documents'][]= 'mots';
 	
-	$interfaces['tables_jointures']['spip_rubriques'][]= 'mots_rubriques';
+	$interfaces['tables_jointures']['spip_rubriques'][]= 'mots_liens';
 	$interfaces['tables_jointures']['spip_rubriques'][]= 'mots';
 	
-	$interfaces['tables_jointures']['spip_syndic'][]= 'mots_syndic';
+	$interfaces['tables_jointures']['spip_syndic'][]= 'mots_liens';
 	$interfaces['tables_jointures']['spip_syndic'][]= 'mots';
 	
-	$interfaces['tables_jointures']['spip_syndic_articles'][]= 'mots_syndic';
+	$interfaces['tables_jointures']['spip_syndic_articles'][]= 'mots_liens';
 	$interfaces['tables_jointures']['spip_syndic_articles'][]= 'mots';
 	
-	$interfaces['tables_jointures']['spip_mots'][]= 'mots_articles';
-	$interfaces['tables_jointures']['spip_mots'][]= 'mots_breves';
-	$interfaces['tables_jointures']['spip_mots'][]= 'mots_rubriques';
-	$interfaces['tables_jointures']['spip_mots'][]= 'mots_syndic';
-	$interfaces['tables_jointures']['spip_mots'][]= 'mots_documents';
+	$interfaces['tables_jointures']['spip_mots'][]= 'mots_liens';
 	
 	$interfaces['tables_jointures']['spip_groupes_mots'][]= 'mots';
 
 	$interfaces['exceptions_des_jointures']['type_mot'] = array('spip_mots', 'type');
-	$interfaces['exceptions_des_jointures']['id_mot_syndic'] = array('spip_mots_syndic', 'id_mot');
+	$interfaces['exceptions_des_jointures']['id_mot_syndic'] = array('spip_mots_liens', 'id_mot');
 	$interfaces['exceptions_des_jointures']['titre_mot_syndic'] = array('spip_mots', 'titre');
 	$interfaces['exceptions_des_jointures']['type_mot_syndic'] = array('spip_mots', 'type');
 
@@ -95,11 +91,6 @@ function mots_declarer_tables_principales($tables_principales){
 			"unseul"	=> "varchar(3) DEFAULT '' NOT NULL",
 			"obligatoire"	=> "varchar(3) DEFAULT '' NOT NULL",
 			"tables_liees" => "text DEFAULT '' NOT NULL",
-			# suppression des champs a faire dans la maj
-			#"articles"	=> "varchar(3) DEFAULT '' NOT NULL",
-			#"breves"	=> "varchar(3) DEFAULT '' NOT NULL",
-			#"rubriques"	=> "varchar(3) DEFAULT '' NOT NULL",
-			#"syndic"	=> "varchar(3) DEFAULT '' NOT NULL",
 			"minirezo"	=> "varchar(3) DEFAULT '' NOT NULL",
 			"comite"	=> "varchar(3) DEFAULT '' NOT NULL",
 			"forum"	=> "varchar(3) DEFAULT '' NOT NULL",
@@ -123,63 +114,18 @@ function mots_declarer_tables_principales($tables_principales){
  */
 function mots_declarer_tables_auxiliaires($tables_auxiliaires){
 
-
-	$spip_mots_articles = array(
+	$spip_mots_liens = array(
 			"id_mot"	=> "bigint(21) DEFAULT '0' NOT NULL",
-			"id_article"	=> "bigint(21) DEFAULT '0' NOT NULL");
+			"id_objet"	=> "bigint(21) DEFAULT '0' NOT NULL",
+			"objet"	=> "VARCHAR (25) DEFAULT '' NOT NULL");
 
-	$spip_mots_articles_key = array(
-			"PRIMARY KEY"	=> "id_article, id_mot",
+	$spip_mots_liens_key = array(
+			"PRIMARY KEY"		=> "id_mot,id_objet,objet",
 			"KEY id_mot"	=> "id_mot");
 
-	$spip_mots_breves = array(
-			"id_mot"	=> "bigint(21) DEFAULT '0' NOT NULL",
-			"id_breve"	=> "bigint(21) DEFAULT '0' NOT NULL");
-
-	$spip_mots_breves_key = array(
-			"PRIMARY KEY"	=> "id_breve, id_mot",
-			"KEY id_mot"	=> "id_mot");
-
-	$spip_mots_rubriques = array(
-			"id_mot"	=> "bigint(21) DEFAULT '0' NOT NULL",
-			"id_rubrique"	=> "bigint(21) DEFAULT '0' NOT NULL");
-
-	$spip_mots_rubriques_key = array(
-			"PRIMARY KEY"	=> "id_rubrique, id_mot",
-			"KEY id_mot"	=> "id_mot");
-
-	$spip_mots_syndic = array(
-			"id_mot"	=> "bigint(21) DEFAULT '0' NOT NULL",
-			"id_syndic"	=> "bigint(21) DEFAULT '0' NOT NULL");
-
-	$spip_mots_syndic_key = array(
-			"PRIMARY KEY"	=> "id_syndic, id_mot",
-			"KEY id_mot"	=> "id_mot");
-
-	$spip_mots_documents = array(
-			"id_mot"	=> "bigint(21) DEFAULT '0' NOT NULL",
-			"id_document"	=> "bigint(21) DEFAULT '0' NOT NULL");
-
-	$spip_mots_documents_key = array(
-			"PRIMARY KEY"	=> "id_document, id_mot",
-			"KEY id_mot"	=> "id_mot");
-
-	$tables_auxiliaires['spip_mots_articles'] = array(
-		'field' => &$spip_mots_articles,
-		'key' => &$spip_mots_articles_key);
-	$tables_auxiliaires['spip_mots_breves'] = array(
-		'field' => &$spip_mots_breves,
-		'key' => &$spip_mots_breves_key);
-	$tables_auxiliaires['spip_mots_rubriques'] = array(
-		'field' => &$spip_mots_rubriques,
-		'key' => &$spip_mots_rubriques_key);
-	$tables_auxiliaires['spip_mots_syndic'] = array(
-		'field' => &$spip_mots_syndic,
-		'key' => &$spip_mots_syndic_key);
-	$tables_auxiliaires['spip_mots_documents'] = array(
-		'field' => &$spip_mots_documents,
-		'key' => &$spip_mots_documents_key);
-
+	$tables_auxiliaires['spip_mots_liens'] =
+		array('field' => &$spip_mots_liens, 'key' => &$spip_mots_liens_key);
+		
 	return $tables_auxiliaires;
 }
 

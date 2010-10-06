@@ -23,7 +23,8 @@ function inc_editer_mots_dist($objet, $id_objet, $cherche_mot, $select_groupe, $
 	$nom = table_objet($objet);
 	$desc = $trouver_table($nom);
 	$table_id =  @$desc['key']["PRIMARY KEY"];
-
+	$objet = objet_type($objet);
+	
 	$reponse = ($flag AND $cherche_mot)
 		? chercher_inserer_mot($cherche_mot, $select_groupe, $objet, $id_objet, $nom, $table_id, $url_base)
 		: '';
@@ -68,7 +69,7 @@ function chercher_inserer_mot($cherche_mot, $select_groupe, $objet, $id_objet, $
 	list($reponse, $nouveaux_mots) = recherche_mot_cle($cherche_mot, $select_groupe, $objet, $id_objet, $nom, $table_id, $url_base);
 	foreach($nouveaux_mots as $nouv_mot) {
 		if ($nouv_mot!='x') {
-			$modifier |= inserer_mot("spip_mots_$nom", $table_id, $id_objet, $nouv_mot);
+			$modifier |= inserer_mot($objet, $table_id, $id_objet, $nouv_mot);
 		}
 	}
 	if ($modifier) {
@@ -86,11 +87,11 @@ function chercher_inserer_mot($cherche_mot, $select_groupe, $objet, $id_objet, $
 	return $reponse;
 }
 // http://doc.spip.org/@inserer_mot
-function inserer_mot($table, $table_id, $id_objet, $id_mot)
+function inserer_mot($objet, $id_objet, $id_mot)
 {
-	$r = sql_countsel($table, "id_mot=$id_mot AND $table_id=$id_objet");
+	$r = sql_countsel('spip_mots_liens', array("id_mot=$id_mot", "objet=".sql_quote($objet), "id_objet=$id_objet"));
 	if (!$r) {
-		sql_insertq($table, array('id_mot' =>$id_mot,  $table_id => $id_objet));
+		sql_insertq('spip_mots_liens', array('id_mot' =>$id_mot, 'objet' => $objet, 'id_objet' => $id_objet));
 		return true;
 	}
 }
@@ -145,7 +146,11 @@ function recherche_mot_cle($cherche_mots, $id_groupe, $objet, $id_objet, $table,
 // http://doc.spip.org/@afficher_mots_cles
 function afficher_mots_cles($flag, $objet, $id_objet, $table, $table_id, $url)
 {
-	$q = array('SELECT' => "M.id_mot, M.titre, M.id_groupe", 'FROM' => "spip_mots AS M LEFT JOIN spip_mots_$table AS L ON M.id_mot=L.id_mot", 'WHERE' => "L.$table_id=$id_objet", 'ORDER BY' => "M.type, M.titre");
+	$q = array(
+		'SELECT' => "M.id_mot, M.titre, M.id_groupe",
+		'FROM' => "spip_mots AS M LEFT JOIN spip_mots_liens AS L ON M.id_mot=L.id_mot",
+		'WHERE' => "L.objet=" . sql_quote($objet) . " AND L.id_objet=$id_objet",
+		'ORDER BY' => "M.type, M.titre");
 
 	$ret = generer_url_retour($url, "$table_id=$id_objet#editer_mots-$id_objet");
 	$styles = array(array('arial11',25), array('arial2'), array('arial2'), array('arial1'));

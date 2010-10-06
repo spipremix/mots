@@ -44,27 +44,29 @@ function filtre_objets_associes_mot_dist($id_mot,$id_groupe) {
  */
 function calculer_utilisations_mots($id_groupe)
 {
-	$aff_articles = sql_in('O.statut',  ($GLOBALS['connect_statut'] =="0minirezo")  ? array('prepa','prop','publie') : array('prop','publie'));
+	$statuts = sql_in('O.statut',  ($GLOBALS['connect_statut'] =="0minirezo")  ? array('prepa','prop','publie') : array('prop','publie'));
+	$retour = array();
+	$objets = sql_allfetsel('DISTINCT objet', array('spip_mots_liens AS L', 'spip_mots AS M'), array('L.id_mot=M.id_mot', 'M.id_groupe='.$id_groupe));
 
-	$res = sql_allfetsel("COUNT(*) AS cnt, L.id_mot", "spip_mots_articles AS L LEFT JOIN spip_mots AS M ON L.id_mot=M.id_mot LEFT JOIN spip_articles AS O ON L.id_article=O.id_article", "M.id_groupe=$id_groupe AND $aff_articles", "L.id_mot");
-	$articles = array();
-	foreach($res as $row) $articles[$row['id_mot']] = $row['cnt'];
+	foreach($objets as $o) {
+		$objet=$o['objet'];
+		$_id_objet = id_table_objet($objet);
+		$table_objet = table_objet($objet);
+		$table_objet_sql = table_objet_sql($objet);
+		$res = sql_allfetsel(
+			"COUNT(*) AS cnt, L.id_mot",
+			"spip_mots_liens AS L
+				LEFT JOIN spip_mots AS M ON L.id_mot=M.id_mot
+					AND L.objet=" . sql_quote($objet) . "
+				LEFT JOIN " . $table_objet_sql . " AS O ON L.id_objet=O.$_id_objet" ,
+			"M.id_groupe=$id_groupe AND $statuts",
+			"L.id_mot");
 
-	$rubriques = array();
-	$res = sql_allfetsel("COUNT(*) AS cnt, L.id_mot", "spip_mots_rubriques AS L LEFT JOIN spip_mots AS M ON L.id_mot=M.id_mot", "M.id_groupe=$id_groupe", "L.id_mot");
-	foreach($res as $row) $rubriques[$row['id_mot']] = $row['cnt'];
-  
-	$breves = array();
-	$res = sql_allfetsel("COUNT(*) AS cnt, L.id_mot", "spip_mots_breves AS L LEFT JOIN spip_mots AS M ON L.id_mot=M.id_mot LEFT JOIN spip_breves AS O ON L.id_breve=O.id_breve", "M.id_groupe=$id_groupe AND $aff_articles", "L.id_mot");
-	foreach($res as $row) $breves[$row['id_mot']] = $row['cnt'];
+		foreach($res as $row) {
+			$retour[$table_objet][$row['id_mot']] = $row['cnt'];
+		}
+	}
 
-	$syndic = array(); 
-	$res = sql_allfetsel("COUNT(*) AS cnt, L.id_mot", "spip_mots_syndic AS L LEFT JOIN spip_mots AS M ON L.id_mot=M.id_mot LEFT JOIN spip_syndic AS O ON L.id_syndic=O.id_syndic", "M.id_groupe=$id_groupe AND $aff_articles", "L.id_mot");
-	foreach($res as $row) $syndic[$row['id_mot']] = $row['cnt'];
-
-	return array('articles' => $articles, 
-		'breves' => $breves, 
-		'rubriques' => $rubriques, 
-		'syndic' => $syndic);
+	return $retour;
 }
 ?>
