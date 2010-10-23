@@ -54,7 +54,10 @@ function inc_editer_mots_dist($objet, $id_objet, $cherche_mot, $select_groupe, $
 	if (!$aff)
 		return '';
 
-	$res = debut_cadre_enfonce("mot-24.png", true, "", $bouton)
+	$res =
+	 #recuperer_fond('prive/editer/liens',array('table_source'=>'mots','objet'=>$objet,'id_objet'=>$id_objet)) .
+
+	debut_cadre_enfonce("mot-24.png", true, "", $bouton)
 	  . $reponse
 	  . $liste
 	  . fin_cadre_enfonce(true);
