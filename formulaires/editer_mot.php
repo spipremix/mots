@@ -16,11 +16,22 @@ include_spip('inc/actions');
 include_spip('inc/editer');
 
 // http://doc.spip.org/@inc_editer_mot_dist
-function formulaires_editer_mot_charger_dist($id_mot='new', $id_groupe=0, $retour='', $ajouter_id_article=0, $table='', $table_id=0, $config_fonc='mots_edit_config', $row=array(), $hidden=''){
+function formulaires_editer_mot_charger_dist($id_mot='new', $id_groupe=0, $retour='', $associer_objet='', $dummy1='', $dummy2='', $config_fonc='mots_edit_config', $row=array(), $hidden=''){
 	$valeurs = formulaires_editer_objet_charger('mot',$id_mot,$id_groupe,'',$retour,$config_fonc,$row,$hidden);
 	if ($valeurs['id_parent'] && !$valeurs['id_groupe'])
 		$valeurs['id_groupe'] = $valeurs['id_parent'];
-	$valeurs['table'] = $table;
+	
+	if ($associer_objet){
+		if (intval($associer_objet)){
+			// compat avec l'appel de la forme ajouter_id_article
+			$objet = 'article';
+			$id_objet = intval($associer_objet);
+		}
+		else {
+			list($objet,$id_objet) = explode('|',$associer_objet);
+		}
+	}
+	$valeurs['table'] = ($associer_objet?table_objet($objet):'');
 
 	// Si nouveau et titre dans l'url : fixer le titre
 	if ($id_mot == 'oui'
@@ -34,8 +45,8 @@ function formulaires_editer_mot_charger_dist($id_mot='new', $id_groupe=0, $retou
  * Identifier le formulaire en faisant abstraction des parametres qui
  * ne representent pas l'objet edite
  */
-function formulaires_editer_mot_identifier_dist($id_mot='new', $id_groupe=0, $retour='', $ajouter_id_article=0, $table='', $table_id=0, $config_fonc='mots_edit_config', $row=array(), $hidden=''){
-	return serialize(array($id_mot,$ajouter_id_article,$row));
+function formulaires_editer_mot_identifier_dist($id_mot='new', $id_groupe=0, $retour='', $associer_objet='', $dummy1='', $dummy2='', $config_fonc='mots_edit_config', $row=array(), $hidden=''){
+	return serialize(array($id_mot,$associer_objet,$row));
 }
 
 // Choix par defaut des options de presentation
@@ -52,7 +63,7 @@ function mots_edit_config($row)
 	return $config;
 }
 
-function formulaires_editer_mot_verifier_dist($id_mot='new', $id_groupe=0, $retour='', $ajouter_id_article=0, $table='', $table_id=0, $config_fonc='mots_edit_config', $row=array(), $hidden=''){
+function formulaires_editer_mot_verifier_dist($id_mot='new', $id_groupe=0, $retour='', $associer_objet='', $dummy1='', $dummy2='', $config_fonc='mots_edit_config', $row=array(), $hidden=''){
 
 	$erreurs = formulaires_editer_objet_verifier('mot',$id_mot,array('titre'));
 	// verifier qu'un mot du meme groupe n'existe pas avec le meme titre
@@ -70,7 +81,7 @@ function formulaires_editer_mot_verifier_dist($id_mot='new', $id_groupe=0, $reto
 }
 
 // http://doc.spip.org/@inc_editer_mot_dist
-function formulaires_editer_mot_traiter_dist($id_mot='new', $id_groupe=0, $retour='', $ajouter_id_article=0, $table='', $table_id=0, $config_fonc='mots_edit_config', $row=array(), $hidden=''){
+function formulaires_editer_mot_traiter_dist($id_mot='new', $id_groupe=0, $retour='', $associer_objet='', $dummy1='', $dummy2='', $config_fonc='mots_edit_config', $row=array(), $hidden=''){
 	$res = '';
 	set_request('redirect','');
 	$action_editer = charger_fonction("editer_mot",'action');
@@ -79,10 +90,20 @@ function formulaires_editer_mot_traiter_dist($id_mot='new', $id_groupe=0, $retou
 		$res['message_erreur'] = $err;
 	}
 	else {
-		if ($ajouter_id_article){
+		if ($associer_objet){
+			if (intval($associer_objet)){
+				// compat avec l'appel de la forme ajouter_id_article
+				$objet = 'article';
+				$id_objet = intval($associer_objet);
+			}
+			else {
+				list($objet,$id_objet) = explode('|',$associer_objet);
+			}
 			$id_groupe = intval(_request('id_groupe'));
-			ajouter_nouveau_mot($id_groupe, $table, $table_id, $id_mot, $ajouter_id_article);
+			include_spip('action/editer_mot');
+			mot_associer($id_mot, array($objet=>$id_objet));
 		}
+
 		if ($retour)
 			$res['redirect'] = $retour;
 	}
@@ -90,24 +111,4 @@ function formulaires_editer_mot_traiter_dist($id_mot='new', $id_groupe=0, $retou
 }
 
 
-// http://doc.spip.org/@ajouter_nouveau_mot
-function ajouter_nouveau_mot($id_groupe, $table, $table_id, $id_mot, $id)
-{
-	$type = objet_type($table);
-	if (un_seul_mot_dans_groupe($id_groupe)) {
-		sql_delete("spip_mots_liens", array(
-			"objet=" . sql_quote($type),
-			"id_objet = $id",
-			sql_in_select("id_mot", "id_mot", "spip_mots", "id_groupe = $id_groupe")
-		));
-	}
-	include_spip('action/editer_mot');
-	mot_associer($id_mot, array($type=>$id));
-}
-
-// http://doc.spip.org/@un_seul_mot_dans_groupe
-function un_seul_mot_dans_groupe($id_groupe)
-{
-	return sql_countsel('spip_groupes_mots', "id_groupe=$id_groupe AND unseul='oui'");
-}
 ?>

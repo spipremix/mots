@@ -18,6 +18,9 @@ include_spip('base/abstract_sql');
 // http://doc.spip.org/@exec_mots_edit_dist
 function exec_mots_edit_dist()
 {
+	$associer_objet = _request('associer_objet');
+	if (!preg_match(',^\w+\|[0-9]+$,',$associer_objet))
+		$associer_objet = '';
 	exec_mots_edit_args(intval(_request('id_mot')),
 		       intval(_request('id_groupe')),
 		       _request('new'),
@@ -27,13 +30,13 @@ function exec_mots_edit_dist()
 		       preg_replace('/\W/','', _request('table_id')),
 		       _request('titre'),
 		       _request('redirect'),
-		       intval(_request('ajouter_id_article')));
+		       $associer_objet);
 }
 
 // attention, ajouter_id_article n'est pas forcement un id d'article
 
 // http://doc.spip.org/@exec_mots_edit_args
-function exec_mots_edit_args($id_mot, $id_groupe, $new, $table='', $table_id='', $titre='', $redirect='', $ajouter_id_article='')
+function exec_mots_edit_args($id_mot, $id_groupe, $new, $table='', $table_id='', $titre='', $redirect='', $associer_objet='')
 {
 	global $spip_lang_right, $connect_statut, $les_notes;
 
@@ -208,7 +211,7 @@ function exec_mots_edit_args($id_mot, $id_groupe, $new, $table='', $table_id='',
 			'new'=>$new == "oui"?$new:$id_mot,
 			'id_groupe'=>$id_groupe,
 			'config_fonc'=>'mots_edit_config',
-			'ajouter_id_article' => $ajouter_id_article,
+			'associer_objet' => $associer_objet,
 			'table'=>$table,
 			'table_id'=>$table_id
 		);
