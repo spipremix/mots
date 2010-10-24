@@ -1,8 +1,14 @@
-[(#REM)
+#SET{groupes_vus,'0'}
+<BOUCLE_exclus(MOTS){tout}{id_objet}{objet}{doublons 1}{doublons 2}>[(#ID_GROUPE|unique|oui)#SET{groupes_vus,#GET{groupes_vus}|concat{',',#ID_GROUPE}} ]</BOUCLE_exclus>
 
-  Squelette
-  (c) 2009 xxx
-  Distribue sous licence GPL
 
-]
-<BOUCLE_exclus(MOTS){tout}{id_objet}{objet}{doublons 1} />
+<B_groupes>
+	<ul>
+	<BOUCLE_groupes(GROUPES_MOTS){tables_liees==#ENV{objet}}{par titre}>
+	<li class="associer_mot groupe_mots[(#UNSEUL|=={oui}|oui)unseul][(#OBLIGATOIRE|=={oui}|oui)obligatoire][ (#ID_GROUPE|in_any{#GET{groupes_vus}|explode{','}}|?{'vu','nonvu'})]">
+		<label for="ajouter_lien-groupe#ID_GROUPE">#TITRE</label>
+		[(#INCLURE{fond=prive/listes/mots_associer-select,env,doublons,id_groupe=#ID_GROUPE,unseul=#UNSEUL})]
+	</li>
+	</BOUCLE_groupes>
+	</ul>
+</B_groupes>

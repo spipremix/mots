@@ -1,0 +1,19 @@
+#SET{selected,''}
+<B_mots>
+	<select name="ajouter_lien[groupe#ID_GROUPE]" id="ajouter_lien-groupe#ID_GROUPE"
+	  onchange="jQuery(this).siblings('input.submit').css('visibility','visible');"
+	>
+		<BOUCLE_remplacer(MOTS){id_groupe}{id_objet}{objet}{0,1}>[(#UNSEUL|=={oui})
+			<option value="x"><:info_remplacer_mot{titre=#TITRE}:></option>
+			#SET{supprime,mot-#ID_MOT-#OBJET-#ID_OBJET}
+		]</BOUCLE_remplacer>
+			<option value="x"><:titre_ajouter_un_mot:></option>
+		<//B_remplacer>
+	<BOUCLE_mots(MOTS){id_groupe}{doublons 1}{par num titre, multi titre}>
+		#SET{value,mot-#ID_MOT-#OBJET-#ID_OBJET}
+		<option value="#GET{value}"[(#GET{value}|=={#ENV{ajouter_lien}|table_valeur{groupe#ID_GROUPE}}|oui)selected="selected"#SET{selected,' '}]>#TITRE</option>
+	</BOUCLE_mots>
+	</select>
+	<input type="submit" class="submit" name="groupe#ID_GROUPE" value="<:bouton_ajouter:>"[(#GET{selected}|non)style="visibility:hidden;"]/>
+	[<input type="hidden" name="supprimer_lien#EVAL{chr(91)}groupe#ID_GROUPE#EVAL{chr(93)}" value="(#GET{supprime})" />]
+</B_mots>

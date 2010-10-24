@@ -32,7 +32,10 @@
 	</tbody>
 </table>
 [<p class='pagination'>(#PAGINATION{prive})</p>]
+[(#GRAND_TOTAL|>{3}|oui)<div class="action"><button class="button link" name="supprimer_lien#EVAL{chr(91)}mot-*-#OBJET-#ID_OBJET#EVAL{chr(93)}" value="X"><:info_retirer_mots:> [(#CHEMIN_IMAGE{supprimer-8.png}|balise_img{'X'})]</button></div>]
 </div>
-</B_liste_mot>[
-<div class="liste-objets mots"><strong class="caption">(#ENV*{sinon,''})</strong></div>
-]<//B_liste_mot>
+</B_liste_mot>
+<div class="liste-objets liste-objets-lies mots">
+<strong class="caption">[(#ENV*{titre,<:info_aucun_mot_cle:>}) ]#AIDER{artmots}</strong>
+</div>
+<//B_liste_mot>
