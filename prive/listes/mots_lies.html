@@ -21,12 +21,12 @@
 	</thead>
 	<tbody>
 	<BOUCLE_liste_mot(MOTS){id_mot?}{id_groupe?}{id_objet?}{objet}{where?}{tri #ENV{par,type},#GET{defaut_tri}}{par multi titre}{pagination #ENV{nb,10} motl}>
-		<tr class="[(#COMPTEUR_BOUCLE|alterner{row_odd,row_even})]">
+		<tr class="[(#COMPTEUR_BOUCLE|alterner{row_odd,row_even})][(#ID_MOT|=={#ENV{id_new}}|oui)append]">
 			<td class='picto'>[(#CHEMIN_IMAGE{mot-16.png}|balise_img)]</td>
 			<td class='titre principale'>[(#LOGO_MOT|image_reduire{20,20})]<a href="[(#ID_MOT|generer_url_entite{mot})]"
 																																						title="<:info_numero_abbreviation|attribut_html:> #ID_MOT">[(#RANG). ]#TITRE</a></td>
 			<td class='type secondaire'>#TYPE</td>
-			<td class='action'><button class="button link" name="supprimer_lien[mot-#ID_MOT-#OBJET-#ID_OBJET]" value="X"><:info_retirer_mot:> [(#CHEMIN_IMAGE{supprimer-8.png}|balise_img{'X'})]</button></td>
+			<td class='action'><button class="button link delete" name="supprimer_lien[mot-#ID_MOT-#OBJET-#ID_OBJET]" value="X"><:info_retirer_mot:> [(#CHEMIN_IMAGE{supprimer-8.png}|balise_img{'X'})]</button></td>
 		</tr>
 	</BOUCLE_liste_mot>
 	</tbody>
