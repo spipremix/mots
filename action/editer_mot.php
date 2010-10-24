@@ -78,7 +78,18 @@ function supprimer_mot($id_mot) {
  * @return string
  */
 function mot_associer($id_mot,$objets, $qualif = null){
+
 	include_spip('action/editer_liens');
+
+	// si il s'agit d'un groupe avec 'unseul', alors supprimer d'abord les autres
+	// mots de ce groupe associe a ces objets
+	$id_groupe = sql_getfetsel('id_groupe','spip_mots','id_mot='.intval($id_mot));
+	if (un_seul_mot_dans_groupe($id_groupe)) {
+		$mots_groupe = sql_allfetsel("id_mot", "spip_mots", "id_groupe=".intval($id_groupe));
+		$mots_groupe = array_map('reset',$mots_groupe);
+		objet_dissocier(array('mot'=>$mots_groupe), $objets);
+	}
+
 	return objet_associer(array('mot'=>$id_mot), $objets, $qualif);
 }
 
@@ -118,4 +129,16 @@ function mot_qualifier($id_mot,$objets,$qualif){
 }
 
 
+
+/**
+ * Renvoyer true si le groupe de mot ne doit etre associe qu'une fois aux objet
+ * (maximum un seul mot de ce groupe associe a chaque objet)
+ *
+ * @param int $id_groupe
+ * @return bool
+ */
+function un_seul_mot_dans_groupe($id_groupe)
+{
+	return sql_countsel('spip_groupes_mots', "id_groupe=$id_groupe AND unseul='oui'");
+}
 ?>
