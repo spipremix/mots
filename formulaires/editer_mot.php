@@ -90,6 +90,9 @@ function formulaires_editer_mot_traiter_dist($id_mot='new', $id_groupe=0, $retou
 		$res['message_erreur'] = $err;
 	}
 	else {
+		if ($retour)
+			$res['redirect'] = $retour;
+		
 		if ($associer_objet){
 			if (intval($associer_objet)){
 				// compat avec l'appel de la forme ajouter_id_article
@@ -102,10 +105,10 @@ function formulaires_editer_mot_traiter_dist($id_mot='new', $id_groupe=0, $retou
 			$id_groupe = intval(_request('id_groupe'));
 			include_spip('action/editer_mot');
 			mot_associer($id_mot, array($objet=>$id_objet));
+			if (isset($res['redirect']))
+				$res['redirect'] = parametre_url ($res['redirect'], "id_lien_ajoute", $id_mot, '&');
 		}
 
-		if ($retour)
-			$res['redirect'] = $retour;
 	}
 	return $res;
 }
