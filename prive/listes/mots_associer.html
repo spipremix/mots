@@ -11,7 +11,12 @@
 		<BOUCLE_compte(MOTS){id_groupe}{doublons 2} />#SET{total,#TOTAL_BOUCLE}<//B_compte>
 
 		[(#GET{total}|<{#GET{_MAX_MOTS_LISTE}}|oui)
-			[(#INCLURE{fond=prive/listes/mots_associer-select,env,doublons,id_groupe=#ID_GROUPE,unseul=#UNSEUL})]
+			[(#UNSEUL|=={oui}|oui)
+				[(#INCLURE{fond=prive/listes/mots_associer-select-unseul,env,doublons,id_groupe=#ID_GROUPE})]
+			]
+			[(#UNSEUL|=={oui}|non)
+				[(#INCLURE{fond=prive/listes/mots_associer-select,env,doublons,id_groupe=#ID_GROUPE})]
+			]
 		]
 		[(#GET{total}|<{#GET{_MAX_MOTS_LISTE}}|non)
 			[(#INCLURE{fond=prive/listes/mots_associer-recherche,env,doublons,id_groupe=#ID_GROUPE,unseul=#UNSEUL})]
