@@ -119,42 +119,12 @@ function mots_optimiser_base_disparus($flux){
 	$n = &$flux['data'];
 
 	$result = sql_delete("spip_mots", "length(titre)=0 AND maj < $mydate");
-	
-	#[todo] optimiser_table_liens_objet_lie_inexistant('spip_mots_liens');
-	# les liens des mots qui sont lies a un objet inexistant
-	$objets = allfetsel("DISTINCT objet","spip_mots_liens");
-	foreach ($objets as $t){
-		$type = $t['objet'];
-		$spip_table_objet = table_objet_sql($type);
-		$id_table_objet = id_table_objet($type);
-		$res = sql_select("L.id_mot AS id,id_objet",
-			      "spip_mots_liens AS L
-			        LEFT JOIN $spip_table_objet AS O
-			          ON O.$id_table_objet=L.id_objet AND L.objet=".sql_quote($type),
-				"O.$id_table_objet IS NULL");
-		// sur une cle primaire composee, pas d'autres solutions que de virer un a un
-		while ($row = sql_fetch($sel)){
-			sql_delete("spip_mots_liens", array("id_mot=".$row['id'],"id_objet=".$row['id_objet'],"objet=".sql_quote($type)));
-			spip_log("Entree ".$row['id']."/".$row['id_objet']."/$type supprimee dans la table spip_mots_liens");
-		}
-	}
-	
-	#[todo] optimiser_table_liens_id_lie_inexistant('spip_mots_liens');
-	# les liens des mots qui sont lies a un mot inexistant
-	$table_origine = substr("spip_mots_liens", 0, -6);
-	$id_table_origine = id_table_objet($table_origine);
-	$res = sql_select("L.$id_table_origine AS id,id_objet",
-			  "spip_mots_liens AS L
-				LEFT JOIN $table_origine AS O
-				  ON O.$id_table_origine=L.$id_table_origine",
-			"O.$id_table_origine IS NULL");
-	// sur une cle primaire composee, pas d'autres solutions que de virer un a un
-	while ($row = sql_fetch($sel)){
-		sql_delete("spip_mots_liens", array("id_mot=".$row['id']));
-		spip_log("Entree id_mot=".$row['id']."/$type supprimee dans la table spip_mots_liens");
-	}
-	
 
+	include_spip('action/editer_liens');
+	// optimiser les liens morts :
+	// entre mots vers des objets effaces
+	// depuis des mots effaces
+	$n+= objet_optimiser_liens(array('mot'=>'*'),'*');
 
 	return $flux;
 
