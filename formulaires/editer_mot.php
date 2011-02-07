@@ -92,7 +92,9 @@ function formulaires_editer_mot_traiter_dist($id_mot='new', $id_groupe=0, $retou
 	else {
 		if ($retour)
 			$res['redirect'] = $retour;
-		
+		if (strlen(parametre_url($retour,'id_mot')))
+			$res['redirect'] = parametre_url($res['redirect'],'id_mot',$id_mot);
+
 		if ($associer_objet){
 			if (intval($associer_objet)){
 				// compat avec l'appel de la forme ajouter_id_article
