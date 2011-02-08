@@ -10,5 +10,5 @@
 	[<:info_modifier_mot:>
 	<h1>(#ENV{titre,#INFO_TITRE{mot,#ID_MOT}|sinon{<:texte_nouveau_mot:>}})</h1>]
 </div>
-#FORMULAIRE_EDITER_MOT{#ENV{id_mot,oui},#ENV{id_groupe},#GET{redirect},#ENV{associer_objet}}
+#FORMULAIRE_EDITER_MOT{#ENV{id_mot,oui},#ENV{id_groupe},#ENV{redirect}|sinon{#URL_ECRIRE{mot,id_mot=0}},#ENV{associer_objet}}
 </div>
