@@ -1,11 +1,11 @@
 <!-- hierarchie -->
 <div id="chemin"><a href="#URL_ECRIRE{mots_tous}"><:icone_mots_cles:></a>
 <BOUCLE_hierarchie(MOTS){id_mot}>
-&gt; [(#URL_ECRIRE{mots_type,id_groupe=#ID_GROUPE}|lien_ou_expose{#INFO_TITRE{groupe_mot,#ID_GROUPE},''})]
+&gt; [(#URL_ECRIRE{groupe_mots,id_groupe=#ID_GROUPE}|lien_ou_expose{#INFO_TITRE{groupe_mots,#ID_GROUPE},''})]
 &gt; <strong class="on">#TITRE</strong>
 </BOUCLE_hierarchie>
 [(#ENV{id_groupe}|oui)
-	&gt; [(#URL_ECRIRE{mots_type,id_groupe=#ID_GROUPE}|lien_ou_expose{#INFO_TITRE{groupe_mot,#ID_GROUPE},''})]
+	&gt; [(#URL_ECRIRE{groupe_mots,id_groupe=#ID_GROUPE}|lien_ou_expose{#INFO_TITRE{groupe_mots,#ID_GROUPE},''})]
 ]
 &gt; <strong class="on"><:texte_nouveau_mot:></strong>
 <//B_hierarchie>

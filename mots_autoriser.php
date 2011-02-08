@@ -76,6 +76,10 @@ function autoriser_mot_creer_dist($faire, $type, $id, $qui, $opt) {
 	// si pas de groupe de mot qui colle, pas le droit
 	if (!sql_countsel('spip_groupes_mots',$where))
 		return false;
+
+	if (isset($opt['id_groupe']))
+		return autoriser('modifier','groupemots',$opt['id_groupe']);
+	
 	return true;
 }
 
@@ -124,5 +128,8 @@ function autoriser_mot_iconifier_dist($faire,$quoi,$id,$qui,$opts){
  return (($qui['statut'] == '0minirezo') AND !$qui['restreint']);
 }
 
+function autoriser_groupemots_iconifier_dist($faire,$quoi,$id,$qui,$opts){
+ return (($qui['statut'] == '0minirezo') AND !$qui['restreint']);
+}
 
 ?>

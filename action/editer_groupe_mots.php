@@ -15,13 +15,15 @@ if (!defined("_ECRIRE_INC_VERSION")) return;
 include_spip('inc/filtres');
 
 // Modification d'un groupe de mots
-// http://doc.spip.org/@action_editer_groupe_mot_dist
-function action_editer_groupe_mot_dist()
+// http://doc.spip.org/@action_editer_groupe_mots_dist
+function action_editer_groupe_mots_dist($id_groupe=null)
 {
-	$securiser_action = charger_fonction('securiser_action', 'inc');
-	$id_groupe = intval($securiser_action());
+	if (is_null($id_groupe)){
+		$securiser_action = charger_fonction('securiser_action', 'inc');
+		$id_groupe = $securiser_action();
+	}
 
-	if (!$id_groupe) {
+	if (!intval($id_groupe)) {
 		$id_groupe = sql_insertq("spip_groupes_mots");
 	}
 
@@ -60,7 +62,7 @@ function action_editer_groupe_mot_dist()
  * @param string $table
  * @return int 
  */
-function insert_groupe_mot($table) {
+function insert_groupe_mots($table) {
 	$titre = _T('info_mot_sans_groupe');
 	$id_groupe = sql_insertq("spip_groupes_mots", array(
 		'titre' => $titre,

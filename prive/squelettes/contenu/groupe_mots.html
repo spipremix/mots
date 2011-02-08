@@ -1,0 +1,22 @@
+<BOUCLE_mot(GROUPES_MOTS){id_groupe}{tout}{si #ENV{exec}|=={groupe_mots}}>
+[(#BOITE_OUVRIR{[
+	[(#AUTORISER{modifier,groupemots,#ID_GROUPE})
+	[(#URL_ECRIRE{groupe_mots_edit,id_groupe=#ID_GROUPE}|icone_verticale{<:icone_modif_groupe_mots:>,groupe_mots-24.png,edit,right ajax preload})]
+	]
+	<h1>[(#RANG). ](#TITRE|sinon{<:info_sans_titre:>})[(#CHEMIN_IMAGE{groupe_mots-24.png}|balise_img{groupe_mots,cadre-icone})]</h1>
+],simple})]
+
+<div id="wysiwyg">
+<INCLURE{fond=prive/contenu/groupe_mots,id=#ID_GROUPE}>
+</div>
+
+#BOITE_FERMER
+
+<INCLURE{fond=prive/listes/mots-admin,id_groupe,par=titre,ajax,env}>
+[(#AUTORISER{creer,mot,'','',#ARRAY{id_groupe,#ID_GROUPE}})
+	[(#URL_ECRIRE{mot_edit,new=oui&id_groupe=#ID_GROUPE}|parametre_url{redirect,#SELF}
+		|icone_verticale{<:icone_creation_mots_cles:>,mot-24.png,new,right})]
+]
+</BOUCLE_mot>
+[(#ENV{exec}|=={groupe_mots_edit}|?{#INCLURE{fond=prive/squelettes/contenu/groupe_mots_edit,redirect='',env,retourajax=oui},#REM|sinon_interdire_acces})]
+<//B_mot>

@@ -16,7 +16,7 @@ include_spip('inc/actions');
 include_spip('inc/editer');
 
 function formulaires_editer_groupe_mot_charger_dist($id_groupe='new',$retour='', $config_fonc='groupes_mots_edit_config', $row=array(), $hidden=''){
-	$valeurs = formulaires_editer_objet_charger('groupe_mot',$id_groupe,0,'',$retour,$config_fonc,$row,$hidden);
+	$valeurs = formulaires_editer_objet_charger('groupe_mots',$id_groupe,0,'',$retour,$config_fonc,$row,$hidden);
 
 	$valeurs['tables_liees'] = explode(',',$valeurs['tables_liees']);
 
@@ -35,7 +35,7 @@ function formulaires_editer_groupe_mot_charger_dist($id_groupe='new',$retour='',
  * ne representent pas l'objet edite
  */
 function formulaires_editer_groupe_mot_identifier_dist($id_groupe='new',$retour='', $config_fonc='groupes_mots_edit_config', $row=array(), $hidden=''){
-	return serialize(array($id_groupe,$row));
+	return serialize(array($id_groupe));
 }
 
 // Choix par defaut des options de presentation
@@ -52,14 +52,15 @@ function groupes_mots_edit_config($row)
 
 function formulaires_editer_groupe_mot_verifier_dist($id_groupe='new',$retour='', $config_fonc='groupes_mots_edit_config', $row=array(), $hidden=''){
 
-	$erreurs = formulaires_editer_objet_verifier('groupe_mot',0,array('titre'));
+	$erreurs = formulaires_editer_objet_verifier('groupe_mots',0,array('titre'));
 	return $erreurs;
 }
 
 // http://doc.spip.org/@inc_editer_groupe_mot_dist
 function formulaires_editer_groupe_mot_traiter_dist($id_groupe='new',$retour='', $config_fonc='groupes_mots_edit_config', $row=array(), $hidden=''){
 	set_request('redirect','');
-	return formulaires_editer_objet_traiter('groupe_mot',$id_groupe,0,0,$retour,$config_fonc,$row,$hidden);
+	$res = formulaires_editer_objet_traiter('groupe_mots',$id_groupe,0,0,$retour,$config_fonc,$row,$hidden);
+	return $res;
 }
 
 

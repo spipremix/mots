@@ -44,7 +44,7 @@ function exec_mots_tous_dist()
 			<ul class='raccourcis_rapides'>".$out."</ul>
 			<a href='#' onclick='$(\"div.mots_tous\").show();return false;'>"._T('icone_voir_tous_mots_cles')."</a>";
 
-		$res = icone_horizontale(_T('icone_creation_groupe_mots'), generer_url_ecrire("mots_type","new=oui"), "groupe_mots-24.png", "new",false);
+		$res = icone_horizontale(_T('icone_creation_groupe_mots'), generer_url_ecrire("groupe_mots_edit","new=oui"), "groupe_mots-24.png", "new",false);
 		echo bloc_des_raccourcis($res . $out);
 	}
 
@@ -127,12 +127,12 @@ function exec_mots_tous_dist()
 				echo "\n<table border='0' width='100%'>";
 				echo "<tr>";
 				echo "<td>";
-				echo icone_inline(_T('icone_modif_groupe_mots'), generer_url_ecrire("mots_type","id_groupe=$id_groupe"), "groupe_mots-24.png", "edit", $spip_lang_left);
+				echo icone_inline(_T('icone_modif_groupe_mots'), generer_url_ecrire("groupe_mots","id_groupe=$id_groupe"), "groupe_mots-24.png", "edit", $spip_lang_left);
 				echo "</td>";
 				echo "\n<td id='editer_mots-$id_groupe-supprimer'",
 					(autoriser('supprimer','groupemots',$id_groupe) ? '' : " style='visibility: hidden'"),
 					">";
-				echo icone_inline(_T('icone_supprimer_groupe_mots'), redirige_action_auteur('instituer_groupe_mots', "-$id_groupe", "mots_tous"), "groupe_mots-24.png", "del", $spip_lang_left);
+				echo icone_inline(_T('icone_supprimer_groupe_mots'), redirige_action_auteur('supprimer_groupe_mots', "$id_groupe", "mots_tous"), "groupe_mots-24.png", "del", $spip_lang_left);
 				echo "</td>";
 				echo "<td>";
 				echo icone_inline(_T('icone_creation_mots_cles'), generer_url_ecrire("mot_edit","new=oui&id_groupe=$id_groupe&redirect=" . generer_url_retour('mots_tous', "#mots_tous-$id_groupe")), "mot-24.png", "new", $spip_lang_right);
