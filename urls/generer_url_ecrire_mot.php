@@ -18,7 +18,7 @@ function urls_generer_url_ecrire_mot_dist($id, $args='', $ancre='', $statut='', 
 	$a = "id_mot=" . intval($id);
 	$h = (!$statut OR $connect)
 	?  generer_url_entite_absolue($id, 'mot', $args, $ancre, $connect)
-	: (generer_url_ecrire('mots_edit',$a . ($args ? "&$args" : ''))
+	: (generer_url_ecrire('mot',$a . ($args ? "&$args" : ''))
 		. ($ancre ? "#$ancre" : ''));
 	return $h;
 }

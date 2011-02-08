@@ -4,4 +4,9 @@
 &gt; [(#URL_ECRIRE{mots_type,id_groupe=#ID_GROUPE}|lien_ou_expose{#INFO_TITRE{groupe_mot,#ID_GROUPE},''})]
 &gt; <strong class="on">#TITRE</strong>
 </BOUCLE_hierarchie>
+[(#ENV{id_groupe}|oui)
+	&gt; [(#URL_ECRIRE{mots_type,id_groupe=#ID_GROUPE}|lien_ou_expose{#INFO_TITRE{groupe_mot,#ID_GROUPE},''})]
+]
+&gt; <strong class="on"><:texte_nouveau_mot:></strong>
+<//B_hierarchie>
 </div>

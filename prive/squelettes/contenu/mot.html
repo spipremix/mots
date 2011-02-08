@@ -1,7 +1,7 @@
-<BOUCLE_mot(MOTS){id_mot}{tout}>
+<BOUCLE_mot(MOTS){id_mot}{tout}{si #ENV{exec}|=={mot}}>
 [(#BOITE_OUVRIR{[
 	[(#AUTORISER{modifier,mot,#ID_MOT})
-	[(#URL_ECRIRE{mot_edit,id_mot=#ID_MOT}|icone_verticale{<:icone_modifier_mot:>,mot,edit,right})]
+	[(#URL_ECRIRE{mot_edit,id_mot=#ID_MOT}|icone_verticale{<:icone_modifier_mot:>,mot,edit,right ajax preload})]
 	]
 	<h1>[(#RANG). ](#TITRE|sinon{<:info_sans_titre:>})[(#CHEMIN_IMAGE{mot-24.png}|balise_img{mot,cadre-icone})]</h1>
 ],simple})]
@@ -17,11 +17,11 @@
 <BOUCLE_autresobjets(spip_mots_liens){id_mot}{objet !IN article,rubrique}{fusion objet}{par objet}>
 	#SET{table,#OBJET|table_objet}
 	[(#SET{titre,[info_(#GET{table})_liees_mot]})]
-	<INCLURE{fond=prive/listes/#GET{table},titre=(#GET{titre}|_T),id_mot,par=date_heure,ajax,env}>
+	<INCLURE{fond=prive/listes/#GET{table},titre=(#GET{titre}|_T),id_mot,ajax,env}>
 </BOUCLE_autresobjets>
 
 
 #BOITE_FERMER
 </BOUCLE_mot>
-[(#REM|sinon_interdire_acces)]
+[(#ENV{exec}|=={mot_edit}|?{#INCLURE{fond=prive/squelettes/contenu/mot_edit,redirect='',env,retourajax=oui},#REM|sinon_interdire_acces})]
 <//B_mot>

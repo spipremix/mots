@@ -51,7 +51,24 @@ function autoriser_mot_modifier_dist($faire, $type, $id, $qui, $opt) {
 		);
 }
 
+function autoriser_mot_creer_dist($faire, $type, $id, $qui, $opt) {
+	if ($qui['statut'] != '0minirezo' OR $qui['restreint'])
+		return false;
 
+	$where = '';
+	// si objet associe, verifier qu'un groupe peut etre associe
+	// a la table correspondante
+	if (isset($opt['associer_objet'])
+	  AND $associer_objet = $opt['associer_objet']){
+		if (!preg_match(',^(\w+)\|[0-9]+$,',$associer_objet,$match))
+			return false;
+		$where = "tables_liees REGEXP '(^|,)".$match[1]."($|,)'";
+	}
+	// si pas de groupe de mot qui colle, pas le droit
+	if (!sql_countsel('spip_groupes_mots',$where))
+		return false;
+	return true;
+}
 
 
 function autoriser_objet_editermots_dist($faire,$quoi,$id,$qui,$opts){

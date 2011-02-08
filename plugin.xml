@@ -17,7 +17,7 @@
 	<bouton id='mot_creer' parent="outils_rapides">
 		<icone>images/mot-new-16.png</icone>
 		<titre>icone_creation_mots_cles</titre>
-		<url>mots_edit</url>
+		<url>mot_edit</url>
 		<args>new=oui</args>
 	</bouton>
 

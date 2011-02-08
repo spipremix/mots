@@ -135,7 +135,7 @@ function exec_mots_tous_dist()
 				echo icone_inline(_T('icone_supprimer_groupe_mots'), redirige_action_auteur('instituer_groupe_mots', "-$id_groupe", "mots_tous"), "groupe-mot-24.png", "del", $spip_lang_left);
 				echo "</td>";
 				echo "<td>";
-				echo icone_inline(_T('icone_creation_mots_cles'), generer_url_ecrire("mots_edit","new=oui&id_groupe=$id_groupe&redirect=" . generer_url_retour('mots_tous', "#mots_tous-$id_groupe")), "mot-24.png", "new", $spip_lang_right);
+				echo icone_inline(_T('icone_creation_mots_cles'), generer_url_ecrire("mot_edit","new=oui&id_groupe=$id_groupe&redirect=" . generer_url_retour('mots_tous', "#mots_tous-$id_groupe")), "mot-24.png", "new", $spip_lang_right);
 				echo "</td></tr></table>";
 			}
 
