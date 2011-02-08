@@ -38,6 +38,15 @@ function autoriser_groupemots_modifier_dist($faire, $type, $id, $qui, $opt) {
 		AND !$qui['restreint'];
 }
 
+/**
+ * Autoriser a supprimer un groupe de mots $id
+ */
+function autoriser_groupemots_supprimer_dist($faire, $type, $id, $qui, $opt) {
+	if (!autoriser('modifier','groupemots',$id))
+		return false;
+	return sql_countsel('spip_mots','id_groupe='.intval($id))?false:true;
+}
+
 // Autoriser a modifier un mot $id ; note : si on passe l'id_groupe
 // dans les options, on gagne du CPU (c'est ce que fait l'espace prive)
 // http://doc.spip.org/@autoriser_mot_modifier_dist

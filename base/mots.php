@@ -153,6 +153,7 @@ function mots_declarer_tables_objets_surnoms($table){
  */
 function mots_declarer_type_surnoms($table) {
 	$table['groupes_mot'] = 'groupe_mots';
+	$table['groupemot'] = 'groupemots'; // pour les appels a autoriser('faire','groupemots')
 	$table['mot-cle'] = 'mot'; // pour les icones...
 	return $table;
 }

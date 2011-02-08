@@ -130,7 +130,7 @@ function exec_mots_tous_dist()
 				echo icone_inline(_T('icone_modif_groupe_mots'), generer_url_ecrire("mots_type","id_groupe=$id_groupe"), "groupe-mot-24.png", "edit", $spip_lang_left);
 				echo "</td>";
 				echo "\n<td id='editer_mots-$id_groupe-supprimer'",
-					(!$groupe ? '' : " style='visibility: hidden'"),
+					(autoriser('supprimer','groupemots',$id_groupe) ? '' : " style='visibility: hidden'"),
 					">";
 				echo icone_inline(_T('icone_supprimer_groupe_mots'), redirige_action_auteur('instituer_groupe_mots', "-$id_groupe", "mots_tous"), "groupe-mot-24.png", "del", $spip_lang_left);
 				echo "</td>";
