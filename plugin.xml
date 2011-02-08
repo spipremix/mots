@@ -2,7 +2,7 @@
 	<nom>Mots</nom>
 	<icon>prive/themes/spip/images/mot-24.png</icon>
 	<auteur>Collectif SPIP</auteur>
-	<version>2.1.0</version>
+	<version>2.1.1</version>
 	<version_base>2.0.0</version_base>
 	<etat>test</etat>
 	<description>Mots et Groupes de mots</description>
@@ -12,7 +12,7 @@
 	<bouton id='mots' parent="bando_edition">
 		<icone>images/mot-16.png</icone>
 		<titre>icone_mots_cles</titre>
-		<url>mots_tous</url>
+		<url>mots</url>
 	</bouton>
 	<bouton id='mot_creer' parent="outils_rapides">
 		<icone>images/mot-new-16.png</icone>

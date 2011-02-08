@@ -1,0 +1,14 @@
+#BOITE_OUVRIR{'',raccourcis}
+[(#URL_ECRIRE{groupe_mots_edit,new=oui}|icone_horizontale{<:icone_creation_groupe_mots:>,groupe_mots,new})]
+<B_nav>
+<p><:titre_page_mots_tous:></p>
+<ul class='raccourcis_rapides'>
+<BOUCLE_nav(GROUPES_MOTS){par multi titre}>
+<li><a href='#groupe_mots-#ID_GROUPE'
+			 onclick='$(".groupe_mots").hide().filter("#groupe_mots-#ID_GROUPE").show();return false;'
+		>#TITRE</a></li>
+</BOUCLE_nav>
+</ul>
+<a href='#' onclick='$(".groupe_mots").show();return false;'><:icone_voir_tous_mots_cles:></a>
+</B_nav>
+#BOITE_FERMER
