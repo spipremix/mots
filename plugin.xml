@@ -2,7 +2,7 @@
 	<nom>Mots</nom>
 	<icon>prive/themes/spip/images/mot-24.png</icon>
 	<auteur>Collectif SPIP</auteur>
-	<version>2.1.1</version>
+	<version>2.1.2</version>
 	<version_base>2.0.0</version_base>
 	<etat>test</etat>
 	<description>Mots et Groupes de mots</description>

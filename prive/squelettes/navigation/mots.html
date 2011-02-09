@@ -3,11 +3,11 @@
 <B_nav>
 <p><:titre_page_mots_tous:></p>
 <ul class='raccourcis_rapides'>
-<BOUCLE_nav(GROUPES_MOTS){par multi titre}>
+<BOUCLE_nav(GROUPES_MOTS){par multi titre}>[(#AUTORISER{voir,groupemots,#ID_GROUPE}|oui)
 <li><a href='#groupe_mots-#ID_GROUPE'
 			 onclick='$(".groupe_mots").hide().filter("#groupe_mots-#ID_GROUPE").show();return false;'
 		>#TITRE</a></li>
-</BOUCLE_nav>
+]</BOUCLE_nav>
 </ul>
 <a href='#' onclick='$(".groupe_mots").show();return false;'><:icone_voir_tous_mots_cles:></a>
 </B_nav>

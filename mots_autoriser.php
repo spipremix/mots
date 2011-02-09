@@ -20,6 +20,17 @@ function autoriser_mot_creer_bouton_dist($faire, $type, $id, $qui, $opt){
 	return 	($GLOBALS['meta']['articles_mots'] != 'non' OR sql_countsel('spip_groupes_mots'));
 }
 
+// Voir un objet
+// http://doc.spip.org/@autoriser_voir_dist
+function autoriser_groupemots_voir_dist($faire, $type, $id, $qui, $opt) {
+	if ($qui['statut'] == '0minirezo') return true;
+	$acces = sql_fetsel("comite,forum", "spip_groupes_mots", "id_groupe=".intval($id));
+	if ($qui['statut']=='1comite' AND ($acces['comite'] == 'oui' OR $acces['forum'] == 'oui'))
+		return true;
+	if ($qui['statut']=='6forum' AND $acces['forum'] == 'oui')
+		return true;
+	return false;
+}
 
 // Autoriser a creer un groupe de mots
 // http://doc.spip.org/@autoriser_groupemots_creer_dist
@@ -34,8 +45,8 @@ function autoriser_groupemots_creer_dist($faire, $type, $id, $qui, $opt) {
 // http://doc.spip.org/@autoriser_groupemots_modifier_dist
 function autoriser_groupemots_modifier_dist($faire, $type, $id, $qui, $opt) {
 	return
-		$qui['statut'] == '0minirezo'
-		AND !$qui['restreint'];
+		$qui['statut'] == '0minirezo' AND !$qui['restreint']
+		AND autoriser('voir','groupemots',$id,$qui,$opt);
 }
 
 /**

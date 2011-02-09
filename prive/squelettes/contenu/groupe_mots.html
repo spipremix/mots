@@ -1,3 +1,4 @@
+[(#AUTORISER{voir,groupemots,#ID_GROUPE}|sinon_interdire_acces)]
 <BOUCLE_mot(GROUPES_MOTS){id_groupe}{tout}{si #ENV{exec}|=={groupe_mots}}>
 [(#BOITE_OUVRIR{[
 	[(#AUTORISER{modifier,groupemots,#ID_GROUPE})
