@@ -37,7 +37,6 @@ function mots_affiche_milieu($flux){
 	static $ou = array(
 		'articles'    => array('objet' => 'article'),
 		'naviguer'    => array('objet' => 'rubrique', 'opt' => array('autoriser_faire' => 'publierdans')),
-		'breves_voir' => array('objet' => 'breve'),
 		'breve' => array('objet' => 'breve'),
 		'sites'       => array('objet' => 'syndic'),
 	);
