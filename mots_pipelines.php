@@ -38,6 +38,7 @@ function mots_affiche_milieu($flux){
 		'articles'    => array('objet' => 'article'),
 		'naviguer'    => array('objet' => 'rubrique', 'opt' => array('autoriser_faire' => 'publierdans')),
 		'breves_voir' => array('objet' => 'breve'),
+		'breve' => array('objet' => 'breve'),
 		'sites'       => array('objet' => 'syndic'),
 	);
 	
@@ -55,7 +56,11 @@ function mots_affiche_milieu($flux){
 		
 		// on récupère l'identifiant de l'objet...
 		if ($id_objet = $flux['args'][ $_id_objet ]) {
-			$flux['data'] .= mots_ajouter_selecteur_mots($objet, $id_objet, $flux['args']['exec'], $opt);
+			$texte = mots_ajouter_selecteur_mots($objet, $id_objet, $flux['args']['exec'], $opt);
+			if ($p=strpos($flux['data'],"<!--affiche_milieu-->"))
+				$flux['data'] = substr_replace($flux['data'],$texte,$p,0);
+			else
+				$flux['data'] .= $texte;
 		}
 	}
 		
