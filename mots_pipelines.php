@@ -38,7 +38,7 @@ function mots_affiche_milieu($flux){
 		'articles'    => array('objet' => 'article'),
 		'naviguer'    => array('objet' => 'rubrique', 'opt' => array('autoriser_faire' => 'publierdans')),
 		'breve' => array('objet' => 'breve'),
-		'sites'       => array('objet' => 'syndic'),
+		'site'       => array('objet' => 'syndic'),
 	);
 	
 	if ($flux["args"]["exec"] == "configurer_contenu") {
