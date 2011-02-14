@@ -16,8 +16,8 @@ function mots_autoriser(){}
 function autoriser_mots_bouton_dist($faire, $type, $id, $qui, $opt){
 	return 	($GLOBALS['meta']['articles_mots'] != 'non' OR sql_countsel('spip_groupes_mots'));
 }
-function autoriser_mot_creer_bouton_dist($faire, $type, $id, $qui, $opt){
-	return 	($GLOBALS['meta']['articles_mots'] != 'non' OR sql_countsel('spip_groupes_mots'));
+function autoriser_motcreer_bouton_dist($faire, $type, $id, $qui, $opt){
+	return 	($GLOBALS['meta']['articles_mots'] != 'non');
 }
 
 // Voir un objet
