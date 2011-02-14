@@ -1,14 +1,15 @@
-#BOITE_OUVRIR{'',raccourcis}
-[(#URL_ECRIRE{groupe_mots_edit,new=oui}|icone_horizontale{<:icone_creation_groupe_mots:>,groupe_mots,new})]
+[(#BOITE_OUVRIR{<:titre_page_mots_tous:>,info})]
 <B_nav>
-<p><:titre_page_mots_tous:></p>
-<ul class='raccourcis_rapides'>
+<ul class='liste-items'>
 <BOUCLE_nav(GROUPES_MOTS){par multi titre}>[(#AUTORISER{voir,groupemots,#ID_GROUPE}|oui)
-<li><a href='#groupe_mots-#ID_GROUPE'
-			 onclick='$(".groupe_mots").hide().filter("#groupe_mots-#ID_GROUPE").show();return false;'
+<li class="item"><a href='#groupe_mots-#ID_GROUPE'
+			 onclick='$(".groupe_mots").hide().filter("#groupe_mots-#ID_GROUPE").show();$(this).parent().addClass("on").siblings().removeClass("on");return false;'
 		>#TITRE</a></li>
 ]</BOUCLE_nav>
 </ul>
-<a href='#' onclick='$(".groupe_mots").show();return false;'><:icone_voir_tous_mots_cles:></a>
+<a href='#' onclick='$(".groupe_mots").show();$(this).siblings("ul").find(">li").removeClass("on");return false;'><:icone_voir_tous_mots_cles:></a>
 </B_nav>
+#BOITE_FERMER
+#BOITE_OUVRIR{'',raccourcis}
+	[(#URL_ECRIRE{groupe_mots_edit,new=oui}|icone_horizontale{<:icone_creation_groupe_mots:>,groupe_mots,new})]
 #BOITE_FERMER
