@@ -18,7 +18,7 @@ include_spip('inc/mots');
 // http://doc.spip.org/@inc_editer_mots_dist
 function inc_editer_mots_dist($objet, $id_objet, $cherche_mot, $select_groupe, $flag, $visible = false, $url_base='') {
 	$objet = objet_type($objet);
-	return recuperer_fond('prive/editer/liens',array('table_source'=>'mots','objet'=>$objet,'id_objet'=>$id_objet));
+	return recuperer_fond('prive/objets/editer/liens',array('table_source'=>'mots','objet'=>$objet,'id_objet'=>$id_objet));
 }
 
 ?>

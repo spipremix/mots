@@ -8,12 +8,12 @@
 ],simple})]
 
 <div id="wysiwyg">
-<INCLURE{fond=prive/contenu/groupe_mots,id=#ID_GROUPE}>
+<INCLURE{fond=prive/objets/contenu/groupe_mots,id=#ID_GROUPE}>
 </div>
 
 #BOITE_FERMER
 
-<INCLURE{fond=prive/listes/mots-admin,id_groupe,par=titre,ajax,env}>
+<INCLURE{fond=prive/objets/liste/mots-admin,id_groupe,par=titre,ajax,env}>
 [(#AUTORISER{creer,mot,'','',#ARRAY{id_groupe,#ID_GROUPE}})
 	[(#URL_ECRIRE{mot_edit,new=oui&id_groupe=#ID_GROUPE}|parametre_url{redirect,#SELF}
 		|icone_verticale{<:icone_creation_mots_cles:>,mot-24.png,new,right})]

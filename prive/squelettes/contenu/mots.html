@@ -7,10 +7,10 @@
 		[(#BOITE_OUVRIR{[[(#RANG). ](#TITRE)[(#CHEMIN_IMAGE{groupe_mots-24.png}|balise_img{'',cadre-icone})]],'simple','titrem'})]
 
 			<div id="wysiwyg">
-			<INCLURE{fond=prive/contenu/groupe_mots,id=#ID_GROUPE}>
+			<INCLURE{fond=prive/objets/contenu/groupe_mots,id=#ID_GROUPE}>
 			</div>
 
-			<INCLURE{fond=prive/listes/mots-admin,id_groupe,par=titre,ajax,env}>
+			<INCLURE{fond=prive/objets/liste/mots-admin,id_groupe,par=titre,ajax,env}>
 			[(#AUTORISER{modifier,groupemots,#ID_GROUPE})
 			[(#URL_ECRIRE{groupe_mots,id_groupe=#ID_GROUPE}|icone_verticale{<:icone_modif_groupe_mots:>,groupe_mots-24.png,edit,left})]
 			]

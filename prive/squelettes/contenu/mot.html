@@ -7,17 +7,17 @@
 ],simple})]
 
 <div id="wysiwyg">
-<INCLURE{fond=prive/contenu/mot,id=#ID_MOT}>
+<INCLURE{fond=prive/objets/contenu/mot,id=#ID_MOT}>
 </div>
 
 
-<INCLURE{fond=prive/listes/rubriques,titre=<:info_rubriques_liees_mot:>,id_mot,par=titre,ajax,env}>
-<INCLURE{fond=prive/listes/articles,titre=<:info_articles_lies_mot:>,id_mot,par=date,statut=(#SESSION{statut}|statuts_articles_visibles),ajax,env}>
+<INCLURE{fond=prive/objets/liste/rubriques,titre=<:info_rubriques_liees_mot:>,id_mot,par=titre,ajax,env}>
+<INCLURE{fond=prive/objets/liste/articles,titre=<:info_articles_lies_mot:>,id_mot,par=date,statut=(#SESSION{statut}|statuts_articles_visibles),ajax,env}>
 
 <BOUCLE_autresobjets(spip_mots_liens){id_mot}{objet !IN article,rubrique}{fusion objet}{par objet}>
 	#SET{table,#OBJET|table_objet}
 	[(#SET{titre,[info_(#GET{table})_liees_mot]})]
-	<INCLURE{fond=prive/listes/#GET{table},titre=(#GET{titre}|_T),id_mot,ajax,env}>
+	<INCLURE{fond=prive/objets/liste/#GET{table},titre=(#GET{titre}|_T),id_mot,ajax,env}>
 </BOUCLE_autresobjets>
 
 
