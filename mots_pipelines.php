@@ -36,6 +36,7 @@ function mots_configurer_liste_metas($metas){
 function mots_affiche_milieu($flux){
 	static $ou = array(
 		'articles'    => array('objet' => 'article'),
+		'article'    => array('objet' => 'article'),
 		'naviguer'    => array('objet' => 'rubrique', 'opt' => array('autoriser_faire' => 'publierdans')),
 		'breve' => array('objet' => 'breve'),
 		'site'       => array('objet' => 'syndic'),
