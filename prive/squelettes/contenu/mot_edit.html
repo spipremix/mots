@@ -3,10 +3,10 @@
 [(#ID_MOT|non)
 	[(#AUTORISER{creer,mot,#ID_MOT,'','',#ARRAY{associer_objet,#ENV{associer_objet}}}|sinon_interdire_acces)]]
 
-#SET{redirect,#ENV{redirect}|sinon{#ENV{id_mot}|?{#URL_ECRIRE{mot,id_mot=#ID_MOT},#URL_ECRIRE{mots}}}}
+#SET{retour,#ENV{redirect}|sinon{#ENV{id_mot}|?{#URL_ECRIRE{mot,id_mot=#ID_MOT},#URL_ECRIRE{mots}}}}
 <div class='cadre-formulaire-editer'>
 <div class="entete-formulaire">
-	[(#GET{redirect}|icone_verticale{<:icone_retour:>,mot,'',left[(#ENV{retourajax,''}|oui)ajax preload]})]
+	[(#GET{retour}|icone_verticale{<:icone_retour:>,mot,'',left[(#ENV{retourajax,''}|oui)ajax preload]})]
 	[<:info_modifier_mot:>
 	<h1>(#ENV{titre,#INFO_TITRE{mot,#ID_MOT}|sinon{<:texte_nouveau_mot:>}})</h1>]
 </div>
