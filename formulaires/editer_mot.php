@@ -104,11 +104,12 @@ function formulaires_editer_mot_traiter_dist($id_mot='new', $id_groupe=0, $retou
 			else {
 				list($objet,$id_objet) = explode('|',$associer_objet);
 			}
-			$id_groupe = intval(_request('id_groupe'));
-			include_spip('action/editer_mot');
-			mot_associer($id_mot, array($objet=>$id_objet));
-			if (isset($res['redirect']))
-				$res['redirect'] = parametre_url ($res['redirect'], "id_lien_ajoute", $id_mot, '&');
+			if ($objet AND $id_objet AND autoriser('modifier',$objet,$id_objet)){
+				include_spip('action/editer_mot');
+				mot_associer($id_mot, array($objet=>$id_objet));
+				if (isset($res['redirect']))
+					$res['redirect'] = parametre_url ($res['redirect'], "id_lien_ajoute", $id_mot, '&');
+			}
 		}
 
 	}
