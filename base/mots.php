@@ -114,8 +114,8 @@ function mots_declarer_tables_objets_sql($tables){
 	  'type_surnoms' => array('mot-cle'), // pour les icones...
 
 		'texte_retour' => 'icone_retour',
-		'texte_objets' => 'mots_clefs',
-		'texte_objet' => 'mots_clef',
+		'texte_objets' => 'public:mots_clefs',
+		'texte_objet' => 'public:mots_clef',
 		'texte_modifier' => 'icone_modifier_mot',
 		'info_aucun_objet'=> 'info_aucun_mot',
 		'info_1_objet' => 'info_1_mot',
