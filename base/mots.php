@@ -151,6 +151,7 @@ function mots_declarer_tables_objets_sql($tables){
 				'mot' => array('titre' => 3)
 			)
 		),
+		'champs_versionnes' => array('titre', 'descriptif', 'texte','id_groupe'),
 	);
 
 	$tables['spip_groupes_mots'] = array(
@@ -201,6 +202,7 @@ function mots_declarer_tables_objets_sql($tables){
 				'mot' => array('titre' => 3)
 			)
 		),
+		'champs_versionnes' => array('titre', 'descriptif', 'texte','un_seul','obligatoire','tables_liees','minirezo','forum','comite'),
 	);
 	return $tables;
 }
