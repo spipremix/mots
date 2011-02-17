@@ -136,48 +136,6 @@ function mots_optimiser_base_disparus($flux){
 }
 
 
-
-/**
- * Definir la liste des champs de recherche sur la table mots 
- *
- * @param array $liste
- * @return array
- */
-function mots_rechercher_liste_des_champs($liste){
-	$liste['mot'] = array(
-	  'titre' => 8, 'texte' => 1, 'descriptif' => 5
-	);
-
-	return $liste;
-}
-
-
-/**
- * Definir la liste des champs de jointure sur la table mots 
- *
- * @param array $liste
- * @return array
- */
-function mots_rechercher_liste_des_jointures($liste) {
-	$jointures = array(
-		'article' => array(
-			'mot' => array('titre' => 3),
-		),
-		'breve' => array(
-			'mot' => array('titre' => 3),
-		),
-		'rubrique' => array(
-			'mot' => array('titre' => 3),
-		),
-		'document' => array(
-			'mot' => array('titre' => 3)
-		)
-	);
-	
-	return array_merge_recursive($liste, $jointures);
-}
-
-
 /**
  * Copier le type des groupes sur la table spip_mots
  * a chaque changement d'un groupe.
@@ -197,16 +155,6 @@ function mots_post_edition($flux){
 }
 
 
-/**
- * Permet des calculs de noms d'url sur les mots. 
- *
- * @param array $array liste des objets acceptant des urls
- * @return array
-**/
-function mots_declarer_url_objets($array){
-	$array[] = 'mot';
-	return $array;
-}
 
 /**
  * Libelle des logos de mot et de groupe

@@ -22,10 +22,10 @@ function mots_declarer_tables_interfaces($interfaces){
 	$interfaces['table_des_tables']['groupes_mots']='groupes_mots';
 
 
-	$interfaces['table_date']['groupes_mots'] = 'date';
-	$interfaces['table_date']['mots'] = 'date';
+	#$interfaces['table_date']['groupes_mots'] = 'date';
+	#$interfaces['table_date']['mots'] = 'date';
 
-	$interfaces['table_titre']['mots'] = "titre, '' AS lang";
+	#$interfaces['table_titre']['mots'] = "titre, '' AS lang";
 
 	$interfaces['tables_jointures']['spip_articles'][]= 'mots_liens';
 	$interfaces['tables_jointures']['spip_articles'][]= 'mots';
@@ -57,54 +57,6 @@ function mots_declarer_tables_interfaces($interfaces){
 	return $interfaces;
 }
 
-/**
- * Table principale spip_mots
- *
- * @param array $tables_principales
- * @return array
- */
-function mots_declarer_tables_principales($tables_principales){
-
-
-	$spip_mots = array(
-			"id_mot"	=> "bigint(21) NOT NULL",
-			"titre"	=> "text DEFAULT '' NOT NULL",
-			"descriptif"	=> "text DEFAULT '' NOT NULL",
-			"texte"	=> "longtext DEFAULT '' NOT NULL",
-			"id_groupe"	=> "bigint(21) DEFAULT 0 NOT NULL",
-			"type"	=> "text DEFAULT '' NOT NULL",
-			"maj"	=> "TIMESTAMP");
-
-	$spip_mots_key = array(
-			"PRIMARY KEY"	=> "id_mot",
-	);
-
-	$tables_principales['spip_mots']     =
-		array('field' => &$spip_mots, 'key' => &$spip_mots_key);
-
-		
-	$spip_groupes_mots = array(
-			"id_groupe"	=> "bigint(21) NOT NULL",
-			"titre"	=> "text DEFAULT '' NOT NULL",
-			"descriptif"	=> "text DEFAULT '' NOT NULL",
-			"texte"	=> "longtext DEFAULT '' NOT NULL",
-			"unseul"	=> "varchar(3) DEFAULT '' NOT NULL",
-			"obligatoire"	=> "varchar(3) DEFAULT '' NOT NULL",
-			"tables_liees" => "text DEFAULT '' NOT NULL",
-			"minirezo"	=> "varchar(3) DEFAULT '' NOT NULL",
-			"comite"	=> "varchar(3) DEFAULT '' NOT NULL",
-			"forum"	=> "varchar(3) DEFAULT '' NOT NULL",
-			"maj"	=> "TIMESTAMP");
-
-	$spip_groupes_mots_key = array(
-			"PRIMARY KEY"	=> "id_groupe");
-			
-	$tables_principales['spip_groupes_mots'] =
-		array('field' => &$spip_groupes_mots, 'key' => &$spip_groupes_mots_key);
-
-
-	return $tables_principales;
-}
 
 /**
  * Table auxilaire spip_mots_xx
@@ -139,10 +91,7 @@ function mots_declarer_tables_auxiliaires($tables_auxiliaires){
  * @return array
  */
 function mots_declarer_tables_objets_surnoms($table){
-	$table['groupe_mots'] = 'groupes_mots'; # hum
-	$table['groupe_mot'] = 'groupes_mots'; # hum
-	$table['groupe'] = 'groupes_mots'; # hum (EXPOSE)
-	$table['mot'] = 'mots';
+	#$table['mot'] = 'mots';
 	return $table;
 }
 
@@ -154,8 +103,105 @@ function mots_declarer_tables_objets_surnoms($table){
 function mots_declarer_type_surnoms($table) {
 	$table['groupes_mot'] = 'groupe_mots';
 	$table['groupemot'] = 'groupemots'; // pour les appels a autoriser('faire','groupemots')
-	$table['mot-cle'] = 'mot'; // pour les icones...
+	#$table['mot-cle'] = 'mot'; // pour les icones...
 	return $table;
 }
 
+
+function mots_declarer_tables_objets_sql($tables){
+	$tables['spip_mots'] = array(
+		'type'=>'mot',
+	  'type_surnoms' => array('mot-cle'), // pour les icones...
+
+		'texte_retour' => 'icone_retour',
+		'texte_objets' => 'titre_page_mots_tous',
+		'texte_modifier' => 'icone_modifier_mot',
+		'info_aucun_objet'=> 'info_aucun_mot',
+		'info_1_objet' => 'info_1_mot',
+		'info_nb_objets' => 'info_nb_mots',
+		'titre' => "titre, '' AS lang",
+		'date' => 'date',
+		'principale' => 'oui',
+		'field'=> array(
+			"id_mot"	=> "bigint(21) NOT NULL",
+			"titre"	=> "text DEFAULT '' NOT NULL",
+			"descriptif"	=> "text DEFAULT '' NOT NULL",
+			"texte"	=> "longtext DEFAULT '' NOT NULL",
+			"id_groupe"	=> "bigint(21) DEFAULT 0 NOT NULL",
+			"type"	=> "text DEFAULT '' NOT NULL",
+			"maj"	=> "TIMESTAMP"
+		),
+		'key' => array(
+			"PRIMARY KEY"	=> "id_mot",
+		),
+		'rechercher_champs' => array(
+	  'titre' => 8, 'texte' => 1, 'descriptif' => 5
+		),
+		'rechercher_jointures' => array(
+			'article' => array(
+				'mot' => array('titre' => 3),
+			),
+			'breve' => array(
+				'mot' => array('titre' => 3),
+			),
+			'rubrique' => array(
+				'mot' => array('titre' => 3),
+			),
+			'document' => array(
+				'mot' => array('titre' => 3)
+			)
+		),
+	);
+
+	$tables['spip_groupes_mots'] = array(
+		'table_objet_surnoms' => array('groupe_mots' /*hum*/,'groupe_mot' /* hum*/,'groupe' /*hum (EXPOSE)*/),
+
+		'type'=>'groupe_mots',
+	  'type_surnoms' => array('groupes_mot','groupemot'),
+
+		'texte_retour' => 'icone_retour',
+		'texte_objets' => 'mots:titre_groupes_mots',
+		'texte_modifier' => 'icone_modif_groupe_mots',
+		'info_aucun_objet'=> 'mots:info_aucun_groupemots',
+		'info_1_objet' => 'mots:info_1_groupemots',
+		'info_nb_objets' => 'mots:info_nb_groupemots',
+		'titre' => "titre, '' AS lang",
+		'date' => 'date',
+		'principale' => 'oui',
+		'field'=> array(
+			"id_groupe"	=> "bigint(21) NOT NULL",
+			"titre"	=> "text DEFAULT '' NOT NULL",
+			"descriptif"	=> "text DEFAULT '' NOT NULL",
+			"texte"	=> "longtext DEFAULT '' NOT NULL",
+			"unseul"	=> "varchar(3) DEFAULT '' NOT NULL",
+			"obligatoire"	=> "varchar(3) DEFAULT '' NOT NULL",
+			"tables_liees" => "text DEFAULT '' NOT NULL",
+			"minirezo"	=> "varchar(3) DEFAULT '' NOT NULL",
+			"comite"	=> "varchar(3) DEFAULT '' NOT NULL",
+			"forum"	=> "varchar(3) DEFAULT '' NOT NULL",
+			"maj"	=> "TIMESTAMP"
+		),
+		'key' => array(
+			"PRIMARY KEY"	=> "id_groupe"
+		),
+		'rechercher_champs' => array(
+	  'titre' => 8, 'texte' => 1, 'descriptif' => 5
+		),
+		'rechercher_jointures' => array(
+			'article' => array(
+				'mot' => array('titre' => 3),
+			),
+			'breve' => array(
+				'mot' => array('titre' => 3),
+			),
+			'rubrique' => array(
+				'mot' => array('titre' => 3),
+			),
+			'document' => array(
+				'mot' => array('titre' => 3)
+			)
+		),
+	);
+	return $tables;
+}
 ?>
