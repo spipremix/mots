@@ -6,7 +6,7 @@
 #SET{redirect,#ENV{redirect}|sinon{#ENV{id_groupe}|?{#URL_ECRIRE{groupe_mots,id_groupe=#ID_GROUPE},#URL_ECRIRE{mots}}}}
 <div class='cadre-formulaire-editer'>
 <div class="entete-formulaire">
-	[(#GET{redirect}|icone_verticale{<:icone_retour:>,groupe_mots,'',left[(#ENV{retourajax,''}|oui)ajax preload]})]
+	[(#GET{redirect}|icone_verticale{<:icone_retour:>,groupe_mots-24.png,'',left[(#ENV{retourajax,''}|oui)ajax preload]})]
 	[<:titre_groupe_mots:>
 	<h1>(#ENV{titre,#INFO_TITRE{groupe_mots,#ID_GROUPE}|sinon{<:titre_nouveau_groupe:>}})</h1>]
 </div>
