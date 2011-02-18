@@ -83,31 +83,6 @@ function mots_declarer_tables_auxiliaires($tables_auxiliaires){
 
 
 
-
-/**
- * Declarer le surnom des groupes de mots
- *
- * @param array $table
- * @return array
- */
-function mots_declarer_tables_objets_surnoms($table){
-	#$table['mot'] = 'mots';
-	return $table;
-}
-
-/**
- * Alias de type pour les groupes de mot
- * @param array $table
- * @return string
- */
-function mots_declarer_type_surnoms($table) {
-	$table['groupes_mot'] = 'groupe_mots';
-	$table['groupemot'] = 'groupemots'; // pour les appels a autoriser('faire','groupemots')
-	#$table['mot-cle'] = 'mot'; // pour les icones...
-	return $table;
-}
-
-
 function mots_declarer_tables_objets_sql($tables){
 	$tables['spip_mots'] = array(
 		'type'=>'mot',
@@ -159,7 +134,7 @@ function mots_declarer_tables_objets_sql($tables){
 		'table_objet_surnoms' => array('groupe_mots' /*hum*/,'groupe_mot' /* hum*/,'groupe' /*hum (EXPOSE)*/),
 
 		'type'=>'groupe_mots',
-	  'type_surnoms' => array('groupes_mot','groupemot'),
+	  'type_surnoms' => array('groupes_mot','groupemot','groupe_mot'),
 
 		'texte_retour' => 'icone_retour',
 		'texte_objets' => 'mots:titre_groupes_mots',
