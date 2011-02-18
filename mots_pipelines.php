@@ -34,83 +34,33 @@ function mots_configurer_liste_metas($metas){
  * @return array
  */
 function mots_affiche_milieu($flux){
-	static $ou = array(
-		'articles'    => array('objet' => 'article'),
-		'article'    => array('objet' => 'article'),
-		'naviguer'    => array('objet' => 'rubrique', 'opt' => array('autoriser_faire' => 'publierdans')),
-		'breve' => array('objet' => 'breve'),
-		'site'       => array('objet' => 'syndic'),
-	);
-	
 	if ($flux["args"]["exec"] == "configurer_contenu") {
 		$flux["data"] .=  recuperer_fond('prive/squelettes/inclure/configurer',array('configurer'=>'configurer_mots'));
 	}
 
 	// si on est sur une page ou il faut inserer les mots cles...
-	if (in_array($flux['args']['exec'], array_keys($ou))) {
-
-		$me = $ou[ $flux['args']['exec'] ];
-		$objet = $me['objet']; // auteur
-		$_id_objet = id_table_objet($objet); // id_auteur
-		$opt = isset($me['opt']) ? $me['opt'] : array();
-		
-		// on récupère l'identifiant de l'objet...
-		if ($id_objet = $flux['args'][ $_id_objet ]) {
-			$texte = mots_ajouter_selecteur_mots($objet, $id_objet, $flux['args']['exec'], $opt);
-			if ($p=strpos($flux['data'],"<!--affiche_milieu-->"))
-				$flux['data'] = substr_replace($flux['data'],$texte,$p,0);
-			else
-				$flux['data'] .= $texte;
-		}
+	if ($en_cours = trouver_objet_exec($flux['args']['exec'])
+		AND !$en_cours['edition'] // page visu
+		AND $type = $en_cours['type']
+		AND $id_table_objet = $en_cours['id_table_objet']
+		AND ($id = intval($flux['args'][$id_table_objet]))){
+		$texte = recuperer_fond(
+				'prive/objets/editer/liens',
+				array(
+					'table_source'=>'mots',
+					'objet'=>$type,
+					'id_objet'=>$id,
+					'editable'=>autoriser('associermots',$type,$id)?'oui':'non'
+				)
+		);
+		if ($p=strpos($flux['data'],"<!--affiche_milieu-->"))
+			$flux['data'] = substr_replace($flux['data'],$texte,$p,0);
+		else
+			$flux['data'] .= $texte;
 	}
 		
 	return $flux;
 }
-
-
-
-/**
- * Retourne le selecteur de mots pour un objet donnee
- *
- * @param string $objet : nom de l'objet
- * @param int $id_objet : identifiant de l'objet
- * @param string $exec_retour : url de exec de retour
- * @param array $opt options
- * 		@param string $cherche_mot	un mot cherché particulier
- * 		@param string $select_groupe	un/des groupe particulier ?
- * 		@param bool $editable	autorisé ou non à voir ajouter des mots
- * 		@param string $autoriser_faire	En cas d'absence de $editable, qu'elle nom d'autorisation utiliser
- * 
- * @return string	HTML produit.
-**/
-function mots_ajouter_selecteur_mots($objet, $id_objet, $exec_retour='', $opt = array()) {
-
-	if (!isset($opt['flag_editable'])) {
-		$faire = isset($opt['autoriser_faire']) ? $opt['autoriser_faire'] : 'modifier';
-		$opt['flag_editable'] = autoriser($faire, $objet, $id_objet);
-	}
-	
-	// pas beau ces request ici...
-	// en attendant un formulaire CVT digne de ce nom...
-	if (!isset($opt['cherche_mot'])) {
-		$opt['cherche_mot'] = _request('cherche_mot');
-	}
-	if (!isset($opt['select_groupe'])) {
-		$opt['select_groupe'] = _request('select_groupe');
-	}
-
-	
-	$editer_mots = charger_fonction('editer_mots', 'inc');
-	return $editer_mots(
-		table_objet($objet), $id_objet,
-		$opt['cherche_mot'], $opt['select_groupe'],
-		$opt['flag_editable'], false, $exec_retour
-	);
-
-}
-
-
-
 
 
 

@@ -22,8 +22,6 @@
 	</bouton>
 
 	<pipeline><nom>mots_indexation</nom><action></action></pipeline>
-	<pipeline><nom>libelle_association_mots</nom><action></action></pipeline>
-
 	
 	<pipeline>
 		<nom>autoriser</nom>

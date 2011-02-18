@@ -95,44 +95,49 @@ function autoriser_mot_creer_dist($faire, $type, $id, $qui, $opt) {
 }
 
 
-function autoriser_objet_editermots_dist($faire,$quoi,$id,$qui,$opts){
-	// on recupere les champs du groupe s'ils ne sont pas passes en opt
-	$droit = substr($GLOBALS['visiteur_session']['statut'],1);
-	if (!isset($opts['groupe_champs'])){
-		if (!$id_groupe = $opts['id_groupe'])
-			return false;
-		include_spip('base/abstract_sql');
-		$opts['groupe_champs'] = sql_fetsel("*", "spip_groupes_mots", "id_groupe=".intval($id_groupe));
+/**
+ * Autorisation pour verifier le droit d'associer des mots
+ * a un objet
+ * si groupe_champ ou id_groupe est fourni dans opts, on regarde les droits pour ce groupe
+ * en particulier
+ *
+ * @return bool
+ */
+function autoriser_associermots_dist($faire,$quoi,$id,$qui,$opts){
+	// jamais de mots sur des mots
+	if ($quoi=='mot') return false;
+	if ($quoi=='groupemots') return false;
+	$droit = substr($qui['statut'],1);
+
+	if (!isset($opts['groupe_champs']) AND !isset($opts['id_groupe'])){
+		// chercher si un groupe est autorise pour mon statut
+		// et pour la table demandee
+		$table = addslashes(table_objet($quoi));
+		if (sql_countsel('spip_groupes_mots',"tables_liees REGEXP '(^|,)$table($|,)' AND ".addslashes($droit)."='oui'"))
+			return true;
 	}
-	$droit = $opts['groupe_champs'][$droit];
+	// cas d'un groupe en particulier
+	else {
+		// on recupere les champs du groupe s'ils ne sont pas passes en opt
+		if (!isset($opts['groupe_champs'])){
+			if (!$id_groupe = $opts['id_groupe'])
+				return false;
+			include_spip('base/abstract_sql');
+			$opts['groupe_champs'] = sql_fetsel("*", "spip_groupes_mots", "id_groupe=".intval($id_groupe));
+		}
+		$droit = $opts['groupe_champs'][$droit];
 
-	return
-		($droit == 'oui')
-		AND
-		// on verifie que l'objet demande est bien dans les tables liees
-		in_array(
-			table_objet($quoi),
-			explode(',', $opts['groupe_champs']['tables_liees'])
-		);
+		return
+			($droit == 'oui')
+			AND
+			// on verifie que l'objet demande est bien dans les tables liees
+			in_array(
+				table_objet($quoi),
+				explode(',', $opts['groupe_champs']['tables_liees'])
+			);
+	}
+	return false;
 }
-
-// http://doc.spip.org/@autoriser_rubrique_editermots_dist
-function autoriser_rubrique_editermots_dist($faire,$quoi,$id,$qui,$opts){
-	return autoriser_objet_editermots_dist($faire,'rubrique',0,$qui,$opts);
-}
-// http://doc.spip.org/@autoriser_article_editermots_dist
-function autoriser_article_editermots_dist($faire,$quoi,$id,$qui,$opts){
-	return autoriser_objet_editermots_dist($faire,'article',0,$qui,$opts);
-}
-// http://doc.spip.org/@autoriser_breve_editermots_dist
-function autoriser_breve_editermots_dist($faire,$quoi,$id,$qui,$opts){
-	return autoriser_objet_editermots_dist($faire,'breve',0,$qui,$opts);
-}
-// http://doc.spip.org/@autoriser_syndic_editermots_dist
-function autoriser_syndic_editermots_dist($faire,$quoi,$id,$qui,$opts){
-	return autoriser_objet_editermots_dist($faire,'syndic',0,$qui,$opts);
-}
-
 
 // http://doc.spip.org/@autoriser_mot_iconifier_dist
 function autoriser_mot_iconifier_dist($faire,$quoi,$id,$qui,$opts){
