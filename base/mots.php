@@ -26,7 +26,7 @@ function mots_declarer_tables_interfaces($interfaces){
 	#$interfaces['table_date']['mots'] = 'date';
 
 	#$interfaces['table_titre']['mots'] = "titre, '' AS lang";
-
+/*
 	$interfaces['tables_jointures']['spip_articles'][]= 'mots_liens';
 	$interfaces['tables_jointures']['spip_articles'][]= 'mots';
 	
@@ -44,11 +44,7 @@ function mots_declarer_tables_interfaces($interfaces){
 	
 	$interfaces['tables_jointures']['spip_syndic_articles'][]= 'mots_liens';
 	$interfaces['tables_jointures']['spip_syndic_articles'][]= 'mots';
-	
-	$interfaces['tables_jointures']['spip_mots'][]= 'mots_liens';
-	
-	$interfaces['tables_jointures']['spip_groupes_mots'][]= 'mots';
-
+	*/
 	$interfaces['exceptions_des_jointures']['type_mot'] = array('spip_mots', 'type');
 	$interfaces['exceptions_des_jointures']['id_mot_syndic'] = array('spip_mots_liens', 'id_mot');
 	$interfaces['exceptions_des_jointures']['titre_mot_syndic'] = array('spip_mots', 'titre');
@@ -111,7 +107,7 @@ function mots_declarer_tables_objets_sql($tables){
 			"PRIMARY KEY"	=> "id_mot",
 		),
 		'rechercher_champs' => array(
-	  'titre' => 8, 'texte' => 1, 'descriptif' => 5
+		  'titre' => 8, 'texte' => 1, 'descriptif' => 5
 		),
 		'rechercher_jointures' => array(
 			'article' => array(
@@ -126,6 +122,9 @@ function mots_declarer_tables_objets_sql($tables){
 			'document' => array(
 				'mot' => array('titre' => 3)
 			)
+		),
+		'tables_jointures' => array(
+			'mots_liens'
 		),
 		'champs_versionnes' => array('titre', 'descriptif', 'texte','id_groupe'),
 	);
@@ -146,6 +145,7 @@ function mots_declarer_tables_objets_sql($tables){
 		'titre' => "titre, '' AS lang",
 		'date' => 'date',
 		'principale' => 'oui',
+		'page' => '', // pas de page publique pour les groupes
 		'field'=> array(
 			"id_groupe"	=> "bigint(21) NOT NULL",
 			"titre"	=> "text DEFAULT '' NOT NULL",
@@ -163,7 +163,7 @@ function mots_declarer_tables_objets_sql($tables){
 			"PRIMARY KEY"	=> "id_groupe"
 		),
 		'rechercher_champs' => array(
-	  'titre' => 8, 'texte' => 1, 'descriptif' => 5
+	    'titre' => 8, 'texte' => 1, 'descriptif' => 5
 		),
 		'rechercher_jointures' => array(
 			'article' => array(
@@ -178,6 +178,9 @@ function mots_declarer_tables_objets_sql($tables){
 			'document' => array(
 				'mot' => array('titre' => 3)
 			)
+		),
+		'tables_jointures' => array(
+			'mots'
 		),
 		'champs_versionnes' => array('titre', 'descriptif', 'texte','un_seul','obligatoire','tables_liees','minirezo','forum','comite'),
 	);
