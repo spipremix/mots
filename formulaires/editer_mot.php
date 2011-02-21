@@ -82,7 +82,7 @@ function formulaires_editer_mot_verifier_dist($id_mot='new', $id_groupe=0, $reto
 
 // http://doc.spip.org/@inc_editer_mot_dist
 function formulaires_editer_mot_traiter_dist($id_mot='new', $id_groupe=0, $retour='', $associer_objet='', $dummy1='', $dummy2='', $config_fonc='mots_edit_config', $row=array(), $hidden=''){
-	$res = '';
+	$res = array();
 	set_request('redirect','');
 	$action_editer = charger_fonction("editer_mot",'action');
 	list($id_mot,$err) = $action_editer();
@@ -90,10 +90,18 @@ function formulaires_editer_mot_traiter_dist($id_mot='new', $id_groupe=0, $retou
 		$res['message_erreur'] = $err;
 	}
 	else {
-		if ($retour)
-			$res['redirect'] = $retour;
-		if (strlen(parametre_url($retour,'id_mot')))
-			$res['redirect'] = parametre_url($res['redirect'],'id_mot',$id_mot);
+		$res['message_ok'] = "";
+		if ($retour){
+			if (strncmp($retour,'javascript:',11)==0){
+				$res['message_ok'] .= '<script type="text/javascript">/*<![CDATA[*/'.substr($retour,11).'/*]]>*/</script>';
+				$res['editable'] = true;
+			}
+			else {
+				$res['redirect'] = $retour;
+				if (strlen(parametre_url($retour,'id_mot')))
+					$res['redirect'] = parametre_url($res['redirect'],'id_mot',$id_mot);
+			}
+		}
 
 		if ($associer_objet){
 			if (intval($associer_objet)){

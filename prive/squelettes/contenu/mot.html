@@ -23,5 +23,5 @@
 
 #BOITE_FERMER
 </BOUCLE_mot>
-[(#ENV{exec}|=={mot_edit}|?{#INCLURE{fond=prive/squelettes/contenu/mot_edit,redirect='',env,retourajax=oui},#REM|sinon_interdire_acces})]
+[(#ENV**{exec}|=={mot_edit}|?{#INCLURE{fond=prive/squelettes/contenu/mot_edit,redirect='',env,retourajax=oui},#REM|sinon_interdire_acces})]
 <//B_mot>
