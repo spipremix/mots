@@ -26,7 +26,7 @@ function mots_declarer_tables_interfaces($interfaces){
 	#$interfaces['table_date']['mots'] = 'date';
 
 	#$interfaces['table_titre']['mots'] = "titre, '' AS lang";
-/*
+
 	$interfaces['tables_jointures']['spip_articles'][]= 'mots_liens';
 	$interfaces['tables_jointures']['spip_articles'][]= 'mots';
 	
@@ -44,7 +44,7 @@ function mots_declarer_tables_interfaces($interfaces){
 	
 	$interfaces['tables_jointures']['spip_syndic_articles'][]= 'mots_liens';
 	$interfaces['tables_jointures']['spip_syndic_articles'][]= 'mots';
-	*/
+
 	$interfaces['exceptions_des_jointures']['type_mot'] = array('spip_mots', 'type');
 	$interfaces['exceptions_des_jointures']['id_mot_syndic'] = array('spip_mots_liens', 'id_mot');
 	$interfaces['exceptions_des_jointures']['titre_mot_syndic'] = array('spip_mots', 'titre');
