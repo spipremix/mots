@@ -21,38 +21,11 @@ function mots_declarer_tables_interfaces($interfaces){
 	$interfaces['table_des_tables']['mots']='mots';
 	$interfaces['table_des_tables']['groupes_mots']='groupes_mots';
 
-	#$interfaces['table_date']['groupes_mots'] = 'date';
-	#$interfaces['table_date']['mots'] = 'date';
-
-	#$interfaces['table_titre']['mots'] = "titre, '' AS lang";
-	
-	$interfaces['tables_jointures']['spip_articles'][]= 'mots_liens';
-	$interfaces['tables_jointures']['spip_articles'][]= 'mots';
-	
-	$interfaces['tables_jointures']['spip_breves'][]= 'mots_liens';
-	$interfaces['tables_jointures']['spip_breves'][]= 'mots';
-	
-	$interfaces['tables_jointures']['spip_documents'][]= 'mots_liens';
-	$interfaces['tables_jointures']['spip_documents'][]= 'mots';
-	
-	$interfaces['tables_jointures']['spip_rubriques'][]= 'mots_liens';
-	$interfaces['tables_jointures']['spip_rubriques'][]= 'mots';
-	
-	$interfaces['tables_jointures']['spip_syndic'][]= 'mots_liens';
-	$interfaces['tables_jointures']['spip_syndic'][]= 'mots';
-	
-	$interfaces['tables_jointures']['spip_syndic_articles'][]= 'mots_liens';
-	$interfaces['tables_jointures']['spip_syndic_articles'][]= 'mots';
-
-	$interfaces['tables_jointures']['spip_mots'][]= 'mots_liens';
-	$interfaces['tables_jointures']['spip_groupes_mots'][]= 'mots';
-
 	$interfaces['exceptions_des_jointures']['type_mot'] = array('spip_mots', 'type');
 	$interfaces['exceptions_des_jointures']['id_mot_syndic'] = array('spip_mots_liens', 'id_mot');
 	$interfaces['exceptions_des_jointures']['titre_mot_syndic'] = array('spip_mots', 'titre');
 	$interfaces['exceptions_des_jointures']['type_mot_syndic'] = array('spip_mots', 'type');
 	
-	$interface['exceptions_des_tables']['spip_articles']['id_groupe'] = array('spip_mots', 'id_groupe');
 	return $interfaces;
 }
 
@@ -112,25 +85,6 @@ function mots_declarer_tables_objets_sql($tables){
 		'rechercher_champs' => array(
 		  'titre' => 8, 'texte' => 1, 'descriptif' => 5
 		),
-/* Declaration erronee a virer ? 
-on ne veut pas 
-$tables['spip_mots']['rechercher_jointures'][article]['mot'] = array('titre' => 3);
-mais 
-$tables['spip_articles']['rechercher_jointures']['mot'] = array('titre' => 3);
-		'rechercher_jointures' => array(
-			'article' => array(
-				'mot' => array('titre' => 3),
-			),
-			'breve' => array(
-				'mot' => array('titre' => 3),
-			),
-			'rubrique' => array(
-				'mot' => array('titre' => 3),
-			),
-			'document' => array(
-				'mot' => array('titre' => 3)
-			)
-		), */
 		'tables_jointures' => array(
 			'mots_liens'
 		),
@@ -173,33 +127,18 @@ $tables['spip_articles']['rechercher_jointures']['mot'] = array('titre' => 3);
 		'rechercher_champs' => array(
 	    'titre' => 8, 'texte' => 1, 'descriptif' => 5
 		),
-/* Declaration erronee a virer ? 
-		'rechercher_jointures' => array(
-			'article' => array(
-				'mot' => array('titre' => 3),
-			),
-			'breve' => array(
-				'mot' => array('titre' => 3),
-			),
-			'rubrique' => array(
-				'mot' => array('titre' => 3),
-			),
-			'document' => array(
-				'mot' => array('titre' => 3)
-			)
-		), */
 		'tables_jointures' => array(
 			'mots'
 		),
 		'champs_versionnes' => array('titre', 'descriptif', 'texte','un_seul','obligatoire','tables_liees','minirezo','forum','comite'),
 	);
-	// recherche jointe sur les mots pour les objets pour lesquels les mots existent
-	$tables['spip_articles']['rechercher_jointures']['mot'] = array('titre' => 3);
-	$tables['spip_rubriques']['rechercher_jointures']['mot'] = array('titre' => 3);
-	$tables['spip_breves']['rechercher_jointures']['mot'] = array('titre' => 3);
-	$tables['spip_documents']['rechercher_jointures']['mot'] = array('titre' => 3);	
-	$tables['spip_auteurs']['rechercher_jointures']['mot'] = array('titre' => 3);
-	$tables['spip_syndic']['rechercher_jointures']['mot'] = array('titre' => 3);
+
+	// jointures sur les mots pour tous les objets
+	$tables[]['tables_jointures'][]= 'mots_liens';
+	$tables[]['tables_jointures'][]= 'mots';
+	// recherche jointe sur les mots pour tous les objets
+	$tables[]['rechercher_jointures']['mot'] = array('titre' => 3);
+
 	return $tables;
 }
 ?>
