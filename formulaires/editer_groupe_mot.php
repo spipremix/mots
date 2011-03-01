@@ -59,6 +59,14 @@ function formulaires_editer_groupe_mot_verifier_dist($id_groupe='new',$retour=''
 // http://doc.spip.org/@inc_editer_groupe_mot_dist
 function formulaires_editer_groupe_mot_traiter_dist($id_groupe='new',$retour='', $config_fonc='groupes_mots_edit_config', $row=array(), $hidden=''){
 	set_request('redirect','');
+	// cas des checkbox : injecter la valeur non si rien de coche
+	foreach (array(
+		'obligatoire', 'unseul',
+		'comite', 'forum', 'minirezo'
+	) as $champ)
+		if (!_request($champ))
+			set_request($champ,'non');
+
 	$res = formulaires_editer_objet_traiter('groupe_mots',$id_groupe,0,0,$retour,$config_fonc,$row,$hidden);
 	return $res;
 }

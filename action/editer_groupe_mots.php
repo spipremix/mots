@@ -24,36 +24,18 @@ function action_editer_groupe_mots_dist($id_groupe=null)
 	}
 
 	if (!intval($id_groupe)) {
-		$id_groupe = sql_insertq("spip_groupes_mots");
+		$id_groupe = insert_groupemots();
 	}
 
-	// modifier le contenu via l'API
-	include_spip('inc/modifier');
+	if ($id_groupe>0) $err = groupemots_set($id_groupe);
 
-	$c = array();
-	foreach (array(
-		'titre', 'descriptif', 'texte', 'tables_liees'
-	) as $champ)
-		$c[$champ] = _request($champ);
-	foreach (array(
-		'obligatoire', 'unseul'
-	) as $champ)
-		$c[$champ] = _request($champ)=='oui'?'oui':'non';
-	foreach (array(
-		'comite', 'forum', 'minirezo'
-	) as $champ)
-		$c[$champ] = _request("acces_$champ")=='oui'?'oui':'non';
-		
-	if (is_array($c['tables_liees']))
-		$c['tables_liees'] = implode(',',array_diff($c['tables_liees'],array('')));
-
-	revision_groupe_mot($id_groupe, $c);
 	if ($redirect = _request('redirect')) {
 		include_spip('inc/headers');
 		redirige_par_entete(parametre_url(urldecode($redirect),
 			'id_groupe', $id_groupe, '&'));
-	} else
-		return array($id_groupe,'');
+	}
+	else
+		return array($id_groupe,$err);
 }
 
 /**
@@ -62,19 +44,78 @@ function action_editer_groupe_mots_dist($id_groupe=null)
  * @param string $table
  * @return int 
  */
-function insert_groupe_mots($table) {
-	$titre = _T('info_mot_sans_groupe');
-	$id_groupe = sql_insertq("spip_groupes_mots", array(
-		'titre' => $titre,
+function insert_groupemots($table='') {
+	$champs = array(
+		'titre' => '',
 		'unseul' => 'non',
 		'obligatoire' => 'non',
-		'tables_liees'=>$table,
+		'tables_liees' => $table,
 		'minirezo' =>  'oui',
 		'comite' =>  'non',
-		'forum' => 'non')) ;
+		'forum' => 'non'
+	);
 
+	// Envoyer aux plugins
+	$champs = pipeline('pre_insertion',
+		array(
+			'args' => array(
+				'table' => 'spip_groupes_mots',
+			),
+			'data' => $champs
+		)
+	);
+
+	$id_groupe = sql_insertq("spip_groupes_mots", $champs) ;
+
+	pipeline('post_insertion',
+		array(
+			'args' => array(
+				'table' => 'spip_groupes_mots',
+				'id_objet' => $id_groupe
+			),
+			'data' => $champs
+		)
+	);
 
 	return $id_groupe;
+}
+
+/**
+ * Modifier un groupe de mot
+ * @param int $id_groupe
+ * @param array|null $set
+ * @return string
+ */
+function groupemots_set($id_groupe, $set=null) {
+	$err = '';
+
+	include_spip('inc/modifier');
+	$c = collecter_requests(
+		// white list
+		array(
+		 'titre', 'descriptif', 'texte', 'tables_liees',
+		 'obligatoire', 'unseul',
+		 'comite', 'forum', 'minirezo',
+		),
+		// black list
+		array(),
+		// donnees eventuellement fournies
+		$set
+	);
+	// normaliser les champ oui/non
+	foreach (array(
+		'obligatoire', 'unseul',
+		'comite', 'forum', 'minirezo'
+	) as $champ)
+		if (isset($c[$champ]))
+			$c[$champ] = ($c[$champ]=='oui'?'oui':'non');
+
+	if (is_array($c['tables_liees']))
+		$c['tables_liees'] = implode(',',array_diff($c['tables_liees'],array('')));
+
+	revision_groupe_mot($id_groupe, $c);
+
+	return $err;
 }
 
 ?>

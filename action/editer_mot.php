@@ -26,26 +26,83 @@ function action_editer_mot_dist($arg=null)
 
 	$id_groupe = intval(_request('id_groupe'));
 	if (!$id_mot AND $id_groupe) {
-		$id_mot = sql_insertq("spip_mots", array('id_groupe' => $id_groupe));
+		$id_mot = insert_mot($id_groupe);
 	}
 
-	// modifier le contenu via l'API
-	include_spip('inc/modifier');
-
-	$c = array();
-	foreach (array(
-		'titre', 'descriptif', 'texte', 'id_groupe'
-	) as $champ)
-		$c[$champ] = _request($champ);
-
-	revision_mot($id_mot, $c);
+	// Enregistre l'envoi dans la BD
+	if ($id_mot > 0) $err = mots_set($id_mot);
+	
 	if ($redirect = _request('redirect')) {
 		include_spip('inc/headers');
 		redirige_par_entete(parametre_url(urldecode($redirect),
 			'id_mot', $id_mot, '&'));
-	} else
-		return array($id_mot,'');
+	}
+	else
+		return array($id_mot,$err);
 }
+
+/**
+ * Insertion d'un mot dans un groupe
+ * @param int $id_groupe
+ * @return int
+ */
+function insert_mot($id_groupe) {
+
+	$champs = array(
+		'id_groupe' => $id_groupe,
+	);
+
+	// Envoyer aux plugins
+	$champs = pipeline('pre_insertion',
+		array(
+			'args' => array(
+				'table' => 'spip_mots',
+			),
+			'data' => $champs
+		)
+	);
+
+	$id_mot = sql_insertq("spip_mots", $champs);
+
+	pipeline('post_insertion',
+		array(
+			'args' => array(
+				'table' => 'spip_mots',
+				'id_objet' => $id_mot
+			),
+			'data' => $champs
+		)
+	);
+
+	return $id_mot;
+}
+
+/**
+ * Modifier un mot
+ * @param int $id_mot
+ * @param null $set
+ * @return string
+ */
+function mots_set($id_mot, $set=null) {
+	$err = '';
+
+	include_spip('inc/modifier');
+	$c = collecter_requests(
+		// white list
+		array(
+		 'titre', 'descriptif', 'texte', 'id_groupe'
+		),
+		// black list
+		array(),
+		// donnees eventuellement fournies
+		$set
+	);
+	
+	revision_mot($id_mot, $c);
+
+	return $err;
+}
+
 
 function supprimer_mot($id_mot) {
 	sql_delete("spip_mots", "id_mot=".intval($id_mot));
