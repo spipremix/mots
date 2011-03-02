@@ -46,7 +46,7 @@ function formulaires_editer_mot_charger_dist($id_mot='new', $id_groupe=0, $retou
  * ne representent pas l'objet edite
  */
 function formulaires_editer_mot_identifier_dist($id_mot='new', $id_groupe=0, $retour='', $associer_objet='', $dummy1='', $dummy2='', $config_fonc='mots_edit_config', $row=array(), $hidden=''){
-	return serialize(array($id_mot,$associer_objet,$row));
+	return serialize(array(intval($id_mot),$associer_objet));
 }
 
 // Choix par defaut des options de presentation
