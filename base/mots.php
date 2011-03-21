@@ -56,6 +56,7 @@ function mots_declarer_tables_auxiliaires($tables_auxiliaires){
 
 
 function mots_declarer_tables_objets_sql($tables){
+	$tables['spip_articles']['champs_versionnes'][] = 'jointure_mots';
 	$tables['spip_mots'] = array(
 		'type'=>'mot',
 	  'type_surnoms' => array('mot-cle'), // pour les icones...
