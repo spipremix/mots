@@ -16,7 +16,7 @@
 
 <BOUCLE_autresobjets(spip_mots_liens){id_mot}{objet !IN article,rubrique}{fusion objet}{par objet}>
 	#SET{table,#OBJET|table_objet}
-	[(#SET{titre,[info_(#GET{table})_liees_mot]})]
+	[(#SET{titre,[#OBJET:info_(#GET{table})_liees_mot]})]
 	<INCLURE{fond=prive/objets/liste/#GET{table},titre=(#GET{titre}|_T),id_mot,ajax,env}>
 </BOUCLE_autresobjets>
 
