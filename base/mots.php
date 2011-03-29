@@ -21,6 +21,7 @@ function mots_declarer_tables_interfaces($interfaces){
 	$interfaces['table_des_tables']['mots']='mots';
 	$interfaces['table_des_tables']['groupes_mots']='groupes_mots';
 
+	$interfaces['exceptions_des_jointures']['titre_mot'] = array('spip_mots', 'titre');
 	$interfaces['exceptions_des_jointures']['type_mot'] = array('spip_mots', 'type');
 	$interfaces['exceptions_des_jointures']['id_mot_syndic'] = array('spip_mots_liens', 'id_mot');
 	$interfaces['exceptions_des_jointures']['titre_mot_syndic'] = array('spip_mots', 'titre');
