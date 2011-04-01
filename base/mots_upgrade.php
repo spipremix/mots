@@ -25,7 +25,9 @@ function mots_upgrade($nom_meta_base_version,$version_cible){
 	if (!isset($GLOBALS['meta'][$nom_meta_base_version])){
 		$trouver_table = charger_fonction('trouver_table','base');
 		if ($desc = $trouver_table('spip_mots')
-		  AND isset($desc['field'])){
+		  AND isset($desc['field'])
+		  AND $desc = $trouver_table('spip_mots_articles')
+			AND isset($desc['field'])){
 			ecrire_meta($nom_meta_base_version,'1.0.0');
 		}
 		// si pas de table en base, on fera une simple creation de base
@@ -41,8 +43,6 @@ function mots_upgrade($nom_meta_base_version,$version_cible){
 	include_spip('maj/svn10000');
 	$maj['2.0.0'] = array(
 		array('maj_liens','mot'), // creer la table liens
-		array('maj_liens','mot','article'),
-		array('sql_drop_table',"spip_mots_articles"),
 		array('maj_liens','mot','breve'),
 		array('sql_drop_table',"spip_mots_breves"),
 		array('maj_liens','mot','rubrique'),
@@ -55,6 +55,8 @@ function mots_upgrade($nom_meta_base_version,$version_cible){
 		array('sql_drop_table',"spip_mots_auteurs"),
 		array('maj_liens','mot','document'),
 		array('sql_drop_table',"spip_mots_documents"),
+		array('maj_liens','mot','article'),
+		array('sql_drop_table',"spip_mots_articles"),
 	);
 
 	include_spip('base/upgrade');
