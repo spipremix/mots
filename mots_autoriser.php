@@ -66,7 +66,7 @@ function autoriser_mot_modifier_dist($faire, $type, $id, $qui, $opt) {
 	isset($opt['id_groupe'])
 		? autoriser('modifier', 'groupemots', $opt['id_groupe'], $qui, $opt)
 		: (
-			$t = sql_getfetsel("id_groupe", "spip_mots", "id_mot=".sql_quote($id))
+			$t = sql_getfetsel("id_groupe", "spip_mots", "id_mot=".intval($id))
 			AND autoriser('modifier', 'groupemots', $t, $qui, $opt)
 		);
 }
