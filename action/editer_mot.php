@@ -26,19 +26,13 @@ function action_editer_mot_dist($arg=null)
 
 	$id_groupe = intval(_request('id_groupe'));
 	if (!$id_mot AND $id_groupe) {
-		$id_mot = insert_mot($id_groupe);
+		$id_mot = mot_inserer($id_groupe);
 	}
 
 	// Enregistre l'envoi dans la BD
-	if ($id_mot > 0) $err = mots_set($id_mot);
+	if ($id_mot > 0) $err = mot_modifier($id_mot);
 	
-	if ($redirect = _request('redirect')) {
-		include_spip('inc/headers');
-		redirige_par_entete(parametre_url(urldecode($redirect),
-			'id_mot', $id_mot, '&'));
-	}
-	else
-		return array($id_mot,$err);
+	return array($id_mot,$err);
 }
 
 /**
@@ -46,7 +40,7 @@ function action_editer_mot_dist($arg=null)
  * @param int $id_groupe
  * @return int
  */
-function insert_mot($id_groupe) {
+function mot_inserer($id_groupe) {
 
 	$champs = array(
 		'id_groupe' => $id_groupe,
@@ -80,10 +74,10 @@ function insert_mot($id_groupe) {
 /**
  * Modifier un mot
  * @param int $id_mot
- * @param null $set
+ * @param array $set
  * @return string
  */
-function mots_set($id_mot, $set=null) {
+function mot_modifier($id_mot, $set=null) {
 	$err = '';
 
 	include_spip('inc/modifier');
@@ -93,18 +87,91 @@ function mots_set($id_mot, $set=null) {
 		 'titre', 'descriptif', 'texte', 'id_groupe'
 		),
 		// black list
-		array(),
+		array('id_groupe'),
 		// donnees eventuellement fournies
 		$set
 	);
 	
-	revision_mot($id_mot, $c);
+	modifier_contenu('mot', $id_mot,
+		array(
+			'nonvide' => array('titre' => _T('info_sans_titre'))
+		),
+		$c);
 
+	$c = collecter_requests(array('id_groupe', 'type'),array(),$set);
+	$err = mot_instituer($id_mot, $c);
 	return $err;
 }
 
+/**
+ * Modifier le groupe parent d'un mot
+ * @param  $id_mot
+ * @param  $c
+ * @return void
+ */
+function mot_instituer($id_mot, $c){
+	$champs = array();
+	// regler le groupe
+	if (isset($c['id_groupe']) OR isset($c['type'])) {
+		$row = sql_fetsel("titre", "spip_groupes_mots", "id_groupe=".intval($c['id_groupe']));
+		if ($row) {
+			$champs['id_groupe'] = $c['id_groupe'];
+			$champs['type'] = $row['titre'];
+		}
+	}
 
-function supprimer_mot($id_mot) {
+	// Envoyer aux plugins
+	$champs = pipeline('pre_edition',
+		array(
+			'args' => array(
+				'table' => 'spip_mots',
+				'id_objet' => $id_mot,
+				'action'=>'instituer',
+			),
+			'data' => $champs
+		)
+	);
+
+	if (!$champs) return;
+
+	sql_updateq('spip_mots', $champs, "id_mot=".intval($id_mot));
+
+	//
+	// Post-modifications
+	//
+
+	// Invalider les caches
+	include_spip('inc/invalideur');
+	suivre_invalideur("id='mot/$id_mot'");
+
+	// Pipeline
+	pipeline('post_edition',
+		array(
+			'args' => array(
+				'table' => 'spip_mots',
+				'id_objet' => $id_mot,
+				'action'=>'instituer',
+			),
+			'data' => $champs
+		)
+	);
+
+	// Notifications
+	if ($notifications = charger_fonction('notifications', 'inc')) {
+		$notifications('instituermot', $id_mot,
+			array('id_groupe' => $champs['id_groupe'])
+		);
+	}
+
+	return ''; // pas d'erreur
+}
+
+/**
+ * Supprimer un mot
+ * @param int $id_mot
+ * @return void
+ */
+function mot_supprimer($id_mot) {
 	sql_delete("spip_mots", "id_mot=".intval($id_mot));
 	mot_dissocier($id_mot, '*');
 	pipeline('trig_supprimer_objets_lies',
@@ -198,4 +265,17 @@ function un_seul_mot_dans_groupe($id_groupe)
 {
 	return sql_countsel('spip_groupes_mots', "id_groupe=$id_groupe AND unseul='oui'");
 }
+
+
+
+function insert_mot($id_groupe) {
+	return mot_inserer($id_groupe);
+}
+function mots_set($id_mot, $set=null) {
+	return mot_modifier($id_mot, $set);
+}
+function revision_mot($id_mot, $c=false) {
+	return mot_modifier($id_mot, $c);
+}
+
 ?>

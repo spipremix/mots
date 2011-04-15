@@ -24,18 +24,13 @@ function action_editer_groupe_mots_dist($id_groupe=null)
 	}
 
 	if (!intval($id_groupe)) {
-		$id_groupe = insert_groupemots();
+		$id_groupe = groupemots_inserer();
 	}
 
-	if ($id_groupe>0) $err = groupemots_set($id_groupe);
+	if ($id_groupe>0)
+		$err = groupemots_modifier($id_groupe);
 
-	if ($redirect = _request('redirect')) {
-		include_spip('inc/headers');
-		redirige_par_entete(parametre_url(urldecode($redirect),
-			'id_groupe', $id_groupe, '&'));
-	}
-	else
-		return array($id_groupe,$err);
+	return array($id_groupe,$err);
 }
 
 /**
@@ -44,7 +39,7 @@ function action_editer_groupe_mots_dist($id_groupe=null)
  * @param string $table
  * @return int 
  */
-function insert_groupemots($table='') {
+function groupemots_inserer($table='') {
 	$champs = array(
 		'titre' => '',
 		'unseul' => 'non',
@@ -86,7 +81,7 @@ function insert_groupemots($table='') {
  * @param array|null $set
  * @return string
  */
-function groupemots_set($id_groupe, $set=null) {
+function groupemots_modifier($id_groupe, $set=null) {
 	$err = '';
 
 	include_spip('inc/modifier');
@@ -113,9 +108,18 @@ function groupemots_set($id_groupe, $set=null) {
 	if (is_array($c['tables_liees']))
 		$c['tables_liees'] = implode(',',array_diff($c['tables_liees'],array('')));
 
-	revision_groupe_mot($id_groupe, $c);
+	modifier_contenu('groupe_mot', $id_groupe,
+		array(
+			'nonvide' => array('titre' => _T('info_sans_titre'))
+		),
+		$c);
 
 	return $err;
 }
 
+
+// obsolete
+function revision_groupe_mot($id_groupe, $c=false) {
+	return groupemots_modifier($id_groupe,$c);
+}
 ?>

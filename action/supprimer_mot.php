@@ -18,7 +18,7 @@ function action_supprimer_mot_dist() {
 	$id_mot = $securiser_action();
 
 	include_spip('action/editer_mot');
-	supprimer_mot($id_mot);
+	mot_supprimer($id_mot);
 }
 
 ?>
