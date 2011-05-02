@@ -8,7 +8,7 @@
 <div class="entete-formulaire">
 	[(#GET{redirect}|icone_verticale{<:icone_retour:>,groupe_mots-24.png,'',left retour[(#ENV{retourajax,''}|oui)ajax preload]})]
 	[<:titre_groupe_mots:>
-	<h1>(#ENV{titre,#INFO_TITRE{groupe_mots,#ID_GROUPE}|sinon{<:titre_nouveau_groupe:>}})</h1>]
+	<h1>(#ENV{titre,#INFO_TITRE{groupe_mots,#ID_GROUPE}|sinon{<:mots:titre_nouveau_groupe:>}})</h1>]
 </div>
 #SET{redirect,#ENV{redirect,#ID_GROUPE|generer_url_entite{groupe_mots}}}
 [(#ENV{retourajax,''}|oui)

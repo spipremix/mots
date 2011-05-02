@@ -1,7 +1,7 @@
 <BOUCLE_mot(MOTS){id_mot}{tout}{si #ENV{exec}|=={mot}}>
 [(#BOITE_OUVRIR{[
 	[(#AUTORISER{modifier,mot,#ID_MOT})
-	[(#URL_ECRIRE{mot_edit,id_mot=#ID_MOT}|icone_verticale{<:icone_modifier_mot:>,mot,edit,right ajax preload})]
+	[(#URL_ECRIRE{mot_edit,id_mot=#ID_MOT}|icone_verticale{<:mots:icone_modifier_mot:>,mot,edit,right ajax preload})]
 	]
 	<h1>[(#RANG). ](#TITRE|sinon{<:info_sans_titre:>})[(#CHEMIN_IMAGE{mot-24.png}|balise_img{mot,cadre-icone})]</h1>
 ],simple})]
@@ -11,8 +11,8 @@
 </div>
 
 
-<INCLURE{fond=prive/objets/liste/rubriques,titre=<:info_rubriques_liees_mot:>,id_mot,par=titre,ajax,env} />
-<INCLURE{fond=prive/objets/liste/articles,titre=<:info_articles_lies_mot:>,id_mot,par=date,statut=(#SESSION{statut}|statuts_articles_visibles),ajax,env} />
+<INCLURE{fond=prive/objets/liste/rubriques,titre=<:mots:info_rubriques_liees_mot:>,id_mot,par=titre,ajax,env} />
+<INCLURE{fond=prive/objets/liste/articles,titre=<:mots:info_articles_lies_mot:>,id_mot,par=date,statut=(#SESSION{statut}|statuts_articles_visibles),ajax,env} />
 
 <BOUCLE_autresobjets(spip_mots_liens){id_mot}{objet !IN article,rubrique}{fusion objet}{par objet}>
 	#SET{table,#OBJET|table_objet}

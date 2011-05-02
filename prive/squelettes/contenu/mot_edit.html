@@ -7,8 +7,8 @@
 <div class='cadre-formulaire-editer'>
 <div class="entete-formulaire">
 	[(#GET{retour}|icone_verticale{<:icone_retour:>,mot,'',left retour[(#ENV{retourajax,''}|oui)ajax preload]})]
-	[<:info_modifier_mot:>
-	<h1>(#ENV{titre,#INFO_TITRE{mot,#ID_MOT}|sinon{<:texte_nouveau_mot:>}})</h1>]
+	[<:mots:info_modifier_mot:>
+	<h1>(#ENV{titre,#INFO_TITRE{mot,#ID_MOT}|sinon{<:mots:texte_nouveau_mot:>}})</h1>]
 </div>
 
 #SET{redirect,#ENV{redirect,#ID_MOT|generer_url_entite{mot}}}

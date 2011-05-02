@@ -74,7 +74,7 @@ function formulaires_editer_mot_verifier_dist($id_mot='new', $id_groupe=0, $reto
 						"titre REGEXP ".sql_quote("^([0-9]+[.] )?".preg_quote(supprimer_numero(_request('titre')))."$")
 						." AND id_mot<>".intval($id_mot)))
 			$erreurs['titre'] =
-						_T('avis_doublon_mot_cle')
+						_T('mots:avis_doublon_mot_cle')
 						." <input type='hidden' name='confirm_titre_mot' value='1' />";
 	}
 	return $erreurs;

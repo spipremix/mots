@@ -15,7 +15,7 @@
 		<tr class='first_row'>
 			<th class='picto'></th>
 			<th class='titre'>[(#TRI{titre,<:info_titre:>,ajax})]</th>
-			<th class='type'>[(#TRI{type,<:info_dans_groupe:>,ajax})]</th>
+			<th class='type'>[(#TRI{type,<:mots:info_dans_groupe:>,ajax})]</th>
 			<th class='action'>&nbsp;</th>
 		</tr>
 	</thead>
@@ -32,10 +32,10 @@
 	</tbody>
 </table>
 [<p class='pagination'>(#PAGINATION{prive})</p>]
-[(#GRAND_TOTAL|>{3}|oui)<div class="action"><button class="button link" name="supprimer_lien#EVAL{chr(91)}mot-*-#OBJET-#ID_OBJET#EVAL{chr(93)}" value="X"><:info_retirer_mots:> [(#CHEMIN_IMAGE{supprimer-12.png}|balise_img{'X'})]</button></div>]
+[(#GRAND_TOTAL|>{3}|oui)<div class="action"><button class="button link" name="supprimer_lien#EVAL{chr(91)}mot-*-#OBJET-#ID_OBJET#EVAL{chr(93)}" value="X"><:mots:info_retirer_mots:> [(#CHEMIN_IMAGE{supprimer-12.png}|balise_img{'X'})]</button></div>]
 </div>
 </B_liste_mot>
 <div class="liste-objets liste-objets-lies mots">
-<strong class="caption">[(#ENV*{titre,<:info_aucun_mot_cle:>}) ]#AIDER{artmots}</strong>
+<strong class="caption">[(#ENV*{titre,<:mots:info_aucun_mot_cle:>}) ]#AIDER{artmots}</strong>
 </div>
 <//B_liste_mot>
