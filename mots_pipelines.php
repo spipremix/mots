@@ -105,17 +105,4 @@ function mots_post_edition($flux){
 	return $flux;
 }
 
-
-
-/**
- * Libelle des logos de mot et de groupe
- * @param <type> $logo_libelles
- * @return string
- */
-function mots_libeller_logo($logo_libelles) {
-	$logo_libelles['mot'] = _T('mots:logo_mot_cle').aide("breveslogo");
-	$logo_libelles['groupe'] = _T('mots:logo_groupe').aide("breveslogo");
-	$logo_libelles['groupe_mots'] = _T('mots:logo_groupe').aide("breveslogo");
-	return $logo_libelles;
-}
 ?>
