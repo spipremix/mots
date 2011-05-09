@@ -60,6 +60,7 @@
 		<inclure>mots_pipelines.php</inclure>
 	</pipeline>
 	
+	<necessite id="SPIP" version="[3.0.0-dev;]" />
 	<categorie>edition</categorie>
 	<traduire gestionnaire="salvatore" module="mots" reference="fr" />
 </plugin>
