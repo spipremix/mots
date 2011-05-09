@@ -60,4 +60,6 @@
 		<inclure>mots_pipelines.php</inclure>
 	</pipeline>
 	
+	<categorie>edition</categorie>
+	<traduire gestionnaire="salvatore" module="mots" reference="fr" />
 </plugin>
