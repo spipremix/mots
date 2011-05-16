@@ -28,7 +28,7 @@ function filtre_objets_associes_mot_dist($id_mot,$id_groupe) {
 		$table = table_objet($type);
 		$nb = (isset($occurrences[$id_groupe][$table][$id_mot]) ? $occurrences[$id_groupe][$table][$id_mot] : 0);
 		if ($nb)
-			$associes[] = singulier_ou_pluriel ($nb, "info_1_$type", "info_nb_{$type}s");
+			$associes[] = objet_afficher_nb($nb,$type);
 	}
 
 	$associes = pipeline('afficher_nombre_objets_associes_a',array('args'=>array('objet'=>'mot','id_objet'=>$id_mot),'data'=>$associes));
