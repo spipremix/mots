@@ -26,28 +26,29 @@
 				]<textarea name='texte' id='text_area' cols='40' rows='[(#ENV**{config}|table_valeur{lignes}|plus{2})]'>[(#ENV**{texte})]</textarea>
 	    </li>
 	    <li class="fieldset">
-	      <fieldset><h3 class="legend"><:mots:info_mots_cles_association:></h3>
-	      <ul><li class="editer_groupe_mots_associer">
-				<INCLURE{fond=formulaires/inc-choisir-groupemots-tables-liees,selected=#ENV*{tables_liees},name=tables_liees} />
-	    	</li>
-	    	</ul>
-	    	</fieldset>
-	    	[(#ENV{config}|table_valeur{config_precise_groupes}|=={oui}|ou{#ENV{unseul}|=={oui}}|ou{#ENV{obligatoire}|=={oui}}|oui)
-	    	<fieldset><ul><li class="editer_groupe_mots_reglage_avance">
-	    	<div class='choix'><input type='checkbox' class='checkbox' name='unseul' value='oui'[(#ENV{unseul}|=={oui}|oui)checked='checked'] id='unseul' /><label for='unseul'><:mots:info_selection_un_seul_mot_cle:></label></div>
-	    	<div class='choix'><input type='checkbox' class='checkbox' name='obligatoire' value='oui'[(#ENV{obligatoire}|=={oui}|oui)checked='checked'] id='obligatoire' /><label for='obligatoire'><:mots:avis_conseil_selection_mot_cle:></label></div>
-    		</li></ul></fieldset>
-    		]
-				<fieldset><h3 class="legend"><:mots:info_qui_attribue_mot_cle:></h3><ul><li class="editer_groupe_mots_editeur">
-	    	<div class='choix'><input type='checkbox' class='checkbox' name='minirezo' value='oui'[(#ENV{minirezo}|=={oui}|oui)checked='checked'] id='acces_minirezo' /><label for='acces_minirezo'><:mots:bouton_checkbox_qui_attribue_mot_cle_administrateurs:></label></div>
-	    	<div class='choix'><input type='checkbox' class='checkbox' name='comite' value='oui'[(#ENV{comite}|=={oui}|oui)checked='checked'] id='acces_comite' /><label for='acces_comite'><:mots:bouton_checkbox_qui_attribue_mot_cle_redacteurs:></label></div>
-				[(#ENV{config}|table_valeur{forums_publics}|=={non}|non)
-					[(#ENV{config}|table_valeur{mots_cles_forums}|=={oui}|ou{#ENV{forum}|=={oui}}|oui)
-	    		<div class='choix'><input type='checkbox' class='checkbox' name='forum' value='oui'[(#ENV{forum}|=={oui}|oui)checked='checked'] id='acces_forum' /><label for='acces_forum'><:mots:bouton_checkbox_qui_attribue_mot_cle_visiteurs:></label></div>
-					]
-				]
-				<!--choix_acces-->
-    		</li>
+	      <fieldset>
+	      <ul>
+					<li class="editer_groupe_mots_associer">
+						<label><:mots:info_mots_cles_association:></label>
+						<INCLURE{fond=formulaires/inc-choisir-groupemots-tables-liees,selected=#ENV*{tables_liees},name=tables_liees} />
+	    		</li>
+		    	[(#ENV{config}|table_valeur{config_precise_groupes}|=={oui}|ou{#ENV{unseul}|=={oui}}|ou{#ENV{obligatoire}|=={oui}}|oui)
+					<li class="editer_groupe_mots_reglage_avance">
+						<div class='choix'><input type='checkbox' class='checkbox' name='unseul' value='oui'[(#ENV{unseul}|=={oui}|oui)checked='checked'] id='unseul' /><label for='unseul'><:mots:info_selection_un_seul_mot_cle:></label></div>
+						<div class='choix'><input type='checkbox' class='checkbox' name='obligatoire' value='oui'[(#ENV{obligatoire}|=={oui}|oui)checked='checked'] id='obligatoire' /><label for='obligatoire'><:mots:avis_conseil_selection_mot_cle:></label></div>
+					</li>
+  	  		]
+					<li class="editer_groupe_mots_editeur">
+						<label><:mots:info_qui_attribue_mot_cle:></label>
+						<div class='choix'><input type='checkbox' class='checkbox' name='minirezo' value='oui'[(#ENV{minirezo}|=={oui}|oui)checked='checked'] id='acces_minirezo' /><label for='acces_minirezo'><:mots:bouton_checkbox_qui_attribue_mot_cle_administrateurs:></label></div>
+						<div class='choix'><input type='checkbox' class='checkbox' name='comite' value='oui'[(#ENV{comite}|=={oui}|oui)checked='checked'] id='acces_comite' /><label for='acces_comite'><:mots:bouton_checkbox_qui_attribue_mot_cle_redacteurs:></label></div>
+						[(#ENV{config}|table_valeur{forums_publics}|=={non}|non)
+							[(#ENV{config}|table_valeur{mots_cles_forums}|=={oui}|ou{#ENV{forum}|=={oui}}|oui)
+							<div class='choix'><input type='checkbox' class='checkbox' name='forum' value='oui'[(#ENV{forum}|=={oui}|oui)checked='checked'] id='acces_forum' /><label for='acces_forum'><:mots:bouton_checkbox_qui_attribue_mot_cle_visiteurs:></label></div>
+							]
+						]
+					<!--choix_acces-->
+  	  		</li>
     		</ul></fieldset>
 	    </li>
 	  </ul>
