@@ -80,6 +80,7 @@ per personalizzare la presentazione degli articoli nei tuoi modelli di layout.',
 	'titre_mots_cles_dans_forum' => 'Parole chiave nel forum del sito pubblico',
 	'titre_mots_tous' => 'Le parole chiave',
 	'titre_nouveau_groupe' => 'Nuovo gruppo',
+	'titre_objets_lies_mot' => 'Liés à ce mot-clé :', # NEW
 	'titre_page_mots_tous' => 'Parole chiave'
 );
 

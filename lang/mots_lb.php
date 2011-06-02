@@ -74,6 +74,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_mots_cles_dans_forum' => 'Schlësselwierder an de Forum\'en vum öffentlëchen Site',
 	'titre_mots_tous' => 'D\'Schlësselwierder',
 	'titre_nouveau_groupe' => 'Neie Grupp',
+	'titre_objets_lies_mot' => 'Liés à ce mot-clé :', # NEW
 	'titre_page_mots_tous' => 'Schlësselwierder'
 );
 

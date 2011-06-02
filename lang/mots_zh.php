@@ -78,6 +78,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_mots_cles_dans_forum' => '公众论坛的关键词',
 	'titre_mots_tous' => '关键词',
 	'titre_nouveau_groupe' => '新组',
+	'titre_objets_lies_mot' => 'Liés à ce mot-clé :', # NEW
 	'titre_page_mots_tous' => '关键词'
 );
 

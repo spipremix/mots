@@ -80,6 +80,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_mots_cles_dans_forum' => 'Nyckelord i de publika forumen',
 	'titre_mots_tous' => 'Nyckelord',
 	'titre_nouveau_groupe' => 'Ny grupp',
+	'titre_objets_lies_mot' => 'Liés à ce mot-clé :', # NEW
 	'titre_page_mots_tous' => 'Mots-clés' # NEW
 );
 

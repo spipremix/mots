@@ -80,6 +80,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_mots_cles_dans_forum' => 'Trefwoorden in de forums van de publieke site',
 	'titre_mots_tous' => 'Trefwoorden',
 	'titre_nouveau_groupe' => 'Nieuwe groep',
+	'titre_objets_lies_mot' => 'Liés à ce mot-clé :', # NEW
 	'titre_page_mots_tous' => 'Trefwoorden'
 );
 

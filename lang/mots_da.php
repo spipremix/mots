@@ -78,6 +78,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_mots_cles_dans_forum' => 'Nøgleord i forummer på det offentlige websted',
 	'titre_mots_tous' => 'Nøgleord',
 	'titre_nouveau_groupe' => 'Nyhedsgruppe',
+	'titre_objets_lies_mot' => 'Liés à ce mot-clé :', # NEW
 	'titre_page_mots_tous' => 'Nøgleord'
 );
 

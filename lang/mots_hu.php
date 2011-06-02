@@ -78,6 +78,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_mots_cles_dans_forum' => 'Kulcsszavak a nyilvános honlap fórumaiban',
 	'titre_mots_tous' => 'Kulcsszavak',
 	'titre_nouveau_groupe' => 'Új csoport',
+	'titre_objets_lies_mot' => 'Liés à ce mot-clé :', # NEW
 	'titre_page_mots_tous' => 'Kulcsszavak'
 );
 

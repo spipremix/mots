@@ -80,6 +80,7 @@ con <b>@texte_lie@</b> debes confirmar esta decisión:',
 	'titre_mots_cles_dans_forum' => 'Pallabres-clave nos foros del sitiu públicu',
 	'titre_mots_tous' => 'Les pallabres-clave',
 	'titre_nouveau_groupe' => 'Grupu nuevu',
+	'titre_objets_lies_mot' => 'Liés à ce mot-clé :', # NEW
 	'titre_page_mots_tous' => 'Pallabres-clave'
 );
 

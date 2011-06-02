@@ -80,6 +80,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_mots_cles_dans_forum' => 'Kata-kata kunci di forum situs umum',
 	'titre_mots_tous' => 'Kata kunci',
 	'titre_nouveau_groupe' => 'Kelompok baru',
+	'titre_objets_lies_mot' => 'Liés à ce mot-clé :', # NEW
 	'titre_page_mots_tous' => 'Kata kunci'
 );
 

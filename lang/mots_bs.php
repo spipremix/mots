@@ -73,6 +73,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_mots_cles_dans_forum' => 'Kljucne rijeci u forumu javne stranice',
 	'titre_mots_tous' => 'Kljucne rijeci',
 	'titre_nouveau_groupe' => 'Nova grupa',
+	'titre_objets_lies_mot' => 'Liés à ce mot-clé :', # NEW
 	'titre_page_mots_tous' => 'Kljucne rijeci'
 );
 

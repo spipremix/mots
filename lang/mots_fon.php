@@ -73,6 +73,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_mots_cles_dans_forum' => 'gbètákɛn é ɖò kplékplé gblogblojí ɔ tɔn mɛ',
 	'titre_mots_tous' => 'gbètákɛn lɛ',
 	'titre_nouveau_groupe' => 'àgùn yɔyɔ',
+	'titre_objets_lies_mot' => 'Liés à ce mot-clé :', # NEW
 	'titre_page_mots_tous' => 'gbètákɛn'
 );
 

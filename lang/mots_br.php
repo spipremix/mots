@@ -78,6 +78,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_mots_cles_dans_forum' => 'Gerioù-stur e foromoù al lec\'hienn foran',
 	'titre_mots_tous' => 'Ar gerioù-stur',
 	'titre_nouveau_groupe' => 'Strollad nevez',
+	'titre_objets_lies_mot' => 'Liés à ce mot-clé :', # NEW
 	'titre_page_mots_tous' => 'Gerioù-stur'
 );
 

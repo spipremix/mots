@@ -80,6 +80,7 @@ enriquir la navegació del vostre lloc, inclús utilitzar aquestes propietats
 	'titre_mots_cles_dans_forum' => 'Paraules clau dins dels fòrums del lloc públic',
 	'titre_mots_tous' => 'Les paraules clau',
 	'titre_nouveau_groupe' => 'Grup nou',
+	'titre_objets_lies_mot' => 'Liés à ce mot-clé :', # NEW
 	'titre_page_mots_tous' => 'Paraules clau'
 );
 

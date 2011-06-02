@@ -75,6 +75,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_mots_cles_dans_forum' => 'Schlagworte in öffentlichen Foren',
 	'titre_mots_tous' => 'Schlagworte',
 	'titre_nouveau_groupe' => 'Neue Kategorie',
+	'titre_objets_lies_mot' => 'Liés à ce mot-clé :', # NEW
 	'titre_page_mots_tous' => 'Schlagworte'
 );
 

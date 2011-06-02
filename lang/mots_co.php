@@ -78,6 +78,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_mots_cles_dans_forum' => 'Segni in u foru di u situ pùbblicu',
 	'titre_mots_tous' => 'I segni',
 	'titre_nouveau_groupe' => 'Nuvellu gruppu',
+	'titre_objets_lies_mot' => 'Liés à ce mot-clé :', # NEW
 	'titre_page_mots_tous' => 'Segni'
 );
 

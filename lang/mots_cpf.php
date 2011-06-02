@@ -81,6 +81,7 @@ Li pé permèt alor swazi inn  sèl molaklé sanm group, o rand inn group pli im
 	'titre_mots_cles_dans_forum' => 'Bann molaklé dann bann forom sir figirwèb',
 	'titre_mots_tous' => 'Bann molaklé',
 	'titre_nouveau_groupe' => 'Nouvo group',
+	'titre_objets_lies_mot' => 'Liés à ce mot-clé :', # NEW
 	'titre_page_mots_tous' => 'Bann molaklé'
 );
 

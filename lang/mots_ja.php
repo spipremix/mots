@@ -75,6 +75,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_mots_cles_dans_forum' => 'パブリックなサイトの掲示板のキーワード',
 	'titre_mots_tous' => 'キーワード',
 	'titre_nouveau_groupe' => '新しいグループ',
+	'titre_objets_lies_mot' => 'Liés à ce mot-clé :', # NEW
 	'titre_page_mots_tous' => 'キーワード'
 );
 

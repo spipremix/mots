@@ -73,6 +73,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_mots_cles_dans_forum' => 'ពាក្យគន្លឹះ ក្នុងទីប្រជុំមតិ នៃសៃថ៍សាធារណះ',
 	'titre_mots_tous' => 'ពាក្យ​គន្លឹះ',
 	'titre_nouveau_groupe' => 'ក្រុម​ថ្មី',
+	'titre_objets_lies_mot' => 'Liés à ce mot-clé :', # NEW
 	'titre_page_mots_tous' => 'ពាក្យ​គន្លឹះ'
 );
 

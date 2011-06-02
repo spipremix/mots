@@ -73,6 +73,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_mots_cles_dans_forum' => 'Toki publikoko foroetan hitz gakoak',
 	'titre_mots_tous' => 'Gako-hitzak',
 	'titre_nouveau_groupe' => 'Talde berria',
+	'titre_objets_lies_mot' => 'Liés à ce mot-clé :', # NEW
 	'titre_page_mots_tous' => 'Gako-hitzak'
 );
 

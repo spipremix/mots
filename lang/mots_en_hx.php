@@ -80,6 +80,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_mots_cles_dans_forum' => 'K3yw0rd5 1n 7h3 pub11c 5173 f0rum5',
 	'titre_mots_tous' => 'K3yw0rd5',
 	'titre_nouveau_groupe' => 'N3w gr0up',
+	'titre_objets_lies_mot' => 'Liés à ce mot-clé :', # NEW
 	'titre_page_mots_tous' => 'K3yw0rd5'
 );
 

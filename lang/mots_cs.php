@@ -80,6 +80,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_mots_cles_dans_forum' => 'Klíčová slova diskusních skupin veřejného webu',
 	'titre_mots_tous' => 'Klíčová slova',
 	'titre_nouveau_groupe' => 'Nová skupina',
+	'titre_objets_lies_mot' => 'Liés à ce mot-clé :', # NEW
 	'titre_page_mots_tous' => 'Klíčová slova'
 );
 
