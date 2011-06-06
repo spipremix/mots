@@ -10,7 +10,7 @@
 		#ACTION_FORMULAIRE{#ENV{action}}
 		<ul>
 			#SET{name,articles_mots}#SET{erreurs,#ENV**{erreurs}|table_valeur{#GET{name}}}
-			<li class="editer_[(#GET{name})][ (#GET{obli})][ (#GET{erreurs}|oui)erreur]">
+			<li class="editer editer_[(#GET{name})][ (#GET{obli})][ (#GET{erreurs}|oui)erreur]">
 				<label><:mots:info_question_mots_cles:></label>[
 				<span class='erreur_message'>(#GET{erreurs})</span>
 				]<div class="choix">
@@ -25,7 +25,7 @@
 				</div>
 			</li>
 			#SET{name,config_precise_groupes}#SET{erreurs,#ENV**{erreurs}|table_valeur{#GET{name}}}
-			<li class="editer_[(#GET{name})][ (#GET{obli})][ (#GET{erreurs}|oui)erreur]"[(#ENV{articles_mots}|=={oui}|non)style="display:none;"]>
+			<li class="editer editer_[(#GET{name})][ (#GET{obli})][ (#GET{erreurs}|oui)erreur]"[(#ENV{articles_mots}|=={oui}|non)style="display:none;"]>
 				<label><:mots:titre_config_groupe_mots_cles:></label>[
 				<span class='erreur_message'>(#GET{erreurs})</span>
 				]<p class="explication"><:mots:texte_config_groupe_mots_cles:></p>
@@ -39,7 +39,7 @@
 				</div>
 			</li>
 			#SET{name,mots_cles_forums}#SET{erreurs,#ENV**{erreurs}|table_valeur{#GET{name}}}
-			<li class="editer_[(#GET{name})][ (#GET{obli})][ (#GET{erreurs}|oui)erreur]"[(#ENV{articles_mots}|=={oui}|non)style="display:none;"]>
+			<li class="editer editer_[(#GET{name})][ (#GET{obli})][ (#GET{erreurs}|oui)erreur]"[(#ENV{articles_mots}|=={oui}|non)style="display:none;"]>
 				<label><:mots:titre_mots_cles_dans_forum:></label>[
 				<span class='erreur_message'>(#GET{erreurs})</span>
 				]<p class="explication"><:mots:texte_mots_cles_dans_forum:></p>
