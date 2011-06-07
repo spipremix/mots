@@ -68,6 +68,7 @@ function mots_declarer_tables_objets_sql($tables){
 		'texte_modifier' => 'mots:icone_modifier_mot',
 		'texte_creer' => 'icone_creer_mot_cle',
 		'texte_logo_objet' => 'mots:logo_mot_cle',
+		'texte_creer_associer' => 'mots:creer_et_associer_un_mot',
 		'info_aucun_objet'=> 'info_aucun_mot',
 		'info_1_objet' => 'info_1_mot',
 		'info_nb_objets' => 'info_nb_mots',
