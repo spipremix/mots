@@ -16,6 +16,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_checkbox_qui_attribue_mot_cle_redacteurs' => 'نويسندگان',
 	'bouton_checkbox_qui_attribue_mot_cle_visiteurs' => 'بازديد كنندهاى سايت همگانى هنگامى كه پيامى در سخنگاه ميفرستند',
 
+	// C
+	'creer_et_associer_un_mot' => 'Créér et associer un mot-clé', # NEW
+
 	// I
 	'icone_creation_groupe_mots' => 'يك گروه واژه نو بسازيد',
 	'icone_creation_mots_cles' => 'يك واژه-كليد نو بسازيد',

@@ -16,6 +16,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_checkbox_qui_attribue_mot_cle_redacteurs' => 'المحررون',
 	'bouton_checkbox_qui_attribue_mot_cle_visiteurs' => 'زوار الموقع العمومي حين يرسلون مشاركة الى المنتدى',
 
+	// C
+	'creer_et_associer_un_mot' => 'Créér et associer un mot-clé', # NEW
+
 	// I
 	'icone_creation_groupe_mots' => 'إنشاء مجموعة جديدة',
 	'icone_creation_mots_cles' => 'إنشاء مفتاح جديد',
@@ -80,7 +83,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_mots_cles_dans_forum' => 'المفاتيح في منتديات الموقع العمومي',
 	'titre_mots_tous' => 'المفاتيح',
 	'titre_nouveau_groupe' => 'مجموعة جديدة',
-	'titre_objets_lies_mot' => 'Liés à ce mot-clé :', # NEW
+	'titre_objets_lies_mot' => 'مرتبطة بهذا المفتاح:',
 	'titre_page_mots_tous' => 'المفاتيح'
 );
 

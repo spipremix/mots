@@ -16,6 +16,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_checkbox_qui_attribue_mot_cle_redacteurs' => 'עורכים',
 	'bouton_checkbox_qui_attribue_mot_cle_visiteurs' => 'אורחים של אתר ציבורי כשהם מוסיפים הודעה בפורום ',
 
+	// C
+	'creer_et_associer_un_mot' => 'Créér et associer un mot-clé', # NEW
+
 	// I
 	'icone_creation_groupe_mots' => 'צור קבוצה חדשה של מילות מפתח',
 	'icone_creation_mots_cles' => 'צור מילת מפתח חדשה',

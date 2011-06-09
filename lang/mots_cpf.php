@@ -20,6 +20,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 ',
 
+	// C
+	'creer_et_associer_un_mot' => 'Créér et associer un mot-clé', # NEW
+
 	// I
 	'icone_creation_groupe_mots' => 'Kré inn nouvo group astèr pou bann molaklé',
 	'icone_creation_mots_cles' => 'Kré inn nouvo molaklé',

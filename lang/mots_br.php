@@ -16,6 +16,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_checkbox_qui_attribue_mot_cle_redacteurs' => 'ar skridaozerien',
 	'bouton_checkbox_qui_attribue_mot_cle_visiteurs' => 'gweladennerien al lec\'hienn foran pa bostont ur gemennadenn er forom',
 
+	// C
+	'creer_et_associer_un_mot' => 'Créér et associer un mot-clé', # NEW
+
 	// I
 	'icone_creation_groupe_mots' => 'Krouiñ ur strollad gerioù nevez',
 	'icone_creation_mots_cles' => 'Krouiñ ur ger-stur nevez',

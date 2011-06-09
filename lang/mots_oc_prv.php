@@ -16,6 +16,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_checkbox_qui_attribue_mot_cle_redacteurs' => 'lei redactors',
 	'bouton_checkbox_qui_attribue_mot_cle_visiteurs' => 'lei vesitaires dau sit public quora mandan un messatge dins un forum.',
 
+	// C
+	'creer_et_associer_un_mot' => 'Créér et associer un mot-clé', # NEW
+
 	// I
 	'icone_creation_groupe_mots' => 'Crear un novèu grop de mots',
 	'icone_creation_mots_cles' => 'Crear un mot clau nòu',
