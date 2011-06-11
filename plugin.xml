@@ -5,6 +5,7 @@
 	<version>2.1.4</version>
 	<version_base>2.0.0</version_base>
 	<etat>test</etat>
+	<slogan>Gestion des mots et groupes de mots dans SPIP</slogan>
 	<description>Mots et Groupes de mots</description>
 	<prefix>mots</prefix>
 	<install>base/mots_upgrade.php</install>
