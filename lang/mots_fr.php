@@ -24,6 +24,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_modifier_mot' => 'Modifier ce mot-clé',
 	'icone_mots_cles' => 'Mots-clés',
 	'icone_supprimer_groupe_mots' => 'Supprimer ce groupe',
+	'icone_voir_groupe_mots' => 'Voir ce groupe de mots',
 	'icone_voir_tous_mots_cles' => 'Voir tous les mots-clés',
 	'info_1_groupe_mots' => '1 groupe de mots',
 	'info_articles_lies_mot' => 'Les articles liés à ce mot-clé',
