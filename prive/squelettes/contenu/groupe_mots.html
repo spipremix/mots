@@ -13,6 +13,13 @@
 
 #BOITE_FERMER
 
+<BOUCLE_cpt_mot(MOTS){id_groupe} />[(#TOTAL_BOUCLE|>{10}|oui)
+<p class="tri"><:info_afficher_par_nb:> [(#SELF|parametre_url{nb,10}|lien_ou_expose{10,#ENV{nb}|=={10},ajax})]
+	[ | (#SELF|parametre_url{nb,50}|lien_ou_expose{50,#ENV{nb}|=={50},ajax})]
+	[ | (#TOTAL_BOUCLE|>{50}|oui) [(#SELF|parametre_url{nb,200}|lien_ou_expose{200,#ENV{nb}|=={200},ajax})]]
+	[ | (#TOTAL_BOUCLE|>{200}|oui) [(#SELF|parametre_url{nb,1000}|lien_ou_expose{1000,#ENV{nb}|=={1000},ajax})]]
+</p>
+]<//B_cpt_mot>
 <INCLURE{fond=prive/objets/liste/mots-admin,id_groupe,par=titre,ajax,env} />
 [(#AUTORISER{creer,mot,'','',#ARRAY{id_groupe,#ID_GROUPE}})
 	[(#URL_ECRIRE{mot_edit,new=oui&id_groupe=#ID_GROUPE}|parametre_url{redirect,#SELF}
