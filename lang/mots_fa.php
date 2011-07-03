@@ -26,6 +26,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_modifier_mot' => 'اصلاح اين كليدواژه',
 	'icone_mots_cles' => 'واژه-كليدها',
 	'icone_supprimer_groupe_mots' => 'اين گروه را حذف كنيد',
+	'icone_voir_groupe_mots' => 'Voir ce groupe de mots', # NEW
 	'icone_voir_tous_mots_cles' => 'همه واژه-كليدها را نگاه كنيد',
 	'info_1_groupe_mots' => '1 groupe de mots', # NEW
 	'info_articles_lies_mot' => 'مقالات مربوط به اين واژه-كليد',

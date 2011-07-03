@@ -26,6 +26,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_modifier_mot' => 'Modificaţi acest cuvânt-cheie',
 	'icone_mots_cles' => 'Cuvinte-cheie',
 	'icone_supprimer_groupe_mots' => 'Ştergeţi acest grup',
+	'icone_voir_groupe_mots' => 'Voir ce groupe de mots', # NEW
 	'icone_voir_tous_mots_cles' => 'Vedeţi toate cuvintele-cheie',
 	'info_1_groupe_mots' => '1 groupe de mots', # NEW
 	'info_articles_lies_mot' => 'Articole legate de acest cuvânt-cheie',

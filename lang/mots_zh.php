@@ -26,6 +26,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_modifier_mot' => 'Modifier ce mot-clé', # NEW
 	'icone_mots_cles' => '关键词',
 	'icone_supprimer_groupe_mots' => '删除组',
+	'icone_voir_groupe_mots' => 'Voir ce groupe de mots', # NEW
 	'icone_voir_tous_mots_cles' => '查看所有关键词',
 	'info_1_groupe_mots' => '1 groupe de mots', # NEW
 	'info_articles_lies_mot' => '与关键词关联的文章',

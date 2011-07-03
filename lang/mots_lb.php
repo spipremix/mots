@@ -26,6 +26,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_modifier_mot' => 'Dëst Schlësselwuert änneren',
 	'icone_mots_cles' => 'Schlësselwierder',
 	'icone_supprimer_groupe_mots' => 'Dëse Grupp läschen',
+	'icone_voir_groupe_mots' => 'Voir ce groupe de mots', # NEW
 	'icone_voir_tous_mots_cles' => 'All d\'Schlësselwierder weisen',
 	'info_1_groupe_mots' => '1 groupe de mots', # NEW
 	'info_articles_lies_mot' => 'Artikelen déi un dëst Schlësselwuert gebonnen sinn',

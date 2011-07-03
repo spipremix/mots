@@ -26,6 +26,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_modifier_mot' => 'Modifier ce mot-clé', # NEW
 	'icone_mots_cles' => 'Mokle yo',
 	'icone_supprimer_groupe_mots' => 'Kraze gwoup la',
+	'icone_voir_groupe_mots' => 'Voir ce groupe de mots', # NEW
 	'icone_voir_tous_mots_cles' => 'Gad tout mokle yo',
 	'info_1_groupe_mots' => '1 groupe de mots', # NEW
 	'info_articles_lies_mot' => 'Atik yo ki te fin jwenn ak mokle-a ',

@@ -26,6 +26,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_modifier_mot' => 'កែប្រែ ពាក្យគន្លឹះនេះ',
 	'icone_mots_cles' => 'ពាក្យ​គន្លឹះ',
 	'icone_supprimer_groupe_mots' => 'លប់​ក្រុម​នេះ',
+	'icone_voir_groupe_mots' => 'Voir ce groupe de mots', # NEW
 	'icone_voir_tous_mots_cles' => 'បង្ហាញ គ្រប់ពាក្យគន្លឹះ',
 	'info_1_groupe_mots' => '1 groupe de mots', # NEW
 	'info_articles_lies_mot' => 'អត្ថបទ​ដែល​ទាក់ទង​ទៅ​នឹង​ពាក្យ​គន្លឹះ​នេះ',

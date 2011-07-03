@@ -26,6 +26,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_modifier_mot' => 'Modificar aquesta paraula clau',
 	'icone_mots_cles' => 'Paraules clau',
 	'icone_supprimer_groupe_mots' => 'Suprimir aquest grup',
+	'icone_voir_groupe_mots' => 'Voir ce groupe de mots', # NEW
 	'icone_voir_tous_mots_cles' => 'Mostrar totes les paraules clau',
 	'info_1_groupe_mots' => '1 groupe de mots', # NEW
 	'info_articles_lies_mot' => 'Articles lligats a aquesta paraula clau',

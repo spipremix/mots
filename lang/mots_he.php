@@ -26,6 +26,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_modifier_mot' => 'שנה מילת מפתח זאת',
 	'icone_mots_cles' => 'מילות מפתח',
 	'icone_supprimer_groupe_mots' => 'מחק קבוצה זו',
+	'icone_voir_groupe_mots' => 'Voir ce groupe de mots', # NEW
 	'icone_voir_tous_mots_cles' => 'הצג את כל מילות המפתח',
 	'info_1_groupe_mots' => '1 groupe de mots', # NEW
 	'info_articles_lies_mot' => 'מאמרים מקושרים עם מילת המפתח הזו',

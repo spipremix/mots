@@ -17,7 +17,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_checkbox_qui_attribue_mot_cle_visiteurs' => 'Besucher der Website die einen Beitrag in ein Forum geschrieben haben.',
 
 	// C
-	'creer_et_associer_un_mot' => 'Créér et associer un mot-clé', # NEW
+	'creer_et_associer_un_mot' => 'Schlagwort anlegen und zuordnen',
 
 	// I
 	'icone_creation_groupe_mots' => 'Neue Schlagwort-Kategorie anlegen',
@@ -26,10 +26,11 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_modifier_mot' => 'Schlagwort ändern',
 	'icone_mots_cles' => 'Schlagworte',
 	'icone_supprimer_groupe_mots' => 'Schlagwort-Kategorie löschen',
+	'icone_voir_groupe_mots' => 'Voir ce groupe de mots', # NEW
 	'icone_voir_tous_mots_cles' => 'Alle Schlagworte anzeigen',
-	'info_1_groupe_mots' => '1 groupe de mots', # NEW
+	'info_1_groupe_mots' => 'Eine Schlagwortgruppe',
 	'info_articles_lies_mot' => 'Alle Artikel zu diesem Schlagwort',
-	'info_aucun_groupe_mots' => 'Aucun groupe de mots', # NEW
+	'info_aucun_groupe_mots' => 'Keine Schlagwortgruppe',
 	'info_aucun_mot_cle' => 'Kein Schlagwort',
 	'info_changer_nom_groupe' => 'Namen dieser Kategorie ändern:',
 	'info_creation_mots_cles' => 'Hier verwalten Sie die Schlagworte der Website',
@@ -39,7 +40,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_modifier_mot' => 'Schlagwort ändern:',
 	'info_mots_cles' => 'Schlagworte',
 	'info_mots_cles_association' => 'Schlagworte dieser Kategorie können zugeordnet werden:',
-	'info_nb_groupe_mots' => '@nb@ groupes de mots', # NEW
+	'info_nb_groupe_mots' => '@nb@ Schlagwortgruppen',
 	'info_oui_suppression_mot_cle' => ' ich möchte dieses Schlagwort endgültig löschen.',
 	'info_question_mots_cles' => 'Möchten Sie Schlagworte für Ihre Website verwenden?',
 	'info_qui_attribue_mot_cle' => 'Schlagworte dieser Kategorie können zugeordnet werden von:',
@@ -72,13 +73,13 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'texte_nouveau_mot' => 'Neues Wort',
 	'titre_config_groupe_mots_cles' => 'Schlagwort-Kategorien einrichten',
 	'titre_gauche_mots_edit' => 'WORT NUMMER:',
-	'titre_groupe_mots' => 'Groupe de mots-cl&eacute;s', # NEW
-	'titre_groupe_mots_numero' => 'GROUPE DE MOTS NUMÉRO :', # NEW
-	'titre_groupes_mots' => 'Groupes de mots-cl&eacute;s', # NEW
+	'titre_groupe_mots' => 'Schlagwortgruppe',
+	'titre_groupe_mots_numero' => 'SCHLAGWORTGRUPPE NO.:',
+	'titre_groupes_mots' => 'Schlagwortgruppen',
 	'titre_mots_cles_dans_forum' => 'Schlagworte in öffentlichen Foren',
 	'titre_mots_tous' => 'Schlagworte',
 	'titre_nouveau_groupe' => 'Neue Kategorie',
-	'titre_objets_lies_mot' => 'Liés à ce mot-clé :', # NEW
+	'titre_objets_lies_mot' => 'Diesem Schlagwort zugeordnet:',
 	'titre_page_mots_tous' => 'Schlagworte'
 );
 

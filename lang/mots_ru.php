@@ -26,6 +26,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_modifier_mot' => 'Изменить ключевое слово',
 	'icone_mots_cles' => 'Кейворды',
 	'icone_supprimer_groupe_mots' => 'Удалить эту группу',
+	'icone_voir_groupe_mots' => 'Voir ce groupe de mots', # NEW
 	'icone_voir_tous_mots_cles' => 'Показать все ключевые слова',
 	'info_1_groupe_mots' => '1 groupe de mots', # NEW
 	'info_articles_lies_mot' => 'Статьи с этим ключевым словом',

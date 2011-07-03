@@ -26,6 +26,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_modifier_mot' => 'Kemmañ ar ger-alc\'hwez-mañ',
 	'icone_mots_cles' => 'Gerioù-stur',
 	'icone_supprimer_groupe_mots' => 'Diverkañ ar strollad-mañ',
+	'icone_voir_groupe_mots' => 'Voir ce groupe de mots', # NEW
 	'icone_voir_tous_mots_cles' => 'Gwelet an holl c\'herioù-stur',
 	'info_1_groupe_mots' => '1 groupe de mots', # NEW
 	'info_articles_lies_mot' => 'Ar pennadoù liammet ouzh ar ger-stur-mañ',

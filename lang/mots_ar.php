@@ -26,6 +26,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_modifier_mot' => 'تغيير هذا المفتاح',
 	'icone_mots_cles' => 'المفاتيح',
 	'icone_supprimer_groupe_mots' => 'حذف هذه المجموعة',
+	'icone_voir_groupe_mots' => 'Voir ce groupe de mots', # NEW
 	'icone_voir_tous_mots_cles' => 'عرض كل المفاتيح',
 	'info_1_groupe_mots' => 'مجموعة مفاتيح واحدة',
 	'info_articles_lies_mot' => 'المقالات المرتبطة بهذا المفتاح',

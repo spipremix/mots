@@ -26,6 +26,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_modifier_mot' => 'Modifier ce mot-clé', # NEW
 	'icone_mots_cles' => 'စကားစုများ',
 	'icone_supprimer_groupe_mots' => 'ဤအုပ်စုကို ဖျက်ပစ်ပါ',
+	'icone_voir_groupe_mots' => 'Voir ce groupe de mots', # NEW
 	'icone_voir_tous_mots_cles' => 'သော့ချက်စကားလုံးများကို ပြပါ',
 	'info_1_groupe_mots' => '1 groupe de mots', # NEW
 	'info_articles_lies_mot' => 'ဆောင်းပါးများကို ဤသော့ချက်စကားလုံးများနှင့် ပေါင်းစည်းပါ',

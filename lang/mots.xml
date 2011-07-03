@@ -83,7 +83,9 @@
 	<langue code="ro" />
 	<langue code="ru" />
 	<langue code="scn" />
-	<langue code="sk" />
+	<langue code="sk">
+		<traducteur nom="jaro" />
+	</langue>
 	<langue code="src" />
 	<langue code="sro" />
 	<langue code="sv" />

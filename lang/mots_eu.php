@@ -26,6 +26,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_modifier_mot' => 'Gako-hitz hori aldatu',
 	'icone_mots_cles' => 'Gako-hitzak',
 	'icone_supprimer_groupe_mots' => 'Talde hau ezabatu',
+	'icone_voir_groupe_mots' => 'Voir ce groupe de mots', # NEW
 	'icone_voir_tous_mots_cles' => 'Gako-hitz guztiak ikusi',
 	'info_1_groupe_mots' => '1 groupe de mots', # NEW
 	'info_articles_lies_mot' => 'Gako-hitz honi lotutako artikuluak',

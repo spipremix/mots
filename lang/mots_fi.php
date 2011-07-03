@@ -26,6 +26,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_modifier_mot' => 'Edit this keyword', # NEW
 	'icone_mots_cles' => 'Keywords', # NEW
 	'icone_supprimer_groupe_mots' => 'Delete this group', # NEW
+	'icone_voir_groupe_mots' => 'Voir ce groupe de mots', # NEW
 	'icone_voir_tous_mots_cles' => 'Show all keywords', # NEW
 	'info_1_groupe_mots' => '1 groupe de mots', # NEW
 	'info_articles_lies_mot' => 'Tähän hakusanaan liittyvät artikkelit',

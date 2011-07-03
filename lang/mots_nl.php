@@ -26,6 +26,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_modifier_mot' => 'Dit sleutelwoord wijzigen',
 	'icone_mots_cles' => 'Trefwoorden',
 	'icone_supprimer_groupe_mots' => 'Deze groep wissen',
+	'icone_voir_groupe_mots' => 'Voir ce groupe de mots', # NEW
 	'icone_voir_tous_mots_cles' => 'Alle trefwoorden bekijken',
 	'info_1_groupe_mots' => '1 groupe de mots', # NEW
 	'info_articles_lies_mot' => 'Artikels gekoppeld aan dit trefwoord',
