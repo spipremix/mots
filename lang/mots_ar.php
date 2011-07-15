@@ -17,7 +17,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_checkbox_qui_attribue_mot_cle_visiteurs' => 'زوار الموقع العمومي حين يرسلون مشاركة الى المنتدى',
 
 	// C
-	'creer_et_associer_un_mot' => 'Créér et associer un mot-clé', # NEW
+	'creer_et_associer_un_mot' => 'إنشاء مفتاح وربطه',
 
 	// I
 	'icone_creation_groupe_mots' => 'إنشاء مجموعة جديدة',
@@ -26,7 +26,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_modifier_mot' => 'تغيير هذا المفتاح',
 	'icone_mots_cles' => 'المفاتيح',
 	'icone_supprimer_groupe_mots' => 'حذف هذه المجموعة',
-	'icone_voir_groupe_mots' => 'Voir ce groupe de mots', # NEW
+	'icone_voir_groupe_mots' => 'عرض مجموعة المفاتيح',
 	'icone_voir_tous_mots_cles' => 'عرض كل المفاتيح',
 	'info_1_groupe_mots' => 'مجموعة مفاتيح واحدة',
 	'info_articles_lies_mot' => 'المقالات المرتبطة بهذا المفتاح',
