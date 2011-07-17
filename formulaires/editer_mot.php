@@ -53,7 +53,7 @@ function formulaires_editer_mot_identifier_dist($id_mot='new', $id_groupe=0, $re
 // http://doc.spip.org/@articles_edit_config
 function mots_edit_config($row)
 {
-	global $spip_ecran, $spip_lang, $spip_display;
+	global $spip_ecran, $spip_lang;
 
 	$config = $GLOBALS['meta'];
 	$config['lignes'] = ($spip_ecran == "large")? 8 : 5;

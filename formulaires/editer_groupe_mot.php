@@ -42,7 +42,7 @@ function formulaires_editer_groupe_mot_identifier_dist($id_groupe='new',$retour=
 // http://doc.spip.org/@articles_edit_config
 function groupes_mots_edit_config($row)
 {
-	global $spip_ecran, $spip_lang, $spip_display;
+	global $spip_ecran, $spip_lang;
 
 	$config = $GLOBALS['meta'];
 	$config['lignes'] = ($spip_ecran == "large")? 8 : 5;
