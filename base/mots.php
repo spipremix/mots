@@ -97,7 +97,7 @@ function mots_declarer_tables_objets_sql($tables){
 	);
 
 	$tables['spip_groupes_mots'] = array(
-		'table_objet_surnoms' => array('groupe_mots' /*hum*/,'groupe_mot' /* hum*/,'groupe' /*hum (EXPOSE)*/),
+		'table_objet_surnoms' => array('groupemot','groupe_mots' /*hum*/,'groupe_mot' /* hum*/,'groupe' /*hum (EXPOSE)*/),
 
 		'type'=>'groupe_mots',
 	  'type_surnoms' => array('groupes_mot','groupemot','groupe_mot'),
