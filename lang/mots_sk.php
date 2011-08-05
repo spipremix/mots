@@ -17,7 +17,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_checkbox_qui_attribue_mot_cle_visiteurs' => 'návštevníci verejnej stránky, keď pošlú príspevok do diskusného fóra.',
 
 	// C
-	'creer_et_associer_un_mot' => 'Créér et associer un mot-clé', # NEW
+	'creer_et_associer_un_mot' => 'Vytvoriť a priradiť kľúčové slovo',
 
 	// I
 	'icone_creation_groupe_mots' => 'Vytvoriť novú skupinu klúčových slov',
@@ -26,11 +26,11 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_modifier_mot' => 'Upraviť toto kľúčové slovo',
 	'icone_mots_cles' => 'Kľúčové slová',
 	'icone_supprimer_groupe_mots' => 'Zmazať túto skupinu',
-	'icone_voir_groupe_mots' => 'Voir ce groupe de mots', # NEW
+	'icone_voir_groupe_mots' => 'Zobraziť skupinu kľúčových slov',
 	'icone_voir_tous_mots_cles' => 'Zobraziť všetky kľúčové slová',
-	'info_1_groupe_mots' => '1 groupe de mots', # NEW
+	'info_1_groupe_mots' => '1 skupina kľúčových slov',
 	'info_articles_lies_mot' => 'Články s týmto kľúčovým slovom',
-	'info_aucun_groupe_mots' => 'Aucun groupe de mots', # NEW
+	'info_aucun_groupe_mots' => 'Žiadna skupina kľúčových slov',
 	'info_aucun_mot_cle' => 'Žiadne kľúčové slová',
 	'info_changer_nom_groupe' => 'Zmeniť názov tejto skupiny:',
 	'info_creation_mots_cles' => 'Tu vytvorte a nastavte kľúčové slová stránky',
@@ -42,7 +42,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_modifier_mot' => 'Upraviť kľúčové slovo:',
 	'info_mots_cles' => 'Kľúčové slová',
 	'info_mots_cles_association' => 'Kľúčové slová v tejto skupine možno priradiť:',
-	'info_nb_groupe_mots' => '@nb@ groupes de mots', # NEW
+	'info_nb_groupe_mots' => '@nb@ skupín kľúčových slov',
 	'info_oui_suppression_mot_cle' => 'Toto kľúčové slovo chcem odstrániť natrvalo.',
 	'info_question_mots_cles' => 'Chcete na svojej stránke používať kľúčové slová?',
 	'info_qui_attribue_mot_cle' => 'Kľúčové slová v tejto skupine môže priradiť:',
@@ -78,13 +78,13 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'texte_nouveau_mot' => 'Nové kľúčové slovo',
 	'titre_config_groupe_mots_cles' => 'Nastavenie skupín kľúčových slov',
 	'titre_gauche_mots_edit' => 'KĽÚČOVÉ SLOVO ČÍSLO:',
-	'titre_groupe_mots' => 'Groupe de mots-cl&eacute;s', # NEW
-	'titre_groupe_mots_numero' => 'GROUPE DE MOTS NUMÉRO :', # NEW
-	'titre_groupes_mots' => 'Groupes de mots-cl&eacute;s', # NEW
+	'titre_groupe_mots' => 'Skupina kľúčových slov',
+	'titre_groupe_mots_numero' => 'SKUPINA KĽÚČOVÝCH SLOV ČÍSLO:',
+	'titre_groupes_mots' => 'Skupiny kľúčových slov',
 	'titre_mots_cles_dans_forum' => 'Kľúčové slová v diskusných fórach na verejnej stránke',
 	'titre_mots_tous' => 'Kľúčové slová',
 	'titre_nouveau_groupe' => 'Nová skupina',
-	'titre_objets_lies_mot' => 'Liés à ce mot-clé :', # NEW
+	'titre_objets_lies_mot' => 'Prepojené s týmto kľúčovým slovom:',
 	'titre_page_mots_tous' => 'Kľúčové slová'
 );
 
