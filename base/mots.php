@@ -34,7 +34,7 @@ function mots_declarer_tables_interfaces($interfaces){
 /**
  * Table auxilaire spip_mots_xx
  *
- * @param array $tables_principales
+ * @param array $tables_auxiliaires
  * @return array
  */
 function mots_declarer_tables_auxiliaires($tables_auxiliaires){
@@ -55,9 +55,13 @@ function mots_declarer_tables_auxiliaires($tables_auxiliaires){
 }
 
 
-
+/**
+ * Declarer les objets mots et les jointures mots pour tous les objets
+ *
+ * @param array $tables
+ * @return array
+ */
 function mots_declarer_tables_objets_sql($tables){
-	$tables['spip_articles']['champs_versionnes'][] = 'jointure_mots';
 	$tables['spip_mots'] = array(
 		'type'=>'mot',
 	  'type_surnoms' => array('mot-cle'), // pour les icones...
@@ -91,7 +95,7 @@ function mots_declarer_tables_objets_sql($tables){
 		  'titre' => 8, 'texte' => 1, 'descriptif' => 5
 		),
 		'tables_jointures' => array(
-			'mots_liens'
+			#'mots_liens' // declare generiquement ci dessous
 		),
 		'champs_versionnes' => array('titre', 'descriptif', 'texte','id_groupe'),
 	);
@@ -145,6 +149,8 @@ function mots_declarer_tables_objets_sql($tables){
 	$tables[]['tables_jointures'][]= 'mots';
 	// recherche jointe sur les mots pour tous les objets
 	$tables[]['rechercher_jointures']['mot'] = array('titre' => 3);
+	// versionner les jointures pour tous les objets
+	$tables[]['champs_versionnes'][] = 'jointure_mots';
 
 	return $tables;
 }
