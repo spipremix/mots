@@ -1,5 +1,6 @@
 #SET{picto,#ENV{objet}|objet_icone{16}}
-[(#SET{req,[select [(#ENV{objet}|id_table_objet)] as id from (#ENV{objet}|table_objet_sql), spip_mots_liens as mots_liens where mots_liens.id_objet=[(#ENV{id_mot})] and mots_liens.id_objet=[(#ENV{objet}|id_table_objet)] and mots_liens.objet="[(#ENV{objet})]" order by [(#ENV{objet}|id_table_objet)] desc]})]
+[(#SET{req,[select [(#ENV{objet}|id_table_objet)] as id from (#ENV{objet}|table_objet_sql) as table_objet, spip_mots_liens as mots_liens where mots_liens.id_mot=[(#ENV{id_mot})] and mots_liens.id_objet=table_objet.[(#ENV{objet}|id_table_objet)] and mots_liens.objet="[(#ENV{objet})]" order by [(#ENV{objet}|id_table_objet)] desc]})]
+#GET{req}
 <B_objets>
 #ANCRE_PAGINATION
 <div class="liste-objets [(#ENV{objet}|objet_info{table_objet})]">
