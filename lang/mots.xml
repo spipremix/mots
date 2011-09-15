@@ -27,6 +27,7 @@
 	</langue>
 	<langue code="en">
 		<traducteur nom="squonk" />
+		<traducteur nom="davood" />
 	</langue>
 	<langue code="en_hx" />
 	<langue code="eo" />
@@ -35,7 +36,9 @@
 		<traducteur nom="filou" />
 	</langue>
 	<langue code="eu" />
-	<langue code="fa" />
+	<langue code="fa">
+		<traducteur nom="davood" />
+	</langue>
 	<langue code="fi" />
 	<langue code="fon" />
 	<langue code="fr_sc">
