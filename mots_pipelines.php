@@ -10,6 +10,7 @@
  *  Pour plus de details voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
+if (!defined('_ECRIRE_INC_VERSION')) return;
 
 /**
  * Definir les meta de configuration liee aux mots
@@ -23,9 +24,6 @@ function mots_configurer_liste_metas($metas){
 	#$metas['mots_cles_forums'] =  'non';
 	return $metas;
 }
-
-
-
 
 /**
  * Configuration des mots
@@ -61,8 +59,6 @@ function mots_affiche_milieu($flux){
 		
 	return $flux;
 }
-
-
 
 /**
  * Optimiser la base de donnee en supprimant les liens orphelins
