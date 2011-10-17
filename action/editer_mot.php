@@ -78,8 +78,6 @@ function mot_inserer($id_groupe) {
  * @return string
  */
 function mot_modifier($id_mot, $set=null) {
-	$err = '';
-
 	include_spip('inc/modifier');
 	$c = collecter_requests(
 		// white list
@@ -92,11 +90,12 @@ function mot_modifier($id_mot, $set=null) {
 		$set
 	);
 	
-	modifier_contenu('mot', $id_mot,
+	if ($err = objet_modifier_champs('mot', $id_mot,
 		array(
 			'nonvide' => array('titre' => _T('info_sans_titre'))
 		),
-		$c);
+		$c))
+		return $err;
 
 	$c = collecter_requests(array('id_groupe', 'type'),array(),$set);
 	$err = mot_instituer($id_mot, $c);

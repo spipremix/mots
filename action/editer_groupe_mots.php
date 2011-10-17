@@ -108,7 +108,7 @@ function groupemots_modifier($id_groupe, $set=null) {
 	if (is_array($c['tables_liees']))
 		$c['tables_liees'] = implode(',',array_diff($c['tables_liees'],array('')));
 
-	modifier_contenu('groupe_mot', $id_groupe,
+	$err = objet_modifier_champs('groupe_mot', $id_groupe,
 		array(
 			'nonvide' => array('titre' => _T('info_sans_titre'))
 		),
