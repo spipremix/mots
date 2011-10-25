@@ -19,7 +19,7 @@ function autoriser_mots_menu_dist($faire, $type, $id, $qui, $opt){
 	return 	($GLOBALS['meta']['articles_mots'] != 'non' OR sql_countsel('spip_groupes_mots'));
 }
 function autoriser_motcreer_menu_dist($faire, $type, $id, $qui, $opt){
-	return 	($GLOBALS['meta']['articles_mots'] != 'non');
+	return 	($GLOBALS['meta']['articles_mots'] != 'non' AND sql_countsel('spip_groupes_mots'));
 }
 
 // Voir un objet
