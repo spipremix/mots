@@ -1,6 +1,6 @@
 #SET{selected,''}
 #SET{action,ajouter_lien}
-<BOUCLE_remplacer(MOTS){id_groupe}{id_objet}{objet}{0,1}>[(#UNSEUL|=={oui}|oui)
+<BOUCLE_remplacer(MOTS){id_groupe}{id_mot IN #ENV{exclus}}{0,1}>[(#UNSEUL|=={oui}|oui)
 	<:mots:info_remplacer_mot{titre=#TITRE}:><br />
 	[(#SET{action,[(#VAL{remplacer_lien}|concat{[(#VAL{91}|chr)],'mot-',#ID_MOT,'-',#OBJET,'-',#ID_OBJET,[(#VAL{93}|chr)]})]})]
 ]</BOUCLE_remplacer>
@@ -26,7 +26,7 @@
 		</tr>
 	</thead>
 	<tbody>
-	<BOUCLE_liste_mot(MOTS){id_groupe}{doublons 1}{recherche #GET{recherche}}{tri #ENV{par,titre},#GET{defaut_tri}}{par multi titre}{pagination 10 mota#ID_GROUPE}>
+	<BOUCLE_liste_mot(MOTS){id_groupe}{id_mot !IN #ENV{exclus}}{recherche #GET{recherche}}{tri #ENV{par,titre},#GET{defaut_tri}}{par multi titre}{pagination 10 mota#ID_GROUPE}>
 		<tr class="[(#COMPTEUR_BOUCLE|alterner{row_odd,row_even})]">
 			<td class='picto'>[(#CHEMIN_IMAGE{mot-16.png}|balise_img)]</td>
 			<td class='titre principale'>[(#LOGO_MOT|image_reduire{20,20})]<a href="[(#ID_MOT|generer_url_entite{mot})]"

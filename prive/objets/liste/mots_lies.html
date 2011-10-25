@@ -5,6 +5,7 @@
 	id_mot,1
 }})
 ]
+#SET{selection,#ENV{objet_source}|lister_objets_lies{#ENV{objet},#ENV{id_objet},#ENV{_objet_lien}}}
 <input type="hidden" name="debutmotl" value='#ENV{debutmotl,#EVAL{_request("debutmotl");}}' />
 <B_liste_mot>
 #ANCRE_PAGINATION
@@ -20,7 +21,7 @@
 		</tr>
 	</thead>
 	<tbody>
-	<BOUCLE_liste_mot(MOTS){id_mot?}{id_groupe?}{id_objet?}{objet}{where?}{tri #ENV{par,type},#GET{defaut_tri}}{par multi titre}{pagination #ENV{nb,10} motl}>
+	<BOUCLE_liste_mot(MOTS){id_mot IN #GET{selection}}{id_groupe?}{where?}{tri #ENV{par,type},#GET{defaut_tri}}{par multi titre}{pagination #ENV{nb,10} motl}>
 		<tr class="[(#COMPTEUR_BOUCLE|alterner{row_odd,row_even})][(#ID_MOT|=={#ENV{id_lien_ajoute}}|oui)append]">
 			<td class='picto'>[(#CHEMIN_IMAGE{mot-16.png}|balise_img)]</td>
 			<td class='titre principale'>[(#LOGO_MOT|image_reduire{20,20})]<a href="[(#ID_MOT|generer_url_entite{mot})]"

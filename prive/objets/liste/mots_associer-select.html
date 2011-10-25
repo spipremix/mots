@@ -4,7 +4,7 @@
 	  onchange="jQuery(this).siblings('input.submit').css('visibility','visible');"
 	>
 	<option value="x">&nbsp;</option>
-	<BOUCLE_mots(MOTS){id_groupe}{doublons 1}{par num titre, multi titre}>
+	<BOUCLE_mots(MOTS){id_groupe}{id_mot !IN #ENV{exclus}}{par num titre, multi titre}>
 		#SET{value,mot-#ID_MOT-#OBJET-#ID_OBJET}
 		<option value="#GET{value}"[(#GET{value}|=={#ENV{ajouter_lien}|table_valeur{groupe#ID_GROUPE}}|oui)selected="selected"#SET{selected,' '}]>#TITRE</option>
 	</BOUCLE_mots>

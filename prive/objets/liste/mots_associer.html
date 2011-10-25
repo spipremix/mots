@@ -1,26 +1,27 @@
 #SET{groupes_vus,'0'}
 [(#SET{_MAX_MOTS_LISTE,[(#VAL{_MAX_MOTS_LISTE}|defined|?{[(#VAL{_MAX_MOTS_LISTE}|constant)],50})]})]
-<BOUCLE_exclus(MOTS){tout}{id_objet}{objet}{doublons 1}{doublons 2}>[(#ID_GROUPE|unique|oui)#SET{groupes_vus,#GET{groupes_vus}|concat{',',#ID_GROUPE}} ]</BOUCLE_exclus>
+#SET{exclus,#ENV{objet_source}|lister_objets_lies{#ENV{objet},#ENV{id_objet},#ENV{_objet_lien}}}
+<BOUCLE_exclus(MOTS){id_mot IN #GET{exclus}}{tout}>[(#ID_GROUPE|unique|oui)#SET{groupes_vus,#GET{groupes_vus}|concat{',',#ID_GROUPE}} ]</BOUCLE_exclus>
 
 
 <B_groupes>
 	<ul>
 	<BOUCLE_groupes(GROUPES_MOTS){tables_liees==#ENV{objet}|table_objet}{par titre}
-		><BOUCLE_compte(MOTS){id_groupe}{doublons 2} />#SET{total,#TOTAL_BOUCLE}<//B_compte>[
+		><BOUCLE_compte(MOTS){id_groupe}{id_mot !IN #GET{exclus}} />#SET{total,#TOTAL_BOUCLE}<//B_compte>[
 	(#GET{total}|!={0}|oui)
 	<li class="editer associer_mot groupe_mots[(#UNSEUL|=={oui}|oui)unseul][(#OBLIGATOIRE|=={oui}|oui)obligatoire][ (#ID_GROUPE|in_any{#GET{groupes_vus}|explode{','}}|?{'vu','nonvu'})]">
 		<label for="ajouter_lien-groupe#ID_GROUPE">#TITRE</label>
 
 		[(#GET{total}|<{#GET{_MAX_MOTS_LISTE}}|oui)
 			[(#UNSEUL|=={oui}|oui)
-				[(#INCLURE{fond=prive/objets/liste/mots_associer-select-unseul,env,doublons,id_groupe=#ID_GROUPE})]
+				[(#INCLURE{fond=prive/objets/liste/mots_associer-select-unseul,env,exclus=#GET{exclus},id_groupe=#ID_GROUPE})]
 			]
 			[(#UNSEUL|=={oui}|non)
-				[(#INCLURE{fond=prive/objets/liste/mots_associer-select,env,doublons,id_groupe=#ID_GROUPE})]
+				[(#INCLURE{fond=prive/objets/liste/mots_associer-select,env,exclus=#GET{exclus},id_groupe=#ID_GROUPE})]
 			]
 		]
 		[(#GET{total}|<{#GET{_MAX_MOTS_LISTE}}|non)
-			[(#INCLURE{fond=prive/objets/liste/mots_associer-recherche,env,doublons,id_groupe=#ID_GROUPE,unseul=#UNSEUL})]
+			[(#INCLURE{fond=prive/objets/liste/mots_associer-recherche,env,exclus=#GET{exclus},id_groupe=#ID_GROUPE,unseul=#UNSEUL})]
 		]
 	</li>
 	]</BOUCLE_groupes>
