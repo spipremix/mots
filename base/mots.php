@@ -150,6 +150,15 @@ function mots_declarer_tables_objets_sql($tables){
 	// jointures sur les mots pour tous les objets
 	$tables[]['tables_jointures'][]= 'mots_liens';
 	$tables[]['tables_jointures'][]= 'mots';
+
+	// cas particulier des auteurs et mots : declarer explicitement mots_liens comme jointure privilegiee
+	// cf http://core.spip.org/issues/2329
+	$tables['spip_auteurs']['tables_jointures'][]= 'mots_liens';
+	$tables['spip_auteurs']['tables_jointures'][]= 'mots';
+	$tables['spip_mots']['tables_jointures'][]= 'mots_liens';
+	$tables['spip_mots']['tables_jointures'][]= 'mots';
+
+
 	// recherche jointe sur les mots pour tous les objets
 	$tables[]['rechercher_jointures']['mot'] = array('titre' => 3);
 	// versionner les jointures pour tous les objets
