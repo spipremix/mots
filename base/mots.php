@@ -73,7 +73,7 @@ function mots_declarer_tables_objets_sql($tables){
 		'texte_objet' => 'public:mots_clef',
 		'texte_modifier' => 'mots:icone_modifier_mot',
 		'texte_ajouter' => 'titre_ajouter_un_mot', // # A deplacer
-		'texte_creer' => 'icone_creer_mot_cle',
+		'texte_creer' => 'titre_ajouter_un_mot',
 		'texte_logo_objet' => 'mots:logo_mot_cle',
 		'texte_creer_associer' => 'mots:creer_et_associer_un_mot',
 		'info_aucun_objet'=> 'info_aucun_mot',
