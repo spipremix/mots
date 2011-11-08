@@ -24,11 +24,11 @@ function filtre_objets_associes_mot_dist($id_mot,$id_groupe) {
 		$occurrences[$id_groupe] = calculer_utilisations_mots($id_groupe);
 
 	$associes = array();
-	foreach (array('article','breve','site','rubrique') as $type) {
-		$table = table_objet($type);
-		$nb = (isset($occurrences[$id_groupe][$table][$id_mot]) ? $occurrences[$id_groupe][$table][$id_mot] : 0);
+	$tables = lister_tables_objets_sql();
+	foreach ($tables as $table_objet_sql=>$infos) {
+		$nb = (isset($occurrences[$id_groupe][$table_objet_sql][$id_mot]) ? $occurrences[$id_groupe][$table_objet_sql][$id_mot] : 0);
 		if ($nb)
-			$associes[] = objet_afficher_nb($nb,$type);
+			$associes[] = objet_afficher_nb($nb,$infos['type']);
 	}
 
 	$associes = pipeline('afficher_nombre_objets_associes_a',array('args'=>array('objet'=>'mot','id_objet'=>$id_mot),'data'=>$associes));
@@ -51,7 +51,6 @@ function calculer_utilisations_mots($id_groupe)
 	foreach($objets as $o) {
 		$objet=$o['objet'];
 		$_id_objet = id_table_objet($objet);
-		$table_objet = table_objet($objet);
 		$table_objet_sql = table_objet_sql($objet);
 		$res = sql_allfetsel(
 			"COUNT(*) AS cnt, L.id_mot",
@@ -63,7 +62,7 @@ function calculer_utilisations_mots($id_groupe)
 			"L.id_mot");
 
 		foreach($res as $row) {
-			$retour[$table_objet][$row['id_mot']] = $row['cnt'];
+			$retour[$table_objet_sql][$row['id_mot']] = $row['cnt'];
 		}
 	}
 
