@@ -60,6 +60,9 @@ function mots_upgrade($nom_meta_base_version,$version_cible){
 		array('maj_liens','mot','article'),
 		array('sql_drop_table',"spip_mots_articles"),
 	);
+	$maj['2.0.1'] = array(
+		array('sql_updateq',"spip_mots_liens",array('objet'=>'site'),"objet='syndic'"),
+	);
 
 	include_spip('base/upgrade');
 	maj_plugin($nom_meta_base_version, $version_cible, $maj);
