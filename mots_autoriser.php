@@ -141,6 +141,19 @@ function autoriser_associermots_dist($faire,$quoi,$id,$qui,$opts){
 	return false;
 }
 
+
+/**
+ * Autorisation pour verifier le droit d'afficher le selecteur de mots
+ * pour un groupe de mot donne, dans un objet / id_objet donne
+ *
+ * @return bool
+ */
+function autoriser_groupemots_afficherselecteurmots_dist($faire,$quoi,$id,$qui,$opts){
+	return true;
+}
+
+
+	
 // http://doc.spip.org/@autoriser_mot_iconifier_dist
 function autoriser_mot_iconifier_dist($faire,$quoi,$id,$qui,$opts){
  return (($qui['statut'] == '0minirezo') AND !$qui['restreint']);
