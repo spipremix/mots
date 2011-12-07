@@ -17,7 +17,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_checkbox_qui_attribue_mot_cle_visiteurs' => 'bezoekers van de publieke site die een bericht op het forum posten',
 
 	// C
-	'creer_et_associer_un_mot' => 'Créér et associer un mot-clé', # NEW
+	'creer_et_associer_un_mot' => 'Maken en toewijzen een trefwoord',
 
 	// I
 	'icone_creation_groupe_mots' => 'Een nieuwe groep van trefwoorden aanmaken',
@@ -26,11 +26,11 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_modifier_mot' => 'Dit sleutelwoord wijzigen',
 	'icone_mots_cles' => 'Trefwoorden',
 	'icone_supprimer_groupe_mots' => 'Deze groep wissen',
-	'icone_voir_groupe_mots' => 'Voir ce groupe de mots', # NEW
+	'icone_voir_groupe_mots' => 'Zie deze zin',
 	'icone_voir_tous_mots_cles' => 'Alle trefwoorden bekijken',
-	'info_1_groupe_mots' => '1 groupe de mots', # NEW
+	'info_1_groupe_mots' => '1 groep woorden',
 	'info_articles_lies_mot' => 'Artikels gekoppeld aan dit trefwoord',
-	'info_aucun_groupe_mots' => 'Aucun groupe de mots', # NEW
+	'info_aucun_groupe_mots' => 'Geen enkele groep van woorden',
 	'info_aucun_mot_cle' => 'Geen Trefwoord',
 	'info_changer_nom_groupe' => 'De naam van deze groep veranderen:',
 	'info_creation_mots_cles' => 'Creëer en configureer hier de trefwoorden van de site',
@@ -42,11 +42,11 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_modifier_mot' => 'Het sleutelwoord wijzigen :',
 	'info_mots_cles' => 'Trefwoorden',
 	'info_mots_cles_association' => 'Trefwoorden uit deze groep kunnen verbonden worden met:',
-	'info_nb_groupe_mots' => '@nb@ groupes de mots', # NEW
+	'info_nb_groupe_mots' => '@nb@ groepen van woorden',
 	'info_oui_suppression_mot_cle' => 'Ik wil dit trefwoord definitief verwijderen.',
 	'info_question_mots_cles' => 'Wil je gebruik maken van trefwoorden op je site?',
 	'info_qui_attribue_mot_cle' => 'De woorden uit deze groep kunnen toegekend worden door:',
-	'info_remplacer_mot' => 'Remplacer "@titre@"', # NEW
+	'info_remplacer_mot' => '"@titre@" te vervangen',
 	'info_retirer_mot' => 'Trek dat woord',
 	'info_retirer_mots' => 'Alle trefwoorden intrekken',
 	'info_rubriques_liees_mot' => 'Rubrieken gekoppeld aan dit trefwoord',
@@ -62,8 +62,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'item_utiliser_mots_cles' => 'Trefwoorden gebruiken',
 
 	// L
-	'lien_ajouter_mot' => 'Ajouter ce mot-clé', # NEW
-	'logo_groupe' => 'LOGO DE CE GROUPE', # NEW
+	'lien_ajouter_mot' => 'Voeg dit trefwoord',
+	'logo_groupe' => 'LOGO VOOR DEZE GROEP',
 	'logo_mot_cle' => 'LOGO VAN HET TREFWOORD',
 
 	// T
@@ -78,13 +78,13 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'texte_nouveau_mot' => 'Nieuw trefwoord',
 	'titre_config_groupe_mots_cles' => 'Configuratie van de groepen trefwoorden',
 	'titre_gauche_mots_edit' => 'WOORD NUMMER:',
-	'titre_groupe_mots' => 'Groupe de mots-cl&eacute;s', # NEW
-	'titre_groupe_mots_numero' => 'GROUPE DE MOTS NUMÉRO :', # NEW
-	'titre_groupes_mots' => 'Groupes de mots-cl&eacute;s', # NEW
+	'titre_groupe_mots' => 'Groep van trefwoord',
+	'titre_groupe_mots_numero' => 'GROEP WOORDEN NUMBER :',
+	'titre_groupes_mots' => 'Groepen van trefwoorden',
 	'titre_mots_cles_dans_forum' => 'Trefwoorden in de forums van de publieke site',
 	'titre_mots_tous' => 'Trefwoorden',
 	'titre_nouveau_groupe' => 'Nieuwe groep',
-	'titre_objets_lies_mot' => 'Liés à ce mot-clé :', # NEW
+	'titre_objets_lies_mot' => 'Gerelateerd aan dit trefwoord :',
 	'titre_page_mots_tous' => 'Trefwoorden'
 );
 

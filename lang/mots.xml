@@ -84,7 +84,9 @@
 	</langue>
 	<langue code="qu" />
 	<langue code="ro" />
-	<langue code="ru" />
+	<langue code="ru">
+		<traducteur nom="papa_troll" />
+	</langue>
 	<langue code="scn" />
 	<langue code="sk">
 		<traducteur nom="jaro" />
