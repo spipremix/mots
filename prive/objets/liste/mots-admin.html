@@ -21,7 +21,7 @@
 	<BOUCLE_liste_mot(MOTS){id_mot?}{id_groupe?}{id_rubrique?}{id_article?}{where?}{tri #ENV{par,num titre},#GET{defaut_tri}}{par titre}{pagination #ENV{nb,10}}>
 		#SET{url_edit,#AUTORISER{modifier,mot,#ID_MOT}|?{#ID_MOT|generer_url_entite{mot}|parametre_url{redirect,#ENV{retour}},''}}
 		<tr class="[(#COMPTEUR_BOUCLE|alterner{row_odd,row_even})]">
-			<td class='picto'>[(#CHEMIN_IMAGE{mot-16.png}|balise_img)]</td>
+			<td class='picto'>[(#VAL|puce_statut{mot,#ID_MOT,#ID_GROUPE})]</td>
 			<td class='titre principale'>[(#LOGO_MOT|image_reduire{20,26})][<a href="(#GET{url_edit})">][(#RANG). ]#TITRE[</a>(#GET{url_edit}|oui)]</td>
 			<td class='utilisations secondaire'>#SET{utilise,#ID_MOT|objets_associes_mot{#ID_GROUPE}|implode{', '}}#GET{utilise}</td>
 			<td class='action'>

@@ -25,6 +25,6 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
  * @return string
  */
 // http://doc.spip.org/@puce_statut_mot_dist
-function puce_statut_mot_dist($id, $statut, $id_groupe, $type, $ajax='') {
+function puce_statut_mot_dist($id, $statut, $id_groupe, $type, $ajax='', $menu_rapide=_ACTIVER_PUCE_RAPIDE) {
 	return "<img src='" . chemin_image("mot-16.png") . "' width='16' height='16' alt=''  />";
 }
