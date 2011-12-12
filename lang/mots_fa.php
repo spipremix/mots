@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -73,7 +73,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_gauche_mots_edit' => 'واژه شماره :',
 	'titre_groupe_mots' => 'گروه كليدواژه‌ها',
 	'titre_groupe_mots_numero' => 'گروه نمره واژه‌ها:',
-	'titre_groupes_mots' => 'گروه‌هاي واژه‌كليدها',
+	'titre_groupes_mots' => 'Groupes de mots-clés', # NEW
 	'titre_mots_cles_dans_forum' => 'واژه-كليدهاى سخنگاه سايت همگانى',
 	'titre_mots_tous' => 'واژه-كليدها',
 	'titre_nouveau_groupe' => 'گروه جديد',

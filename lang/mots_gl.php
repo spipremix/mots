@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -36,8 +36,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_creation_mots_cles' => 'Crea e configura aquí as palabras chave do web',
 	'info_dans_groupe' => 'No grupo:',
 	'info_delet_mots_cles' => 'Solicitouse eliminar a palabra clave
-<b>@titre_mot@</b> (@type_mot@). Esta palabra clave est&amp;aacute; ligada a
-<b>@texte_lie@</b>, ten que confirmar a s&amp;uacute;a decisi&amp;oacute;n :',
+<b>@titre_mot@</b> (@type_mot@). Esta palabra clave est&aacute; ligada a
+<b>@texte_lie@</b>, ten que confirmar a s&uacute;a decisi&oacute;n :',
 	'info_groupe_important' => 'Grupo importante',
 	'info_modifier_mot' => 'Modificar a palabra clave :',
 	'info_mots_cles' => 'As palabras chave',
@@ -67,9 +67,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'logo_mot_cle' => 'LOGO DA PALABRA CHAVE',
 
 	// T
-	'texte_config_groupe_mots_cles' => 'Quere activar a configuraci&amp;oacute;n avanzada das palabras clave,
-  para indicar, por exemplo que se pode seleccionar unha palabra &amp;uacute;nica
-  por grupo, que un grupo &amp;eacute; importante... ?',
+	'texte_config_groupe_mots_cles' => 'Quere activar a configuraci&oacute;n avanzada das palabras clave,
+  para indicar, por exemplo que se pode seleccionar unha palabra &uacute;nica
+  por grupo, que un grupo &eacute; importante... ?',
 	'texte_mots_cles' => 'As palabras chave permiten crear ligazóns temáticas entre os artigos
   sen depender do seu emprazamento dentro dos temas. Pódese, dende
   mellorar a navegación do seu web, ata empregar as súas propiedades
@@ -78,9 +78,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'texte_nouveau_mot' => 'Nova palabra',
 	'titre_config_groupe_mots_cles' => 'Configuración dos grupos de palabras chave',
 	'titre_gauche_mots_edit' => 'PALABRA NÚMERO:',
-	'titre_groupe_mots' => 'Groupe de mots-cl&eacute;s', # NEW
+	'titre_groupe_mots' => 'Groupe de mots-clés', # NEW
 	'titre_groupe_mots_numero' => 'GROUPE DE MOTS NUMÉRO :', # NEW
-	'titre_groupes_mots' => 'Groupes de mots-cl&eacute;s', # NEW
+	'titre_groupes_mots' => 'Groupes de mots-clés', # NEW
 	'titre_mots_cles_dans_forum' => 'Palabras chave nos foros do web público',
 	'titre_mots_tous' => 'As palabras chave',
 	'titre_nouveau_groupe' => 'Novo grupo',

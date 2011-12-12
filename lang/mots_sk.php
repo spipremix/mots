@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -80,7 +80,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_gauche_mots_edit' => 'KĽÚČOVÉ SLOVO ČÍSLO:',
 	'titre_groupe_mots' => 'Skupina kľúčových slov',
 	'titre_groupe_mots_numero' => 'SKUPINA KĽÚČOVÝCH SLOV ČÍSLO:',
-	'titre_groupes_mots' => 'Skupiny kľúčových slov',
+	'titre_groupes_mots' => 'Groupes de mots-clés', # NEW
 	'titre_mots_cles_dans_forum' => 'Kľúčové slová v diskusných fórach na verejnej stránke',
 	'titre_mots_tous' => 'Kľúčové slová',
 	'titre_nouveau_groupe' => 'Nová skupina',

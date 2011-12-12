@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -79,9 +79,9 @@ Li pé permèt alor swazi inn  sèl molaklé sanm group, o rand inn group pli im
 	'texte_nouveau_mot' => 'Nouvo mo',
 	'titre_config_groupe_mots_cles' => 'Lakonfigirasyon pou bann group molaklé',
 	'titre_gauche_mots_edit' => 'MO NIMÉRO :',
-	'titre_groupe_mots' => 'Groupe de mots-cl&eacute;s', # NEW
+	'titre_groupe_mots' => 'Groupe de mots-clés', # NEW
 	'titre_groupe_mots_numero' => 'GROUPE DE MOTS NUMÉRO :', # NEW
-	'titre_groupes_mots' => 'Groupes de mots-cl&eacute;s', # NEW
+	'titre_groupes_mots' => 'Groupes de mots-clés', # NEW
 	'titre_mots_cles_dans_forum' => 'Bann molaklé dann bann forom sir figirwèb',
 	'titre_mots_tous' => 'Bann molaklé',
 	'titre_nouveau_groupe' => 'Nouvo group',

@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -78,9 +78,9 @@ con <b>@texte_lie@</b> debes confirmar esta decisión:',
 	'texte_nouveau_mot' => 'Pallabra nueva',
 	'titre_config_groupe_mots_cles' => 'Configuración de los grupos de pallabres-clave',
 	'titre_gauche_mots_edit' => 'PALLABRA NÚMBERU:',
-	'titre_groupe_mots' => 'Groupe de mots-cl&eacute;s', # NEW
+	'titre_groupe_mots' => 'Groupe de mots-clés', # NEW
 	'titre_groupe_mots_numero' => 'GROUPE DE MOTS NUMÉRO :', # NEW
-	'titre_groupes_mots' => 'Groupes de mots-cl&eacute;s', # NEW
+	'titre_groupes_mots' => 'Groupes de mots-clés', # NEW
 	'titre_mots_cles_dans_forum' => 'Pallabres-clave nos foros del sitiu públicu',
 	'titre_mots_tous' => 'Les pallabres-clave',
 	'titre_nouveau_groupe' => 'Grupu nuevu',

@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -17,7 +17,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_checkbox_qui_attribue_mot_cle_visiteurs' => 'visitors of the public site when they post a message in a forum.',
 
 	// C
-	'creer_et_associer_un_mot' => 'Créér et associer un mot-clé', # NEW
+	'creer_et_associer_un_mot' => 'Create and assign a keyword',
 
 	// I
 	'icone_creation_groupe_mots' => 'Create a new keyword group',
@@ -26,11 +26,11 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_modifier_mot' => 'Edit this keyword',
 	'icone_mots_cles' => 'Keywords',
 	'icone_supprimer_groupe_mots' => 'Delete this group',
-	'icone_voir_groupe_mots' => 'Voir ce groupe de mots', # NEW
+	'icone_voir_groupe_mots' => 'Show this keyword group',
 	'icone_voir_tous_mots_cles' => 'Show all keywords',
-	'info_1_groupe_mots' => '1 groupe de mots', # NEW
+	'info_1_groupe_mots' => '1 keyword group',
 	'info_articles_lies_mot' => 'Articles with this keyword',
-	'info_aucun_groupe_mots' => 'Aucun groupe de mots', # NEW
+	'info_aucun_groupe_mots' => 'No keyword group',
 	'info_aucun_mot_cle' => 'No keywords',
 	'info_changer_nom_groupe' => 'Change the name of this group:',
 	'info_creation_mots_cles' => 'Create and configure site keywords here',
@@ -42,7 +42,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_modifier_mot' => 'Edit the keyword:',
 	'info_mots_cles' => 'Keywords',
 	'info_mots_cles_association' => 'Keywords in this group can be associated with:',
-	'info_nb_groupe_mots' => '@nb@ groupes de mots', # NEW
+	'info_nb_groupe_mots' => '@nb@ keyword groups',
 	'info_oui_suppression_mot_cle' => 'I want to delete this keyword permanently.',
 	'info_question_mots_cles' => 'Do you wish to use keywords on your site?',
 	'info_qui_attribue_mot_cle' => 'Keywords in this group can be assigned by:',
@@ -78,13 +78,13 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'texte_nouveau_mot' => 'New keyword',
 	'titre_config_groupe_mots_cles' => 'Configuration of the keyword groups',
 	'titre_gauche_mots_edit' => 'KEYWORD NUMBER:',
-	'titre_groupe_mots' => 'Groupe de mots-cl&eacute;s', # NEW
-	'titre_groupe_mots_numero' => 'GROUPE DE MOTS NUMÉRO :', # NEW
-	'titre_groupes_mots' => 'Groupes de mots-cl&eacute;s', # NEW
+	'titre_groupe_mots' => 'Keyword group',
+	'titre_groupe_mots_numero' => 'KEYWORD GROUP NUMBER:',
+	'titre_groupes_mots' => 'Keyword groups',
 	'titre_mots_cles_dans_forum' => 'Keywords in the public site forums',
 	'titre_mots_tous' => 'Keywords',
 	'titre_nouveau_groupe' => 'New group',
-	'titre_objets_lies_mot' => 'Liés à ce mot-clé :', # NEW
+	'titre_objets_lies_mot' => 'Linked to that keyword:',
 	'titre_page_mots_tous' => 'Keywords'
 );
 

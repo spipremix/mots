@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -73,9 +73,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'texte_nouveau_mot' => 'သော့ချက်စကားလုံး​အသစ်',
 	'titre_config_groupe_mots_cles' => 'သော့ချက်စကားလုံးအုပ်စုများ ဆက်သွယ်တပ်ဆင်မှု',
 	'titre_gauche_mots_edit' => 'သော့ချက်စကားလုံးနံပါတ်',
-	'titre_groupe_mots' => 'Groupe de mots-cl&eacute;s', # NEW
+	'titre_groupe_mots' => 'Groupe de mots-clés', # NEW
 	'titre_groupe_mots_numero' => 'GROUPE DE MOTS NUMÉRO :', # NEW
-	'titre_groupes_mots' => 'Groupes de mots-cl&eacute;s', # NEW
+	'titre_groupes_mots' => 'Groupes de mots-clés', # NEW
 	'titre_mots_cles_dans_forum' => 'အများသုံး ဝက်ဘ်ဆိုက်ဖိုရမ်ထဲရှိ သော့ချက်စကားလုံးများ',
 	'titre_mots_tous' => 'သော့ချက်စကားလုံးများ',
 	'titre_nouveau_groupe' => 'အုပ်စုအသစ်',

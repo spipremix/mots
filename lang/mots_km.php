@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -71,9 +71,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'texte_nouveau_mot' => 'ពាក្យ​គន្លឹះ​ថ្មី',
 	'titre_config_groupe_mots_cles' => 'ទម្រង់​របស់​ក្រុម​ពាក្យ​គន្លឹះ',
 	'titre_gauche_mots_edit' => 'ពាក្យ លេខ៖',
-	'titre_groupe_mots' => 'Groupe de mots-cl&eacute;s', # NEW
+	'titre_groupe_mots' => 'Groupe de mots-clés', # NEW
 	'titre_groupe_mots_numero' => 'GROUPE DE MOTS NUMÉRO :', # NEW
-	'titre_groupes_mots' => 'Groupes de mots-cl&eacute;s', # NEW
+	'titre_groupes_mots' => 'Groupes de mots-clés', # NEW
 	'titre_mots_cles_dans_forum' => 'ពាក្យគន្លឹះ ក្នុងទីប្រជុំមតិ នៃសៃថ៍សាធារណះ',
 	'titre_mots_tous' => 'ពាក្យ​គន្លឹះ',
 	'titre_nouveau_groupe' => 'ក្រុម​ថ្មី',

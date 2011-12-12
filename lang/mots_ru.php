@@ -1,6 +1,6 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// extrait automatiquement de http://www.spip.net/trad-lang/
+// extrait automatiquement de http://trad.spip.org
 // ** ne pas modifier le fichier **
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
@@ -78,9 +78,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'texte_nouveau_mot' => 'Новое ключевое слово',
 	'titre_config_groupe_mots_cles' => 'Настройка групп ключевых слов',
 	'titre_gauche_mots_edit' => 'НОМЕР КЛЮЧЕВОГО СЛОВА:',
-	'titre_groupe_mots' => '<NEW>Groupe de mots-cl&eacute;s', # NEW
+	'titre_groupe_mots' => '<NEW>Groupe de mots-clés', # NEW
 	'titre_groupe_mots_numero' => '<NEW>GROUPE DE MOTS NUMÉRO :', # NEW
-	'titre_groupes_mots' => '<NEW>Groupes de mots-cl&eacute;s', # NEW
+	'titre_groupes_mots' => '<NEW>Groupes de mots-clés', # NEW
 	'titre_mots_cles_dans_forum' => 'Ключевые слова в форумах основного сайта',
 	'titre_mots_tous' => 'Ключевые слова',
 	'titre_nouveau_groupe' => 'Новая группа',
