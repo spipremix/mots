@@ -42,9 +42,15 @@ function action_editer_mot_dist($arg=null)
  */
 function mot_inserer($id_groupe) {
 
-	$champs = array(
-		'id_groupe' => $id_groupe,
-	);
+	$champs = array();
+	$row = sql_fetsel("titre", "spip_groupes_mots", "id_groupe=".intval($id_groupe));
+	if ($row) {
+		$champs['id_groupe'] = $id_groupe;
+		$champs['type'] = $row['titre'];
+	}
+	else
+		return false;
+
 
 	// Envoyer aux plugins
 	$champs = pipeline('pre_insertion',
