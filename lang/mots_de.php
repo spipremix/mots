@@ -17,7 +17,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_checkbox_qui_attribue_mot_cle_visiteurs' => 'Besucher der Website die einen Beitrag in ein Forum geschrieben haben.',
 
 	// C
-	'creer_et_associer_un_mot' => 'Schlagwort anlegen und zuordnen',
+	'creer_et_associer_un_mot' => 'Schlagwort anlegen und zuordnen', # MODIF
 
 	// I
 	'icone_creation_groupe_mots' => 'Neue Schlagwort-Kategorie anlegen',

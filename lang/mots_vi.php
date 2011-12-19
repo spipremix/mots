@@ -17,7 +17,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_checkbox_qui_attribue_mot_cle_visiteurs' => 'Độc giả lúc gửi góp ý trên diễn đàn.',
 
 	// C
-	'creer_et_associer_un_mot' => 'Créér et associer un mot-clé', # NEW
+	'creer_et_associer_un_mot' => 'Créér et associer un mot-clé', # MODIF
 
 	// I
 	'icone_creation_groupe_mots' => 'Thêm NHÓM từ mới  ',

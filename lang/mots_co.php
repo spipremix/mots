@@ -17,7 +17,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_checkbox_qui_attribue_mot_cle_visiteurs' => 'i visitori di u situ pùbblicu quand\'elli scrivenu un messagiu in un foru.',
 
 	// C
-	'creer_et_associer_un_mot' => 'Créér et associer un mot-clé', # NEW
+	'creer_et_associer_un_mot' => 'Créér et associer un mot-clé', # MODIF
 
 	// I
 	'icone_creation_groupe_mots' => 'Creà un novu gruppu di parulle',

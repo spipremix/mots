@@ -17,7 +17,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_checkbox_qui_attribue_mot_cle_visiteurs' => 'v15170r5 0f 7h3 pub11c 5173 wh3n 7h3y p057 4 m3554g3 0n 4 f0rum.',
 
 	// C
-	'creer_et_associer_un_mot' => 'Créér et associer un mot-clé', # NEW
+	'creer_et_associer_un_mot' => 'Créér et associer un mot-clé', # MODIF
 
 	// I
 	'icone_creation_groupe_mots' => 'Cr3473 4 n3w k3yw0rd gr0up',

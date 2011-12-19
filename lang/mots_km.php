@@ -17,7 +17,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_checkbox_qui_attribue_mot_cle_visiteurs' => 'ពួក​ទស្សនាករ សៃថ៍សាធារណៈ ពេល​ពួក​គេ ​ដាក់មួយសារ ​លើមួយ​វេទិកា។',
 
 	// C
-	'creer_et_associer_un_mot' => 'Créér et associer un mot-clé', # NEW
+	'creer_et_associer_un_mot' => 'Créér et associer un mot-clé', # MODIF
 
 	// I
 	'icone_creation_groupe_mots' => 'បង្កើត មួយក្រុមពាក្យថ្មី',

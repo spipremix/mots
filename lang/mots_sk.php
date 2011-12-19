@@ -17,7 +17,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_checkbox_qui_attribue_mot_cle_visiteurs' => 'návštevníci verejnej stránky, keď pošlú príspevok do diskusného fóra.',
 
 	// C
-	'creer_et_associer_un_mot' => 'Vytvoriť a priradiť kľúčové slovo',
+	'creer_et_associer_un_mot' => 'Vytvoriť a priradiť kľúčové slovo', # MODIF
 
 	// I
 	'icone_creation_groupe_mots' => 'Vytvoriť novú skupinu klúčových slov',

@@ -17,7 +17,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_checkbox_qui_attribue_mot_cle_visiteurs' => 'ဖိုရမ်တွင် မှာကြားချက်များထားရှိပြီး အများသုံးဝက်ဘ်ဆိုက်သို့ ဝင်ရောက်ကြည့်ရှုသူများ',
 
 	// C
-	'creer_et_associer_un_mot' => 'Créér et associer un mot-clé', # NEW
+	'creer_et_associer_un_mot' => 'Créér et associer un mot-clé', # MODIF
 
 	// I
 	'icone_creation_groupe_mots' => 'သော့ချက်စကားလုံး အုပ်စုအသစ်တည်ဆောက်ပါ',

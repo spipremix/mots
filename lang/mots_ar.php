@@ -17,7 +17,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_checkbox_qui_attribue_mot_cle_visiteurs' => 'زوار الموقع العمومي حين يرسلون مشاركة الى المنتدى',
 
 	// C
-	'creer_et_associer_un_mot' => 'إنشاء مفتاح وربطه',
+	'creer_et_associer_un_mot' => 'إنشاء مفتاح وربطه', # MODIF
 
 	// I
 	'icone_creation_groupe_mots' => 'إنشاء مجموعة جديدة',
