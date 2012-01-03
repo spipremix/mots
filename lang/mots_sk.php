@@ -17,7 +17,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_checkbox_qui_attribue_mot_cle_visiteurs' => 'návštevníci verejnej stránky, keď pošlú príspevok do diskusného fóra.',
 
 	// C
-	'creer_et_associer_un_mot' => 'Vytvoriť a priradiť kľúčové slovo', # MODIF
+	'creer_et_associer_un_mot' => 'Vytvoriť a pripojiť kľúčové slovo',
 
 	// I
 	'icone_creation_groupe_mots' => 'Vytvoriť novú skupinu klúčových slov',
@@ -80,7 +80,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_gauche_mots_edit' => 'KĽÚČOVÉ SLOVO ČÍSLO:',
 	'titre_groupe_mots' => 'Skupina kľúčových slov',
 	'titre_groupe_mots_numero' => 'SKUPINA KĽÚČOVÝCH SLOV ČÍSLO:',
-	'titre_groupes_mots' => 'Groupes de mots-clés', # NEW
+	'titre_groupes_mots' => 'Skupiny kľúčových slov',
 	'titre_mots_cles_dans_forum' => 'Kľúčové slová v diskusných fórach na verejnej stránke',
 	'titre_mots_tous' => 'Kľúčové slová',
 	'titre_nouveau_groupe' => 'Nová skupina',

@@ -17,7 +17,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_checkbox_qui_attribue_mot_cle_visiteurs' => 'visitors of the public site when they post a message in a forum.',
 
 	// C
-	'creer_et_associer_un_mot' => 'Create and assign a keyword',
+	'creer_et_associer_un_mot' => 'Create and assign a keyword', # MODIF
 
 	// I
 	'icone_creation_groupe_mots' => 'Create a new keyword group',
