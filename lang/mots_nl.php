@@ -17,7 +17,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_checkbox_qui_attribue_mot_cle_visiteurs' => 'bezoekers van de publieke site die een bericht op het forum posten',
 
 	// C
-	'creer_et_associer_un_mot' => 'Maken en toewijzen een trefwoord', # MODIF
+	'creer_et_associer_un_mot' => 'Maken en toewijzen een trefwoord',
 
 	// I
 	'icone_creation_groupe_mots' => 'Een nieuwe groep van trefwoorden aanmaken',
