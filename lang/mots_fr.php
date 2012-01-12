@@ -33,9 +33,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_changer_nom_groupe' => 'Changer le nom de ce groupe :',
 	'info_creation_mots_cles' => 'Créez et configurez ici les mots-clés du site',
 	'info_dans_groupe' => 'Dans le groupe :',
-	'info_delet_mots_cles' => 'Vous avez	demandé à supprimer le mot-clé
-<b>@titre_mot@</b> (@type_mot@). Ce mot-clé étant lié à
-<b>@texte_lie@</b> vous devez confirmer cette décision :',
+	'info_delet_mots_cles' => 'Vous avez demandé à supprimer le mot-clé <b>@titre_mot@</b> (@type_mot@). Ce mot-clé étant lié à <b>@texte_lie@</b> vous devez confirmer cette décision :',
 	'info_groupe_important' => 'Groupe important',
 	'info_modifier_mot' => 'Modifier le mot-clé :',
 	'info_mots_cles' => 'Les mots-clés',
@@ -48,7 +46,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_retirer_mot' => 'Retirer ce mot',
 	'info_retirer_mots' => 'Retirer tous les mots',
 	'info_rubriques_liees_mot' => 'Les rubriques liées à ce mot-clé',
-	'info_selection_un_seul_mot_cle' => 'On ne peut sélectionner qu\'<b>un seul mot-clé à</b> la fois dans ce groupe.',
+	'info_selection_un_seul_mot_cle' => 'On ne peut sélectionner qu\'<b>un seul</b> mot-clé à la fois dans ce groupe.',
 	'info_supprimer_mot' => 'supprimer ce mot',
 	'info_titre_mot_cle' => 'Nom ou titre du mot-clé',
 	'info_un_mot' => 'Un seul mot à la fois',
@@ -65,9 +63,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'logo_mot_cle' => 'LOGO DU MOT-CLÉ',
 
 	// T
-	'texte_config_groupe_mots_cles' => 'Souhaitez-vous activer la configuration avancée des mots-clés,
-   en indiquant par exemple qu\'on peut sélectionner un mot unique
-   par groupe, qu\'un groupe est important... ?',
+	'texte_config_groupe_mots_cles' => 'Souhaitez-vous activer la configuration avancée des mots-clés, en indiquant par exemple qu\'on peut sélectionner un mot unique par groupe, qu\'un groupe est important… ?',
 	'texte_mots_cles' => 'Les mots-clés permettent de créer des liens thématiques entre vos articles
 		indépendamment de leur placement dans des rubriques. Vous pouvez ainsi
 		enrichir la navigation de votre site, voire utiliser ces propriétés
