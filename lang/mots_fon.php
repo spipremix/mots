@@ -35,7 +35,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_changer_nom_groupe' => 'mi ɖyɔ nyíkɔ gbɛtá ɔ tɔn:',
 	'info_creation_mots_cles' => 'mi bló bó sɔ gbètɛn lɛ sín àfɔɖóté',
 	'info_dans_groupe' => 'ɖò àgun ɔ mɛ:',
-	'info_delet_mots_cles' => 'àzán gùdó tɔn ',
+	'info_delet_mots_cles' => 'àzán gùdó tɔn ', # MODIF
 	'info_groupe_important' => 'Agùn trítrí',
 	'info_modifier_mot' => 'Modifier le mot-clé :', # NEW
 	'info_mots_cles' => 'Gbètákɛn',
@@ -48,7 +48,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_retirer_mot' => 'ɖè wékwí é lɔ sín ',
 	'info_retirer_mots' => 'Mi ɖè wékwí bí sín ',
 	'info_rubriques_liees_mot' => 'àkpáxwé lɛ ɖê bɔɖó gbètákɛn lɛ wú ɔ',
-	'info_selection_un_seul_mot_cle' => 'Mi gbètákɛn ɖòkpó jɛn mi síwú zé.',
+	'info_selection_un_seul_mot_cle' => 'Mi gbètákɛn ɖòkpó jɛn mi síwú zé.', # MODIF
 	'info_supprimer_mot' => 'gbìdí  ɔ wékwín é lɔ ',
 	'info_titre_mot_cle' => 'nyíkɔ xótá ɔ kàbí gbètákɛn ɔ tɔn ',
 	'info_un_mot' => 'xókwín ɖòkpó',
@@ -65,7 +65,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'logo_mot_cle' => 'sɔsí xógbè ɔ tɔn',
 
 	// T
-	'texte_config_groupe_mots_cles' => ' xógbè lɛ nyɔwlántɔ lɛ gblogblojí é lɔ nɔ zɔn bɔ mi nɔ sɛ  wɛn ɖó bó nɔ lɛ yí wɛnxó kléwun lɛ wěmà kléwún ɖé lɛ wɛbɔ yé nɔ zɔn bɔ xó lɛ nɔ yí àtɛjí gànmɛgànmɛmi sɔ xóxòkplégbàví mi tɔn ',
+	'texte_config_groupe_mots_cles' => ' xógbè lɛ nyɔwlántɔ lɛ gblogblojí é lɔ nɔ zɔn bɔ mi nɔ sɛ  wɛn ɖó bó nɔ lɛ yí wɛnxó kléwun lɛ wěmà kléwún ɖé lɛ wɛbɔ yé nɔ zɔn bɔ xó lɛ nɔ yí àtɛjí gànmɛgànmɛmi sɔ xóxòkplégbàví mi tɔn ', # MODIF
 	'texte_mots_cles' => 'Gbêgbè yé wlán wěmà ɔMi sɔ Azán ɖê yé sɔ wěmà sɔ xlɛàlɔwlí ɖévó lɛ ɖê gòsín gblogblojí é lɔ ján mi tìnmɛ càcàcàxójíjlá ɔmi sɔ ɖidé ɖó wěmà lɛ mɛsùpípù tɔn nú mi ná tò wěmà mi tɔn gànjí ɔ mi síwú zán kwín é lɔ lɛmi kó mɔ mi àmɔ mi sɔ ɖò xóxòkplégbàví ɔ mɛ ámi lɛ vɔ yí kànjí',
 	'texte_mots_cles_dans_forum' => 'Gbêgbè yé wlán wěmà ɔMi sɔ Azán ɖê yé sɔ wěmà sɔ xlɛàlɔwlí ɖévó lɛ ɖê gòsín gblogblojí é lɔ ján mi tìnmɛ càcàcàxójíjlá ɔmi sɔ ɖidé ɖó wěmà lɛ mɛsùpípù tɔn nú mi ná tò wěmà mi tɔn gànjí ɔ mi síwú zán kwín é lɔ lɛ',
 	'texte_nouveau_mot' => 'wékwín yɔyɔ',

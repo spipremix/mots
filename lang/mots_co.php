@@ -36,7 +36,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_creation_mots_cles' => 'Create puru è cunfigurate quì e parulle chjave di u situ',
 	'info_dans_groupe' => 'In u gruppu :',
 	'info_delet_mots_cles' => 'Vulete sguassà u segnu
-<b>@titre_mot@</b> (@type_mot@). Essendu questu alleatu à <b>@texte_lie@</b>, vi tocca à cunfirmà sta decisione :',
+<b>@titre_mot@</b> (@type_mot@). Essendu questu alleatu à <b>@texte_lie@</b>, vi tocca à cunfirmà sta decisione :', # MODIF
 	'info_groupe_important' => 'Gruppu impurtante',
 	'info_modifier_mot' => 'Mudificà u segnu :',
 	'info_mots_cles' => 'I segni',
@@ -49,7 +49,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_retirer_mot' => 'Sguassà sta parulla',
 	'info_retirer_mots' => 'Sguassà tutte e parulle',
 	'info_rubriques_liees_mot' => 'E rùbbriche alleate à stu segnu',
-	'info_selection_un_seul_mot_cle' => 'Si pò sceglie <b>un solu segnu</b> à a volta in stu gruppu.',
+	'info_selection_un_seul_mot_cle' => 'Si pò sceglie <b>un solu segnu</b> à a volta in stu gruppu.', # MODIF
 	'info_supprimer_mot' => 'sguassà sta parulla',
 	'info_titre_mot_cle' => 'Nome o tìtulu di u segnu',
 	'info_un_mot' => 'Una parlla sola à a volta',
@@ -67,7 +67,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// T
 	'texte_config_groupe_mots_cles' => 'Vulete attivà a cunfigurazione avanzata di i segni,
-  indettendu per esempiu chì si pò sceglie un segnu ùnicu per gruppu, o chì un gruppu hè impurtante ... ?',
+  indettendu per esempiu chì si pò sceglie un segnu ùnicu per gruppu, o chì un gruppu hè impurtante ... ?', # MODIF
 	'texte_mots_cles' => 'I segni permettenu di creà lee temàtiche frà i vostri artìculi,
   duv\'elli sianu piazzati à mezu à e diverse rùbbriche.
   Cusì pudete arricchisce a navigazione di u vostru situ, o puru persunalizà a presentazione di l\'artìculi in i vostri mudelli.',

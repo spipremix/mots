@@ -37,7 +37,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_dans_groupe' => 'Andan gwoup :',
 	'info_delet_mots_cles' => 'W te domann kraze yon mokle
 <b>@titre_mot@</b> (@type_mot@).Mokle-a  se jwenn ek
-<b>@texte_lie@</b> fòk w konfime chwa-a :',
+<b>@texte_lie@</b> fòk w konfime chwa-a :', # MODIF
 	'info_groupe_important' => 'Gwoup enpòtan',
 	'info_modifier_mot' => 'Modifier le mot-clé :', # NEW
 	'info_mots_cles' => 'Mokle yo',
@@ -50,7 +50,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_retirer_mot' => 'Kraze mokle-a',
 	'info_retirer_mots' => 'Kraze tout mokle yo',
 	'info_rubriques_liees_mot' => 'Ribrik yo ki jwenn an lyen ak mokle-a',
-	'info_selection_un_seul_mot_cle' => 'Se posib chwasi selman <b> yon sèl mokle</b> nan group la .',
+	'info_selection_un_seul_mot_cle' => 'Se posib chwasi selman <b> yon sèl mokle</b> nan group la .', # MODIF
 	'info_supprimer_mot' => 'kraze mokle-a',
 	'info_titre_mot_cle' => 'Kouman mokle i rele',
 	'info_un_mot' => 'Yon sèl mo nan mèm tan',
@@ -68,7 +68,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// T
 	'texte_config_groupe_mots_cles' => 'W vle aktive konfigirasyon prési pou tout mokle,
-   ek di w pa egsanp se posib chwazi yon mokle sèlman, osnon di yon gwoup-la se enpòtan... ? ',
+   ek di w pa egsanp se posib chwazi yon mokle sèlman, osnon di yon gwoup-la se enpòtan... ? ', # MODIF
 	'texte_mots_cles' => 'Moklé se bagay ki pèmè w kreye lyen tématik ansanm atik yo
   kiswa zot plas nan ribrik. Bagay-la pémè rann méyè navigasyon sou sit aw
   ak pèsònalize prezantasyon atik yo nan leskelèt.',

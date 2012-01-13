@@ -36,7 +36,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_creation_mots_cles' => 'Setzt hei d\'Schlësselwierder vum Site derbäi a konfiguréiert se',
 	'info_dans_groupe' => 'Am Grupp:',
 	'info_delet_mots_cles' => 'Dir wëllt d\'Schlësselwuert
- <b>@titre_mot@</b> (@type_mot@) läschen. Dëst Wuert ass un <b>@texte_lie@</b> gebonnen, dir musst dës Decisioun bestätegen:',
+ <b>@titre_mot@</b> (@type_mot@) läschen. Dëst Wuert ass un <b>@texte_lie@</b> gebonnen, dir musst dës Decisioun bestätegen:', # MODIF
 	'info_groupe_important' => 'Wichtege Grupp',
 	'info_modifier_mot' => 'Schlësselwuert änneren:',
 	'info_mots_cles' => 'D\'Schlësselwierder',
@@ -49,7 +49,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_retirer_mot' => 'Dëst Wuert läschen',
 	'info_retirer_mots' => 'D\'Wierder all läschen',
 	'info_rubriques_liees_mot' => 'Un dëst Schlësselwuert gebonnen Rubriken',
-	'info_selection_un_seul_mot_cle' => 'Dir kënnt <b>ëmmer nëmmen een Schlësselwuert</b> an dësem Grupp wielen.',
+	'info_selection_un_seul_mot_cle' => 'Dir kënnt <b>ëmmer nëmmen een Schlësselwuert</b> an dësem Grupp wielen.', # MODIF
 	'info_supprimer_mot' => 'dëst Wuert läschen',
 	'info_titre_mot_cle' => 'Numm oder Titel vum Schlësselwuert',
 	'info_un_mot' => 'Wuert fir Wuert',
@@ -66,7 +66,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'logo_mot_cle' => 'LOGO VUM SCHLËSSELWUERT',
 
 	// T
-	'texte_config_groupe_mots_cles' => 'Wëll dir déi erweidert Astellung vun de Schlësselwierder, fir z.B. unzeginn dat een een eenzegt Wuert pro Grupp kann auswielen, dat e Grupp wichteg ass...?',
+	'texte_config_groupe_mots_cles' => 'Wëll dir déi erweidert Astellung vun de Schlësselwierder, fir z.B. unzeginn dat een een eenzegt Wuert pro Grupp kann auswielen, dat e Grupp wichteg ass...?', # MODIF
 	'texte_mots_cles' => 'D\'Schlësselwierder erlaaben thematësch Linken tëschent den Artikelen ze maachen, egal a wéi enger Rubrik se sinn. Dir kënnt esou är Navigatioun vum Site erweideren, oder dëst benotzen fir de Layout vun den Artikelen an de Skeletter unzepassen.',
 	'texte_mots_cles_dans_forum' => 'Wëllt dir erlaaben dass d\'Schlësselwierder an den öffentlëche Forum\'en aschalten vun de Benotzer gewielt ginn? (Opgepasst: dës Fonktioun ass zimlëch schwéier richteg ze benotzen.)',
 	'texte_nouveau_mot' => 'Neit Wuert',

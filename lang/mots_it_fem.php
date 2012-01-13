@@ -38,7 +38,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_delet_mots_cles' => 'Hai chiesto
 di eliminare la parola chiave
 <b>@titre_mot@</b> (@type_mot@). Essendo quest\'ultima collegata a
-<b>@texte_lie@</b>, è necessario confermare la decisione:',
+<b>@texte_lie@</b>, è necessario confermare la decisione:', # MODIF
 	'info_groupe_important' => 'Gruppo importante',
 	'info_modifier_mot' => 'Modifica la parola chiave:',
 	'info_mots_cles' => 'Le parole chiave',
@@ -51,7 +51,7 @@ di eliminare la parola chiave
 	'info_retirer_mot' => 'Rimuovere questa parola',
 	'info_retirer_mots' => 'Rimuovere tutte le parole',
 	'info_rubriques_liees_mot' => 'Le rubriche collegate a questa parola chiave',
-	'info_selection_un_seul_mot_cle' => 'È consentito selezionare <b>una sola parola chiave</b> alla volta in questo gruppo.',
+	'info_selection_un_seul_mot_cle' => 'È consentito selezionare <b>una sola parola chiave</b> alla volta in questo gruppo.', # MODIF
 	'info_supprimer_mot' => 'cancella questa parola',
 	'info_titre_mot_cle' => 'Nome o titolo della parola chiave',
 	'info_un_mot' => 'Una parola sola alla volta',
@@ -69,7 +69,7 @@ di eliminare la parola chiave
 
 	// T
 	'texte_config_groupe_mots_cles' => 'Vuoi attivare la configurazione avanzata delle parole chiave,
-indicando per esempio che si può selezionare una parola unica per gruppo o che un gruppo è importante, ecc.?',
+indicando per esempio che si può selezionare una parola unica per gruppo o che un gruppo è importante, ecc.?', # MODIF
 	'texte_mots_cles' => 'Le parole chiave permettono di creare dei link tematici tra gli articoli
 indipendentemente dal posto che occupano nelle diverse rubriche.
 Si può quindi arricchire la navigazione del sito, o utilizzare queste proprietà

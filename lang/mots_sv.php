@@ -37,7 +37,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_dans_groupe' => 'I gruppen:',
 	'info_delet_mots_cles' => 'Du har försökt radera nyckelordet
 <b>@titre_mot@</b> (@type_mot@). Nyckleordet är länkat till
-<b>@texte_lie@</b> du måste bekräfta handlingen:',
+<b>@texte_lie@</b> du måste bekräfta handlingen:', # MODIF
 	'info_groupe_important' => 'Viktig grupp',
 	'info_modifier_mot' => 'Editera nyckelordet:',
 	'info_mots_cles' => 'Nyckelord',
@@ -50,7 +50,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_retirer_mot' => 'Radera nyckelordet',
 	'info_retirer_mots' => 'Radera alla nyckelord',
 	'info_rubriques_liees_mot' => 'Avdelningar förknippade med detta nyckelord',
-	'info_selection_un_seul_mot_cle' => 'Du kan välja <b>endast ett nyckelord</b> samtidigt i den här gruppen.',
+	'info_selection_un_seul_mot_cle' => 'Du kan välja <b>endast ett nyckelord</b> samtidigt i den här gruppen.', # MODIF
 	'info_supprimer_mot' => 'Radera nyckelordet',
 	'info_titre_mot_cle' => 'Namen eller titel för det här nyckelordet',
 	'info_un_mot' => 'Ett nyckelord åt gången',

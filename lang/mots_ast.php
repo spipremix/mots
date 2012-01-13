@@ -37,7 +37,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_dans_groupe' => 'Nel grupu:',
 	'info_delet_mots_cles' => 'Pedisti desaniciar la pallabra-clave
 <b>@titre_mot@</b> (@type_mot@). Como esta pallabra ta enllazada
-con <b>@texte_lie@</b> debes confirmar esta decisión:',
+con <b>@texte_lie@</b> debes confirmar esta decisión:', # MODIF
 	'info_groupe_important' => 'Grupu importante',
 	'info_modifier_mot' => 'Modificar la pallabra-clave:',
 	'info_mots_cles' => 'Les pallabres-clave',
@@ -50,7 +50,7 @@ con <b>@texte_lie@</b> debes confirmar esta decisión:',
 	'info_retirer_mot' => 'Retirar esta pallabra',
 	'info_retirer_mots' => 'Retirar toles pallabres',
 	'info_rubriques_liees_mot' => 'Les estayes lligáes con esta pallabra-clave',
-	'info_selection_un_seul_mot_cle' => 'Nun se pue seleicionar más que <b>una sola pallabra-clave</b> a la vez nesti grupu.',
+	'info_selection_un_seul_mot_cle' => 'Nun se pue seleicionar más que <b>una sola pallabra-clave</b> a la vez nesti grupu.', # MODIF
 	'info_supprimer_mot' => 'desaniciar esta pallabra',
 	'info_titre_mot_cle' => 'Nome o títulu de la pallabra clave',
 	'info_un_mot' => 'Una sola pallabra a la vez',
@@ -69,7 +69,7 @@ con <b>@texte_lie@</b> debes confirmar esta decisión:',
 	// T
 	'texte_config_groupe_mots_cles' => '¿Quies activar la configuración avanzada de les pallabres-clave,
    conseñando por exemplu que pue seleicionase una pallabra única
-   por grupu, que un grupu ye importante...?',
+   por grupu, que un grupu ye importante...?', # MODIF
 	'texte_mots_cles' => 'Les pallabres-clave permiten crear enllaces temáticos ente artículos
   independientemente del so allugamientu nes estayes. D\'esti mou pues
   arriquecer la ñavegacion pol sitiu, y utilizar estes propiedáes

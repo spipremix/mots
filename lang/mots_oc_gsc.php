@@ -37,7 +37,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_dans_groupe' => 'Dens lo grop:',
 	'info_delet_mots_cles' => 'Qu\'avetz demandat de suprimir lo mot clau
 <b>@titre_mot@</b> (@type_mot@). Aqueth mot clau qu\'ei ligat a
- <b>@texte_lie@</b>. Que devetz confirmar aquera decision:',
+ <b>@texte_lie@</b>. Que devetz confirmar aquera decision:', # MODIF
 	'info_groupe_important' => 'Grop important',
 	'info_modifier_mot' => 'Modifier le mot-clé :', # NEW
 	'info_mots_cles' => 'Los mots clau',
@@ -50,7 +50,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_retirer_mot' => 'Quitar aqueth mot',
 	'info_retirer_mots' => 'Quitar tots los mots ',
 	'info_rubriques_liees_mot' => 'Las rubricas ligadas a aqueth mot clau',
-	'info_selection_un_seul_mot_cle' => 'Que\'s pòt seleccionar sonque <b>un mot clau</b> au còp dens aqueth grop.',
+	'info_selection_un_seul_mot_cle' => 'Que\'s pòt seleccionar sonque <b>un mot clau</b> au còp dens aqueth grop.', # MODIF
 	'info_supprimer_mot' => 'suprimir aqueth mot',
 	'info_titre_mot_cle' => 'Nom o títol deu mot clau',
 	'info_un_mot' => 'Sonque un mot au còp',
@@ -69,7 +69,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// T
 	'texte_config_groupe_mots_cles' => 'E desiratz d\'activar la configuracion avançada deus mots clau,
  en indicar per exemple que\'s pòt seleccionar un mot unenc
- per grop, qu\'un grop ei important...?',
+ per grop, qu\'un grop ei important...?', # MODIF
 	'texte_mots_cles' => 'Mercés aus mots clau que podetz crear ligams tematics entre los vòstes articles
   qué que sia la lor plaça dens las rubricas. Aquò que\'vs permet
   d\'enriquir la navigacion deu vòste sit, e quitament d\'utilizar aqueras proprietats 

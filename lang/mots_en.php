@@ -37,7 +37,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_dans_groupe' => 'In group:',
 	'info_delet_mots_cles' => 'You requested the deletion of keyword
 <b>@titre_mot@</b> (@type_mot@). As this keyword is linked to
-<b>@texte_lie@</b>you must confirm this decision:',
+<b>@texte_lie@</b>you must confirm this decision:', # MODIF
 	'info_groupe_important' => 'Important group',
 	'info_modifier_mot' => 'Edit the keyword:',
 	'info_mots_cles' => 'Keywords',
@@ -50,7 +50,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_retirer_mot' => 'Remove this keyword',
 	'info_retirer_mots' => 'Remove all keywords',
 	'info_rubriques_liees_mot' => 'Sections with this keyword',
-	'info_selection_un_seul_mot_cle' => 'You can select <b>only one keyword</b> at a time in this group.',
+	'info_selection_un_seul_mot_cle' => 'You can select <b>only one keyword</b> at a time in this group.', # MODIF
 	'info_supprimer_mot' => 'delete this keyword',
 	'info_titre_mot_cle' => 'Keyword name or title',
 	'info_un_mot' => 'One keyword at a time',
@@ -69,7 +69,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// T
 	'texte_config_groupe_mots_cles' => 'Do you want to activate advanced keyword group configuration,
    e.g. to indicate that one one word from the group may be used,
-  that a group is important etc.?',
+  that a group is important etc.?', # MODIF
 	'texte_mots_cles' => 'Keywords allow you to create topical links between your articles
   irrespective of their section. This can be used to
   improve site navigability, or even as a tool

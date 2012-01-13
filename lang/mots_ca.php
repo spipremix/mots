@@ -37,7 +37,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_dans_groupe' => 'Dins el grup:',
 	'info_delet_mots_cles' => 'Heu sol·licitat la supressió de la
  paraula clau <b>@titre_mot@</b> (@type_mot@). Donat que la paraula-clau està lligada a
-<b>@texte_lie@</b> heu de confirmar aquesta decisió:',
+<b>@texte_lie@</b> heu de confirmar aquesta decisió:', # MODIF
 	'info_groupe_important' => 'Grup important',
 	'info_modifier_mot' => 'Modificar la paraula clau:',
 	'info_mots_cles' => 'Les paraules clau',
@@ -50,7 +50,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_retirer_mot' => 'suprimir aquesta paraula',
 	'info_retirer_mots' => 'suprimir totes les paraules',
 	'info_rubriques_liees_mot' => 'Seccions associades a aquesta paraula clau',
-	'info_selection_un_seul_mot_cle' => 'Podeu seleccionar <b>només una paraula clau</b> cada vegada en aquest grup.',
+	'info_selection_un_seul_mot_cle' => 'Podeu seleccionar <b>només una paraula clau</b> cada vegada en aquest grup.', # MODIF
 	'info_supprimer_mot' => 'suprimir aquesta paraula',
 	'info_titre_mot_cle' => 'Nom o títol de la paraula clau',
 	'info_un_mot' => 'Una sola paraula a la vegada',
@@ -69,7 +69,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// T
 	'texte_config_groupe_mots_cles' => 'Voleu activar la configuració avançada de les paraules clau,
   indicant per exemple que es pot seleccionar un mot únic
-  per grup, quin grup és important...?',
+  per grup, quin grup és important...?', # MODIF
 	'texte_mots_cles' => 'Les paraules clau permeten crear enllaços tematics entre els articles
 independement del seu emplaçament a les seccions.Es pot així
 enriquir la navegació del vostre lloc, inclús utilitzar aquestes propietats

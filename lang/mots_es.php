@@ -37,7 +37,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_dans_groupe' => 'En el grupo',
 	'info_delet_mots_cles' => 'Pediste la supresión de la palabra clave
 <b>@titre_mot@</b> (@type_mot@). Como esta palabra clave está relacionada a 
-<b>@texte_lie@</b>, debes confirmar esta decisión:',
+<b>@texte_lie@</b>, debes confirmar esta decisión:', # MODIF
 	'info_groupe_important' => 'Grupo importante',
 	'info_modifier_mot' => 'Modificar la palabra clave:',
 	'info_mots_cles' => 'Las palabras clave',
@@ -50,7 +50,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_retirer_mot' => 'Retirar la palabra',
 	'info_retirer_mots' => 'Retirar todas las palabras',
 	'info_rubriques_liees_mot' => 'Las secciones ligadas a esta palabra clave',
-	'info_selection_un_seul_mot_cle' => 'Sólo se puede seleccionar <b>una palabra</b> a la vez en este grupo',
+	'info_selection_un_seul_mot_cle' => 'Sólo se puede seleccionar <b>una palabra</b> a la vez en este grupo', # MODIF
 	'info_supprimer_mot' => 'Suprimir esta palabra',
 	'info_titre_mot_cle' => 'Título de la palabra clave',
 	'info_un_mot' => 'Una sola palabra a la vez',
@@ -67,7 +67,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'logo_mot_cle' => 'Logotipo de la palabra clave...',
 
 	// T
-	'texte_config_groupe_mots_cles' => '¿Deseas activar la configuración avanzada de las palabras clave, indicando, por ejemplo, que se puede seleccionar sólo una palabra por grupo, que un grupo importante, ...?',
+	'texte_config_groupe_mots_cles' => '¿Deseas activar la configuración avanzada de las palabras clave, indicando, por ejemplo, que se puede seleccionar sólo una palabra por grupo, que un grupo importante, ...?', # MODIF
 	'texte_mots_cles' => 'Las palabras clave permiten crear enlaces temáticos entre los artículos, independientemente de su emplazamiento dentro de las secciones. De este modo, puedes enriquecer la navegación de tu sitio, o incluso utilizar estas propiedades para personalizar la presentación de los artículos dentro de tus esqueletos.',
 	'texte_mots_cles_dans_forum' => '¿Quieres permitir el uso de las palabras clave, que los y las visitantes puedan seleccionar en los foros del sitio público? (Atención: esta opción es relativamente compleja de usar correctamente.)',
 	'texte_nouveau_mot' => 'Nueva palabra',

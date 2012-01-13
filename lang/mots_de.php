@@ -35,7 +35,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_changer_nom_groupe' => 'Namen dieser Kategorie ändern:',
 	'info_creation_mots_cles' => 'Hier verwalten Sie die Schlagworte der Website',
 	'info_dans_groupe' => 'In der Kategorie:',
-	'info_delet_mots_cles' => 'Das Schlagwort <b>@titre_mot@</b> (@type_mot@) ist mit dem Artikel <b>@texte_lie@</b> verknüpft. Sie müssen deshalb das Löschen ausdrücklich bestätigen:',
+	'info_delet_mots_cles' => 'Das Schlagwort <b>@titre_mot@</b> (@type_mot@) ist mit dem Artikel <b>@texte_lie@</b> verknüpft. Sie müssen deshalb das Löschen ausdrücklich bestätigen:', # MODIF
 	'info_groupe_important' => 'Wichtige Kategorie',
 	'info_modifier_mot' => 'Schlagwort ändern:',
 	'info_mots_cles' => 'Schlagworte',
@@ -48,7 +48,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_retirer_mot' => 'Wort entfernen',
 	'info_retirer_mots' => 'Alle Worte entfernen',
 	'info_rubriques_liees_mot' => 'Mit diesem Schlagwort verknüpfte Rubriken',
-	'info_selection_un_seul_mot_cle' => 'In dieser Kategorie kann man nur <b>ein Schlagwort auf einmal</b> auswählen.',
+	'info_selection_un_seul_mot_cle' => 'In dieser Kategorie kann man nur <b>ein Schlagwort auf einmal</b> auswählen.', # MODIF
 	'info_supprimer_mot' => 'Wort löschen',
 	'info_titre_mot_cle' => 'Name oder Titel des Schlagworts',
 	'info_un_mot' => 'Nur ein Wort auf einmal',
@@ -67,7 +67,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// T
 	'texte_config_groupe_mots_cles' => 'Möchten Sie die erweiterten Einstellungen für
  Schlagworte einschalten? Sie können dann z.B. die Zuordnungen auf ein Wort
- pro Kategorie begrenzen, eine Kategorie als besonders wichtig definieren etc.',
+ pro Kategorie begrenzen, eine Kategorie als besonders wichtig definieren etc.', # MODIF
 	'texte_mots_cles' => 'Mit Schlagworten können Verbindungen zu thematisch verwandten Artikeln hergestellt werden, die sich in einer anderen Rubrik befinden. Dadurch können Sie eine flexible Navigationsstruktur schaffen oder in Ihren Layoutvorlagen individuelle Benutzer-Layouts ermöglichen.',
 	'texte_mots_cles_dans_forum' => 'Dürfen Ihre Besucher Forumsbeiträge verschlagworten? (Achtung! Diese Option ist komplex und sett genaue Kenntnisse voraus.)',
 	'texte_nouveau_mot' => 'Neues Wort',

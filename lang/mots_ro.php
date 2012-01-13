@@ -37,7 +37,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_dans_groupe' => 'În grupul :',
 	'info_delet_mots_cles' => 'Aţi cerut ştergerea cuvântului-cheie
 <b>@titre_mot@</b> (@type_mot@). Acest cuvânt-cheie fiind legat de
-<b>@texte_lie@</b> vă rugăm să confirmaţi această decizie :',
+<b>@texte_lie@</b> vă rugăm să confirmaţi această decizie :', # MODIF
 	'info_groupe_important' => 'Grup important',
 	'info_modifier_mot' => 'Modificaţi cuvântul-cheie :',
 	'info_mots_cles' => 'Cuvintele-cheie',
@@ -50,7 +50,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_retirer_mot' => 'Retrageţi acest cuvânt',
 	'info_retirer_mots' => 'Retrageţi toate cuvintele',
 	'info_rubriques_liees_mot' => 'Rubricile legate de acest cuvânt-cheie',
-	'info_selection_un_seul_mot_cle' => 'Doar <b>un singur cuvânt-cheie</b> poate fi selecţionat pe moment din acest grup.',
+	'info_selection_un_seul_mot_cle' => 'Doar <b>un singur cuvânt-cheie</b> poate fi selecţionat pe moment din acest grup.', # MODIF
 	'info_supprimer_mot' => 'ştergeţi acest cuvânt',
 	'info_titre_mot_cle' => 'Numele sau titlu cuvântului-cheie',
 	'info_un_mot' => 'Un singur cuvânt-cheie odată',
@@ -69,7 +69,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// T
 	'texte_config_groupe_mots_cles' => 'Doriţi să activaţi configurarea avansată a cuvintelor-cheie,
    indicând, de exemplu, că puteţi selecţiona un cuvânt unic
-   pe grup, sau că un grup este important... ?',
+   pe grup, sau că un grup este important... ?', # MODIF
 	'texte_mots_cles' => 'Cuvintele-cheie permit crearea de legături tematice între articole,
   independent de plasarea lor în rubrici. Puteţi astfel
   să îmbogăţiţi navigarea site-ului dumneavoatră, adică să utilizaţi aceste proprietăţi

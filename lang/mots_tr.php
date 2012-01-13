@@ -36,7 +36,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_creation_mots_cles' => 'Burada sitenin anahtar sözcüklerini yaratınız ve konfigürasyonunu yapınız.',
 	'info_dans_groupe' => 'Grupta :',
 	'info_delet_mots_cles' => '<b>@titre_mot@</b>(@type_mot@) anahtar sözcüğünü silmek istediniz. Bu anahtar sözcük  
-<b>@texte_lie@<b>\'e bağlı olduğundan, bu kararı onaylamanız gerekiyor :',
+<b>@texte_lie@<b>\'e bağlı olduğundan, bu kararı onaylamanız gerekiyor :', # MODIF
 	'info_groupe_important' => 'Önemli gurup',
 	'info_modifier_mot' => 'Anahtar sözcüğü değiştir :',
 	'info_mots_cles' => 'Anahtar sözcükler',
@@ -49,7 +49,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_retirer_mot' => 'Bu anahtar sözcüğü geri al',
 	'info_retirer_mots' => 'Tüm anahtar sözcükleri geri al',
 	'info_rubriques_liees_mot' => 'Bu anahtar sözcüğe bağlı bölümler',
-	'info_selection_un_seul_mot_cle' => 'Bu grupta bir defada sadece bir anahtar sözcük seçebilirsiniz.',
+	'info_selection_un_seul_mot_cle' => 'Bu grupta bir defada sadece bir anahtar sözcük seçebilirsiniz.', # MODIF
 	'info_supprimer_mot' => 'Bu sözcüğü sil',
 	'info_titre_mot_cle' => 'Anahtar sözcüğün ismi veya başlığı',
 	'info_un_mot' => 'Her defasında tek bir anahtar sözcük',
@@ -68,7 +68,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// T
 	'texte_config_groupe_mots_cles' => 'Örneğin, grup başına tek sözcük seçme olanağı bulunduğunu,
            bir grubun önemli olduğunu ... belirtmek gibi,
-           anahtar sözcüklerin gelişmiş konfigürasyonunu çalıştırmak ister misiniz ? ',
+           anahtar sözcüklerin gelişmiş konfigürasyonunu çalıştırmak ister misiniz ? ', # MODIF
 	'texte_mots_cles' => 'Anahtar sözcükler makaleleriniz arasında bölümlerdeki yerlerini gözetmeksizin konusal bağlantılar kurmaya yarar.  Böylece, sitenizdeki gezintiyi zenginleştirir, şablonlarınızda makalelerin sunumunu kişiselleştirmek için bu özellikleri kullanabilirsiniz.',
 	'texte_mots_cles_dans_forum' => 'Kamu sitesinin forumlarında, ziyaretçiler tarafından seçilebilir anahtar sözcüklerin kullanımına izin vermek istiyor musunuz ?  (Dikkat : bu seçeneğin kullanımı karmaşıktır).',
 	'texte_nouveau_mot' => 'Yeni sözcük',

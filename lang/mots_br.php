@@ -37,7 +37,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_dans_groupe' => 'Er strollad :',
 	'info_delet_mots_cles' => 'Goulennet hoc\'h eus diverkañ ar ger-stur
 <b>@titre_mot@</b> (@type_mot@). Dre ma\'z eo liammet ar ger-se ouzh
-<b>@texte_lie@</b> e rankit kadarnaat ho tiviz :',
+<b>@texte_lie@</b> e rankit kadarnaat ho tiviz :', # MODIF
 	'info_groupe_important' => 'Strollad pouezus',
 	'info_modifier_mot' => 'Kemmañ ar ger-alc\'hwez :',
 	'info_mots_cles' => 'Ar gerioù-stur',
@@ -50,7 +50,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_retirer_mot' => 'Tennañ ar ger-mañ',
 	'info_retirer_mots' => 'Tennañ an holl c\'herioù',
 	'info_rubriques_liees_mot' => 'Ar rubrikennoù liammet ouzh ar ger-stur-mañ',
-	'info_selection_un_seul_mot_cle' => 'Er strollad-mañ, n\'haller dibab nemet <b>ur ger-stur war un dro</b>.',
+	'info_selection_un_seul_mot_cle' => 'Er strollad-mañ, n\'haller dibab nemet <b>ur ger-stur war un dro</b>.', # MODIF
 	'info_supprimer_mot' => 'Diverkañ ar ger-mañ',
 	'info_titre_mot_cle' => 'Anv pe titl ar ger-stur',
 	'info_un_mot' => 'Ur ger war an dro hepken',
@@ -69,7 +69,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// T
 	'texte_config_groupe_mots_cles' => 'Ha c\'hoant hoc\'h eus ober gant kefluniadur araokaet ar gerioù-stur ?
    O resisaat, da skouer, e c\'heller dibab ur ger hepken dre strollad, 
-   eo pouezus strollad pe strollad... ?',
+   eo pouezus strollad pe strollad... ?', # MODIF
 	'texte_mots_cles' => 'Gant ar gerioù-stur e c\'heller sevel liammoù tematek etre ar pennadoù, ne vern pelec\'h emaint renket er rubrikennoù disheñvel.
   Evel-se e c\'hellit aesaat ar merdeiñ en ho lec\'hienn, pe zoken implijout ar perzhioù-se a-benn personelaat doare kinnig ar pennadoù er frammoù.',
 	'texte_mots_cles_dans_forum' => 'Ha c\'hoant hoc\'h eus da aotren implij gerioù-stur a c\'hall bezañ dibabet gant ar weladennerien e forumoù al lodenn foran ? (Diwallit : diaes a-walc\'h eo implijout an dibarzh-mañ evel m\'eo dleet.)',

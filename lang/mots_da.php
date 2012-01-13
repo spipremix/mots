@@ -37,7 +37,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_dans_groupe' => 'I gruppe:',
 	'info_delet_mots_cles' => 'Du har ønsket at slette nøgleordet
 	<b>@titre_mot@</b> (@type_mot@). Da nøgleordet er knyttet til 
-	<b>@texte_lie@</b>skal du bekræfte sletningen:',
+	<b>@texte_lie@</b>skal du bekræfte sletningen:', # MODIF
 	'info_groupe_important' => 'vigtig gruppe',
 	'info_modifier_mot' => 'Modifier le mot-clé :', # NEW
 	'info_mots_cles' => 'Nøgleord',
@@ -50,7 +50,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_retirer_mot' => 'Slet dette nøgleord',
 	'info_retirer_mots' => 'Slet alle nøgleord',
 	'info_rubriques_liees_mot' => 'Afsnit knyttet til dette nøgleord',
-	'info_selection_un_seul_mot_cle' => 'Du kan <b>kun vælge et nøgleord</b> ad gangen i denne gruppe.',
+	'info_selection_un_seul_mot_cle' => 'Du kan <b>kun vælge et nøgleord</b> ad gangen i denne gruppe.', # MODIF
 	'info_supprimer_mot' => 'slet dette nøgleord',
 	'info_titre_mot_cle' => 'Navn eller titel på dette nøgleord',
 	'info_un_mot' => 'Et nøgleord ad gangen',
@@ -68,7 +68,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// T
 	'texte_config_groupe_mots_cles' => 'Ønsker du at aktivere den avancerede konfiguration af nøgleordsgrupper, ved f.eks. at specificere
-			 at et entydigt ord pr. gruppe kan vælges, at en gruppe er vigtig...?',
+			 at et entydigt ord pr. gruppe kan vælges, at en gruppe er vigtig...?', # MODIF
 	'texte_mots_cles' => 'Nøgleord gør det muligt for dig at oprette emnemæssige forbindelser mellem artikler uafhængigt af, hvilket afsnit de tilhører.
 		På denne måde kan du forbedre navigationen på dit websted 
 		eller benytte disse egenskaber til at tilpasse artiklerne i dine skabeloner.',

@@ -36,7 +36,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_creation_mots_cles' => 'Creatz e configuratz aquí lu mòts claus dau sit',
 	'info_dans_groupe' => 'Dins lo grop:',
 	'info_delet_mots_cles' => 'Avètz demandat de suprimir lo mòt clau
-<b>@titre_mot@</b> (@type_mot@). Aqueu mòt clau es ligat à <b>@texte_lie@</b>. Devètz confirmar aquela decision :',
+<b>@titre_mot@</b> (@type_mot@). Aqueu mòt clau es ligat à <b>@texte_lie@</b>. Devètz confirmar aquela decision :', # MODIF
 	'info_groupe_important' => 'Grop important',
 	'info_modifier_mot' => 'Modificar lo mot clau :',
 	'info_mots_cles' => 'Lu mòts claus',
@@ -49,7 +49,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_retirer_mot' => 'Traire aqueu mòt',
 	'info_retirer_mots' => 'Traire toi lu mòts',
 	'info_rubriques_liees_mot' => 'Li rubricas ligadi à-n-aqueu mòt clau',
-	'info_selection_un_seul_mot_cle' => 'Si pòu seleccionar qu\'<b>un mòt clau</b> à l\'encòup dins aqueu grop.',
+	'info_selection_un_seul_mot_cle' => 'Si pòu seleccionar qu\'<b>un mòt clau</b> à l\'encòup dins aqueu grop.', # MODIF
 	'info_supprimer_mot' => 'suprimir aqueu mòt',
 	'info_titre_mot_cle' => 'Nom ò titre dau mòt clau',
 	'info_un_mot' => 'Un sol mòt à l\'encòup',
@@ -68,7 +68,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// T
 	'texte_config_groupe_mots_cles' => 'Desiratz d\'activar la configuracion avançada dei mòts claus,
  en indicant per exemple que si pòu seleccionar un mòt unic
- per grop, qu\'un grop es important... ?',
+ per grop, qu\'un grop es important... ?', # MODIF
 	'texte_mots_cles' => 'Lu mòts claus permeton crear de ligams tematics entre lu voastres articles
   quauque que sigue la sieua plaça dins li rubricas. Aquò vos permete
   d\'enriquir la navigacion dau voastre site, e mai d\'utilisar aqueli proprietats 

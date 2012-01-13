@@ -37,7 +37,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_dans_groupe' => 'Trong nhóm:',
 	'info_delet_mots_cles' => 'Bạn yêu cầu xóa từ then chốt
 <b>@titre_mot@</b> (@type_mot@). Từ then chốt này có nối qua
-<b>@texte_lie@</b> bạn phải xác nhận quyết định này:',
+<b>@texte_lie@</b> bạn phải xác nhận quyết định này:', # MODIF
 	'info_groupe_important' => 'Nhóm quan trọng',
 	'info_modifier_mot' => 'Modifier le mot-clé :', # NEW
 	'info_mots_cles' => 'Các từ then chốt',
@@ -50,7 +50,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_retirer_mot' => 'Xóa từ then chốt này',
 	'info_retirer_mots' => 'Xóa hết tất cả từ then chốt',
 	'info_rubriques_liees_mot' => 'Đề mục có liên hệ với từ then chốt này',
-	'info_selection_un_seul_mot_cle' => 'Bạn có thể chọn <b>một từ then chốt duy nhất</b> mỗi lần trong nhóm này.',
+	'info_selection_un_seul_mot_cle' => 'Bạn có thể chọn <b>một từ then chốt duy nhất</b> mỗi lần trong nhóm này.', # MODIF
 	'info_supprimer_mot' => 'xóa từ then chốt này',
 	'info_titre_mot_cle' => 'Tên hay tựa của từ then chốt này',
 	'info_un_mot' => 'Mỗi lần một từ then chốt thôi',
@@ -67,7 +67,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'logo_mot_cle' => 'LOGO CỦA TỪ THEN CHỐT',
 
 	// T
-	'texte_config_groupe_mots_cles' => 'Bạn có muốn mở đặc điểm cấu hình cao cấp của nhóm từ then chốt, bằng cách, lấy thí dụ như một chữ đặc thù cho mỗi nhóm có thể được chọn, nhóm quan trọng...? ',
+	'texte_config_groupe_mots_cles' => 'Bạn có muốn mở đặc điểm cấu hình cao cấp của nhóm từ then chốt, bằng cách, lấy thí dụ như một chữ đặc thù cho mỗi nhóm có thể được chọn, nhóm quan trọng...? ', # MODIF
 	'texte_mots_cles' => 'Từ then chốt cho phép bạn lập mối liên hệ theo đề tài giữa các bài với nhau, bất kể chúng ở trong đề mục nào. Như thế việc di chuyển trong webiste phong phú hơn hoặc bạn dùng những đặc tính này để thay đổi bài vở trong khuôn mẫu.',
 	'texte_mots_cles_dans_forum' => 'Bạn có muốn cho phép dùng các từ then chốt để khách chọn, trong các diễn đàn công cộng? (Cảnh báo: đặc tính này khá phức tạp để sử dụng cho đúng.)',
 	'texte_nouveau_mot' => 'Từ then chốt mới',

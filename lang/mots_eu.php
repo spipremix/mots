@@ -35,7 +35,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_changer_nom_groupe' => 'Talde honenizena aldatu',
 	'info_creation_mots_cles' => 'Guneko gako-hitzak sortu eta konfiguratu',
 	'info_dans_groupe' => 'Talde honetan',
-	'info_delet_mots_cles' => 'Honako gako-hitz hau ezabatzeko eskatu duzu:@titre_mot@ (@type_mot@) Gako-hitz hori, honi lotua dago: @texte_lie@. Mesedez,berretsi zure erabakia.',
+	'info_delet_mots_cles' => 'Honako gako-hitz hau ezabatzeko eskatu duzu:@titre_mot@ (@type_mot@) Gako-hitz hori, honi lotua dago: @texte_lie@. Mesedez,berretsi zure erabakia.', # MODIF
 	'info_groupe_important' => 'Talde garrantzitsua',
 	'info_modifier_mot' => 'Gako-hitza aldatu :',
 	'info_mots_cles' => 'Gako-hitzak',
@@ -48,7 +48,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_retirer_mot' => 'Hitz hau kendu',
 	'info_retirer_mots' => 'Hitz guztiak kendu',
 	'info_rubriques_liees_mot' => 'Gako-hitz honi lotutako atalak',
-	'info_selection_un_seul_mot_cle' => 'Bakoitzean gako-hitz bat bakarrik hauta daiteketalde honetan.',
+	'info_selection_un_seul_mot_cle' => 'Bakoitzean gako-hitz bat bakarrik hauta daiteketalde honetan.', # MODIF
 	'info_supprimer_mot' => 'hitz hau kendu',
 	'info_titre_mot_cle' => 'Gako-hitzaren izena edo titulua',
 	'info_un_mot' => 'Hitz bakar bat aldi berean',
@@ -65,7 +65,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'logo_mot_cle' => 'GAKO-HITZAREN LOGOA',
 
 	// T
-	'texte_config_groupe_mots_cles' => 'Gako-hitzen konfigurazio aurreratua aktibatu nahi duzu, adibidez talde bakoitzean hitz bakar bat hautatu ahal dela,talde bat garrantzitsua dela,... adieraziz?',
+	'texte_config_groupe_mots_cles' => 'Gako-hitzen konfigurazio aurreratua aktibatu nahi duzu, adibidez talde bakoitzean hitz bakar bat hautatu ahal dela,talde bat garrantzitsua dela,... adieraziz?', # MODIF
 	'texte_mots_cles' => 'Gako-hitzekinartikuluen artean lotura tematikoak egin ditzakezu, bere atalen barruko kokapena zeinden kontutan hartu gabe. Honela, zure tokiaren nabigazioa hobetu ahal duzu, edopropietate hauek ere erabili zure egituren barruan artikuluen itxura egokitzeko.',
 	'texte_mots_cles_dans_forum' => 'Gako-hitzen erabilera utzi nahi al duzu, bisitariektoki publikoaren foruetan aukeratu ahal izango dituztenak? (Adi egon: aukera haunahiko konplexua da zuzen erabiltzeko.)',
 	'texte_nouveau_mot' => 'Hitz berria',

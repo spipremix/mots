@@ -37,7 +37,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_dans_groupe' => '1n gr0up:',
 	'info_delet_mots_cles' => 'Y0u r3qu3573d 7h3 d313710n 0f k3yw0rd
 <b>@titre_mot@</b> (@type_mot@). 7h15 k3yw0rd b31ng 11nk3d 70
-<b>@texte_lie@</b>y0u mu57 c0nf1rm 7h15 d3c1510n:',
+<b>@texte_lie@</b>y0u mu57 c0nf1rm 7h15 d3c1510n:', # MODIF
 	'info_groupe_important' => '1mp0r74n7 gr0up',
 	'info_modifier_mot' => 'Modifier le mot-clé :', # NEW
 	'info_mots_cles' => 'K3yw0rd5',
@@ -50,7 +50,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_retirer_mot' => 'R3m0v3 7h15 k3yw0rd',
 	'info_retirer_mots' => 'R3m0v3 411 k3yw0rd5',
 	'info_rubriques_liees_mot' => '53c710n5 4550c1473d w17h 7h15 k3yw0rd',
-	'info_selection_un_seul_mot_cle' => 'Y0u c4n 5313c7 <b>0n1y 0n3 k3yw0rd</b> 47 4 71m3 1n 7h15 gr0up.',
+	'info_selection_un_seul_mot_cle' => 'Y0u c4n 5313c7 <b>0n1y 0n3 k3yw0rd</b> 47 4 71m3 1n 7h15 gr0up.', # MODIF
 	'info_supprimer_mot' => 'd31373 7h15 k3yw0rd',
 	'info_titre_mot_cle' => 'N4m3 0r 71713 0f 7h15 k3yw0rd',
 	'info_un_mot' => '0n3 k3yw0rd 47 4 71m3',
@@ -69,7 +69,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// T
 	'texte_config_groupe_mots_cles' => 'D0 y0u w15h 70 4c71v473 7h3 4dv4nc3d c0nf1gur4710n k3yw0rd gr0up5,
 			by 5p3c1fy1ng, f0r 1n574nc3 7h47 4 un1qu3 w0rd p3r gr0up
-			c0u1d b3 5313c73d, 7h47 4 gr0up 15 1mp0r74n7...?',
+			c0u1d b3 5313c73d, 7h47 4 gr0up 15 1mp0r74n7...?', # MODIF
 	'texte_mots_cles' => 'K3yw0rd5 4110w y0u 70 cr3473 70p1c41 11nk5 b37w33n y0ur 4r71c135
   1rr35p3c71v3 0f 7h31r 53c710n 10c4710n. 7h47 w4y y0u c4n
   3nr1ch 7h3 n4v1g4710n 0f y0ur 5173 0r 3v3n u53 7h353 pr0p3r7135

@@ -37,7 +37,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_dans_groupe' => 'グループ内:',
 	'info_delet_mots_cles' => 'キーワード削除リクエストを受け付けました。
 <b>@titre_mot@</b> (@type_mot@)は 
-<b>@texte_lie@</b>に関連づけられていますが、 この決定を確定してください。 :',
+<b>@texte_lie@</b>に関連づけられていますが、 この決定を確定してください。 :', # MODIF
 	'info_groupe_important' => '重要なグループ',
 	'info_modifier_mot' => 'Modifier le mot-clé :', # NEW
 	'info_mots_cles' => 'キーワード',
@@ -50,7 +50,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_retirer_mot' => 'このキーワードを削除',
 	'info_retirer_mots' => 'すべてのキーワードを削除',
 	'info_rubriques_liees_mot' => 'このキーワードと結びつけられているセクション',
-	'info_selection_un_seul_mot_cle' => 'あなたはこのグループ内で、１度に<b>１つのキーワードだけ</b>選ぶことができます。',
+	'info_selection_un_seul_mot_cle' => 'あなたはこのグループ内で、１度に<b>１つのキーワードだけ</b>選ぶことができます。', # MODIF
 	'info_supprimer_mot' => 'このキーワードを削除',
 	'info_titre_mot_cle' => 'このキーワードの名前かタイトル',
 	'info_un_mot' => '１度に１つのキーワード',
@@ -67,7 +67,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'logo_mot_cle' => 'キーワードのロゴ',
 
 	// T
-	'texte_config_groupe_mots_cles' => 'キーワードグループの拡張設定を使用したいですか？、指定することによって、例えばグループ毎に１つユニークな単語をを選択することが出来ました、そのグループは重要...?',
+	'texte_config_groupe_mots_cles' => 'キーワードグループの拡張設定を使用したいですか？、指定することによって、例えばグループ毎に１つユニークな単語をを選択することが出来ました、そのグループは重要...?', # MODIF
 	'texte_mots_cles' => 'キーワードは記事の場所にかかわらず、あなたの記事と話題（キーワード）をくっつける事が出来ます。そのようにあなたのサイトで検索し易くするか、あなたのテンプレートで記事をカスタマイズするそれらの特性を使う。',
 	'texte_mots_cles_dans_forum' => '公開サイトの掲示板の中で、訪問者によってキーワードが選択されるのを許可しますか？（警告：このオプションはどちらかというと複雑です。）',
 	'texte_nouveau_mot' => '新しいキーワード',

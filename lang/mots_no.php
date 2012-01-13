@@ -37,7 +37,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_dans_groupe' => '<NEW> Dans le groupe :',
 	'info_delet_mots_cles' => '<NEW> Vous avez	demandé à supprimer le mot-clé
 <b>@titre_mot@</b> (@type_mot@). Ce mot-clé étant lié à
-<b>@texte_lie@</b> vous devez confirmer cette décision :',
+<b>@texte_lie@</b> vous devez confirmer cette décision :', # MODIF
 	'info_groupe_important' => '<NEW> Groupe important',
 	'info_modifier_mot' => 'Edit the keyword:', # NEW
 	'info_mots_cles' => '<NEW> Les mots-clés',
@@ -50,7 +50,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_retirer_mot' => '<NEW> Retirer ce mot',
 	'info_retirer_mots' => '<NEW> Retirer tous les mots',
 	'info_rubriques_liees_mot' => '<NEW> Les rubriques liées à ce mot-clé',
-	'info_selection_un_seul_mot_cle' => '<NEW> On ne peut sélectionner qu\'<b>un seul mot-clé à</b> la fois dans ce groupe.',
+	'info_selection_un_seul_mot_cle' => '<NEW> On ne peut sélectionner qu\'<b>un seul mot-clé à</b> la fois dans ce groupe.', # MODIF
 	'info_supprimer_mot' => '<NEW> supprimer ce mot',
 	'info_titre_mot_cle' => '<NEW> Nom ou titre du mot-clé',
 	'info_un_mot' => '<NEW> Un seul mot à la fois',
@@ -69,7 +69,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// T
 	'texte_config_groupe_mots_cles' => '<NEW> Souhaitez-vous activer la configuration avancée des mots-clés,
 			en indiquant par exemple qu\'on peut sélectionner un mot unique
-			par groupe, qu\'un groupe est important...&nbsp?',
+			par groupe, qu\'un groupe est important...&nbsp?', # MODIF
 	'texte_mots_cles' => '<NEW> Les mots-clés permettent de créer des liens thématiques entre vos articles
 		indépendamment de leur placement dans des rubriques. Vous pouvez ainsi
 		enrichir la navigation de votre site, voire utiliser ces propriétés

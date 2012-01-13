@@ -37,7 +37,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_dans_groupe' => 'En la grupo:',
 	'info_delet_mots_cles' => 'Vi petis forigon de la ŝlosilvorto
  <b>@titre_mot@</b> (@type_mot@). Ĉar la ŝlosilvorto estas ligita kun
- <b>@texte_lie@</b>, vi konfirmu ĉi tiun decidon :',
+ <b>@texte_lie@</b>, vi konfirmu ĉi tiun decidon :', # MODIF
 	'info_groupe_important' => 'Grava grupo',
 	'info_modifier_mot' => 'Modifi tiun ĉi ŝlosilvorton :',
 	'info_mots_cles' => 'La ŝlosilvortoj',
@@ -50,7 +50,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_retirer_mot' => 'Forigi tiun vorton',
 	'info_retirer_mots' => 'Forigi ĉiujn vortojn',
 	'info_rubriques_liees_mot' => 'La rubrikoj ligitaj al tiu ŝlosilvorto',
-	'info_selection_un_seul_mot_cle' => 'Oni povas elekti nur<b>po unu ŝlosilvorto</b> samtempe por tiu grupo.',
+	'info_selection_un_seul_mot_cle' => 'Oni povas elekti nur<b>po unu ŝlosilvorto</b> samtempe por tiu grupo.', # MODIF
 	'info_supprimer_mot' => 'forviŝi tiun vorton',
 	'info_titre_mot_cle' => 'Nomo aŭ titolo de la ŝlosilvorto',
 	'info_un_mot' => 'Po nur unu vorto samtempe',
@@ -69,7 +69,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// T
 	'texte_config_groupe_mots_cles' => 'Ĉu vi deziras aktivigi la plendetalan konfiguron de la ŝlosilvortoj,
    indikante ekzemple ke oni povas elekti po unu vorton en grupo,
-   ke iu grupo estu grava... ?',
+   ke iu grupo estu grava... ?', # MODIF
 	'texte_mots_cles' => 'La ŝlosilvortoj ebligas krei temajn ligilojn inter viaj artikoloj
   sendepende de ties situo en la rubrikoj. Vi povas tiel
   pliriĉigi la retumadon ĉe via retejo, eĉ uzi tiujn trajtojn

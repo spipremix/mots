@@ -37,7 +37,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_dans_groupe' => 'W grupie:',
 	'info_delet_mots_cles' => 'Chcesz usunąć słowo kluczowege
 <b>@titre_mot@</b> (@type_mot@). To słowo jest powiązane z
-<b>@texte_lie@</b>musisz potwierdzić swoją decyzję:',
+<b>@texte_lie@</b>musisz potwierdzić swoją decyzję:', # MODIF
 	'info_groupe_important' => 'Ważna grupa',
 	'info_modifier_mot' => 'Modifier le mot-clé :', # NEW
 	'info_mots_cles' => 'Słowa kluczowe',
@@ -50,7 +50,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_retirer_mot' => 'Usuń to słowo kluczowe',
 	'info_retirer_mots' => 'Usuń wszystkie słowa kluczowe',
 	'info_rubriques_liees_mot' => 'Działy powiązane z tym słowem kluczowym',
-	'info_selection_un_seul_mot_cle' => 'Możesz wybrać <b>tylko jedno słowo kluczowe</b> naraz w tej grupie.',
+	'info_selection_un_seul_mot_cle' => 'Możesz wybrać <b>tylko jedno słowo kluczowe</b> naraz w tej grupie.', # MODIF
 	'info_supprimer_mot' => 'usuń słowo kluczowe',
 	'info_titre_mot_cle' => 'Nazwa lub tytuł tego słowa kluczowego',
 	'info_un_mot' => 'Jedno słowo kluczowe naraz',
@@ -69,7 +69,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// T
 	'texte_config_groupe_mots_cles' => 'Czy życzysz sobie, aby włączyć zaawansowaną konfigurację słów kluczowych,
    gdzie możesz zaznaczyć np. jedno słowo
-   słowa wg grup, wg ważności grup... ?',
+   słowa wg grup, wg ważności grup... ?', # MODIF
 	'texte_mots_cles' => 'Słowa kluczowe pozwalają na stworzenie linków tematycznych pomiędzy artykułami
   niezależnie od ich umieszczenia w konkretnych działach. Możesz w ten sposób
   wzbogacić nawigację Twojej strony, a nawet skorzystać z tej opcji

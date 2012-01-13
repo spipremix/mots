@@ -36,7 +36,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_creation_mots_cles' => 'Crie e configure aqui as palavras-chave do site',
 	'info_dans_groupe' => 'No grupo:',
 	'info_delet_mots_cles' => 'Você pediu a exclusão da palavra-chave
-<b>@titre_mot@</b> (@type_mot@). Esta palavra-chave está associada a<b>@texte_lie@</b>; você precisa confirmar esta decisão:',
+<b>@titre_mot@</b> (@type_mot@). Esta palavra-chave está associada a<b>@texte_lie@</b>; você precisa confirmar esta decisão:', # MODIF
 	'info_groupe_important' => 'Grupo importante',
 	'info_modifier_mot' => 'Editar a palavra-chave:',
 	'info_mots_cles' => 'As palavras-chave',
@@ -49,7 +49,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_retirer_mot' => 'Retirar esta palavra-chave',
 	'info_retirer_mots' => 'Retirar todas as palavras-chave',
 	'info_rubriques_liees_mot' => 'As seções ligadas a esta palavra-chave',
-	'info_selection_un_seul_mot_cle' => 'Só se pode selecionar uma <b>unica palavra-chave</b> de  cada vêz neste grupo.',
+	'info_selection_un_seul_mot_cle' => 'Só se pode selecionar uma <b>unica palavra-chave</b> de  cada vêz neste grupo.', # MODIF
 	'info_supprimer_mot' => 'excluir esta palavra-chave',
 	'info_titre_mot_cle' => 'Nome ou título da palavra-chave',
 	'info_un_mot' => 'Um palavra-chave de cada vêz',
@@ -66,7 +66,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'logo_mot_cle' => 'ÍCONE DA PALAVRA-CHAVE',
 
 	// T
-	'texte_config_groupe_mots_cles' => 'Você deseja ativar a configuração avançada das palavras-chave, indicando, por exemplo, que se pode selecionar uma única palavra-chave por grupo, ou que um grupo é importante...?',
+	'texte_config_groupe_mots_cles' => 'Você deseja ativar a configuração avançada das palavras-chave, indicando, por exemplo, que se pode selecionar uma única palavra-chave por grupo, ou que um grupo é importante...?', # MODIF
 	'texte_mots_cles' => 'As palavras-chave permitem criar links temáticos entre as suas matérias, independentemente de sua localização nas seções. Você poderá dessa forma enriquecer a navegação do seu site, utilizando essas propriedades para personalizar a apresentação das matérias nos seus templates.',
 	'texte_mots_cles_dans_forum' => 'Você deseja permitir a utilização de palavras-chaves, selecionáveis pelos visitantes, nos fóruns do site público? (Atenção: esta opção é relativamente complexa de se utilizar corretamente.)',
 	'texte_nouveau_mot' => 'Nova palavra-chave',

@@ -42,7 +42,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_delet_mots_cles' => 'Ou la finn
 domann dégrèn molaklé-la
 <b>@titre_mot@</b> (@type_mot@). Kom li lé gatiré èk
-<b>@texte_lie@</b> ou i dwa konfirm sak i vé :',
+<b>@texte_lie@</b> ou i dwa konfirm sak i vé :', # MODIF
 	'info_groupe_important' => 'Group larz',
 	'info_modifier_mot' => 'Modifier le mot-clé :', # NEW
 	'info_mots_cles' => 'Bann molaklé',
@@ -55,7 +55,7 @@ domann dégrèn molaklé-la
 	'info_retirer_mot' => 'Anlèv mo-la',
 	'info_retirer_mots' => 'Anlèv tout bann mo',
 	'info_rubriques_liees_mot' => 'Bann rubrik-la lé gatiré èk molaklé-la',
-	'info_selection_un_seul_mot_cle' => 'Lé posib swazi <b>selman inn molaklé</b> an inn fwa dann group-la.',
+	'info_selection_un_seul_mot_cle' => 'Lé posib swazi <b>selman inn molaklé</b> an inn fwa dann group-la.', # MODIF
 	'info_supprimer_mot' => 'dégrèn mo la',
 	'info_titre_mot_cle' => 'Non ou titr lo molaklé',
 	'info_un_mot' => 'En sel mo a lafwa',
@@ -73,7 +73,7 @@ domann dégrèn molaklé-la
 
 	// T
 	'texte_config_groupe_mots_cles' => 'Ou vé fé zwé astèr lakonfigirasyon présiz pou bann molaklé ? 
-Li pé permèt alor swazi inn  sèl molaklé sanm group, o rand inn group pli importan, é tousala... ',
+Li pé permèt alor swazi inn  sèl molaklé sanm group, o rand inn group pli importan, é tousala... ', # MODIF
 	'texte_mots_cles' => 'Bann molaklé i permèt aou kré bann gatiraz antrobann zartik, sélon lo tèm zot i abord. Bann gatiraz-la lé indépandan laplas bann zartik dann rubrik. Ou i pé anserv azot pou rand lo batkaraz pli ris sir out sitwèb, o pou rand pli personèl laprézantasyon out bann skelèt.',
 	'texte_mots_cles_dans_forum' => 'Indik isi si ou vé permèt litilizasyon bann molaklé, sak bann vizitèr i pé swazi zot-minm, dann bann forom piblik sir lo sitwèb ? (Tansyon pangar :lopsyon-la lé inn pé difisil pou anserv é pou fé zwé byin korèkman.)',
 	'texte_nouveau_mot' => 'Nouvo mo',

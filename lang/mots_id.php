@@ -37,7 +37,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_dans_groupe' => 'Dalam kelompok:',
 	'info_delet_mots_cles' => 'Anda memohon penghapusan kata kunci
 <b>@titre_mot@</b> (@type_mot@). Kata kunci ini ditautkan ke
-<b>@texte_lie@</b>Anda harus mengkonfirmasi keputusan ini:',
+<b>@texte_lie@</b>Anda harus mengkonfirmasi keputusan ini:', # MODIF
 	'info_groupe_important' => 'Kelompok penting',
 	'info_modifier_mot' => 'Modifier le mot-clé :', # NEW
 	'info_mots_cles' => 'Kata-kata kunci',
@@ -50,7 +50,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_retirer_mot' => 'Hapus kata kunci ini',
 	'info_retirer_mots' => 'Hapus semua kata kunci',
 	'info_rubriques_liees_mot' => 'Bagian-bagian yang terasosiasi dengan kata kunci ini',
-	'info_selection_un_seul_mot_cle' => 'Anda hanya dapat memilih <b>satu kata kunci</b> dalam kelompok ini.',
+	'info_selection_un_seul_mot_cle' => 'Anda hanya dapat memilih <b>satu kata kunci</b> dalam kelompok ini.', # MODIF
 	'info_supprimer_mot' => 'hapus kata kunci ini',
 	'info_titre_mot_cle' => 'Nama atau judul kata kunci ini',
 	'info_un_mot' => 'Satu kata kunci pada waktu yang bersamaan',
@@ -69,7 +69,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// T
 	'texte_config_groupe_mots_cles' => 'Apakah anda ingin menaktifkan konfigurasi lanjutan kelompok kata kunci,
 			dengan menspesifikasi, sebagai contoh sebuah kata unik per kelompok
-			dapat dipilih, yang menurut kelompok tersebut penting...?',
+			dapat dipilih, yang menurut kelompok tersebut penting...?', # MODIF
 	'texte_mots_cles' => 'Kata-kata kunci mengizinkan anda untuk membuat tautan bertopik di antara artikel-artikel anda
   tanpa memperhatikan lokasi bagiannya. Dengan cara itu anda dapat
   memperkaya navigasi situs anda atau menggunakan properti ini
