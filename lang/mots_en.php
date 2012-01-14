@@ -8,7 +8,7 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// A
-	'avis_conseil_selection_mot_cle' => '<b>Important group:</b> It is very strongly advised to select a keyword in this group.',
+	'avis_conseil_selection_mot_cle' => '<b>Important group:</b> it is strongly advised to select a keyword in this group.',
 	'avis_doublon_mot_cle' => 'A keyword with this title already exists. Are you sure you want to create another?',
 
 	// B
@@ -37,7 +37,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_dans_groupe' => 'In group:',
 	'info_delet_mots_cles' => 'You requested the deletion of keyword
 <b>@titre_mot@</b> (@type_mot@). As this keyword is linked to
-<b>@texte_lie@</b>you must confirm this decision:', # MODIF
+<b>@texte_lie@</b>you must confirm this decision:',
 	'info_groupe_important' => 'Important group',
 	'info_modifier_mot' => 'Edit the keyword:',
 	'info_mots_cles' => 'Keywords',
@@ -50,7 +50,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_retirer_mot' => 'Remove this keyword',
 	'info_retirer_mots' => 'Remove all keywords',
 	'info_rubriques_liees_mot' => 'Sections with this keyword',
-	'info_selection_un_seul_mot_cle' => 'You can select <b>only one keyword</b> at a time in this group.', # MODIF
+	'info_selection_un_seul_mot_cle' => 'You only can select <b>one keyword</b> at a time in this group.',
 	'info_supprimer_mot' => 'delete this keyword',
 	'info_titre_mot_cle' => 'Keyword name or title',
 	'info_un_mot' => 'One keyword at a time',
@@ -67,9 +67,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'logo_mot_cle' => 'KEYWORD LOGO',
 
 	// T
-	'texte_config_groupe_mots_cles' => 'Do you want to activate advanced keyword group configuration,
-   e.g. to indicate that one one word from the group may be used,
-  that a group is important etc.?', # MODIF
+	'texte_config_groupe_mots_cles' => 'Do you want to activate advanced keyword configuration, e.g. to indicate that one unique word from the group may be used, that a group is important etc.?',
 	'texte_mots_cles' => 'Keywords allow you to create topical links between your articles
   irrespective of their section. This can be used to
   improve site navigability, or even as a tool

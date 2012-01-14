@@ -20,8 +20,8 @@
 		<traducteur nom="klaus++" lien="http://trad.spip.org/auteur/klaus" />
 	</langue>
 	<langue code="en">
-		<traducteur nom="sQuonk" lien="http://trad.spip.org/auteur/squonk" />
 		<traducteur nom="kent1" lien="http://trad.spip.org/auteur/kent1" />
+		<traducteur nom="sQuonk" lien="http://trad.spip.org/auteur/squonk" />
 	</langue>
 	<langue code="en_hx" />
 	<langue code="eo" />
@@ -45,6 +45,7 @@
 	<langue code="my" />
 	<langue code="nl">
 		<traducteur nom="mpossoz" lien="http://trad.spip.org/auteur/mpossoz" />
+		<traducteur nom="gerbrand" lien="http://trad.spip.org/auteur/gerbrand" />
 	</langue>
 	<langue code="no" />
 	<langue code="oc_auv" />

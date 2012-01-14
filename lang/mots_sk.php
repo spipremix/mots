@@ -35,9 +35,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_changer_nom_groupe' => 'Zmeniť názov tejto skupiny:',
 	'info_creation_mots_cles' => 'Tu vytvorte a nastavte kľúčové slová stránky',
 	'info_dans_groupe' => 'V skupine:',
-	'info_delet_mots_cles' => 'Požiadali ste o odstránené kľúčového slova
-<b>@titre_mot@</b> (@type_mot@). Toto kľúčové slovo je prepojené s
-<b>@texte_lie@</b> musíte toto rozhodnutie potvrdiť:', # MODIF
+	'info_delet_mots_cles' => 'Požiadali ste o odstránené kľúčového slova <b>@titre_mot@</b> (@type_mot@). Toto kľúčové slovo je prepojené s <b>@texte_lie@;</b> toto rozhodnutie musíte potvrdiť:',
 	'info_groupe_important' => 'Dôležitá skupina',
 	'info_modifier_mot' => 'Upraviť kľúčové slovo:',
 	'info_mots_cles' => 'Kľúčové slová',
@@ -50,7 +48,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_retirer_mot' => 'Odstrániť toto kľúčové slovo',
 	'info_retirer_mots' => 'Odstrániť všetky kľúčové slová',
 	'info_rubriques_liees_mot' => 'Rubriky s týmto kľúčovým slovom',
-	'info_selection_un_seul_mot_cle' => 'Naraz môžete v tejto skupine vybrať <b>len jedno kľúčové slovo.</b>', # MODIF
+	'info_selection_un_seul_mot_cle' => 'Z tejto skupiny nemôžete vybrať <b>len</b> toto jedno kľúčové slovo.',
 	'info_supprimer_mot' => 'Odstrániť toto kľúčové slovo',
 	'info_titre_mot_cle' => 'Názov kľúčového slova',
 	'info_un_mot' => 'Naraz jedno kľúčové slovo',
@@ -67,9 +65,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'logo_mot_cle' => 'LOGO KĽÚČOVÉHO SLOVA',
 
 	// T
-	'texte_config_groupe_mots_cles' => 'Chcete aktivovať podrobné nastavenia skupín kľúčových slov,
-   napr. určiť, či sa môže použiť jedno slovo zo skupiny,
- či je skupina dôležitá, atď.?', # MODIF
+	'texte_config_groupe_mots_cles' => 'Chcete aktivovať podrobné nastavenia kľúčových slov, napr. určenie, či sa môže použiť jediné slovo zo skupiny, či je skupina dôležitá, atď.?',
 	'texte_mots_cles' => 'Kľúčové slová vám umožňujú vytvárať tematické  prepojenia medzi článkami
   bez ohľadu na rubriku. Môžete to využiť na
   zlepšenie orientácie na stránke alebo dokonca ako nástroj

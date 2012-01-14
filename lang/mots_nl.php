@@ -37,7 +37,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_dans_groupe' => 'In de groep:',
 	'info_delet_mots_cles' => 'Je hebt gevraagd het trefwoord 
 <b>@titre_mot@</b> (@type_mot@) te verwijderen. Dit trefwoord is gekoppeld aan 
-<b>@texte_lie@</b>, je dient je beslissing te bevestigen:', # MODIF
+<b>@texte_lie@</b>, je dient je beslissing te bevestigen:',
 	'info_groupe_important' => 'Belangrijke groep',
 	'info_modifier_mot' => 'Het sleutelwoord wijzigen :',
 	'info_mots_cles' => 'Trefwoorden',
@@ -50,7 +50,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_retirer_mot' => 'Trek dat woord',
 	'info_retirer_mots' => 'Alle trefwoorden intrekken',
 	'info_rubriques_liees_mot' => 'Rubrieken gekoppeld aan dit trefwoord',
-	'info_selection_un_seul_mot_cle' => 'Men kan slechts <b>één enkel trefwoord</b> tegelijk kiezen uit deze groep.', # MODIF
+	'info_selection_un_seul_mot_cle' => 'Men kan slechts <b>één enkel trefwoord</b> tegelijk kiezen uit deze groep.',
 	'info_supprimer_mot' => 'dit woord verwijderen',
 	'info_titre_mot_cle' => 'Name of titel voor slautelwoord',
 	'info_un_mot' => 'Een enkel trefwoord',
@@ -69,7 +69,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// T
 	'texte_config_groupe_mots_cles' => 'Wilt u de geavanceerde configuratie van de sleutelwoorden activeren,
    door mede te delen bijvoorbeeld dat men een enig woord
- kan selecteren   per groep, dat een groep belangrijk is... ?', # MODIF
+ kan selecteren   per groep, dat een groep belangrijk is... ?',
 	'texte_mots_cles' => 'Met behulp van trefwoorden kan je thematische verbanden leggen tussen je artikels,
  onafhankelijk van hun plaats in de rubrieken. Zo kan je
  de navigatie op je site verbeteren maar ook de weergave
