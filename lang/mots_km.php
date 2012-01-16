@@ -8,7 +8,7 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// A
-	'avis_conseil_selection_mot_cle' => 'ក្រុម​សំខាន់ ៖</b> មានអនុសាសខ្លាំងក្លា អោយជ្រើសយក មួយពាក្យគន្លឹះ ក្នុងក្រុមនេះ។', # b
+	'avis_conseil_selection_mot_cle' => 'ក្រុម​សំខាន់ ៖</b> មានអនុសាសខ្លាំងក្លា អោយជ្រើសយក មួយពាក្យគន្លឹះ ក្នុងក្រុមនេះ។', # MODIF
 	'avis_doublon_mot_cle' => 'Un mot existe deja avec ce titre. Êtes vous sûr de vouloir créer le même ?', # NEW
 
 	// B
