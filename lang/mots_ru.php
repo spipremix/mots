@@ -17,7 +17,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_checkbox_qui_attribue_mot_cle_visiteurs' => 'посетители основной части сайта, когда они размещают сообщение на форуме.',
 
 	// C
-	'creer_et_associer_un_mot' => '<NEW>Créér et associer un mot-clé', # MODIF
+	'creer_et_associer_un_mot' => 'Créér et associer un mot-clé', # NEW
 
 	// I
 	'icone_creation_groupe_mots' => 'Создать новую группу ключевых слов',
@@ -26,11 +26,11 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_modifier_mot' => 'Изменить ключевое слово',
 	'icone_mots_cles' => 'Кейворды',
 	'icone_supprimer_groupe_mots' => 'Удалить эту группу',
-	'icone_voir_groupe_mots' => '<NEW>Voir ce groupe de mots', # NEW
+	'icone_voir_groupe_mots' => 'Voir ce groupe de mots', # NEW
 	'icone_voir_tous_mots_cles' => 'Показать все ключевые слова',
-	'info_1_groupe_mots' => '<NEW>1 groupe de mots', # NEW
+	'info_1_groupe_mots' => '1 groupe de mots', # NEW
 	'info_articles_lies_mot' => 'Статьи с этим ключевым словом',
-	'info_aucun_groupe_mots' => '<NEW>Aucun groupe de mots', # NEW
+	'info_aucun_groupe_mots' => 'Aucun groupe de mots', # NEW
 	'info_aucun_mot_cle' => 'No keywords', # NEW
 	'info_changer_nom_groupe' => 'Изменить название этой группы:',
 	'info_creation_mots_cles' => 'Создать и настроить ключевые слова сайта можно здесь',
@@ -42,7 +42,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_modifier_mot' => 'Редактировать ключевое слово:',
 	'info_mots_cles' => 'Ключевые слова',
 	'info_mots_cles_association' => 'Ключевые слова в этой группе могут быть связаны с:',
-	'info_nb_groupe_mots' => '<NEW>@nb@ groupes de mots', # NEW
+	'info_nb_groupe_mots' => '@nb@ groupes de mots', # NEW
 	'info_oui_suppression_mot_cle' => 'Я хочу удалить это ключевое слово.',
 	'info_question_mots_cles' => 'Хотите ли Вы использовать на Вашем сайте ключевые слова?',
 	'info_qui_attribue_mot_cle' => 'Ключевые слова в этой группе могут быть применены к:',
@@ -78,13 +78,13 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'texte_nouveau_mot' => 'Новое ключевое слово',
 	'titre_config_groupe_mots_cles' => 'Настройка групп ключевых слов',
 	'titre_gauche_mots_edit' => 'НОМЕР КЛЮЧЕВОГО СЛОВА:',
-	'titre_groupe_mots' => '<NEW>Groupe de mots-clés', # NEW
-	'titre_groupe_mots_numero' => '<NEW>GROUPE DE MOTS NUMÉRO :', # NEW
-	'titre_groupes_mots' => '<NEW>Groupes de mots-clés', # NEW
+	'titre_groupe_mots' => 'Groupe de mots-clés', # NEW
+	'titre_groupe_mots_numero' => 'GROUPE DE MOTS NUMÉRO :', # NEW
+	'titre_groupes_mots' => 'Groupes de mots-clés', # NEW
 	'titre_mots_cles_dans_forum' => 'Ключевые слова в форумах основного сайта',
 	'titre_mots_tous' => 'Ключевые слова',
 	'titre_nouveau_groupe' => 'Новая группа',
-	'titre_objets_lies_mot' => '<NEW>Liés à ce mot-clé :', # NEW
+	'titre_objets_lies_mot' => 'Liés à ce mot-clé :', # NEW
 	'titre_page_mots_tous' => 'Ключевые слова'
 );
 
