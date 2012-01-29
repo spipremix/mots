@@ -24,6 +24,7 @@
 	<pipeline nom="configurer_liste_metas" inclure="mots_pipelines.php" />
 	<pipeline nom="affiche_milieu" inclure="mots_pipelines.php" />
 	<pipeline nom="post_edition" inclure="mots_pipelines.php" />
+	<pipeline nom="ieconfig_metas" inclure="mots_ieconfig.php" />
 
 	<menu nom="mots" titre="mots:icone_mots_cles" parent="menu_edition" icone="images/mot-16.png" action="mots" />
 	<menu nom="mot_creer" titre="mots:icone_creation_mots_cles" parent="outils_rapides" icone="images/mot-new-16.png" action="mot_edit" parametres="new=oui" />
