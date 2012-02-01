@@ -48,7 +48,10 @@ function mots_declarer_tables_auxiliaires($tables_auxiliaires){
 
 	$spip_mots_liens_key = array(
 			"PRIMARY KEY"		=> "id_mot,id_objet,objet",
-			"KEY id_mot"	=> "id_mot");
+			"KEY id_mot"	=> "id_mot",
+			"KEY id_objet"	=> "id_objet",
+			"KEY objet"	=> "objet",
+	);
 
 	$tables_auxiliaires['spip_mots_liens'] =
 		array('field' => &$spip_mots_liens, 'key' => &$spip_mots_liens_key);

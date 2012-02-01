@@ -63,6 +63,10 @@ function mots_upgrade($nom_meta_base_version,$version_cible){
 	$maj['2.0.1'] = array(
 		array('sql_updateq',"spip_mots_liens",array('objet'=>'site'),"objet='syndic'"),
 	);
+	$maj['2.1.0'] = array(
+		array('sql_alter',"TABLE spip_mots_liens ADD id_objet (id_objet)"),
+		array('sql_alter',"TABLE spip_mots_liens ADD objet (objet)"),
+	);
 
 	include_spip('base/upgrade');
 	maj_plugin($nom_meta_base_version, $version_cible, $maj);
