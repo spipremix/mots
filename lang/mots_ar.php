@@ -17,7 +17,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_checkbox_qui_attribue_mot_cle_visiteurs' => 'زوار الموقع العمومي حين يرسلون مشاركة الى المنتدى',
 
 	// C
-	'creer_et_associer_un_mot' => 'إنشاء مفتاح وربطه', # MODIF
+	'creer_et_associer_un_mot' => 'إنشاء مفتاح وربطه',
 
 	// I
 	'icone_creation_groupe_mots' => 'إنشاء مجموعة جديدة',
@@ -36,8 +36,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_creation_mots_cles' => 'إنشاء مفاتيح الموقع وتنسيقها من هنا',
 	'info_dans_groupe' => 'في المجموعة:',
 	'info_delet_mots_cles' => 'طلبت حذف المفتاح
-<b>@titre_mot@</b> (@type_mot@). بما أن هذا المفتاح مرتبط
-بـ<b>@texte_lie@</b>، يجب تأكيد هذا القرار:', # MODIF
+&lt;b&gt;@titre_mot@&lt;/b&gt; (@type_mot@). بما أن هذا المفتاح مرتبط بـ&lt;b&gt;@texte_lie@&lt;/b&gt;، يجب تأكيد هذا القرار:',
 	'info_groupe_important' => 'مجموعة مهمة',
 	'info_modifier_mot' => 'تغيير المفتاح:',
 	'info_mots_cles' => 'المفاتيح',
@@ -50,7 +49,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_retirer_mot' => 'حذف هذا المفتاح',
 	'info_retirer_mots' => 'حذف كل المفاتيح',
 	'info_rubriques_liees_mot' => 'الأقسام المرتبطة بهذا المفتاح',
-	'info_selection_un_seul_mot_cle' => 'يمكنك تحديد <b>مفتاح واحد فقط</b>  في وقت واحد من هذه المجموعة.', # MODIF
+	'info_selection_un_seul_mot_cle' => 'يمكنك تحديد &lt;b&gt;مفتاح واحد فقط&lt;/b&gt;  في وقت واحد من هذه المجموعة.',
 	'info_supprimer_mot' => 'حذف هذا المفتاح',
 	'info_titre_mot_cle' => 'إسم أو عنوان هذا المفتاح',
 	'info_un_mot' => 'مفتاح واحد في وقت واحد',
@@ -67,9 +66,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'logo_mot_cle' => 'شعار المفتاح',
 
 	// T
-	'texte_config_groupe_mots_cles' => 'هل تريد تفعيل إعداد مجموعات المفاتيح المتطور
-بتحديد، مثلاً، إمكان اختيار مفتاح وحيد في كل مجموعة
-او التشديد على اهمية مجموعة معينة...؟', # MODIF
+	'texte_config_groupe_mots_cles' => 'هل تريد تفعيل إعداد مجموعات المفاتيح المتطور بتحديد، مثلاً، إمكان اختيار مفتاح وحيد في كل مجموعة او التشديد على اهمية مجموعة معينة...؟',
 	'texte_mots_cles' => 'تتيح لك المفاتيح إنشاء روابط بين المقالات تعتمد على مواضيعها
 بغض النظر عن انتمائها الى الأقسام. يمكنك هكذا
 تحسين تصفح موقعك او حتى استخدام هذه الخصائص
