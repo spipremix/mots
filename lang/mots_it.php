@@ -17,7 +17,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_checkbox_qui_attribue_mot_cle_visiteurs' => 'i visitatori del sito pubblico quando scrivono un messaggio in un forum.',
 
 	// C
-	'creer_et_associer_un_mot' => 'Créér et associer un mot-clé', # MODIF
+	'creer_et_associer_un_mot' => 'Crea e associa una parola chiave',
 
 	// I
 	'icone_creation_groupe_mots' => 'Crea un nuovo gruppo',
@@ -26,24 +26,21 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_modifier_mot' => 'Modifica questa parola chiave',
 	'icone_mots_cles' => 'Parole chiave',
 	'icone_supprimer_groupe_mots' => 'Elimina il gruppo',
-	'icone_voir_groupe_mots' => 'Voir ce groupe de mots', # NEW
+	'icone_voir_groupe_mots' => 'Visualizza questo gruppo di parole chiave',
 	'icone_voir_tous_mots_cles' => 'Vedi tutte le parole chiave',
-	'info_1_groupe_mots' => '1 groupe de mots', # NEW
+	'info_1_groupe_mots' => '1 gruppo di parole chiave',
 	'info_articles_lies_mot' => 'Gli articoli collegati a questa parola chiave',
-	'info_aucun_groupe_mots' => 'Aucun groupe de mots', # NEW
+	'info_aucun_groupe_mots' => 'Nessun gruppo di parole chiave',
 	'info_aucun_mot_cle' => 'Nessuna parola chiave',
 	'info_changer_nom_groupe' => 'Cambiare il nome di questo gruppo:',
 	'info_creation_mots_cles' => 'In questa pagina è possibile creare e configurare le parole chiave del sito',
 	'info_dans_groupe' => 'Nel gruppo:',
-	'info_delet_mots_cles' => 'Hai chiesto
-di eliminare la parola chiave
-<b>@titre_mot@</b> (@type_mot@). Essendo quest\'ultima collegata a
-<b>@texte_lie@</b>, è necessario confermare la decisione:', # MODIF
+	'info_delet_mots_cles' => 'Hai chiesto di eliminare la parola chiave <b>@titre_mot@</b> (@type_mot@). Essendo quest\'ultima collegata a <b>@texte_lie@</b>, è necessario confermare la decisione:',
 	'info_groupe_important' => 'Gruppo importante',
 	'info_modifier_mot' => 'Modifica la parola chiave:',
 	'info_mots_cles' => 'Le parole chiave',
 	'info_mots_cles_association' => 'Le parole chiave di questo gruppo possono essere associate:',
-	'info_nb_groupe_mots' => '@nb@ groupes de mots', # NEW
+	'info_nb_groupe_mots' => '@nb@ gruppi di parole chiave',
 	'info_oui_suppression_mot_cle' => 'voglio cancellare definitivamente questa parola chiave.',
 	'info_question_mots_cles' => 'Vuoi utilizzare le parole chiave nel sito?',
 	'info_qui_attribue_mot_cle' => 'Le parole chiave di questo gruppo possono essere attribuite da:',
@@ -51,7 +48,7 @@ di eliminare la parola chiave
 	'info_retirer_mot' => 'Rimuovere questa parola',
 	'info_retirer_mots' => 'Rimuovere tutte le parole',
 	'info_rubriques_liees_mot' => 'Le rubriche collegate a questa parola chiave',
-	'info_selection_un_seul_mot_cle' => 'È consentito selezionare <b>una sola parola chiave</b> alla volta in questo gruppo.', # MODIF
+	'info_selection_un_seul_mot_cle' => 'È consentito selezionare <b>una sola parola chiave</b> alla volta in questo gruppo.',
 	'info_supprimer_mot' => 'cancella questa parola',
 	'info_titre_mot_cle' => 'Nome o titolo della parola chiave',
 	'info_un_mot' => 'Una parola sola alla volta',
@@ -68,8 +65,7 @@ di eliminare la parola chiave
 	'logo_mot_cle' => 'LOGO DELLA PAROLA CHIAVE',
 
 	// T
-	'texte_config_groupe_mots_cles' => 'Vuoi attivare la configurazione avanzata delle parole chiave,
-indicando per esempio che si può selezionare una parola unica per gruppo o che un gruppo è importante, ecc.?', # MODIF
+	'texte_config_groupe_mots_cles' => 'Vuoi attivare la configurazione avanzata delle parole chiave, indicando per esempio che si può selezionare una parola unica per gruppo o che un gruppo è importante, ecc.?',
 	'texte_mots_cles' => 'Le parole chiave permettono di creare dei link tematici tra gli articoli
 indipendentemente dal posto che occupano nelle diverse rubriche.
 Si può quindi arricchire la navigazione del sito, o utilizzare queste proprietà
@@ -78,13 +74,13 @@ per personalizzare la presentazione degli articoli nei tuoi modelli di layout.',
 	'texte_nouveau_mot' => 'Nuova parola',
 	'titre_config_groupe_mots_cles' => 'Configurazione dei gruppi di parole chiave',
 	'titre_gauche_mots_edit' => 'PAROLA CHIAVE NUMERO:',
-	'titre_groupe_mots' => 'Groupe de mots-clés', # NEW
-	'titre_groupe_mots_numero' => 'GROUPE DE MOTS NUMÉRO :', # NEW
-	'titre_groupes_mots' => 'Groupes de mots-clés', # NEW
+	'titre_groupe_mots' => 'GRUPPI DI PAROLE:',
+	'titre_groupe_mots_numero' => 'GRUPPO DI PAROLE NUMERO :',
+	'titre_groupes_mots' => 'Gruppi di parole chiave',
 	'titre_mots_cles_dans_forum' => 'Parole chiave nel forum del sito pubblico',
 	'titre_mots_tous' => 'Le parole chiave',
 	'titre_nouveau_groupe' => 'Nuovo gruppo',
-	'titre_objets_lies_mot' => 'Liés à ce mot-clé :', # NEW
+	'titre_objets_lies_mot' => 'Correlati a questa parola chiave :',
 	'titre_page_mots_tous' => 'Parole chiave'
 );
 
