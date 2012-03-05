@@ -28,7 +28,8 @@ function mots_declarer_tables_interfaces($interfaces){
 	$interfaces['exceptions_des_jointures']['id_mot_syndic'] = array('spip_mots_liens', 'id_mot');
 	$interfaces['exceptions_des_jointures']['titre_mot_syndic'] = array('spip_mots', 'titre');
 	$interfaces['exceptions_des_jointures']['type_mot_syndic'] = array('spip_mots', 'type');
-	
+	$interfaces['exceptions_des_jointures']['spip_articles']['id_groupe'] = array('spip_mots', 'id_groupe');
+
 	return $interfaces;
 }
 
