@@ -48,7 +48,6 @@ function mots_affiche_milieu($flux){
 					'table_source'=>'mots',
 					'objet'=>$type,
 					'id_objet'=>$id,
-					'editable'=>autoriser('associermots',$type,$id)?'oui':'non'
 				)
 		);
 		if ($p=strpos($flux['data'],"<!--affiche_milieu-->"))
