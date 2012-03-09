@@ -96,6 +96,15 @@ function autoriser_mot_creer_dist($faire, $type, $id, $qui, $opt) {
 	return true;
 }
 
+// Supprimer un mot ?
+// Par défaut : pouvoir créer un mot dans le groupe
+function autoriser_mot_supprimer_dist($faire, $type, $id, $qui, $opt) {
+	// On cherche le groupe du mot
+	$id_groupe = $opt['id_groupe'] ? $opt['id_groupe'] : sql_getfetsel('id_groupe', 'spip_mots', 'id_mot = '.intval($id));
+	
+	return autoriser('creer', 'mot', $id, $qui, array('id_groupe'=>$id_groupe));
+}
+
 
 /**
  * Autorisation pour verifier le droit d'associer des mots
