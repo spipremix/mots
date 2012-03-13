@@ -13,6 +13,8 @@
 	</div>
 </B_nav>
 #BOITE_FERMER
+[(#AUTORISER{creer,groupemots}|oui)
 #BOITE_OUVRIR{'',raccourcis}
 	[(#URL_ECRIRE{groupe_mots_edit,new=oui}|icone_horizontale{<:mots:icone_creation_groupe_mots:>,groupe_mots,new})]
 #BOITE_FERMER
+]
