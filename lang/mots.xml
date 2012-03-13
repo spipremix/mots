@@ -62,7 +62,9 @@
 		<traducteur nom="Ricardo Porto" lien="http://trad.spip.org/auteur/ricardo-porto" />
 	</langue>
 	<langue code="ro" />
-	<langue code="ru" />
+	<langue code="ru" url="http://trad.spip.org/tradlang_module/mots?lang_cible=ru">
+		<traducteur nom="Serge Markitanenko" lien="http://trad.spip.org/auteur/serge-markitanenko" />
+	</langue>
 	<langue code="sk" url="http://trad.spip.org/tradlang_module/mots?lang_cible=sk">
 		<traducteur nom="jaro" lien="http://trad.spip.org/auteur/jaro" />
 	</langue>
