@@ -16,10 +16,22 @@ function mots_autoriser(){}
 
 
 function autoriser_mots_menu_dist($faire, $type, $id, $qui, $opt){
-	return 	($GLOBALS['meta']['articles_mots'] != 'non' OR sql_countsel('spip_groupes_mots'));
+	if ($qui['statut'] == '0minirezo')
+		return 	($GLOBALS['meta']['articles_mots'] != 'non' OR sql_countsel('spip_groupes_mots'));
+	$where = "";
+	if ($qui['statut']=='1comite')
+		$where = "comite='oui' OR forum='oui'";
+	if ($qui['statut']=='6forum')
+		$where = "forum='oui'";
+	return ($where
+		AND $GLOBALS['meta']['articles_mots'] != 'non'
+	  AND sql_countsel('spip_groupes_mots',$where));
 }
+
 function autoriser_motcreer_menu_dist($faire, $type, $id, $qui, $opt){
-	return 	($GLOBALS['meta']['articles_mots'] != 'non' AND sql_countsel('spip_groupes_mots'));
+	return 	($GLOBALS['meta']['articles_mots'] != 'non'
+		AND sql_countsel('spip_groupes_mots')
+	  AND autoriser('creer','mot',null,$qui,$opt));
 }
 
 // Voir un objet
