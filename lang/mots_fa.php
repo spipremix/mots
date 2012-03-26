@@ -17,7 +17,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_checkbox_qui_attribue_mot_cle_visiteurs' => 'بازديد كنندهاى سايت همگانى هنگامى كه پيامى در سخنگاه ميفرستند',
 
 	// C
-	'creer_et_associer_un_mot' => 'ساختن و چسباندن يك كليدواژه', # MODIF
+	'creer_et_associer_un_mot' => 'ساختن و چسباندن يك كليدواژه',
 
 	// I
 	'icone_creation_groupe_mots' => 'يك گروه واژه نو بسازيد',
@@ -35,7 +35,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_changer_nom_groupe' => ':نام اين گروه را تغيير دهيد',
 	'info_creation_mots_cles' => 'واژه-كليد هاى سايت را اينجا بسازيد',
 	'info_dans_groupe' => ':درون گروه',
-	'info_delet_mots_cles' => 'شما درخواست حذف اين واژه-كليد را كرده ايد<b>@titre_mot@</b> (@type_mot@).شما بايد اين حذف را تأئيد كنيد، زيرا اين واژه-كليد به اين متن مرتبط است :<b>@texte_lie@</b>', # MODIF
+	'info_delet_mots_cles' => ' شما درخواست حذف اين واژه-كليد را كرده ايد<b>@titre_mot@</b> (@type_mot@).شما بايد اين حذف را تأئيد كنيد، زيرا اين واژه-كليد به اين متن مرتبط است :<b>@texte_lie@</b>',
 	'info_groupe_important' => 'گروه مهم',
 	'info_modifier_mot' => 'اصلاح كليدواژه:',
 	'info_mots_cles' => 'واژه-كليدها',
@@ -48,7 +48,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_retirer_mot' => 'اين واژه را برداريد',
 	'info_retirer_mots' => 'تمام واژه ها را برداريد',
 	'info_rubriques_liees_mot' => 'بخش هاى مربوط به اين واژه-كليد',
-	'info_selection_un_seul_mot_cle' => 'نميتوان هر دفعه بيش از يك كليد-واژه در اين گروه انتخاب كرد.', # MODIF
+	'info_selection_un_seul_mot_cle' => 'نميتوان هر دفعه بيش از يك كليد-واژه در اين گروه انتخاب كرد.',
 	'info_supprimer_mot' => 'اين  واژه را حذف كنيد',
 	'info_titre_mot_cle' => 'نام يا عنوان كليد-واژه',
 	'info_un_mot' => 'يك واژه, هر بار',
@@ -65,7 +65,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'logo_mot_cle' => 'درج علامت (لوگو) براى كليد-واژه',
 
 	// T
-	'texte_config_groupe_mots_cles' => 'آيا مايليد پيكربندى پيشرفته كليد-واژه ها را فعال كنيد؟ براى مثال ميتوان يك واژه را براى يك گروه انتخاب كرد...', # MODIF
+	'texte_config_groupe_mots_cles' => 'آيا مايليد پيكربندى پيشرفته كليد-واژه ها را، مثلاً نشاند دادن اينكه از يك گروه يك كليد‌واژه را مي‌تواتن انتخاب كرد،كه يك گروه مهم است، فعال كنيد؟ ...',
 	'texte_mots_cles' => 'واژه-كليدها امكان ساخت پيوندهاى مربوط به يك موضوع را مستقل از مكانشان در بخشها، به مقالاتتان ميدهد. شما ميتوانيد همچنين سايتتان را توسعه دهيد، يا حتى براى معرفى مقالات در اسكلتهايتان استفاده كنيد.',
 	'texte_mots_cles_dans_forum' => 'آيا مايليد كه بازديدكنندگان از كليد-واژه هاى انتخابى در سخنگاه سايت همگانى استفاده كنند؟(توجه : استفاده درست از اين گزينش نسبتا پيچيده ميباشد)',
 	'texte_nouveau_mot' => 'واژه جديد',
@@ -73,7 +73,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_gauche_mots_edit' => 'واژه شماره :',
 	'titre_groupe_mots' => 'گروه كليدواژه‌ها',
 	'titre_groupe_mots_numero' => 'گروه نمره واژه‌ها:',
-	'titre_groupes_mots' => 'Groupes de mots-clés', # NEW
+	'titre_groupes_mots' => 'گروه‌هاي كليد‌واژه‌ها',
 	'titre_mots_cles_dans_forum' => 'واژه-كليدهاى سخنگاه سايت همگانى',
 	'titre_mots_tous' => 'واژه-كليدها',
 	'titre_nouveau_groupe' => 'گروه جديد',
