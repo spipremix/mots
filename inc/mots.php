@@ -59,7 +59,20 @@ function calculer_utilisations_mots($id_groupe)
 			// on s'approche au mieux de la declaration de l'objet.
 			// il faudrait ameliorer ce point.
 			$c_statut = isset($infos['statut'][0]['champ']) ? $infos['statut'][0]['champ'] : 'statut';
-			$statuts = " AND " . sql_in("O.$c_statut",  ($GLOBALS['connect_statut'] =="0minirezo")  ? array('prepa','prop','publie') : array('prop','publie'));
+			
+			// bricoler les statuts d'apres la declaration de l'objet (champ previsu a defaut de mieux)
+			if (array_key_exists('previsu', $infos['statut'][0]) AND strlen($infos['statut'][0]['previsu'])>1) {
+				$str_statuts = $infos['statut'][0]['previsu'];
+				if ($GLOBALS['connect_statut'] !="0minirezo")
+					$str_statuts = str_replace('prepa','',$str_statuts);
+				$not = (substr($str_statuts, 0, 1) == '!'? 'NOT' : '');
+				$str_statuts = str_replace('!','',$str_statuts);
+				$Tstatuts = array_filter(explode(',', $str_statuts));
+				$statuts = " AND " . sql_in("O.$c_statut",  $Tstatuts, $not);
+			}
+			// objets sans champ previsu ou avec un previsu == '!' (par ex les rubriques)
+			else 		
+				$statuts = " AND " . sql_in("O.$c_statut",  ($GLOBALS['connect_statut'] =="0minirezo")  ? array('prepa','prop','publie') : array('prop','publie'));
 		}
 		$res = sql_allfetsel(
 			"COUNT(*) AS cnt, L.id_mot",
@@ -69,8 +82,7 @@ function calculer_utilisations_mots($id_groupe)
 				LEFT JOIN " . $table_objet_sql . " AS O ON L.id_objet=O.$_id_objet" ,
 			"M.id_groupe=$id_groupe$statuts",
 			"L.id_mot");
-
-		foreach($res as $row) {
+	foreach($res as $row) {
 			$retour[$table_objet_sql][$row['id_mot']] = $row['cnt'];
 		}
 	}
