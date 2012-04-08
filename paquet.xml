@@ -2,7 +2,7 @@
 	prefix="mots"
 	categorie="edition"
 	version="2.4.4"
-	etat="test"
+	etat="stable"
 	compatibilite="[3.0.0-alpha2;["
 	logo="prive/themes/spip/images/mot-32.png"
 	schema="2.1.0"
