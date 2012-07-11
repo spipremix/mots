@@ -11,7 +11,7 @@
 \***************************************************************************/
 
 /**
- * Défini les autorisations du plugin mots 
+ * Définit les autorisations du plugin mots 
  *
  * @package Mots\Autorisations
 **/
@@ -236,37 +236,37 @@ function autoriser_mot_supprimer_dist($faire, $type, $id, $qui, $opt) {
  * @param  array  $opt   Options de cette autorisation
  * @return bool          true s'il a le droit, false sinon
  */
-function autoriser_associermots_dist($faire,$quoi,$id,$qui,$opts){
+function autoriser_associermots_dist($faire,$type,$id,$qui,$opt){
 	// jamais de mots sur des mots
-	if ($quoi=='mot') return false;
-	if ($quoi=='groupemots') return false;
+	if ($type=='mot') return false;
+	if ($type=='groupemots') return false;
 	$droit = substr($qui['statut'],1);
 
-	if (!isset($opts['groupe_champs']) AND !isset($opts['id_groupe'])){
+	if (!isset($opt['groupe_champs']) AND !isset($opt['id_groupe'])){
 		// chercher si un groupe est autorise pour mon statut
 		// et pour la table demandee
-		$table = addslashes(table_objet($quoi));
+		$table = addslashes(table_objet($type));
 		if (sql_countsel('spip_groupes_mots',"tables_liees REGEXP '(^|,)$table($|,)' AND ".addslashes($droit)."='oui'"))
 			return true;
 	}
 	// cas d'un groupe en particulier
 	else {
 		// on recupere les champs du groupe s'ils ne sont pas passes en opt
-		if (!isset($opts['groupe_champs'])){
-			if (!$id_groupe = $opts['id_groupe'])
+		if (!isset($opt['groupe_champs'])){
+			if (!$id_groupe = $opt['id_groupe'])
 				return false;
 			include_spip('base/abstract_sql');
-			$opts['groupe_champs'] = sql_fetsel("*", "spip_groupes_mots", "id_groupe=".intval($id_groupe));
+			$opt['groupe_champs'] = sql_fetsel("*", "spip_groupes_mots", "id_groupe=".intval($id_groupe));
 		}
-		$droit = $opts['groupe_champs'][$droit];
+		$droit = $opt['groupe_champs'][$droit];
 
 		return
 			($droit == 'oui')
 			AND
 			// on verifie que l'objet demande est bien dans les tables liees
 			in_array(
-				table_objet($quoi),
-				explode(',', $opts['groupe_champs']['tables_liees'])
+				table_objet($type),
+				explode(',', $opt['groupe_champs']['tables_liees'])
 			);
 	}
 	return false;
@@ -286,7 +286,7 @@ function autoriser_associermots_dist($faire,$quoi,$id,$qui,$opts){
  * @param  array  $opt   Options de cette autorisation
  * @return bool          true s'il a le droit, false sinon
  */
-function autoriser_groupemots_afficherselecteurmots_dist($faire,$quoi,$id,$qui,$opts){
+function autoriser_groupemots_afficherselecteurmots_dist($faire,$type,$id,$qui,$opt){
 	return true;
 }
 
@@ -301,7 +301,7 @@ function autoriser_groupemots_afficherselecteurmots_dist($faire,$quoi,$id,$qui,$
  * @param  array  $opt   Options de cette autorisation
  * @return bool          true s'il a le droit, false sinon
  */
-function autoriser_mot_iconifier_dist($faire,$quoi,$id,$qui,$opts){
+function autoriser_mot_iconifier_dist($faire,$type,$id,$qui,$opt){
 	return (($qui['statut'] == '0minirezo') AND !$qui['restreint']);
 }
 
@@ -315,7 +315,7 @@ function autoriser_mot_iconifier_dist($faire,$quoi,$id,$qui,$opts){
  * @param  array  $opt   Options de cette autorisation
  * @return bool          true s'il a le droit, false sinon
  */
-function autoriser_groupemots_iconifier_dist($faire,$quoi,$id,$qui,$opts){
+function autoriser_groupemots_iconifier_dist($faire,$type,$id,$qui,$opt){
 	return (($qui['statut'] == '0minirezo') AND !$qui['restreint']);
 }
 
