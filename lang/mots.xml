@@ -42,7 +42,9 @@
 	<langue code="it_fem" />
 	<langue code="ja" />
 	<langue code="km" />
-	<langue code="lb" />
+	<langue code="lb" url="http://trad.spip.net/tradlang_module/mots?lang_cible=lb">
+		<traducteur nom="jwander" lien="http://trad.spip.net/auteur/jwander" />
+	</langue>
 	<langue code="my" />
 	<langue code="nl" url="http://trad.spip.net/tradlang_module/mots?lang_cible=nl">
 		<traducteur nom="mpossoz" lien="http://trad.spip.net/auteur/mpossoz" />
