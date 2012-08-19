@@ -10,9 +10,21 @@
  *  Pour plus de details voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
+/**
+ * Gestion du formulaire de configuration des groupes de mots 
+ *
+ * @package SPIP\Mots\Formulaires
+**/
 if (!defined("_ECRIRE_INC_VERSION")) return;
+
 include_spip('inc/presentation');
 
+/**
+ * Chargement du formulaire de configuration des mots
+ *
+ * @return array
+ *     Environnement du formulaire
+**/
 function formulaires_configurer_mots_charger_dist(){
 	foreach(array(
 		"articles_mots",
@@ -24,7 +36,12 @@ function formulaires_configurer_mots_charger_dist(){
 	return $valeurs;
 }
 
-
+/**
+ * Traitement du formulaire de configuration des mots
+ *
+ * @return array
+ *     Retours du traitement
+**/
 function formulaires_configurer_mots_traiter_dist(){
 	$res = array('editable'=>true);
 	foreach(array(

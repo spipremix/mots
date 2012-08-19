@@ -10,13 +10,21 @@
  *  Pour plus de details voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
+/**
+ * Déclarations relatives à la base de données
+ * 
+ * @package SPIP\Mots\Pipelines
+**/
 if (!defined('_ECRIRE_INC_VERSION')) return;
 
 /**
- * Interfaces des tables mots et groupes de mots pour le compilateur
+ * Déclarer les interfaces des tables mots et groupes de mots pour le compilateur
  *
+ * @pipeline declarer_tables_interfaces
  * @param array $interfaces
+ *     Déclarations d'interface pour le compilateur
  * @return array
+ *     Déclarations d'interface pour le compilateur
  */
 function mots_declarer_tables_interfaces($interfaces){
 
@@ -35,11 +43,15 @@ function mots_declarer_tables_interfaces($interfaces){
 }
 
 
+
 /**
- * Table auxilaire spip_mots_xx
+ * Déclarer les tables auxiliaires des mots
  *
+ * @pipeline declarer_tables_auxiliaires
  * @param array $tables_auxiliaires
+ *     Description des tables
  * @return array
+ *     Description complétée des tables
  */
 function mots_declarer_tables_auxiliaires($tables_auxiliaires){
 
@@ -63,10 +75,13 @@ function mots_declarer_tables_auxiliaires($tables_auxiliaires){
 
 
 /**
- * Declarer les objets mots et les jointures mots pour tous les objets
+ * Déclarer les objets éditoriaux des mots et groupes de mots
  *
+ * @pipeline declarer_tables_objets_sql
  * @param array $tables
+ *     Description des tables
  * @return array
+ *     Description complétée des tables
  */
 function mots_declarer_tables_objets_sql($tables){
 	$tables['spip_mots'] = array(

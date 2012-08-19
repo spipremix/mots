@@ -10,12 +10,28 @@
  *  Pour plus de details voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
+/**
+ * Gestion de l'action editer_mot
+ *
+ * @package SPIP\Mots\Actions
+ */
 if (!defined("_ECRIRE_INC_VERSION")) return;
 
 include_spip('inc/filtres');
 
-// Editer (modification) d'un mot-cle
-// http://doc.spip.org/@action_editer_mot_dist
+/**
+ * Action d'édition d'un mot clé dans la base de données dont
+ * l'identifiant est donné en paramètre de cette fonction ou
+ * en argument de l'action sécurisée
+ *
+ * Si aucun identifiant n'est donné, on crée alors un nouveau mot clé.
+ * 
+ * @param null|int $arg
+ *     Identifiant du mot-clé. En absence utilise l'argument
+ *     de l'action sécurisée.
+ * @return array
+ *     Liste (identifiant du mot clé, Texte d'erreur éventuel)
+**/
 function action_editer_mot_dist($arg=null)
 {
 	if (is_null($arg)){
@@ -37,8 +53,14 @@ function action_editer_mot_dist($arg=null)
 
 /**
  * Insertion d'un mot dans un groupe
+ *
+ * @pipeline_appel pre_insertion
+ * @pipeline_appel post_insertion
+ * 
  * @param int $id_groupe
- * @return int
+ *     Identifiant du groupe de mot
+ * @return int|bool
+ *     Identifiant du nouveau mot clé, false si erreur.
  */
 function mot_inserer($id_groupe) {
 
@@ -79,9 +101,17 @@ function mot_inserer($id_groupe) {
 
 /**
  * Modifier un mot
+ * 
  * @param int $id_mot
- * @param array $set
- * @return string
+ *     Identifiant du mot clé à modifier
+ * @param array|null $set
+ *     Couples (colonne => valeur) de données à modifier.
+ *     En leur absence, on cherche les données dans les champs éditables
+ *     qui ont été postés
+ * @return string|null
+ *     Chaîne vide si aucune erreur,
+ *     Null si aucun champ à modifier,
+ *     Chaîne contenant un texte d'erreur sinon.
  */
 function mot_modifier($id_mot, $set=null) {
 	include_spip('inc/modifier');
@@ -110,9 +140,16 @@ function mot_modifier($id_mot, $set=null) {
 
 /**
  * Modifier le groupe parent d'un mot
- * @param  $id_mot
- * @param  $c
- * @return void
+ *
+ * @pipeline_appel pre_insertion
+ * @pipeline_appel post_insertion
+ * 
+ * @param int $id_mot
+ *     Identifiant du mot clé
+ * @param array $c
+ *     Couples (colonne => valeur) des données à instituer
+ * @return null|string
+ *     Null si aucun champ à modifier, chaîne vide sinon.
  */
 function mot_instituer($id_mot, $c){
 	$champs = array();
@@ -173,7 +210,11 @@ function mot_instituer($id_mot, $c){
 
 /**
  * Supprimer un mot
+ *
+ * @pipeline_appel trig_supprimer_objets_lies
+ * 
  * @param int $id_mot
+ *     Identifiant du mot clé à supprimer
  * @return void
  */
 function mot_supprimer($id_mot) {
@@ -189,22 +230,29 @@ function mot_supprimer($id_mot) {
 
 
 /**
- * Associer un mot a des objets listes sous forme
+ * Associer un mot à des objets listés sous forme
  * array($objet=>$id_objets,...)
- * $id_objets peut lui meme etre un scalaire ou un tableau pour une liste d'objets du meme type
+ * 
+ * $id_objets peut lui-même être un scalaire ou un tableau pour une
+ * liste d'objets du même type
  *
- * on peut passer optionnellement une qualification du (des) lien(s) qui sera
- * alors appliquee dans la foulee.
- * En cas de lot de liens, c'est la meme qualification qui est appliquee a tous
+ * On peut passer optionnellement une qualification du (des) lien(s) qui sera
+ * alors appliquée dans la foulée. En cas de lot de liens, c'est la
+ * même qualification qui est appliquée à tous.
  *
- * Exemples:
- * mot_associer(3, array('auteur'=>2));
- * mot_associer(3, array('auteur'=>2), array('vu'=>'oui)); // ne fonctionnera pas ici car pas de champ 'vu' sur spip_mots_liens
+ * @example
+ *     mot_associer(3, array('auteur'=>2));
+ *     // Ne fonctionnera pas ici car pas de champ 'vu' sur spip_mots_liens :
+ *     mot_associer(3, array('auteur'=>2), array('vu'=>'oui)); 
  * 
  * @param int $id_mot
+ *     Identifiant du mot à faire associer
  * @param array $objets
+ *     Description des associations à faire
  * @param array $qualif
- * @return string
+ *     Couples (colonne => valeur) de qualifications à faire appliquer
+ * @return int|bool
+ *     Nombre de modifications, false si erreur
  */
 function mot_associer($id_mot,$objets, $qualif = null){
 
@@ -225,15 +273,20 @@ function mot_associer($id_mot,$objets, $qualif = null){
 
 
 /**
- * Dossocier un mot des objets listes sous forme
+ * Dissocier un mot des objets listés sous forme
  * array($objet=>$id_objets,...)
- * $id_objets peut lui meme etre un scalaire ou un tableau pour une liste d'objets du meme type
- *
+ * 
+ * $id_objets peut lui-même être un scalaire ou un tableau pour une
+ * liste d'objets du même type
+ * 
  * un * pour $id_mot,$objet,$id_objet permet de traiter par lot
  *
  * @param int $id_mot
+ *     Identifiant du mot à faire dissocier
  * @param array $objets
- * @return string
+ *     Description des dissociations à faire
+ * @return int|bool
+ *     Nombre de modifications, false si erreur
  */
 function mot_dissocier($id_mot,$objets){
 	include_spip('action/editer_liens');
@@ -241,16 +294,25 @@ function mot_dissocier($id_mot,$objets){
 }
 
 /**
- * Qualifier le lien d'un mot avec les objets listes
+ * Qualifier le lien d'un mot avec les objets listés
  * array($objet=>$id_objets,...)
- * $id_objets peut lui meme etre un scalaire ou un tableau pour une liste d'objets du meme type
- * exemple :
- * $c = array('vu'=>'oui');
- * un * pour $id_auteur,$objet,$id_objet permet de traiter par lot
+ * 
+ * $id_objets peut lui-même être un scalaire ou un tableau pour une
+ * liste d'objets du même type
+ * 
+ * Une * pour $id_auteur,$objet,$id_objet permet de traiter par lot
+ * 
+ * @example 
+ *     $c = array('vu'=>'oui');
  *
  * @param int $id_mot
+ *     Identifiant du mot à faire associer
  * @param array $objets
+ *     Description des associations à faire
  * @param array $qualif
+ *     Couples (colonne => valeur) de qualifications à faire appliquer
+ * @return int|bool
+ *     Nombre de modifications, false si erreur
  */
 function mot_qualifier($id_mot,$objets,$qualif){
 	include_spip('action/editer_liens');
@@ -260,11 +322,15 @@ function mot_qualifier($id_mot,$objets,$qualif){
 
 
 /**
- * Renvoyer true si le groupe de mot ne doit etre associe qu'une fois aux objet
- * (maximum un seul mot de ce groupe associe a chaque objet)
+ * Teste si un groupe ne doit avoir qu'un seul mot clé associé
+ * 
+ * Renvoyer TRUE si le groupe de mot ne doit être associé qu'une fois aux objet
+ * (maximum un seul mot de ce groupe associé à chaque objet)
  *
  * @param int $id_groupe
+ *     Identifiant du groupe de mot clé
  * @return bool
+ *     true si un seul mot doit être lié avec ce groupe, false sinon.
  */
 function un_seul_mot_dans_groupe($id_groupe)
 {
@@ -273,12 +339,62 @@ function un_seul_mot_dans_groupe($id_groupe)
 
 
 
+// Fonctions Dépréciées
+// --------------------
+
+/**
+ * Insertion d'un mot dans un groupe
+ *
+ * @deprecated Utiliser mot_inserer()
+ * @see mot_inserer()
+ * 
+ * @param int $id_groupe
+ *     Identifiant du groupe de mot
+ * @return int|bool
+ *     Identifiant du nouveau mot clé, false si erreur.
+ */
 function insert_mot($id_groupe) {
 	return mot_inserer($id_groupe);
 }
+
+/**
+ * Modifier un mot
+ *
+ * @deprecated Utiliser mot_modifier()
+ * @see mot_modifier()
+ * 
+ * @param int $id_mot
+ *     Identifiant du mot clé à modifier
+ * @param array|null $set
+ *     Couples (colonne => valeur) de données à modifier.
+ *     En leur absence, on cherche les données dans les champs éditables
+ *     qui ont été postés
+ * @return string|null
+ *     Chaîne vide si aucune erreur,
+ *     Null si aucun champ à modifier,
+ *     Chaîne contenant un texte d'erreur sinon.
+ */
 function mots_set($id_mot, $set=null) {
 	return mot_modifier($id_mot, $set);
 }
+
+/**
+ * Créer une révision d'un mot
+ *
+ * @deprecated Utiliser mot_modifier()
+ * @see mot_modifier()
+ * 
+ * @param int $id_mot
+ *     Identifiant du mot clé à modifier
+ * @param array|null $c
+ *     Couples (colonne => valeur) de données à modifier.
+ *     En leur absence, on cherche les données dans les champs éditables
+ *     qui ont été postés
+ * @return string|null
+ *     Chaîne vide si aucune erreur,
+ *     Null si aucun champ à modifier,
+ *     Chaîne contenant un texte d'erreur sinon.
+ */
 function revision_mot($id_mot, $c=false) {
 	return mot_modifier($id_mot, $c);
 }

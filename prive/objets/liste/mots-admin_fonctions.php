@@ -10,6 +10,11 @@
  *  Pour plus de details voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
+/**
+ * Charger les fonctions mots
+ *
+ * @package SPIP\Mots\Fonctions
+**/
 if (!defined("_ECRIRE_INC_VERSION")) return;
 
 include_spip('inc/mots');

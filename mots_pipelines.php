@@ -10,13 +10,20 @@
  *  Pour plus de details voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
+/**
+ * Utilisations de pipelines 
+ *
+ * @package SPIP\Mots\Pipelines
+**/
 if (!defined('_ECRIRE_INC_VERSION')) return;
 
 /**
- * Definir les meta de configuration liee aux mots
+ * Définir les meta de configuration liee aux mots
  *
  * @param array $metas
+ *     Couples nom de la méta => valeur par défaut
  * @return array
+ *    Couples nom de la méta => valeur par défaut
  */
 function mots_configurer_liste_metas($metas){
 	$metas['articles_mots'] =  'non';
@@ -26,10 +33,17 @@ function mots_configurer_liste_metas($metas){
 }
 
 /**
- * Configuration des mots
+ * Utilisation du pipeline affiche milieu
+ * 
+ * - Ajoute le formulaire de configuration des mots sur la configuration des contenus
+ * - Ajoute le formulaire d'édition de mots sur les objets qui le peuvent
  *
+ * @pipeline affiche_milieu
+ * 
  * @param array $flux
+ *     Données du pipeline
  * @return array
+ *     Données du pipeline
  */
 function mots_affiche_milieu($flux){
 	if ($flux["args"]["exec"] == "configurer_contenu") {
@@ -60,10 +74,14 @@ function mots_affiche_milieu($flux){
 }
 
 /**
- * Optimiser la base de donnee en supprimant les liens orphelins
+ * Optimise la base de données en supprimant les liens orphelins
  *
- * @param int $n
- * @return int
+ * @pipeline optimiser_base_disparus
+ * 
+ * @param array $flux
+ *     Données du pipeline
+ * @return array
+ *     Données du pipeline
  */
 function mots_optimiser_base_disparus($flux){
 	$n = &$flux['data'];
@@ -84,10 +102,14 @@ function mots_optimiser_base_disparus($flux){
 
 /**
  * Copier le type des groupes sur la table spip_mots
- * a chaque changement d'un groupe.
+ * à chaque changement d'un groupe.
  *
+ * @pipeline post_edition
+ * 
  * @param array $flux
+ *     Données du pipeline
  * @return array
+ *     Données du pipeline
  */
 function mots_post_edition($flux){
 	if (($flux['args']['table'] == 'spip_groupes_mots')

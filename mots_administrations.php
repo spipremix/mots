@@ -10,13 +10,21 @@
  *  Pour plus de details voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
+/**
+ * Fichier gérant l'installation et désinstallation du plugin
+ *
+ * @package SPIP\Mots\Installation
+**/
 if (!defined('_ECRIRE_INC_VERSION')) return;
 
 /**
  * Installation/maj des tables mots et groupes de mots...
  *
  * @param string $nom_meta_base_version
+ *     Nom de la meta informant de la version du schéma de données du plugin installé dans SPIP
  * @param string $version_cible
+ *     Version du schéma de données dans ce plugin (déclaré dans paquet.xml)
+ * @return void
  */
 function mots_upgrade($nom_meta_base_version,$version_cible){
 
@@ -74,9 +82,11 @@ function mots_upgrade($nom_meta_base_version,$version_cible){
 
 
 /**
- * Desinstallation/suppression des tables mots et groupes de mots
+ * Désinstallation/suppression des tables mots et groupes de mots
  *
  * @param string $nom_meta_base_version
+ *     Nom de la meta informant de la version du schéma de données du plugin installé dans SPIP
+ * @return void
  */
 function mots_vider_tables($nom_meta_base_version) {
 	sql_drop_table("spip_mots");

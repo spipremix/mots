@@ -10,8 +10,17 @@
  *  Pour plus de details voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
+/**
+ * Gestion de l'action supprimer_mot
+ *
+ * @package SPIP\Mots\Actions
+ */
 if (!defined("_ECRIRE_INC_VERSION")) return;
 
+/**
+ * Action supprimant un mot clé dans la base de données dont l'identifiant
+ * est en argument de l'action sécurisée
+ */
 function action_supprimer_mot_dist() {
 
 	$securiser_action = charger_fonction('securiser_action', 'inc');

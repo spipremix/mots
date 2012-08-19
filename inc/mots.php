@@ -10,12 +10,30 @@
  *  Pour plus de details voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
+/**
+ * Déclaration de filtres pour les squelettes 
+ *
+ * @package SPIP\Mots\Filtres
+**/
 if (!defined("_ECRIRE_INC_VERSION")) return;
 
 include_spip('inc/presentation');
 include_spip('inc/actions');
 include_spip('base/abstract_sql');
 
+/**
+ * Compte le nombre d'objets associés pour chaque type d'objet, liés
+ * à un mot clé donné.
+ *
+ * @pipeline_appel afficher_nombre_objets_associes_a
+ * 
+ * @param int $id_mot
+ *     Identifiant du mot clé
+ * @param int $id_groupe
+ *     Identifiant du groupe parent
+ * @return string[]
+ *     Tableau de textes indiquant le nombre d'éléments tel que '3 articles'
+**/
 function filtre_objets_associes_mot_dist($id_mot,$id_groupe) {
 	static $occurrences = array();
 
@@ -37,10 +55,14 @@ function filtre_objets_associes_mot_dist($id_mot,$id_groupe) {
 }
 
 /**
- * Calculer les nombres d'elements (articles, etc.) lies a chaque mot
+ * Calculer les nombres d'éléments (articles, etc.) liés à chaque mot
+ * d'un groupe de mots
  *
  * @param int $id_groupe
+ *     Identifiant du groupe de mots
  * @return array
+ *     Couples (tables de liaison => mots).
+ *     Mots est un tableau de couples (id_mot => nombre d'utilisation)
  */
 function calculer_utilisations_mots($id_groupe)
 {

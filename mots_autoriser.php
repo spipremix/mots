@@ -13,11 +13,14 @@
 /**
  * Définit les autorisations du plugin mots 
  *
- * @package Mots\Autorisations
+ * @package SPIP\Mots\Autorisations
 **/
 if (!defined('_ECRIRE_INC_VERSION')) return;
 
-/** Fonction d'appel pour le pipeline */
+/**
+ * Fonction d'appel pour le pipeline
+ * @pipeline autoriser
+ */
 function mots_autoriser(){}
 
 /**

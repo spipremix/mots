@@ -10,12 +10,39 @@
  *  Pour plus de details voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
+/**
+ * Gestion du formulaire de d'édition d'un mot
+ *
+ * @package SPIP\Mots\Formulaires
+**/
 if (!defined("_ECRIRE_INC_VERSION")) return;
 
 include_spip('inc/actions');
 include_spip('inc/editer');
 
-// http://doc.spip.org/@inc_editer_mot_dist
+/**
+ * Chargement du formulaire d'édition d'un groupe de mots 
+ *
+ * @param int|string $id_mot
+ *     Identifiant du mot. 'new' pour un nouveau mot.
+ * @param int $id_groupe
+ *     Identifiant du groupe parent (si connu)
+ * @param string $retour
+ *     URL de redirection après le traitement
+ * @param string $associer_objet
+ *     Éventuel 'objet|x' indiquant de lier le mot créé à cet objet,
+ *     tel que 'article|3'
+ * @param string $dummy1 ?
+ * @param string $dummy2 ?
+ * @param string $config_fonc
+ *     Nom de la fonction ajoutant des configurations particulières au formulaire
+ * @param array $row
+ *     Valeurs de la ligne SQL du groupe de mot, si connu
+ * @param string $hidden
+ *     Contenu HTML ajouté en même temps que les champs cachés du formulaire.
+ * @return array
+ *     Environnement du formulaire
+**/
 function formulaires_editer_mot_charger_dist($id_mot='new', $id_groupe=0, $retour='', $associer_objet='', $dummy1='', $dummy2='', $config_fonc='mots_edit_config', $row=array(), $hidden=''){
 	$valeurs = formulaires_editer_objet_charger('mot',$id_mot,$id_groupe,'',$retour,$config_fonc,$row,$hidden);
 	if ($valeurs['id_parent'] && !$valeurs['id_groupe'])
@@ -41,16 +68,43 @@ function formulaires_editer_mot_charger_dist($id_mot='new', $id_groupe=0, $retou
 	return $valeurs;
 }
 
+
 /**
- * Identifier le formulaire en faisant abstraction des parametres qui
- * ne representent pas l'objet edite
- */
+ * Identifier le formulaire en faisant abstraction des paramètres qui
+ * ne representent pas l'objet edité
+ *
+ * @param int|string $id_mot
+ *     Identifiant du mot. 'new' pour un nouveau mot.
+ * @param int $id_groupe
+ *     Identifiant du groupe parent (si connu)
+ * @param string $retour
+ *     URL de redirection après le traitement
+ * @param string $associer_objet
+ *     Éventuel 'objet|x' indiquant de lier le mot créé à cet objet,
+ *     tel que 'article|3'
+ * @param string $dummy1 ?
+ * @param string $dummy2 ?
+ * @param string $config_fonc
+ *     Nom de la fonction ajoutant des configurations particulières au formulaire
+ * @param array $row
+ *     Valeurs de la ligne SQL du groupe de mot, si connu
+ * @param string $hidden
+ *     Contenu HTML ajouté en même temps que les champs cachés du formulaire.
+ * @return string
+ *     Hash du formulaire
+**/
 function formulaires_editer_mot_identifier_dist($id_mot='new', $id_groupe=0, $retour='', $associer_objet='', $dummy1='', $dummy2='', $config_fonc='mots_edit_config', $row=array(), $hidden=''){
 	return serialize(array(intval($id_mot),$associer_objet));
 }
 
-// Choix par defaut des options de presentation
-// http://doc.spip.org/@articles_edit_config
+/**
+ * Choix par défaut des options de présentation
+ *
+ * @param array $row
+ *     Valeurs de la ligne SQL d'un mot, si connu
+ * return array
+ *     Configuration pour le formulaire
+ */
 function mots_edit_config($row)
 {
 	global $spip_ecran, $spip_lang;
@@ -62,6 +116,29 @@ function mots_edit_config($row)
 	return $config;
 }
 
+/**
+ * Vérification du formulaire d'édition d'un groupe de mots 
+ *
+ * @param int|string $id_mot
+ *     Identifiant du mot. 'new' pour un nouveau mot.
+ * @param int $id_groupe
+ *     Identifiant du groupe parent (si connu)
+ * @param string $retour
+ *     URL de redirection après le traitement
+ * @param string $associer_objet
+ *     Éventuel 'objet|x' indiquant de lier le mot créé à cet objet,
+ *     tel que 'article|3'
+ * @param string $dummy1 ?
+ * @param string $dummy2 ?
+ * @param string $config_fonc
+ *     Nom de la fonction ajoutant des configurations particulières au formulaire
+ * @param array $row
+ *     Valeurs de la ligne SQL du groupe de mot, si connu
+ * @param string $hidden
+ *     Contenu HTML ajouté en même temps que les champs cachés du formulaire.
+ * @return array
+ *     Tableau des erreurs
+**/
 function formulaires_editer_mot_verifier_dist($id_mot='new', $id_groupe=0, $retour='', $associer_objet='', $dummy1='', $dummy2='', $config_fonc='mots_edit_config', $row=array(), $hidden=''){
 
 	$erreurs = formulaires_editer_objet_verifier('mot',$id_mot,array('titre'));
@@ -79,7 +156,29 @@ function formulaires_editer_mot_verifier_dist($id_mot='new', $id_groupe=0, $reto
 	return $erreurs;
 }
 
-// http://doc.spip.org/@inc_editer_mot_dist
+/**
+ * Traitements du formulaire d'édition d'un groupe de mots 
+ *
+ * @param int|string $id_mot
+ *     Identifiant du mot. 'new' pour un nouveau mot.
+ * @param int $id_groupe
+ *     Identifiant du groupe parent (si connu)
+ * @param string $retour
+ *     URL de redirection après le traitement
+ * @param string $associer_objet
+ *     Éventuel 'objet|x' indiquant de lier le mot créé à cet objet,
+ *     tel que 'article|3'
+ * @param string $dummy1 ?
+ * @param string $dummy2 ?
+ * @param string $config_fonc
+ *     Nom de la fonction ajoutant des configurations particulières au formulaire
+ * @param array $row
+ *     Valeurs de la ligne SQL du groupe de mot, si connu
+ * @param string $hidden
+ *     Contenu HTML ajouté en même temps que les champs cachés du formulaire.
+ * @return array
+ *     Retour des traitements
+**/
 function formulaires_editer_mot_traiter_dist($id_mot='new', $id_groupe=0, $retour='', $associer_objet='', $dummy1='', $dummy2='', $config_fonc='mots_edit_config', $row=array(), $hidden=''){
 	$res = array();
 	set_request('redirect','');
