@@ -107,7 +107,7 @@ function mot_inserer($id_groupe) {
  * @param array|null $set
  *     Couples (colonne => valeur) de données à modifier.
  *     En leur absence, on cherche les données dans les champs éditables
- *     qui ont été postés
+ *     qui ont été postés (via _request())
  * @return string|null
  *     Chaîne vide si aucune erreur,
  *     Null si aucun champ à modifier,
@@ -139,7 +139,7 @@ function mot_modifier($id_mot, $set=null) {
 }
 
 /**
- * Modifier le groupe parent d'un mot
+ * Instituer un mot clé : modifier son groupe parent
  *
  * @pipeline_appel pre_insertion
  * @pipeline_appel post_insertion

@@ -18,7 +18,7 @@
 if (!defined('_ECRIRE_INC_VERSION')) return;
 
 /**
- * Définir les meta de configuration liee aux mots
+ * Définir les meta de configuration liées aux mots
  *
  * @param array $metas
  *     Couples nom de la méta => valeur par défaut

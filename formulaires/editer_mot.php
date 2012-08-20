@@ -21,8 +21,10 @@ include_spip('inc/actions');
 include_spip('inc/editer');
 
 /**
- * Chargement du formulaire d'édition d'un groupe de mots 
+ * Chargement du formulaire d'édition d'un mot
  *
+ * @see formulaires_editer_objet_charger()
+ * 
  * @param int|string $id_mot
  *     Identifiant du mot. 'new' pour un nouveau mot.
  * @param int $id_groupe
@@ -37,7 +39,7 @@ include_spip('inc/editer');
  * @param string $config_fonc
  *     Nom de la fonction ajoutant des configurations particulières au formulaire
  * @param array $row
- *     Valeurs de la ligne SQL du groupe de mot, si connu
+ *     Valeurs de la ligne SQL du mot, si connu
  * @param string $hidden
  *     Contenu HTML ajouté en même temps que les champs cachés du formulaire.
  * @return array
@@ -87,7 +89,7 @@ function formulaires_editer_mot_charger_dist($id_mot='new', $id_groupe=0, $retou
  * @param string $config_fonc
  *     Nom de la fonction ajoutant des configurations particulières au formulaire
  * @param array $row
- *     Valeurs de la ligne SQL du groupe de mot, si connu
+ *     Valeurs de la ligne SQL du mot, si connu
  * @param string $hidden
  *     Contenu HTML ajouté en même temps que les champs cachés du formulaire.
  * @return string
@@ -117,8 +119,10 @@ function mots_edit_config($row)
 }
 
 /**
- * Vérification du formulaire d'édition d'un groupe de mots 
+ * Vérification du formulaire d'édition d'un mot
  *
+ * @see formulaires_editer_objet_verifier()
+ * 
  * @param int|string $id_mot
  *     Identifiant du mot. 'new' pour un nouveau mot.
  * @param int $id_groupe
@@ -133,7 +137,7 @@ function mots_edit_config($row)
  * @param string $config_fonc
  *     Nom de la fonction ajoutant des configurations particulières au formulaire
  * @param array $row
- *     Valeurs de la ligne SQL du groupe de mot, si connu
+ *     Valeurs de la ligne SQL du mot, si connu
  * @param string $hidden
  *     Contenu HTML ajouté en même temps que les champs cachés du formulaire.
  * @return array
@@ -157,8 +161,8 @@ function formulaires_editer_mot_verifier_dist($id_mot='new', $id_groupe=0, $reto
 }
 
 /**
- * Traitements du formulaire d'édition d'un groupe de mots 
- *
+ * Traitements du formulaire d'édition d'un mot
+ * 
  * @param int|string $id_mot
  *     Identifiant du mot. 'new' pour un nouveau mot.
  * @param int $id_groupe
@@ -173,7 +177,7 @@ function formulaires_editer_mot_verifier_dist($id_mot='new', $id_groupe=0, $reto
  * @param string $config_fonc
  *     Nom de la fonction ajoutant des configurations particulières au formulaire
  * @param array $row
- *     Valeurs de la ligne SQL du groupe de mot, si connu
+ *     Valeurs de la ligne SQL du mot, si connu
  * @param string $hidden
  *     Contenu HTML ajouté en même temps que les champs cachés du formulaire.
  * @return array
