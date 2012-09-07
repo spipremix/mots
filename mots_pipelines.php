@@ -56,6 +56,7 @@ function mots_affiche_milieu($flux){
 		AND $en_cours['edition']!==true // page visu
 		AND $type = $en_cours['type']
 		AND $id_table_objet = $en_cours['id_table_objet']
+		AND isset($flux['args'][$id_table_objet])
 		AND ($id = intval($flux['args'][$id_table_objet]))){
 		$texte = recuperer_fond(
 				'prive/objets/editer/liens',
