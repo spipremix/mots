@@ -75,7 +75,10 @@ function mots_upgrade($nom_meta_base_version,$version_cible){
 		array('sql_alter',"TABLE spip_mots_liens ADD id_objet (id_objet)"),
 		array('sql_alter',"TABLE spip_mots_liens ADD objet (objet)"),
 	);
-
+	$maj['2.1.1'] = array(
+		array('sql_alter',"TABLE spip_mots ADD INDEX id_groupe (id_groupe)")
+	);
+	
 	include_spip('base/upgrade');
 	maj_plugin($nom_meta_base_version, $version_cible, $maj);
 }
