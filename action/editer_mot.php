@@ -109,9 +109,9 @@ function mot_inserer($id_groupe) {
  *     En leur absence, on cherche les données dans les champs éditables
  *     qui ont été postés (via _request())
  * @return string|null
- *     Chaîne vide si aucune erreur,
- *     Null si aucun champ à modifier,
- *     Chaîne contenant un texte d'erreur sinon.
+ *     - Chaîne vide si aucune erreur,
+ *     - Null si aucun champ n'est à modifier,
+ *     - Chaîne contenant un texte d'erreur sinon.
  */
 function mot_modifier($id_mot, $set=null) {
 	include_spip('inc/modifier');
@@ -231,7 +231,7 @@ function mot_supprimer($id_mot) {
 
 /**
  * Associer un mot à des objets listés sous forme
- * array($objet=>$id_objets,...)
+ * `array($objet=>$id_objets,...)`
  * 
  * $id_objets peut lui-même être un scalaire ou un tableau pour une
  * liste d'objets du même type
@@ -241,9 +241,11 @@ function mot_supprimer($id_mot) {
  * même qualification qui est appliquée à tous.
  *
  * @example
+ *     ```
  *     mot_associer(3, array('auteur'=>2));
  *     // Ne fonctionnera pas ici car pas de champ 'vu' sur spip_mots_liens :
  *     mot_associer(3, array('auteur'=>2), array('vu'=>'oui)); 
+ *     ```
  * 
  * @param int $id_mot
  *     Identifiant du mot à faire associer
@@ -274,7 +276,7 @@ function mot_associer($id_mot,$objets, $qualif = null){
 
 /**
  * Dissocier un mot des objets listés sous forme
- * array($objet=>$id_objets,...)
+ * `array($objet=>$id_objets,...)`
  * 
  * $id_objets peut lui-même être un scalaire ou un tableau pour une
  * liste d'objets du même type
@@ -295,15 +297,17 @@ function mot_dissocier($id_mot,$objets){
 
 /**
  * Qualifier le lien d'un mot avec les objets listés
- * array($objet=>$id_objets,...)
+ * `array($objet=>$id_objets,...)`
  * 
  * $id_objets peut lui-même être un scalaire ou un tableau pour une
  * liste d'objets du même type
  * 
  * Une * pour $id_auteur,$objet,$id_objet permet de traiter par lot
  * 
- * @example 
+ * @example
+ *     ```
  *     $c = array('vu'=>'oui');
+ *     ```
  *
  * @param int $id_mot
  *     Identifiant du mot à faire associer
@@ -370,9 +374,9 @@ function insert_mot($id_groupe) {
  *     En leur absence, on cherche les données dans les champs éditables
  *     qui ont été postés
  * @return string|null
- *     Chaîne vide si aucune erreur,
- *     Null si aucun champ à modifier,
- *     Chaîne contenant un texte d'erreur sinon.
+ *     - Chaîne vide si aucune erreur,
+ *     - Null si aucun champ à modifier,
+ *     - Chaîne contenant un texte d'erreur sinon.
  */
 function mots_set($id_mot, $set=null) {
 	return mot_modifier($id_mot, $set);
@@ -391,9 +395,9 @@ function mots_set($id_mot, $set=null) {
  *     En leur absence, on cherche les données dans les champs éditables
  *     qui ont été postés
  * @return string|null
- *     Chaîne vide si aucune erreur,
- *     Null si aucun champ à modifier,
- *     Chaîne contenant un texte d'erreur sinon.
+ *     - Chaîne vide si aucune erreur,
+ *     - Null si aucun champ à modifier,
+ *     - Chaîne contenant un texte d'erreur sinon.
  */
 function revision_mot($id_mot, $c=false) {
 	return mot_modifier($id_mot, $c);
