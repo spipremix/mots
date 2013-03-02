@@ -282,6 +282,8 @@ function autoriser_associermots_dist($faire,$type,$id,$qui,$opt){
  * Vérifie le droit d'afficher le selecteur de mots
  * pour un groupe de mot donné, dans un objet / id_objet donné
  *
+ * C'est fonction de la configuration du groupe de mots.
+ *
  * @param  string $faire Action demandée
  * @param  string $type  Type d'objet sur lequel appliquer l'action
  * @param  int    $id    Identifiant de l'objet
@@ -290,7 +292,23 @@ function autoriser_associermots_dist($faire,$type,$id,$qui,$opt){
  * @return bool          true s'il a le droit, false sinon
  */
 function autoriser_groupemots_afficherselecteurmots_dist($faire,$type,$id,$qui,$opt){
-	return true;
+	if (!isset($opt['minirezo']) || !isset($opt['comite'])) {
+		$i = sql_fetsel(
+			array('minirezo', 'comite'),
+			'spip_groupes_mots',
+			'id_groupe=' . intval($id));
+		if (!$i) return false; # le groupe n'existe pas
+		$admin = $i['minirezo'];
+		$redac = $i['comite'];
+	} else {
+		$admin = $opt['minirezo'];
+		$redac = $opt['comite'];
+	}
+	$statuts = array();
+	if ($admin == 'oui') $statuts[] = '0minirezo';
+	if ($redac == 'oui') $statuts[] = '1comite';
+
+	return in_array($qui['statut'], $statuts);
 }
 
 
