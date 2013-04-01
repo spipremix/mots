@@ -15,7 +15,7 @@
 
 	<traduire module="mots" reference="fr" gestionnaire="salvatore" />
 
-	<pipeline nom="mots_indexation" />
+	<pipeline nom="mots_indexation" action="" />
 	<pipeline nom="autoriser" inclure="mots_autoriser.php" />
 	<pipeline nom="declarer_tables_auxiliaires" inclure="base/mots.php" />
 	<pipeline nom="declarer_tables_interfaces" inclure="base/mots.php" />
