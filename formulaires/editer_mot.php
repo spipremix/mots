@@ -11,7 +11,7 @@
 \***************************************************************************/
 
 /**
- * Gestion du formulaire de d'édition d'un mot
+ * Gestion du formulaire d'édition d'un mot
  *
  * @package SPIP\Mots\Formulaires
 **/
