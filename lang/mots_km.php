@@ -9,7 +9,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// A
 	'avis_conseil_selection_mot_cle' => 'ក្រុម​សំខាន់ ៖</b> មានអនុសាសខ្លាំងក្លា អោយជ្រើសយក មួយពាក្យគន្លឹះ ក្នុងក្រុមនេះ។', # MODIF
-	'avis_doublon_mot_cle' => 'Un mot existe deja avec ce titre. Êtes vous sûr de vouloir créer le même ?', # NEW
 
 	// B
 	'bouton_checkbox_qui_attribue_mot_cle_administrateurs' => 'ពួកអ្នកអភិបាលសៃថ៍',
@@ -26,12 +25,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_modifier_mot' => 'កែប្រែ ពាក្យគន្លឹះនេះ',
 	'icone_mots_cles' => 'ពាក្យ​គន្លឹះ',
 	'icone_supprimer_groupe_mots' => 'លប់​ក្រុម​នេះ',
-	'icone_voir_groupe_mots' => 'Voir ce groupe de mots', # NEW
 	'icone_voir_tous_mots_cles' => 'បង្ហាញ គ្រប់ពាក្យគន្លឹះ',
-	'info_1_groupe_mots' => '1 groupe de mots', # NEW
 	'info_articles_lies_mot' => 'អត្ថបទ​ដែល​ទាក់ទង​ទៅ​នឹង​ពាក្យ​គន្លឹះ​នេះ',
-	'info_aucun_groupe_mots' => 'Aucun groupe de mots', # NEW
-	'info_aucun_mot_cle' => 'Aucun mot-clé', # NEW
 	'info_changer_nom_groupe' => 'ផ្លាស់​ប្ដូរ​ឈ្មោះ​ក្រុម​នេះ ៖',
 	'info_creation_mots_cles' => 'បង្កើត និងកំណត់ទំរង់ រាល់ពាក្យគន្លឹះ នៃសៃថ៍ នៅទីនេះ',
 	'info_dans_groupe' => 'ក្នុង​ក្រុម ៖',
@@ -40,11 +35,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_modifier_mot' => 'កែប្រែ ពាក្យគន្លឹះ៖',
 	'info_mots_cles' => 'ពាក្យ​គន្លឹះ',
 	'info_mots_cles_association' => 'ពាក្យ​គន្លឹះ​នៅ​ក្នុង​ក្រុម​នេះ​អាច​ទាក់ទិន​ទៅ​នឹងៈ',
-	'info_nb_groupe_mots' => '@nb@ groupes de mots', # NEW
 	'info_oui_suppression_mot_cle' => 'ខ្ញុំ ចងើលុបចេញរហូត ពាក្យគន្លឹះនេះ។',
 	'info_question_mots_cles' => 'អ្នក ចង់ប្រើប្រាស់ ពាក្យគន្លឹះនានា លើសៃថ៍ របស់អ្នក?',
 	'info_qui_attribue_mot_cle' => 'ពាក្យ​គន្លឹះ​នៅ​ក្នុង​ក្រុម​នេះ​អាច​ត្រូវ​បាន​ផ្ទេរ​ដោយៈ',
-	'info_remplacer_mot' => 'Remplacer "@titre@"', # NEW
 	'info_retirer_mot' => 'ដកចេញ ពាក្យនេះ',
 	'info_retirer_mots' => 'ដកចេញ គ្រប់ពាក្យ​',
 	'info_rubriques_liees_mot' => 'ផ្នែក​ទាក់ទិន​ទៅ​នឹង​ពាក្យ​គន្លឹះ​នេះ',
@@ -60,8 +53,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'item_utiliser_mots_cles' => 'ប្រើប្រាស់​ពាក្យ​គន្លឹះ',
 
 	// L
-	'lien_ajouter_mot' => 'Ajouter ce mot-clé', # NEW
-	'logo_groupe' => 'LOGO DE CE GROUPE', # NEW
 	'logo_mot_cle' => 'ឡូ​ហ្គោ​របស់​ពាក្យ​គន្លឹះ',
 
 	// T
@@ -71,13 +62,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'texte_nouveau_mot' => 'ពាក្យ​គន្លឹះ​ថ្មី',
 	'titre_config_groupe_mots_cles' => 'ទម្រង់​របស់​ក្រុម​ពាក្យ​គន្លឹះ',
 	'titre_gauche_mots_edit' => 'ពាក្យ លេខ៖',
-	'titre_groupe_mots' => 'Groupe de mots-clés', # NEW
-	'titre_groupe_mots_numero' => 'GROUPE DE MOTS NUMÉRO :', # NEW
-	'titre_groupes_mots' => 'Groupes de mots-clés', # NEW
 	'titre_mots_cles_dans_forum' => 'ពាក្យគន្លឹះ ក្នុងទីប្រជុំមតិ នៃសៃថ៍សាធារណះ',
 	'titre_mots_tous' => 'ពាក្យ​គន្លឹះ',
 	'titre_nouveau_groupe' => 'ក្រុម​ថ្មី',
-	'titre_objets_lies_mot' => 'Liés à ce mot-clé :', # NEW
 	'titre_page_mots_tous' => 'ពាក្យ​គន្លឹះ'
 );
 

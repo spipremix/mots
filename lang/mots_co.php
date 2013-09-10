@@ -9,7 +9,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// A
 	'avis_conseil_selection_mot_cle' => '<b>Gruppu importante :</b> Hè cunsigliatu di sceglie un segnu in stu gruppu.',
-	'avis_doublon_mot_cle' => 'Un mot existe deja avec ce titre. Êtes vous sûr de vouloir créer le même ?', # NEW
 
 	// B
 	'bouton_checkbox_qui_attribue_mot_cle_administrateurs' => 'l\'amministratori di u situ',
@@ -26,12 +25,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_modifier_mot' => 'Mudificà stu segnu',
 	'icone_mots_cles' => 'Segni',
 	'icone_supprimer_groupe_mots' => 'Sguassà stu gruppu',
-	'icone_voir_groupe_mots' => 'Voir ce groupe de mots', # NEW
 	'icone_voir_tous_mots_cles' => 'Vede tutti i segni',
-	'info_1_groupe_mots' => '1 groupe de mots', # NEW
 	'info_articles_lies_mot' => 'L\'artìculi alleati à stu segnu',
-	'info_aucun_groupe_mots' => 'Aucun groupe de mots', # NEW
-	'info_aucun_mot_cle' => 'Aucun mot-clé', # NEW
 	'info_changer_nom_groupe' => 'Scambià u nome di stu gruppu :',
 	'info_creation_mots_cles' => 'Create puru è cunfigurate quì e parulle chjave di u situ',
 	'info_dans_groupe' => 'In u gruppu :',
@@ -41,11 +36,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_modifier_mot' => 'Mudificà u segnu :',
 	'info_mots_cles' => 'I segni',
 	'info_mots_cles_association' => 'I segni di stu gruppu ponu esse assuciati :',
-	'info_nb_groupe_mots' => '@nb@ groupes de mots', # NEW
 	'info_oui_suppression_mot_cle' => 'vogliu sguassà per sempre stu segnu.',
 	'info_question_mots_cles' => 'Vulete aduprà segni in u situ ?',
 	'info_qui_attribue_mot_cle' => 'I segni di stu gruppu ponu esse attribuiti da :',
-	'info_remplacer_mot' => 'Remplacer "@titre@"', # NEW
 	'info_retirer_mot' => 'Sguassà sta parulla',
 	'info_retirer_mots' => 'Sguassà tutte e parulle',
 	'info_rubriques_liees_mot' => 'E rùbbriche alleate à stu segnu',
@@ -61,8 +54,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'item_utiliser_mots_cles' => 'Aduprà i segni',
 
 	// L
-	'lien_ajouter_mot' => 'Ajouter ce mot-clé', # NEW
-	'logo_groupe' => 'LOGO DE CE GROUPE', # NEW
 	'logo_mot_cle' => 'LOGO DI U SEGNU',
 
 	// T
@@ -76,13 +67,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'texte_nouveau_mot' => 'Nova parulla',
 	'titre_config_groupe_mots_cles' => 'Cunfigurazione di i gruppi di segni',
 	'titre_gauche_mots_edit' => 'SEGNU NÙMERU :',
-	'titre_groupe_mots' => 'Groupe de mots-clés', # NEW
-	'titre_groupe_mots_numero' => 'GROUPE DE MOTS NUMÉRO :', # NEW
-	'titre_groupes_mots' => 'Groupes de mots-clés', # NEW
 	'titre_mots_cles_dans_forum' => 'Segni in u foru di u situ pùbblicu',
 	'titre_mots_tous' => 'I segni',
 	'titre_nouveau_groupe' => 'Nuvellu gruppu',
-	'titre_objets_lies_mot' => 'Liés à ce mot-clé :', # NEW
 	'titre_page_mots_tous' => 'Segni'
 );
 

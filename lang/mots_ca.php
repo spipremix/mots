@@ -26,11 +26,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_modifier_mot' => 'Modificar aquesta paraula clau',
 	'icone_mots_cles' => 'Paraules clau',
 	'icone_supprimer_groupe_mots' => 'Suprimir aquest grup',
-	'icone_voir_groupe_mots' => 'Voir ce groupe de mots', # NEW
 	'icone_voir_tous_mots_cles' => 'Mostrar totes les paraules clau',
-	'info_1_groupe_mots' => '1 groupe de mots', # NEW
 	'info_articles_lies_mot' => 'Articles lligats a aquesta paraula clau',
-	'info_aucun_groupe_mots' => 'Aucun groupe de mots', # NEW
 	'info_aucun_mot_cle' => 'Cap paraula clau',
 	'info_changer_nom_groupe' => 'Canviar el nom d\'aquest grup:',
 	'info_creation_mots_cles' => 'Crear i configurar aquí les paraules clau del lloc',
@@ -42,7 +39,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_modifier_mot' => 'Modificar la paraula clau:',
 	'info_mots_cles' => 'Les paraules clau',
 	'info_mots_cles_association' => 'Les paraules clau d\'aquest grup poden ser associades:',
-	'info_nb_groupe_mots' => '@nb@ groupes de mots', # NEW
 	'info_oui_suppression_mot_cle' => 'vull suprimir definitivament aquesta paraula clau.',
 	'info_question_mots_cles' => 'Voleu utilitzar les paraules clau en la vostra web ?',
 	'info_qui_attribue_mot_cle' => 'Les paraules clau d\'aquest grup poden ser assignades per:',
@@ -78,13 +74,9 @@ enriquir la navegació del vostre lloc, inclús utilitzar aquestes propietats
 	'texte_nouveau_mot' => 'Nova paraula',
 	'titre_config_groupe_mots_cles' => 'Configuració dels grups de paraules clau',
 	'titre_gauche_mots_edit' => 'MOT NÚMERO:',
-	'titre_groupe_mots' => 'Groupe de mots-clés', # NEW
-	'titre_groupe_mots_numero' => 'GROUPE DE MOTS NUMÉRO :', # NEW
-	'titre_groupes_mots' => 'Groupes de mots-clés', # NEW
 	'titre_mots_cles_dans_forum' => 'Paraules clau dins dels fòrums del lloc públic',
 	'titre_mots_tous' => 'Les paraules clau',
 	'titre_nouveau_groupe' => 'Grup nou',
-	'titre_objets_lies_mot' => 'Liés à ce mot-clé :', # NEW
 	'titre_page_mots_tous' => 'Paraules clau'
 );
 

@@ -9,7 +9,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// A
 	'avis_conseil_selection_mot_cle' => '<b>Ampleksa grupo :</b> Estas tre konsilate elekti ŝlosilvorton el tiu grupo.',
-	'avis_doublon_mot_cle' => 'Un mot existe deja avec ce titre. Êtes vous sûr de vouloir créer le même ?', # NEW
 
 	// B
 	'bouton_checkbox_qui_attribue_mot_cle_administrateurs' => 'la retejaj mastrumantoj',
@@ -26,12 +25,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_modifier_mot' => 'Modifi tiun ĉi ŝlosilvorton',
 	'icone_mots_cles' => 'Ŝlosilvortoj',
 	'icone_supprimer_groupe_mots' => 'Forviŝi tiun grupon',
-	'icone_voir_groupe_mots' => 'Voir ce groupe de mots', # NEW
 	'icone_voir_tous_mots_cles' => 'Vidi ĉiujn ŝlosilvortojn',
-	'info_1_groupe_mots' => '1 groupe de mots', # NEW
 	'info_articles_lies_mot' => 'La artikoloj ligitaj kun tiu ŝlosilvorto',
-	'info_aucun_groupe_mots' => 'Aucun groupe de mots', # NEW
-	'info_aucun_mot_cle' => 'Aucun mot-clé', # NEW
 	'info_changer_nom_groupe' => 'Ŝanĝi la nomon de tiu grupo:',
 	'info_creation_mots_cles' => 'Ĉi tie, kreu kaj konfiguru la ŝlosilvortojn de la retejo',
 	'info_dans_groupe' => 'En la grupo:',
@@ -42,11 +37,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_modifier_mot' => 'Modifi tiun ĉi ŝlosilvorton :',
 	'info_mots_cles' => 'La ŝlosilvortoj',
 	'info_mots_cles_association' => 'Eblas kunligi ŝlosilvortojn el tiu grupo :',
-	'info_nb_groupe_mots' => '@nb@ groupes de mots', # NEW
 	'info_oui_suppression_mot_cle' => 'mi volas definitive forviŝi tiun ŝlosilvorton.',
 	'info_question_mots_cles' => 'Ĉu vi deziras uzi ŝlosilvortojn ĉe via retejo ?',
 	'info_qui_attribue_mot_cle' => 'La vortoj de tiu ĉi grupo povas esti atribuitaj de :',
-	'info_remplacer_mot' => 'Remplacer "@titre@"', # NEW
 	'info_retirer_mot' => 'Forigi tiun vorton',
 	'info_retirer_mots' => 'Forigi ĉiujn vortojn',
 	'info_rubriques_liees_mot' => 'La rubrikoj ligitaj al tiu ŝlosilvorto',
@@ -62,8 +55,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'item_utiliser_mots_cles' => 'Uzi la ŝlosilvortojn',
 
 	// L
-	'lien_ajouter_mot' => 'Ajouter ce mot-clé', # NEW
-	'logo_groupe' => 'LOGO DE CE GROUPE', # NEW
 	'logo_mot_cle' => 'VINJETO DE LA ŜLOSILVORTO',
 
 	// T
@@ -78,13 +69,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'texte_nouveau_mot' => 'Nova vorto',
 	'titre_config_groupe_mots_cles' => 'Agordo de la ŝlosilvortaj grupoj',
 	'titre_gauche_mots_edit' => 'VORTO NUMERO:',
-	'titre_groupe_mots' => 'Groupe de mots-clés', # NEW
-	'titre_groupe_mots_numero' => 'GROUPE DE MOTS NUMÉRO :', # NEW
-	'titre_groupes_mots' => 'Groupes de mots-clés', # NEW
 	'titre_mots_cles_dans_forum' => 'Ŝlosilvortoj en la forumoj de la publika spaco',
 	'titre_mots_tous' => 'La ŝlosilvortoj',
 	'titre_nouveau_groupe' => 'Nova grupo',
-	'titre_objets_lies_mot' => 'Liés à ce mot-clé :', # NEW
 	'titre_page_mots_tous' => 'Ŝlosilvortoj'
 );
 

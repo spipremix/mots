@@ -26,11 +26,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_modifier_mot' => 'Iguar esta pallabra',
 	'icone_mots_cles' => 'Pallabres-clave',
 	'icone_supprimer_groupe_mots' => 'Desaniciar esti grupu',
-	'icone_voir_groupe_mots' => 'Voir ce groupe de mots', # NEW
 	'icone_voir_tous_mots_cles' => 'Ver toles pallabres-clave',
-	'info_1_groupe_mots' => '1 groupe de mots', # NEW
 	'info_articles_lies_mot' => 'Los artículos enllazaos con esta pallabra-clave',
-	'info_aucun_groupe_mots' => 'Aucun groupe de mots', # NEW
 	'info_aucun_mot_cle' => 'Denguna pallabra-clave',
 	'info_changer_nom_groupe' => 'Cambear el nome d\'esti grupu:',
 	'info_creation_mots_cles' => 'Crear ya iguar les pallabres clave del sitiu',
@@ -42,7 +39,6 @@ con <b>@texte_lie@</b> debes confirmar esta decisión:', # MODIF
 	'info_modifier_mot' => 'Modificar la pallabra-clave:',
 	'info_mots_cles' => 'Les pallabres-clave',
 	'info_mots_cles_association' => 'Les pallabres-clave d\'esti grupu puen asociase:',
-	'info_nb_groupe_mots' => '@nb@ groupes de mots', # NEW
 	'info_oui_suppression_mot_cle' => 'quiero desaniciar definitivamente esta pallabra-clave.',
 	'info_question_mots_cles' => '¿Quies utilizar les pallabres-clave nesti sitiu?',
 	'info_qui_attribue_mot_cle' => 'Les pallabres d\'esti grupu puen conseñase por:',
@@ -78,13 +74,9 @@ con <b>@texte_lie@</b> debes confirmar esta decisión:', # MODIF
 	'texte_nouveau_mot' => 'Pallabra nueva',
 	'titre_config_groupe_mots_cles' => 'Configuración de los grupos de pallabres-clave',
 	'titre_gauche_mots_edit' => 'PALLABRA NÚMBERU:',
-	'titre_groupe_mots' => 'Groupe de mots-clés', # NEW
-	'titre_groupe_mots_numero' => 'GROUPE DE MOTS NUMÉRO :', # NEW
-	'titre_groupes_mots' => 'Groupes de mots-clés', # NEW
 	'titre_mots_cles_dans_forum' => 'Pallabres-clave nos foros del sitiu públicu',
 	'titre_mots_tous' => 'Les pallabres-clave',
 	'titre_nouveau_groupe' => 'Grupu nuevu',
-	'titre_objets_lies_mot' => 'Liés à ce mot-clé :', # NEW
 	'titre_page_mots_tous' => 'Pallabres-clave'
 );
 

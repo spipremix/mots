@@ -9,7 +9,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// A
 	'avis_conseil_selection_mot_cle' => '<b>Grop important:</b> que s\'aconselha hòrt de seleccionar un mot clau dens aqueth grop.',
-	'avis_doublon_mot_cle' => 'Un mot existe deja avec ce titre. Êtes vous sûr de vouloir créer le même ?', # NEW
 
 	// B
 	'bouton_checkbox_qui_attribue_mot_cle_administrateurs' => 'los administrators deu sit',
@@ -23,15 +22,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_creation_groupe_mots' => 'Crear un navèth grop de mots',
 	'icone_creation_mots_cles' => 'Crear un mot clau nau',
 	'icone_modif_groupe_mots' => 'Modificar aqueth grop de mots',
-	'icone_modifier_mot' => 'Modifier ce mot-clé', # NEW
 	'icone_mots_cles' => 'Mots clau',
 	'icone_supprimer_groupe_mots' => 'Suprimir aqueth document',
-	'icone_voir_groupe_mots' => 'Voir ce groupe de mots', # NEW
 	'icone_voir_tous_mots_cles' => 'Véder tots los mots clau ',
-	'info_1_groupe_mots' => '1 groupe de mots', # NEW
 	'info_articles_lies_mot' => 'Los articles ligats a aqueth mot clau',
-	'info_aucun_groupe_mots' => 'Aucun groupe de mots', # NEW
-	'info_aucun_mot_cle' => 'Aucun mot-clé', # NEW
 	'info_changer_nom_groupe' => 'Cambiar lo nom d\'aqueth grop:',
 	'info_creation_mots_cles' => 'Creatz e configuratz ací los mots clau deu sit',
 	'info_dans_groupe' => 'Dens lo grop:',
@@ -39,14 +33,11 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 <b>@titre_mot@</b> (@type_mot@). Aqueth mot clau qu\'ei ligat a
  <b>@texte_lie@</b>. Que devetz confirmar aquera decision:', # MODIF
 	'info_groupe_important' => 'Grop important',
-	'info_modifier_mot' => 'Modifier le mot-clé :', # NEW
 	'info_mots_cles' => 'Los mots clau',
 	'info_mots_cles_association' => 'Los mots clau d\'aqueth grop que\'s pòden associar:',
-	'info_nb_groupe_mots' => '@nb@ groupes de mots', # NEW
 	'info_oui_suppression_mot_cle' => 'Que vòi suprimir aqueth mot clau definitivament.',
 	'info_question_mots_cles' => 'E desiratz d\'utilizar los mots clau suu vòste sit?',
 	'info_qui_attribue_mot_cle' => 'Los mots d\'aqueth grop que pòden estar atribuits per:',
-	'info_remplacer_mot' => 'Remplacer "@titre@"', # NEW
 	'info_retirer_mot' => 'Quitar aqueth mot',
 	'info_retirer_mots' => 'Quitar tots los mots ',
 	'info_rubriques_liees_mot' => 'Las rubricas ligadas a aqueth mot clau',
@@ -62,8 +53,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'item_utiliser_mots_cles' => 'Utilizar los mots clau',
 
 	// L
-	'lien_ajouter_mot' => 'Ajouter ce mot-clé', # NEW
-	'logo_groupe' => 'LOGO DE CE GROUPE', # NEW
 	'logo_mot_cle' => 'LÒGO DEU MOT CLAU',
 
 	// T
@@ -78,13 +67,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'texte_nouveau_mot' => 'Mot nau',
 	'titre_config_groupe_mots_cles' => 'Configuracion deus grops de mots clau',
 	'titre_gauche_mots_edit' => 'MOT NUMÈRO:',
-	'titre_groupe_mots' => 'Groupe de mots-clés', # NEW
-	'titre_groupe_mots_numero' => 'GROUPE DE MOTS NUMÉRO :', # NEW
-	'titre_groupes_mots' => 'Groupes de mots-clés', # NEW
 	'titre_mots_cles_dans_forum' => 'Mots clau dens los forums deu sit public',
 	'titre_mots_tous' => 'Los mots clau',
 	'titre_nouveau_groupe' => 'Grop navèth',
-	'titre_objets_lies_mot' => 'Liés à ce mot-clé :', # NEW
 	'titre_page_mots_tous' => 'Mots clau'
 );
 
