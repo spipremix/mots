@@ -27,14 +27,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_supprimer_groupe_mots' => 'Forviŝi tiun grupon',
 	'icone_voir_tous_mots_cles' => 'Vidi ĉiujn ŝlosilvortojn',
 	'info_articles_lies_mot' => 'La artikoloj ligitaj kun tiu ŝlosilvorto',
-	'info_changer_nom_groupe' => 'Ŝanĝi la nomon de tiu grupo:',
+	'info_changer_nom_groupe' => 'Ŝanĝi la nomon de tiu grupo :',
 	'info_creation_mots_cles' => 'Ĉi tie, kreu kaj konfiguru la ŝlosilvortojn de la retejo',
-	'info_dans_groupe' => 'En la grupo:',
+	'info_dans_groupe' => 'En la grupo :',
 	'info_delet_mots_cles' => 'Vi petis forigon de la ŝlosilvorto
  <b>@titre_mot@</b> (@type_mot@). Ĉar la ŝlosilvorto estas ligita kun
  <b>@texte_lie@</b>, vi konfirmu ĉi tiun decidon :', # MODIF
 	'info_groupe_important' => 'Grava grupo',
-	'info_modifier_mot' => 'Modifi tiun ĉi ŝlosilvorton :',
+	'info_modifier_mot' => 'Modifi tiun ĉi ŝlosilvorton :',
 	'info_mots_cles' => 'La ŝlosilvortoj',
 	'info_mots_cles_association' => 'Eblas kunligi ŝlosilvortojn el tiu grupo :',
 	'info_oui_suppression_mot_cle' => 'mi volas definitive forviŝi tiun ŝlosilvorton.',
@@ -60,7 +60,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// T
 	'texte_config_groupe_mots_cles' => 'Ĉu vi deziras aktivigi la plendetalan konfiguron de la ŝlosilvortoj,
    indikante ekzemple ke oni povas elekti po unu vorton en grupo,
-   ke iu grupo estu grava... ?', # MODIF
+   ke iu grupo estu grava... ?', # MODIF
 	'texte_mots_cles' => 'La ŝlosilvortoj ebligas krei temajn ligilojn inter viaj artikoloj
   sendepende de ties situo en la rubrikoj. Vi povas tiel
   pliriĉigi la retumadon ĉe via retejo, eĉ uzi tiujn trajtojn
@@ -68,7 +68,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'texte_mots_cles_dans_forum' => 'Ĉu vi deziras permesi uzadon de ŝlosilvortoj selekteblaj de la vizitantoj, en la forumoj de la publika spaco ? (Atentu : tiu opcio estas relative kompleksa por ĝuste uzi ĝin.)',
 	'texte_nouveau_mot' => 'Nova vorto',
 	'titre_config_groupe_mots_cles' => 'Agordo de la ŝlosilvortaj grupoj',
-	'titre_gauche_mots_edit' => 'VORTO NUMERO:',
+	'titre_gauche_mots_edit' => 'VORTO NUMERO :',
 	'titre_mots_cles_dans_forum' => 'Ŝlosilvortoj en la forumoj de la publika spaco',
 	'titre_mots_tous' => 'La ŝlosilvortoj',
 	'titre_nouveau_groupe' => 'Nova grupo',

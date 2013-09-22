@@ -8,7 +8,7 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// A
-	'avis_conseil_selection_mot_cle' => '<b>Grop important:</b> s\'aconselha fòrt de seleccionar un mot clau dins queu grop.',
+	'avis_conseil_selection_mot_cle' => '<b>Grop important:</b> s’aconselha fòrt de seleccionar un mot clau dins queu grop.',
 
 	// B
 	'bouton_checkbox_qui_attribue_mot_cle_administrateurs' => 'los administrators dau sit',
@@ -36,7 +36,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_mots_cles' => 'Los mots clau',
 	'info_mots_cles_association' => 'Los mots clau de queu grop se pòden associar:',
 	'info_oui_suppression_mot_cle' => 'Vòle suprimir queu mot clau definitivament.',
-	'info_question_mots_cles' => 'Desiratz d\'utilizar los mots clau subre vòstre sit?',
+	'info_question_mots_cles' => 'Desiratz d’utilizar los mots clau subre vòstre sit?',
 	'info_qui_attribue_mot_cle' => 'Los mots de queu grop pòden èsser atribuits per:',
 	'info_retirer_mot' => 'Tirar queu mot',
 	'info_retirer_mots' => 'Tirar tots los mots ',
@@ -45,8 +45,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_supprimer_mot' => 'suprimir queu mot',
 	'info_titre_mot_cle' => 'Nom o títol dau mot clau',
 	'info_un_mot' => 'Nonmàs un mot au còp',
-	'item_ajout_mots_cles' => 'Autorizar que s\'aponda daus mots clau aus forums',
-	'item_non_ajout_mots_cles' => 'Proïbir l\'utilizacion daus mots clau dins los forums',
+	'item_ajout_mots_cles' => 'Autorizar que s’aponda daus mots clau aus forums',
+	'item_non_ajout_mots_cles' => 'Proïbir l’utilizacion daus mots clau dins los forums',
 	'item_non_utiliser_config_groupe_mots_cles' => 'Pas utilizar la configuracion avançada daus grops de mots clau',
 	'item_non_utiliser_mots_cles' => 'Pas utilizar los mots clau',
 	'item_utiliser_config_groupe_mots_cles' => 'Utilizar la configuracion avançada daus grops de mots clau',
@@ -56,14 +56,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'logo_mot_cle' => 'LÒGO DAU MOT CLAU',
 
 	// T
-	'texte_config_groupe_mots_cles' => 'Desiratz, vos, d\'activar la configuracion avançada daus mots clau,
+	'texte_config_groupe_mots_cles' => 'Desiratz, vos, d’activar la configuracion avançada daus mots clau,
  en indicant per exemple que se pòt seleccionar un mot unenc
- per grop, qu\'un grop es important...?', # MODIF
+ per grop, qu’un grop es important...?', # MODIF
 	'texte_mots_cles' => 'Gràcias aus mots clau podetz crear daus liams tematics entre vòstres articles
   qué que siá lor plaça dins las rubricas. Quò lai vos permet
-  d\'enrichir la navigacion de vòstre sit, e quitament d\'utilizar quelas proprietats 
+  d’enrichir la navigacion de vòstre sit, e quitament d’utilizar quelas proprietats 
   per personalizar la presentacion daus articles dins las esqueletas. ',
-	'texte_mots_cles_dans_forum' => 'Desiratz, vos, de permetre l\'utilizacion daus mots clau, seleccionables per los vesitaires, dins los forums dau sit public? (Atencion: es pro complexe d\'utilizar quela opcion correctament.)',
+	'texte_mots_cles_dans_forum' => 'Desiratz, vos, de permetre l’utilizacion daus mots clau, seleccionables per los vesitaires, dins los forums dau sit public? (Atencion: es pro complexe d’utilizar quela opcion correctament.)',
 	'texte_nouveau_mot' => 'Mot nuòu',
 	'titre_config_groupe_mots_cles' => 'Configuracion daus grops de mots clau',
 	'titre_gauche_mots_edit' => 'MOT NUMERO:',

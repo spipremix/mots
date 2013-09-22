@@ -31,7 +31,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_creation_mots_cles' => 'Burada sitenin anahtar sözcüklerini yaratınız ve konfigürasyonunu yapınız.',
 	'info_dans_groupe' => 'Grupta :',
 	'info_delet_mots_cles' => '<b>@titre_mot@</b>(@type_mot@) anahtar sözcüğünü silmek istediniz. Bu anahtar sözcük  
-<b>@texte_lie@<b>\'e bağlı olduğundan, bu kararı onaylamanız gerekiyor :', # MODIF
+<b>@texte_lie@<b>’e bağlı olduğundan, bu kararı onaylamanız gerekiyor :', # MODIF
 	'info_groupe_important' => 'Önemli gurup',
 	'info_modifier_mot' => 'Anahtar sözcüğü değiştir :',
 	'info_mots_cles' => 'Anahtar sözcükler',

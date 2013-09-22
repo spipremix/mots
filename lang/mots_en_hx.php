@@ -27,7 +27,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_voir_tous_mots_cles' => '5h0w 411 k3yw0rd5',
 	'info_articles_lies_mot' => '4r71c135 4550c1473d w17h 7h15 k3yw0rd',
 	'info_changer_nom_groupe' => 'Ch4ng3 7h3 n4m3 0f 7h15 gr0up:',
-	'info_creation_mots_cles' => 'Cr3473 4nd c0nf1gur3 7h3 5173\'5 k3yw0rd5 h3r3',
+	'info_creation_mots_cles' => 'Cr3473 4nd c0nf1gur3 7h3 5173’5 k3yw0rd5 h3r3',
 	'info_dans_groupe' => '1n gr0up:',
 	'info_delet_mots_cles' => 'Y0u r3qu3573d 7h3 d313710n 0f k3yw0rd
 <b>@titre_mot@</b> (@type_mot@). 7h15 k3yw0rd b31ng 11nk3d 70
@@ -53,7 +53,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'item_utiliser_mots_cles' => 'U53 k3yw0rd5',
 
 	// L
-	'logo_mot_cle' => 'K3YW0RD\'5 10G0',
+	'logo_mot_cle' => 'K3YW0RD’5 10G0',
 
 	// T
 	'texte_config_groupe_mots_cles' => 'D0 y0u w15h 70 4c71v473 7h3 4dv4nc3d c0nf1gur4710n k3yw0rd gr0up5,

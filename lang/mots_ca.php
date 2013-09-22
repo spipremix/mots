@@ -29,7 +29,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_voir_tous_mots_cles' => 'Mostrar totes les paraules clau',
 	'info_articles_lies_mot' => 'Articles lligats a aquesta paraula clau',
 	'info_aucun_mot_cle' => 'Cap paraula clau',
-	'info_changer_nom_groupe' => 'Canviar el nom d\'aquest grup:',
+	'info_changer_nom_groupe' => 'Canviar el nom d’aquest grup:',
 	'info_creation_mots_cles' => 'Crear i configurar aquí les paraules clau del lloc',
 	'info_dans_groupe' => 'Dins el grup:',
 	'info_delet_mots_cles' => 'Heu sol·licitat la supressió de la
@@ -38,10 +38,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_groupe_important' => 'Grup important',
 	'info_modifier_mot' => 'Modificar la paraula clau:',
 	'info_mots_cles' => 'Les paraules clau',
-	'info_mots_cles_association' => 'Les paraules clau d\'aquest grup poden ser associades:',
+	'info_mots_cles_association' => 'Les paraules clau d’aquest grup poden ser associades:',
 	'info_oui_suppression_mot_cle' => 'vull suprimir definitivament aquesta paraula clau.',
 	'info_question_mots_cles' => 'Voleu utilitzar les paraules clau en la vostra web ?',
-	'info_qui_attribue_mot_cle' => 'Les paraules clau d\'aquest grup poden ser assignades per:',
+	'info_qui_attribue_mot_cle' => 'Les paraules clau d’aquest grup poden ser assignades per:',
 	'info_remplacer_mot' => 'Substituir "@titre@"',
 	'info_retirer_mot' => 'suprimir aquesta paraula',
 	'info_retirer_mots' => 'suprimir totes les paraules',
@@ -50,7 +50,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_supprimer_mot' => 'suprimir aquesta paraula',
 	'info_titre_mot_cle' => 'Nom o títol de la paraula clau',
 	'info_un_mot' => 'Una sola paraula a la vegada',
-	'item_ajout_mots_cles' => 'Autoritzar l\'afegit de paraules clau als fòrums',
+	'item_ajout_mots_cles' => 'Autoritzar l’afegit de paraules clau als fòrums',
 	'item_non_ajout_mots_cles' => 'Prohibir la utilització de les paraules clau en els fòrums',
 	'item_non_utiliser_config_groupe_mots_cles' => 'No utilitzar la configuració avançada dels grup de paraules clau',
 	'item_non_utiliser_mots_cles' => 'No utilitzar les paraules clau',
@@ -59,7 +59,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// L
 	'lien_ajouter_mot' => 'Afegir aquesta paraula clau',
-	'logo_groupe' => 'LOGOTIP D\'AQUEST GRUP',
+	'logo_groupe' => 'LOGOTIP D’AQUEST GRUP',
 	'logo_mot_cle' => 'LOGOTIP DE LA PARAULA CLAU',
 
 	// T
@@ -70,7 +70,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 independement del seu emplaçament a les seccions.Es pot així
 enriquir la navegació del vostre lloc, inclús utilitzar aquestes propietats
  per a personalitzar la presentació dels articles dintre dels esquelets.',
-	'texte_mots_cles_dans_forum' => 'Voleu permetre l\'ús de paraules clau, escollides pels visitants, als fòrums del lloc públic? (Atenció: aquesta opció és relativament complexa d\'utilitzar correctament) ',
+	'texte_mots_cles_dans_forum' => 'Voleu permetre l’ús de paraules clau, escollides pels visitants, als fòrums del lloc públic? (Atenció: aquesta opció és relativament complexa d’utilitzar correctament) ',
 	'texte_nouveau_mot' => 'Nova paraula',
 	'titre_config_groupe_mots_cles' => 'Configuració dels grups de paraules clau',
 	'titre_gauche_mots_edit' => 'MOT NÚMERO:',

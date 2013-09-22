@@ -30,9 +30,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_supprimer_groupe_mots' => 'Dégrèn group-la',
 	'icone_voir_tous_mots_cles' => 'Vwar tout bann molaklé',
 	'info_articles_lies_mot' => 'Bann zartik an gatiraz èk molaklé-la',
-	'info_changer_nom_groupe' => 'Sanz lo non lansanm-la:',
+	'info_changer_nom_groupe' => 'Sanz lo non lansanm-la :',
 	'info_creation_mots_cles' => 'Kré èk konfigir tèrla tout bann molaklé lo sit',
-	'info_dans_groupe' => 'Dann group-la :',
+	'info_dans_groupe' => 'Dann group-la :',
 	'info_delet_mots_cles' => 'Ou la finn
 domann dégrèn molaklé-la
 <b>@titre_mot@</b> (@type_mot@). Kom li lé gatiré èk
@@ -61,13 +61,13 @@ domann dégrèn molaklé-la
 	'logo_mot_cle' => 'LOGO MOLAKLÉ-LA',
 
 	// T
-	'texte_config_groupe_mots_cles' => 'Ou vé fé zwé astèr lakonfigirasyon présiz pou bann molaklé ? 
+	'texte_config_groupe_mots_cles' => 'Ou vé fé zwé astèr lakonfigirasyon présiz pou bann molaklé ? 
 Li pé permèt alor swazi inn  sèl molaklé sanm group, o rand inn group pli importan, é tousala... ', # MODIF
 	'texte_mots_cles' => 'Bann molaklé i permèt aou kré bann gatiraz antrobann zartik, sélon lo tèm zot i abord. Bann gatiraz-la lé indépandan laplas bann zartik dann rubrik. Ou i pé anserv azot pou rand lo batkaraz pli ris sir out sitwèb, o pou rand pli personèl laprézantasyon out bann skelèt.',
 	'texte_mots_cles_dans_forum' => 'Indik isi si ou vé permèt litilizasyon bann molaklé, sak bann vizitèr i pé swazi zot-minm, dann bann forom piblik sir lo sitwèb ? (Tansyon pangar :lopsyon-la lé inn pé difisil pou anserv é pou fé zwé byin korèkman.)',
 	'texte_nouveau_mot' => 'Nouvo mo',
 	'titre_config_groupe_mots_cles' => 'Lakonfigirasyon pou bann group molaklé',
-	'titre_gauche_mots_edit' => 'MO NIMÉRO :',
+	'titre_gauche_mots_edit' => 'MO NIMÉRO :',
 	'titre_mots_cles_dans_forum' => 'Bann molaklé dann bann forom sir figirwèb',
 	'titre_mots_tous' => 'Bann molaklé',
 	'titre_nouveau_groupe' => 'Nouvo group',

@@ -11,9 +11,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_conseil_selection_mot_cle' => '<b>Strollad pouezus :</b> kuzuliet start eo dibab ur ger-stur e diabarzh ar strollad-mañ.',
 
 	// B
-	'bouton_checkbox_qui_attribue_mot_cle_administrateurs' => 'merourien ar lec\'hienn',
+	'bouton_checkbox_qui_attribue_mot_cle_administrateurs' => 'merourien ar lec’hienn',
 	'bouton_checkbox_qui_attribue_mot_cle_redacteurs' => 'ar skridaozerien',
-	'bouton_checkbox_qui_attribue_mot_cle_visiteurs' => 'gweladennerien al lec\'hienn foran pa bostont ur gemennadenn er forom',
+	'bouton_checkbox_qui_attribue_mot_cle_visiteurs' => 'gweladennerien al lec’hienn foran pa bostont ur gemennadenn er forom',
 
 	// C
 	'creer_et_associer_un_mot' => 'Créér et associer un mot-clé', # MODIF
@@ -22,28 +22,28 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_creation_groupe_mots' => 'Krouiñ ur strollad gerioù nevez',
 	'icone_creation_mots_cles' => 'Krouiñ ur ger-stur nevez',
 	'icone_modif_groupe_mots' => 'Kemmañ ar strollad gerioù-mañ',
-	'icone_modifier_mot' => 'Kemmañ ar ger-alc\'hwez-mañ',
+	'icone_modifier_mot' => 'Kemmañ ar ger-alc’hwez-mañ',
 	'icone_mots_cles' => 'Gerioù-stur',
 	'icone_supprimer_groupe_mots' => 'Diverkañ ar strollad-mañ',
-	'icone_voir_tous_mots_cles' => 'Gwelet an holl c\'herioù-stur',
+	'icone_voir_tous_mots_cles' => 'Gwelet an holl c’herioù-stur',
 	'info_articles_lies_mot' => 'Ar pennadoù liammet ouzh ar ger-stur-mañ',
 	'info_changer_nom_groupe' => 'Kemmañ anv ar strollad-mañ :',
-	'info_creation_mots_cles' => 'Savit ha keflugnit amañ gerioù-stur al lec\'hienn.',
+	'info_creation_mots_cles' => 'Savit ha keflugnit amañ gerioù-stur al lec’hienn.',
 	'info_dans_groupe' => 'Er strollad :',
-	'info_delet_mots_cles' => 'Goulennet hoc\'h eus diverkañ ar ger-stur
-<b>@titre_mot@</b> (@type_mot@). Dre ma\'z eo liammet ar ger-se ouzh
+	'info_delet_mots_cles' => 'Goulennet hoc’h eus diverkañ ar ger-stur
+<b>@titre_mot@</b> (@type_mot@). Dre ma’z eo liammet ar ger-se ouzh
 <b>@texte_lie@</b> e rankit kadarnaat ho tiviz :', # MODIF
 	'info_groupe_important' => 'Strollad pouezus',
-	'info_modifier_mot' => 'Kemmañ ar ger-alc\'hwez :',
+	'info_modifier_mot' => 'Kemmañ ar ger-alc’hwez :',
 	'info_mots_cles' => 'Ar gerioù-stur',
 	'info_mots_cles_association' => 'Gallout a ra gerioù-stur ar strollad-mañ bezañ kevredet :',
-	'info_oui_suppression_mot_cle' => 'c\'hoant am eus da ziverkañ ar ger-stur-mañ da vat.',
-	'info_question_mots_cles' => 'Ha c\'hoant hoc\'h eus ober gant ar gerioù-stur war ho lec\'hienn ?',
+	'info_oui_suppression_mot_cle' => 'c’hoant am eus da ziverkañ ar ger-stur-mañ da vat.',
+	'info_question_mots_cles' => 'Ha c’hoant hoc’h eus ober gant ar gerioù-stur war ho lec’hienn ?',
 	'info_qui_attribue_mot_cle' => 'Gallout a ra gerioù ar strollad-mañ bezañ roet gant :',
 	'info_retirer_mot' => 'Tennañ ar ger-mañ',
-	'info_retirer_mots' => 'Tennañ an holl c\'herioù',
+	'info_retirer_mots' => 'Tennañ an holl c’herioù',
 	'info_rubriques_liees_mot' => 'Ar rubrikennoù liammet ouzh ar ger-stur-mañ',
-	'info_selection_un_seul_mot_cle' => 'Er strollad-mañ, n\'haller dibab nemet <b>ur ger-stur war un dro</b>.', # MODIF
+	'info_selection_un_seul_mot_cle' => 'Er strollad-mañ, n’haller dibab nemet <b>ur ger-stur war un dro</b>.', # MODIF
 	'info_supprimer_mot' => 'Diverkañ ar ger-mañ',
 	'info_titre_mot_cle' => 'Anv pe titl ar ger-stur',
 	'info_un_mot' => 'Ur ger war an dro hepken',
@@ -58,16 +58,16 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'logo_mot_cle' => 'LOGO AR GER-STUR',
 
 	// T
-	'texte_config_groupe_mots_cles' => 'Ha c\'hoant hoc\'h eus ober gant kefluniadur araokaet ar gerioù-stur ?
-   O resisaat, da skouer, e c\'heller dibab ur ger hepken dre strollad, 
+	'texte_config_groupe_mots_cles' => 'Ha c’hoant hoc’h eus ober gant kefluniadur araokaet ar gerioù-stur ?
+   O resisaat, da skouer, e c’heller dibab ur ger hepken dre strollad, 
    eo pouezus strollad pe strollad... ?', # MODIF
-	'texte_mots_cles' => 'Gant ar gerioù-stur e c\'heller sevel liammoù tematek etre ar pennadoù, ne vern pelec\'h emaint renket er rubrikennoù disheñvel.
-  Evel-se e c\'hellit aesaat ar merdeiñ en ho lec\'hienn, pe zoken implijout ar perzhioù-se a-benn personelaat doare kinnig ar pennadoù er frammoù.',
-	'texte_mots_cles_dans_forum' => 'Ha c\'hoant hoc\'h eus da aotren implij gerioù-stur a c\'hall bezañ dibabet gant ar weladennerien e forumoù al lodenn foran ? (Diwallit : diaes a-walc\'h eo implijout an dibarzh-mañ evel m\'eo dleet.)',
+	'texte_mots_cles' => 'Gant ar gerioù-stur e c’heller sevel liammoù tematek etre ar pennadoù, ne vern pelec’h emaint renket er rubrikennoù disheñvel.
+  Evel-se e c’hellit aesaat ar merdeiñ en ho lec’hienn, pe zoken implijout ar perzhioù-se a-benn personelaat doare kinnig ar pennadoù er frammoù.',
+	'texte_mots_cles_dans_forum' => 'Ha c’hoant hoc’h eus da aotren implij gerioù-stur a c’hall bezañ dibabet gant ar weladennerien e forumoù al lodenn foran ? (Diwallit : diaes a-walc’h eo implijout an dibarzh-mañ evel m’eo dleet.)',
 	'texte_nouveau_mot' => 'Ger nevez',
 	'titre_config_groupe_mots_cles' => 'Kefluniañ ar strolladoù gerioù-stur',
 	'titre_gauche_mots_edit' => 'GER NIVERENN :',
-	'titre_mots_cles_dans_forum' => 'Gerioù-stur e foromoù al lec\'hienn foran',
+	'titre_mots_cles_dans_forum' => 'Gerioù-stur e foromoù al lec’hienn foran',
 	'titre_mots_tous' => 'Ar gerioù-stur',
 	'titre_nouveau_groupe' => 'Strollad nevez',
 	'titre_page_mots_tous' => 'Gerioù-stur'

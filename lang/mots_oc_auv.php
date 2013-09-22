@@ -8,7 +8,7 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// A
-	'avis_conseil_selection_mot_cle' => '<b>Grop important:</b> s\'aconselha fòrt de seleccionar un mot clau dins aquel grop.',
+	'avis_conseil_selection_mot_cle' => '<b>Grop important:</b> s’aconselha fòrt de seleccionar un mot clau dins aquel grop.',
 
 	// B
 	'bouton_checkbox_qui_attribue_mot_cle_administrateurs' => 'los administrators dau sit',
@@ -26,7 +26,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_supprimer_groupe_mots' => 'Suprimir aquel document',
 	'icone_voir_tous_mots_cles' => 'Veire totes los mots clau ',
 	'info_articles_lies_mot' => 'Los articles liats a aquel mot clau',
-	'info_changer_nom_groupe' => 'Chamjar lo nom d\'aquel grop:',
+	'info_changer_nom_groupe' => 'Chamjar lo nom d’aquel grop:',
 	'info_creation_mots_cles' => 'Creatz e configuratz aicí los mots clau dau sit',
 	'info_dans_groupe' => 'Dins lo grop:',
 	'info_delet_mots_cles' => 'Avètz demandat de suprimir lo mot clau
@@ -34,10 +34,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
  <b>@texte_lie@</b>. Devètz confirmar aquela decision:', # MODIF
 	'info_groupe_important' => 'Grop important',
 	'info_mots_cles' => 'Los mots clau',
-	'info_mots_cles_association' => 'Los mots clau d\'aquel grop se pòdon associar:',
+	'info_mots_cles_association' => 'Los mots clau d’aquel grop se pòdon associar:',
 	'info_oui_suppression_mot_cle' => 'Vòle suprimir aquel mot clau definitivament.',
-	'info_question_mots_cles' => 'Desiratz d\'utilizar los mots clau sobre vòstre sit?',
-	'info_qui_attribue_mot_cle' => 'Los mots d\'aquel grop pòdon l-èsser atribuits per:',
+	'info_question_mots_cles' => 'Desiratz d’utilizar los mots clau sobre vòstre sit?',
+	'info_qui_attribue_mot_cle' => 'Los mots d’aquel grop pòdon l-èsser atribuits per:',
 	'info_retirer_mot' => 'Quitar aquel mot',
 	'info_retirer_mots' => 'Quitar totes los mots ',
 	'info_rubriques_liees_mot' => 'Las rubricas liadas a aquel mot clau',
@@ -45,8 +45,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_supprimer_mot' => 'suprimir aquel mot',
 	'info_titre_mot_cle' => 'Nom o títol dau mot clau',
 	'info_un_mot' => 'Mas un mot au còp',
-	'item_ajout_mots_cles' => 'Autorizar que s\'aponda de mots clau aus forums',
-	'item_non_ajout_mots_cles' => 'Proïbir l\'utilizacion daus mots clau dins los forums',
+	'item_ajout_mots_cles' => 'Autorizar que s’aponda de mots clau aus forums',
+	'item_non_ajout_mots_cles' => 'Proïbir l’utilizacion daus mots clau dins los forums',
 	'item_non_utiliser_config_groupe_mots_cles' => 'Pas utilizar la configuracion avançada daus grops de mots clau',
 	'item_non_utiliser_mots_cles' => 'Pas utilizar los mots clau',
 	'item_utiliser_config_groupe_mots_cles' => 'Utilizar la configuracion avançada daus grops de mots clau',
@@ -56,14 +56,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'logo_mot_cle' => 'LÒGO DAU MOT CLAU',
 
 	// T
-	'texte_config_groupe_mots_cles' => 'Desiratz, vos, d\'activar la configuracion avançada daus mots clau,
+	'texte_config_groupe_mots_cles' => 'Desiratz, vos, d’activar la configuracion avançada daus mots clau,
  en indicant per exemple que se pòt seleccionar un mot unenc
- per grop, qu\'un grop es important...?', # MODIF
+ per grop, qu’un grop es important...?', # MODIF
 	'texte_mots_cles' => 'Gràcias aus mots clau podètz crear de liams tematics entre vòstres articles
   qué que siá lor plaça dins las rubricas. Aquò vos permet
-  d\'enrichir la navigacion de vòstre sit, e nieus d\'utilizar aquelas proprietats 
+  d’enrichir la navigacion de vòstre sit, e nieus d’utilizar aquelas proprietats 
   per personalizar la presentacion daus articles dins las esqueletas. ',
-	'texte_mots_cles_dans_forum' => 'Desiratz, vos, de permetre l\'utilizacion daus mots clau, seleccionables per los vesitaires, dins los forums dau sit public? (Atencion: z-es pro complèxe d\'utilizar aquela opcion correctament.)',
+	'texte_mots_cles_dans_forum' => 'Desiratz, vos, de permetre l’utilizacion daus mots clau, seleccionables per los vesitaires, dins los forums dau sit public? (Atencion: z-es pro complèxe d’utilizar aquela opcion correctament.)',
 	'texte_nouveau_mot' => 'Mot nuòu',
 	'titre_config_groupe_mots_cles' => 'Configuracion daus grops de mots clau',
 	'titre_gauche_mots_edit' => 'MOT NUMÈRO:',
