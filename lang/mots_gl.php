@@ -33,8 +33,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_creation_mots_cles' => 'Crea e configura aquí as palabras chave do web',
 	'info_dans_groupe' => 'No grupo:',
 	'info_delet_mots_cles' => 'Solicitouse eliminar a palabra clave
-<b>@titre_mot@</b> (@type_mot@). Esta palabra clave est&aacute; ligada a
-<b>@texte_lie@</b>, ten que confirmar a s&uacute;a decisi&oacute;n :', # MODIF
+<b>@titre_mot@</b> (@type_mot@). Esta palabra clave está ligada a
+<b>@texte_lie@</b>, ten que confirmar a súa decisión :', # MODIF
 	'info_groupe_important' => 'Grupo importante',
 	'info_modifier_mot' => 'Modificar a palabra clave :',
 	'info_mots_cles' => 'As palabras chave',
@@ -63,9 +63,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'logo_mot_cle' => 'LOGO DA PALABRA CHAVE',
 
 	// T
-	'texte_config_groupe_mots_cles' => 'Quere activar a configuraci&oacute;n avanzada das palabras clave,
-  para indicar, por exemplo que se pode seleccionar unha palabra &uacute;nica
-  por grupo, que un grupo &eacute; importante... ?', # MODIF
+	'texte_config_groupe_mots_cles' => 'Quere activar a configuración avanzada das palabras clave,
+  para indicar, por exemplo que se pode seleccionar unha palabra única
+  por grupo, que un grupo é importante... ?', # MODIF
 	'texte_mots_cles' => 'As palabras chave permiten crear ligazóns temáticas entre os artigos
   sen depender do seu emprazamento dentro dos temas. Pódese, dende
   mellorar a navegación do seu web, ata empregar as súas propiedades
