@@ -49,7 +49,6 @@
 	<langue code="fon" url="http://trad.spip.net/tradlang_module/mots?lang_cible=fon" total="61" traduits="42" relire="0" modifs="4" nouveaux="15" pourcent="68.85">
 	</langue>
 	<langue code="fr" url="http://trad.spip.net/tradlang_module/mots?lang_cible=fr" total="61" traduits="61" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
-		<traducteur nom="Salvatore" lien="http://trad.spip.net/auteur/salvatore" />
 	</langue>
 	<langue code="fr_fem" url="http://trad.spip.net/tradlang_module/mots?lang_cible=fr_fem" total="61" traduits="61" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
 		<traducteur nom="denisb" lien="http://trad.spip.net/auteur/denisb" />
