@@ -16,9 +16,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_checkbox_qui_attribue_mot_cle_redacteurs' => 'Los y les redactores',
 	'bouton_checkbox_qui_attribue_mot_cle_visiteurs' => 'los visitantes del sitiu públicu cuando pongan un mensaxe nun foru',
 
-	// C
-	'creer_et_associer_un_mot' => 'Créér et associer un mot-clé', # MODIF
-
 	// I
 	'icone_creation_groupe_mots' => 'Crear un nuevu grupu de pallabres',
 	'icone_creation_mots_cles' => 'Crear una nueva pallabra-clave',

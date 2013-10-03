@@ -7,9 +7,6 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
-	// C
-	'creer_et_associer_un_mot' => 'Créér et associer un mot-clé', # MODIF
-
 	// I
 	'icone_mots_cles' => 'Lykilorð',
 	'icone_supprimer_groupe_mots' => 'Eyða þessum hóp',

@@ -14,9 +14,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_checkbox_qui_attribue_mot_cle_administrateurs' => 'sivuston ylläpitäjät',
 	'bouton_checkbox_qui_attribue_mot_cle_redacteurs' => 'toimittajat',
 
-	// C
-	'creer_et_associer_un_mot' => 'Créér et associer un mot-clé', # MODIF
-
 	// I
 	'info_articles_lies_mot' => 'Tähän hakusanaan liittyvät artikkelit',
 	'info_changer_nom_groupe' => 'Vaihda tämän ryhmän nimeä:',

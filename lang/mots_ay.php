@@ -15,9 +15,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_checkbox_qui_attribue_mot_cle_redacteurs' => 'Qillqirinaka',
 	'bouton_checkbox_qui_attribue_mot_cle_visiteurs' => 'jach’a qamaw utat tumpirinaka, aruskipañanakan aruskipapxi ukja',
 
-	// C
-	'creer_et_associer_un_mot' => 'Créér et associer un mot-clé', # MODIF
-
 	// I
 	'icone_creation_groupe_mots' => 'Mä machaq qutu arunaka uñstayaña',
 	'icone_creation_mots_cles' => 'Mä machaq imt’at aru uñstayaña ',

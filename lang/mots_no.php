@@ -10,9 +10,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// A
 	'avis_doublon_mot_cle' => 'Un mot existe deja avec ce titre. Êtes vous sûr de vouloir créer le même ?',
 
-	// C
-	'creer_et_associer_un_mot' => 'Créér et associer un mot-clé', # MODIF
-
 	// I
 	'icone_modifier_mot' => 'Edit this keyword',
 	'icone_voir_groupe_mots' => 'Voir ce groupe de mots',

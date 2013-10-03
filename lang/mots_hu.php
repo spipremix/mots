@@ -15,9 +15,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_checkbox_qui_attribue_mot_cle_redacteurs' => 'a szerzők',
 	'bouton_checkbox_qui_attribue_mot_cle_visiteurs' => 'a nyilvános honlap látogatói, ha küldenek üzenetet a fórumba.',
 
-	// C
-	'creer_et_associer_un_mot' => 'Créér et associer un mot-clé', # MODIF
-
 	// I
 	'icone_creation_groupe_mots' => 'Új szócsoport létrehozása',
 	'icone_creation_mots_cles' => 'Új kulcsszó létrehozása',

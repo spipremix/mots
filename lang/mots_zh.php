@@ -15,9 +15,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_checkbox_qui_attribue_mot_cle_redacteurs' => '编辑者',
 	'bouton_checkbox_qui_attribue_mot_cle_visiteurs' => '在论坛上发表消息的站点访问者.',
 
-	// C
-	'creer_et_associer_un_mot' => 'Créér et associer un mot-clé', # MODIF
-
 	// I
 	'icone_creation_groupe_mots' => '新建一个关键词组',
 	'icone_creation_mots_cles' => '新建一个关键词',

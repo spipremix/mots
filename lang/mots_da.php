@@ -15,9 +15,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_checkbox_qui_attribue_mot_cle_redacteurs' => 'redaktører',
 	'bouton_checkbox_qui_attribue_mot_cle_visiteurs' => 'besøgende på det offentlige websted når de sender meddelelse til et forum',
 
-	// C
-	'creer_et_associer_un_mot' => 'Créér et associer un mot-clé', # MODIF
-
 	// I
 	'icone_creation_groupe_mots' => 'Opret ny nøgleordsgruppe',
 	'icone_creation_mots_cles' => 'Opret nyt nøgleord',
