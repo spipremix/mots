@@ -114,7 +114,8 @@ function mots_optimiser_base_disparus($flux){
  *     Données du pipeline
  */
 function mots_post_edition($flux){
-	if (($flux['args']['table'] == 'spip_groupes_mots')
+	if (isset($flux['args']['table'])
+		and ($flux['args']['table'] == 'spip_groupes_mots')
 		and isset($flux['data']['titre']))
 	{
 		sql_updateq('spip_mots', array('type' => $flux['data']['titre']),
