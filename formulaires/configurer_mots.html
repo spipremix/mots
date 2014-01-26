@@ -15,13 +15,17 @@
 				<span class='erreur_message'>(#GET{erreurs})</span>
 				]<div class="choix">
 					<input type="radio" name="#GET{name}" id="#GET{name}_oui" value="oui"
-					onchange="if ($(this).prop('checked')) $('li.editer_articles_mots').siblings('li').show('fast');"
-					[(#ENV{#GET{name}}|=={oui}|oui)checked="checked"] /><label for="#GET{name}_oui"><:mots:item_utiliser_mots_cles:></label>
+						onclick="$(this).blur();"
+						onchange="if ($(this).prop('checked')) $('li.editer_articles_mots').siblings('li').show('fast');"
+						[(#ENV{#GET{name}}|=={oui}|oui)checked="checked"]
+					/><label for="#GET{name}_oui"><:mots:item_utiliser_mots_cles:></label>
 				</div>
 				<div class="choix">
 					<input type="radio" name="#GET{name}" id="#GET{name}_non" value="non"
-					onchange="if ($(this).prop('checked')) $('li.editer_articles_mots').siblings('li').hide('fast');"
-					[(#ENV{#GET{name}}|=={oui}|non)checked="checked"] /><label for="#GET{name}_non"><:mots:item_non_utiliser_mots_cles:></label>
+						onclick="$(this).blur();"
+						onchange="if ($(this).prop('checked')) $('li.editer_articles_mots').siblings('li').hide('fast');"
+						[(#ENV{#GET{name}}|=={oui}|non)checked="checked"]
+					/><label for="#GET{name}_non"><:mots:item_non_utiliser_mots_cles:></label>
 				</div>
 			</li>
 			#SET{name,config_precise_groupes}#SET{erreurs,#ENV**{erreurs}|table_valeur{#GET{name}}}
