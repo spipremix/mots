@@ -41,11 +41,11 @@ function action_editer_groupe_mots_dist($id_groupe=null)
 	}
 
 	if (!intval($id_groupe)) {
-		$id_groupe = groupemots_inserer();
+		$id_groupe = groupe_mots_inserer();
 	}
 
 	if ($id_groupe>0)
-		$err = groupemots_modifier($id_groupe);
+		$err = groupe_mots_modifier($id_groupe);
 
 	return array($id_groupe,$err);
 }
@@ -62,7 +62,7 @@ function action_editer_groupe_mots_dist($id_groupe=null)
  * @return int|bool
  *     Identifiant du nouveau groupe de mots clés.
  */
-function groupemots_inserer($table='') {
+function groupe_mots_inserer($table='') {
 	$champs = array(
 		'titre' => '',
 		'unseul' => 'non',
@@ -113,7 +113,7 @@ function groupemots_inserer($table='') {
  *     Null si aucun champ à modifier,
  *     Chaîne contenant un texte d'erreur sinon.
  */
-function groupemots_modifier($id_groupe, $set=null) {
+function groupe_mots_modifier($id_groupe, $set=null) {
 	$err = '';
 
 	include_spip('inc/modifier');
@@ -155,8 +155,8 @@ function groupemots_modifier($id_groupe, $set=null) {
 /**
  * Créer une révision sur un groupe de mot
  *
- * @deprecated Utiliser groupemots_modifier()
- * @see groupemots_modifier()
+ * @deprecated Utiliser groupe_mots_modifier()
+ * @see groupe_mots_modifier()
  * 
  * @param int $id_groupe
  *     Identifiant du grope de mots clés à modifier
@@ -170,6 +170,43 @@ function groupemots_modifier($id_groupe, $set=null) {
  *     Chaîne contenant un texte d'erreur sinon.
  */
 function revision_groupe_mot($id_groupe, $c=false) {
-	return groupemots_modifier($id_groupe,$c);
+	return groupe_mots_modifier($id_groupe,$c);
+}
+
+
+/**
+ * Insertion d'un groupe de mots clés
+ *
+ * @deprecated Utiliser groupe_mots_inserer() ou objet_inserer()
+ * @see groupe_mots_inserer()
+ * 
+ * @param string $table
+ *     Tables sur lesquels des mots de ce groupe pourront être liés
+ * @return int|bool
+ *     Identifiant du nouveau groupe de mots clés.
+ */
+function groupemots_inserer($table='') {
+	return groupe_mots_inserer($table);
+}
+
+/**
+ * Modifier un groupe de mot
+ *
+ * @deprecated Utiliser groupe_mots_modifier() ou objet_modifier()
+ * @see groupe_mots_modifier()
+ * 
+ * @param int $id_groupe
+ *     Identifiant du grope de mots clés à modifier
+ * @param array|null $set
+ *     Couples (colonne => valeur) de données à modifier.
+ *     En leur absence, on cherche les données dans les champs éditables
+ *     qui ont été postés
+ * @return string|null
+ *     Chaîne vide si aucune erreur,
+ *     Null si aucun champ à modifier,
+ *     Chaîne contenant un texte d'erreur sinon.
+ */
+function groupemots_modifier($id_groupe, $set=null) {
+	return groupe_mots_modifier($id_groupe, $set);
 }
 ?>
