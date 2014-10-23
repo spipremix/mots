@@ -114,8 +114,9 @@
 	<langue code="pt" url="http://trad.spip.net/tradlang_module/mots?lang_cible=pt" total="61" traduits="61" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
 		<traducteur nom="Cláudia Anjos Lopes" lien="http://trad.spip.net/auteur/claudia_a_lopes" />
 	</langue>
-	<langue code="pt_br" url="http://trad.spip.net/tradlang_module/mots?lang_cible=pt_br" total="61" traduits="60" relire="0" modifs="1" nouveaux="0" pourcent="98.36">
+	<langue code="pt_br" url="http://trad.spip.net/tradlang_module/mots?lang_cible=pt_br" total="61" traduits="61" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
 		<traducteur nom="Ricardo Porto" lien="http://trad.spip.net/auteur/ricardo-porto" />
+		<traducteur nom="telopa" lien="http://trad.spip.net/auteur/telopa" />
 	</langue>
 	<langue code="ro" url="http://trad.spip.net/tradlang_module/mots?lang_cible=ro" total="61" traduits="44" relire="0" modifs="3" nouveaux="14" pourcent="72.13">
 	</langue>
