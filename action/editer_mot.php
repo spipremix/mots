@@ -59,10 +59,11 @@ function action_editer_mot_dist($arg=null)
  * 
  * @param int $id_groupe
  *     Identifiant du groupe de mot
+ * @param array|null $set
  * @return int|bool
  *     Identifiant du nouveau mot clé, false si erreur.
  */
-function mot_inserer($id_groupe) {
+function mot_inserer($id_groupe, $set=null) {
 
 	$champs = array();
 	$row = sql_fetsel("titre", "spip_groupes_mots", "id_groupe=".intval($id_groupe));
@@ -73,6 +74,8 @@ function mot_inserer($id_groupe) {
 	else
 		return false;
 
+	if ($set)
+		$champs = array_merge($champs, $set);
 
 	// Envoyer aux plugins
 	$champs = pipeline('pre_insertion',

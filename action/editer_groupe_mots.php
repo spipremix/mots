@@ -57,21 +57,36 @@ function action_editer_groupe_mots_dist($id_groupe=null)
  * @pipeline_appel pre_insertion
  * @pipeline_appel post_insertion
  * 
- * @param string $table
- *     Tables sur lesquels des mots de ce groupe pourront être liés
+ * @param int $id_parent
+ *     inutilise, pour consistance de l'API
+ * @param null|array $set
  * @return int|bool
  *     Identifiant du nouveau groupe de mots clés.
  */
-function groupe_mots_inserer($table='') {
+function groupe_mots_inserer($id_parent=null, $set=null) {
+
+	// support de la signature derogatoire pour compat
+	// groupe_mots_inserer($table='')
+	if (is_string($id_parent) AND strlen($id_parent)){
+		if (is_null($set)){
+			$set = array();
+		}
+		$set['tables_liees'] = $id_parent;
+	}
+
+
 	$champs = array(
 		'titre' => '',
 		'unseul' => 'non',
 		'obligatoire' => 'non',
-		'tables_liees' => $table,
+		'tables_liees' => '',
 		'minirezo' =>  'oui',
 		'comite' =>  'non',
 		'forum' => 'non'
 	);
+
+	if ($set)
+		$champs = array_merge($champs, $set);
 
 	// Envoyer aux plugins
 	$champs = pipeline('pre_insertion',
@@ -182,11 +197,12 @@ function revision_groupe_mot($id_groupe, $c=false) {
  * 
  * @param string $table
  *     Tables sur lesquels des mots de ce groupe pourront être liés
+ * @param null|array $set
  * @return int|bool
  *     Identifiant du nouveau groupe de mots clés.
  */
-function groupemots_inserer($table='') {
-	return groupe_mots_inserer($table);
+function groupemots_inserer($table='', $set=null) {
+	return groupe_mots_inserer($table, $set);
 }
 
 /**
