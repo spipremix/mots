@@ -89,7 +89,7 @@ function mots_optimiser_base_disparus($flux){
 	$n = &$flux['data'];
 	$mydate = $flux['args']['date'];
 	
-	$result = sql_delete("spip_mots", "length(titre)=0 AND maj < $mydate");
+	$result = sql_delete("spip_mots", "length(titre)=0 AND maj < ".sql_quote($mydate));
 
 	include_spip('action/editer_liens');
 	// optimiser les liens morts :
