@@ -32,6 +32,7 @@ function mots_declarer_tables_interfaces($interfaces){
 	$interfaces['table_des_tables']['groupes_mots']='groupes_mots';
 
 	$interfaces['exceptions_des_tables']['mots']['titre_mot'] = 'titre';
+	$interfaces['table_des_traitements']['TYPE']['mots']= _TRAITEMENT_TYPO_SANS_NUMERO;
 
 	$interfaces['exceptions_des_jointures']['titre_mot'] = array('spip_mots', 'titre');
 	$interfaces['exceptions_des_jointures']['type_mot'] = array('spip_mots', 'type');
