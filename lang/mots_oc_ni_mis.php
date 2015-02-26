@@ -9,6 +9,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// A
 	'avis_conseil_selection_mot_cle' => '<b>Group empourtant:</b> es fouòrt acounsilhat de seleciounà un mot clau en aqueu group.',
+	'avis_doublon_mot_cle' => 'Un mot esistà ja embé aqueu titre. Sias segur de voulé creà lou meme ?',
 
 	// B
 	'bouton_checkbox_qui_attribue_mot_cle_administrateurs' => 'Lu aministratour dóu sit',
@@ -28,17 +29,24 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_voir_groupe_mots' => 'Veire aqueu group de mot',
 	'icone_voir_tous_mots_cles' => 'Veire toui lu mot clau',
 	'info_1_groupe_mots' => '1 group de mot',
+	'info_articles_lies_mot' => 'Lu article ligat en aqueu mot clau',
 	'info_aucun_groupe_mots' => 'Mìnga group de mot',
 	'info_aucun_mot_cle' => 'Mìnga mot clau',
 	'info_changer_nom_groupe' => 'Cambià lou noum d’aqueu goup :',
 	'info_creation_mots_cles' => 'Creàs e counfiguràs aquì lu mot clau dóu sit',
 	'info_dans_groupe' => 'En lou group :',
+	'info_delet_mots_cles' => 'Avès demandat da suprimà lou mot clau <b>@titre_mot@</b> (@type_mot@). Couma aqueu mot clau es ligat en <b>@texte_lie@</b> devès counfirmà aqueula dechisioun :',
 	'info_groupe_important' => 'Group empourtant',
 	'info_modifier_mot' => 'Moudificà lou mot clau',
 	'info_mots_cles' => 'Lu mot clau',
+	'info_mots_cles_association' => 'Lu mot clau d’aqueu group pouòdon estre assouciat :',
 	'info_nb_groupe_mots' => '@nb@ group de mot',
+	'info_oui_suppression_mot_cle' => 'vouòli suprimà definitivamen aqueu mot clau.',
+	'info_question_mots_cles' => 'Souhetàs utilisà lu mot clau sus lou vouòstre sit ?',
+	'info_remplacer_mot' => 'Remplaçà "@titre@"',
 	'info_retirer_mot' => 'Retirà aqueu mot',
 	'info_retirer_mots' => 'Retirà toui lu mot',
+	'info_rubriques_liees_mot' => 'Li rùbrica ligadi en aqueu mot clau',
 	'info_supprimer_mot' => 'suprimà aqueu mot',
 	'info_titre_mot_cle' => 'Noum o titre dóu mot clau',
 	'item_ajout_mots_cles' => 'Autourisà l’ajountamen de mot clau ai forou',
@@ -52,11 +60,15 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// T
 	'texte_nouveau_mot' => 'Mot nouvèu',
+	'titre_config_groupe_mots_cles' => 'Configuracioun dei group de mot clau',
+	'titre_gauche_mots_edit' => 'MOT NÙMERO :',
 	'titre_groupe_mots' => 'Group de mot clau',
+	'titre_groupe_mots_numero' => 'GROUP DE MOT NÙMERO :',
 	'titre_groupes_mots' => 'Group de mot clau',
 	'titre_mots_cles_dans_forum' => 'Mot clau en lu forou dóu sit public',
 	'titre_mots_tous' => 'Lu mot clau',
 	'titre_nouveau_groupe' => 'Group nouvèu',
+	'titre_objets_lies_mot' => 'Ligat en aqueu mot clau :',
 	'titre_page_mots_tous' => 'Mot clau'
 );
 
