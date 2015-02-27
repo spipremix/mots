@@ -43,14 +43,20 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_nb_groupe_mots' => '@nb@ group de mot',
 	'info_oui_suppression_mot_cle' => 'vouòli suprimà definitivamen aqueu mot clau.',
 	'info_question_mots_cles' => 'Souhetàs utilisà lu mot clau sus lou vouòstre sit ?',
+	'info_qui_attribue_mot_cle' => 'Lu mot d’aqueu group pouòdon estre atribuit per :',
 	'info_remplacer_mot' => 'Remplaçà "@titre@"',
 	'info_retirer_mot' => 'Retirà aqueu mot',
 	'info_retirer_mots' => 'Retirà toui lu mot',
 	'info_rubriques_liees_mot' => 'Li rùbrica ligadi en aqueu mot clau',
+	'info_selection_un_seul_mot_cle' => 'Si pòu seleciounà qu’un mot clau <b>soulèt</b> a l’encòu en aqueu group.',
 	'info_supprimer_mot' => 'suprimà aqueu mot',
 	'info_titre_mot_cle' => 'Noum o titre dóu mot clau',
+	'info_un_mot' => 'Basta un mot a l’encòu',
 	'item_ajout_mots_cles' => 'Autourisà l’ajountamen de mot clau ai forou',
+	'item_non_ajout_mots_cles' => 'Interdire l’utilisacioun dei mot clau en lu forou',
+	'item_non_utiliser_config_groupe_mots_cles' => 'Noun utilisà la counfiguracioun avançada dei group de mot clau',
 	'item_non_utiliser_mots_cles' => 'Noun utilisà lu mot clau',
+	'item_utiliser_config_groupe_mots_cles' => 'Utilisà la counfiguracioun avançada dei group de mot clau',
 	'item_utiliser_mots_cles' => 'Utilisà lu mot clau',
 
 	// L
@@ -59,6 +65,12 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'logo_mot_cle' => 'LOGOU DÓU MOT CLAU',
 
 	// T
+	'texte_config_groupe_mots_cles' => 'Souhetàs d’ativà la counfiguracioun avançada dei mot clau, en endicant per isemple que si pòu seleciounà un mot souèt per group, qu’un group es empourtant… ?',
+	'texte_mots_cles' => 'Lu mot clau permeton de creà dei estac temàticou tra lu vouòstre article
+		quauque que sigue la sieu plaça en li rùbrica. Acò vous permete
+		d’enriquì la navigacioun dóu vouòstre sit, e mai d’utilisà aqueli prouprietà
+		da persounalisà la presentacioun dei article en li esquèletrou.',
+	'texte_mots_cles_dans_forum' => 'Souhetàs de permetre l’utilisacioun de mot clau seleciounable dai visitaire en lu forou dóu sit public ? (Mèfi : es proun coumplesse da utilisà aquela oupcioun courretamen.)',
 	'texte_nouveau_mot' => 'Mot nouvèu',
 	'titre_config_groupe_mots_cles' => 'Configuracioun dei group de mot clau',
 	'titre_gauche_mots_edit' => 'MOT NÙMERO :',
