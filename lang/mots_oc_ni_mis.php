@@ -14,7 +14,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// B
 	'bouton_checkbox_qui_attribue_mot_cle_administrateurs' => 'Lu aministratour dóu sit',
 	'bouton_checkbox_qui_attribue_mot_cle_redacteurs' => 'lu redatour',
-	'bouton_checkbox_qui_attribue_mot_cle_visiteurs' => 'lu visitaire dóu sit public coura pouòston un message en un forou.',
+	'bouton_checkbox_qui_attribue_mot_cle_visiteurs' => 'lu visitaire dóu sit public quoura pouòston un message en un fòrou.',
 
 	// C
 	'creer_et_associer_un_mot' => 'Creà e assoucià un mot clau',
@@ -52,8 +52,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_supprimer_mot' => 'suprimà aqueu mot',
 	'info_titre_mot_cle' => 'Noum o titre dóu mot clau',
 	'info_un_mot' => 'Basta un mot a l’encòu',
-	'item_ajout_mots_cles' => 'Autourisà l’ajountamen de mot clau ai forou',
-	'item_non_ajout_mots_cles' => 'Interdire l’utilisacioun dei mot clau en lu forou',
+	'item_ajout_mots_cles' => 'Autourisà l’ajountamen de mot clau ai fòrou',
+	'item_non_ajout_mots_cles' => 'Interdire l’utilisacioun dei mot clau en lu fòrou',
 	'item_non_utiliser_config_groupe_mots_cles' => 'Noun utilisà la counfiguracioun avançada dei group de mot clau',
 	'item_non_utiliser_mots_cles' => 'Noun utilisà lu mot clau',
 	'item_utiliser_config_groupe_mots_cles' => 'Utilisà la counfiguracioun avançada dei group de mot clau',
@@ -70,14 +70,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 		quauque que sigue la sieu plaça en li rùbrica. Acò vous permete
 		d’enriquì la navigacioun dóu vouòstre sit, e mai d’utilisà aqueli prouprietà
 		da persounalisà la presentacioun dei article en li esquèletrou.',
-	'texte_mots_cles_dans_forum' => 'Auguràs de permetre l’utilisacioun de mot clau seleciounable dai visitaire en lu forou dóu sit public ? (Mèfi : es proun coumplesse da utilisà aquela oupcioun courretamen.)',
+	'texte_mots_cles_dans_forum' => 'Auguràs de permetre l’utilisacioun de mot clau seleciounable dai visitaire en lu fòrou dóu sit public ? (Mèfi : utilisà courretamen aquela oupcioun es proun coumplesse.)',
 	'texte_nouveau_mot' => 'Mot nouvèu',
 	'titre_config_groupe_mots_cles' => 'Configuracioun dei group de mot clau',
 	'titre_gauche_mots_edit' => 'MOT NÙMERO :',
 	'titre_groupe_mots' => 'Group de mot clau',
 	'titre_groupe_mots_numero' => 'GROUP DE MOT NÙMERO :',
 	'titre_groupes_mots' => 'Group de mot clau',
-	'titre_mots_cles_dans_forum' => 'Mot clau en lu forou dóu sit public',
+	'titre_mots_cles_dans_forum' => 'Mot clau en lu fòrou dóu sit public',
 	'titre_mots_tous' => 'Lu mot clau',
 	'titre_nouveau_groupe' => 'Group nouvèu',
 	'titre_objets_lies_mot' => 'Ligat en aqueu mot clau :',
