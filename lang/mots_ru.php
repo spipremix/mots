@@ -9,11 +9,11 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// A
 	'avis_conseil_selection_mot_cle' => '<b>Выделить группу:</b> данная группа будет визуально более заметной. Удобно использовать для обозначения важных групп ключей.',
-	'avis_doublon_mot_cle' => 'Ключ с таким название уже существует. Вы уверенны, что хотите создать новый?',
+	'avis_doublon_mot_cle' => 'Ключ с таким название уже существует. Вы уверены, что хотите создать новый?',
 
 	// B
 	'bouton_checkbox_qui_attribue_mot_cle_administrateurs' => 'Администраторы',
-	'bouton_checkbox_qui_attribue_mot_cle_redacteurs' => 'Автора',
+	'bouton_checkbox_qui_attribue_mot_cle_redacteurs' => 'Авторы',
 	'bouton_checkbox_qui_attribue_mot_cle_visiteurs' => 'Посетители для комментариев на сайте',
 
 	// C
@@ -35,7 +35,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_changer_nom_groupe' => 'Название группы:',
 	'info_creation_mots_cles' => 'Создание и настройка ключей',
 	'info_dans_groupe' => 'В группе:',
-	'info_delet_mots_cles' => 'Вы хотите удалить ключ <b>@titre_mot@</b> (@type_mot@).Он связан  с  <b>@texte_lie@</b>. Подтвердите удаление: ',
+	'info_delet_mots_cles' => 'Вы хотите удалить ключ <b>@titre_mot@</b> (@type_mot@). Он связан  с  <b>@texte_lie@</b>. Подтвердите удаление: ',
 	'info_groupe_important' => 'Важная группа',
 	'info_modifier_mot' => 'Изменить ключ:',
 	'info_mots_cles' => 'Ключи',
@@ -65,19 +65,19 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'logo_mot_cle' => 'ЛОГОТИП КЛЮЧА',
 
 	// T
-	'texte_config_groupe_mots_cles' => 'В настройках группы вы можете задавать к каким типам материалов можно добавлять ключи, выделять важные группы и ряд других настроек.',
-	'texte_mots_cles' => 'Ключи - это возможность создать дополнительную навигацию между материалами сайта. Так же они используются для создания дополнительного функционала вашего сайта.',
+	'texte_config_groupe_mots_cles' => 'В настройках группы вы можете задавать, к каким типам материалов можно добавлять ключи, выделять важные группы и ряд других настроек.',
+	'texte_mots_cles' => 'Ключи - это возможность создать дополнительную навигацию между материалами сайта. Также они используются для создания дополнительного функционала вашего сайта.',
 	'texte_mots_cles_dans_forum' => 'Разрешить посетителям добавлять ключи к своим комментариям на сайте?',
 	'texte_nouveau_mot' => 'Новый ключ',
 	'titre_config_groupe_mots_cles' => 'Настройка групп ключей',
 	'titre_gauche_mots_edit' => 'НОМЕР КЛЮЧА:',
 	'titre_groupe_mots' => 'Группы ключей',
-	'titre_groupe_mots_numero' => 'НОМЕР ГРУППЫ :',
+	'titre_groupe_mots_numero' => 'НОМЕР ГРУППЫ:',
 	'titre_groupes_mots' => 'Группы ключей',
 	'titre_mots_cles_dans_forum' => 'Ключи для комментариев',
 	'titre_mots_tous' => 'Ключи',
 	'titre_nouveau_groupe' => 'Новая группа',
-	'titre_objets_lies_mot' => 'Материалы с этим ключем :',
+	'titre_objets_lies_mot' => 'Материалы с этим ключом:',
 	'titre_page_mots_tous' => 'Ключи'
 );
 
