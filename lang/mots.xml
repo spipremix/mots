@@ -125,6 +125,7 @@
 	<langue code="ro" url="http://trad.spip.net/tradlang_module/mots?lang_cible=ro" total="61" traduits="44" relire="0" modifs="3" nouveaux="14" pourcent="72.13">
 	</langue>
 	<langue code="ru" url="http://trad.spip.net/tradlang_module/mots?lang_cible=ru" total="61" traduits="61" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
+		<traducteur nom="olly" lien="http://trad.spip.net/auteur/olly" />
 		<traducteur nom="Serge Markitanenko" lien="http://trad.spip.net/auteur/serge-markitanenko" />
 	</langue>
 	<langue code="sk" url="http://trad.spip.net/tradlang_module/mots?lang_cible=sk" total="61" traduits="61" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
@@ -133,6 +134,10 @@
 	<langue code="sv" url="http://trad.spip.net/tradlang_module/mots?lang_cible=sv" total="61" traduits="42" relire="0" modifs="2" nouveaux="17" pourcent="68.85">
 	</langue>
 	<langue code="tr" url="http://trad.spip.net/tradlang_module/mots?lang_cible=tr" total="61" traduits="44" relire="0" modifs="3" nouveaux="14" pourcent="72.13">
+	</langue>
+	<langue code="uk" url="http://trad.spip.net/tradlang_module/mots?lang_cible=uk" total="61" traduits="61" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
+		<traducteur nom="olly" lien="http://trad.spip.net/auteur/olly" />
+		<traducteur nom="Retenodus" lien="http://trad.spip.net/auteur/retenodus" />
 	</langue>
 	<langue code="vi" url="http://trad.spip.net/tradlang_module/mots?lang_cible=vi" total="61" traduits="42" relire="0" modifs="3" nouveaux="16" pourcent="68.85">
 	</langue>
