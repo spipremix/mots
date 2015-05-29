@@ -54,9 +54,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_un_mot' => 'Тільки одне ключове слово',
 	'item_ajout_mots_cles' => 'Включити додання ключових слів до коментарів на сайті',
 	'item_non_ajout_mots_cles' => 'Відключити додання ключових слів до коментарів на сайті',
-	'item_non_utiliser_config_groupe_mots_cles' => 'Відключити настройку груп ключових слів',
+	'item_non_utiliser_config_groupe_mots_cles' => 'Відключити налаштування груп ключових слів',
 	'item_non_utiliser_mots_cles' => 'Відключити ключові слова і групи ключових слів',
-	'item_utiliser_config_groupe_mots_cles' => 'Включити настройку груп ключових слів',
+	'item_utiliser_config_groupe_mots_cles' => 'Включити налашування груп ключових слів',
 	'item_utiliser_mots_cles' => 'Включити ключові слова і групи ключових слів',
 
 	// L
