@@ -66,10 +66,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// T
 	'texte_config_groupe_mots_cles' => 'Auguràs d’ativà la counfiguracioun avançada dei mot clau, en endicant per isemple que si pòu seleciounà un mot soulet per group, qu’un group es empourtant… ?',
-	'texte_mots_cles' => 'Lu mot clau permeton da creà dei estac temàticou tra lu vouòstre article
+	'texte_mots_cles' => 'Lu mot clau permeton de creà dei estac temàticou tra lu vouòstre article
 		quauque que sigue la sieu plaça en li rùbrica. Acò vi permete
 		d’enriquì la navigacioun dóu vouòstre sit, e mai d’utilisà aqueli prouprietà
-		da persounalisà la presentacioun dei article en li esquèletrou.',
+		per persounalisà la presentacioun dei article en li esquèletrou.',
 	'texte_mots_cles_dans_forum' => 'Auguràs de permetre l’utilisacioun de mot clau seleciounable dai visitaire en lu fòrou dóu sit public ? (Mèfi : utilisà courretamen aquela oupcioun es proun coumplesse.)',
 	'texte_nouveau_mot' => 'Mot nouvèu',
 	'titre_config_groupe_mots_cles' => 'Configuracioun dei group de mot clau',
