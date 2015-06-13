@@ -7,7 +7,7 @@
 		parametre : url d'action ]
 		#ACTION_FORMULAIRE{#ENV{action}}
 	  <input type='hidden' name='id_groupe' value='#ENV{id_groupe}' />
-	  <ul>
+	  <ul class="editer-groupe">
 	    <li class='editer editer_titre obligatoire[ (#ENV**{erreurs}|table_valeur{titre}|oui)erreur] editer_type_input'>
 				<label for='titre'><:mots:info_changer_nom_groupe:><em class='aide'>#AIDER{titre}</em></label>[
 				<span class='erreur_message'>(#ENV**{erreurs}|table_valeur{titre})</span>
@@ -27,7 +27,7 @@
 	    </li>
 	    <li class="fieldset fieldset_config">
 	      <fieldset>
-	      <ul>
+	      <ul class="editer-groupe">
 					<li class="editer editer_groupe_mots_associer">
 						<label><:mots:info_mots_cles_association:></label>
 						<INCLURE{fond=formulaires/inc-choisir-groupemots-tables-liees,selected=#ENV*{tables_liees},name=tables_liees} />
