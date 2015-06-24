@@ -8,19 +8,19 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// A
-	'avis_conseil_selection_mot_cle' => '<b>Group empourtant:</b> es fouòrt acounsilhat de seleciounà un mot clau en aqueu group.',
+	'avis_conseil_selection_mot_cle' => '<b>Group empourtant :</b> es fouòrt acounsilhat de seleciounà un mot clau en aqueu group.',
 	'avis_doublon_mot_cle' => 'Un mot esistà ja embé aqueu titre. Sias segur de voulé creà lou meme ?',
 
 	// B
 	'bouton_checkbox_qui_attribue_mot_cle_administrateurs' => 'Lu aministratour dóu sit',
 	'bouton_checkbox_qui_attribue_mot_cle_redacteurs' => 'lu redatour',
-	'bouton_checkbox_qui_attribue_mot_cle_visiteurs' => 'lu visitaire dóu sit public quoura pouòston un message en un fòrou.',
+	'bouton_checkbox_qui_attribue_mot_cle_visiteurs' => 'lu visitaire dóu sit pùblicou coura pouòston un message en un fòrou.',
 
 	// C
 	'creer_et_associer_un_mot' => 'Creà e assoucià un mot clau',
 
 	// I
-	'icone_creation_groupe_mots' => 'Creà un group de mot nouvèu',
+	'icone_creation_groupe_mots' => 'Creà un nouvèu group de mot',
 	'icone_creation_mots_cles' => 'Creà un mot clau nouvèu',
 	'icone_modif_groupe_mots' => 'Moudificà aqueu group de mot',
 	'icone_modifier_mot' => 'Moudificà aqueu mot clau',
@@ -35,7 +35,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_changer_nom_groupe' => 'Cambià lou noum d’aqueu goup :',
 	'info_creation_mots_cles' => 'Creàs e counfiguràs aquì lu mot clau dóu sit',
 	'info_dans_groupe' => 'En lou group :',
-	'info_delet_mots_cles' => 'Avès demandat da suprimà lou mot clau <b>@titre_mot@</b> (@type_mot@). Couma aqueu mot clau es ligat en <b>@texte_lie@</b> devès counfirmà aqueula dechisioun :',
+	'info_delet_mots_cles' => 'Avès demandat de suprimà lou mot clau <b>@titre_mot@</b> (@type_mot@). Couma aqueu mot clau es ligat en <b>@texte_lie@</b> devès counfirmà aqueula dechisioun :',
 	'info_groupe_important' => 'Group empourtant',
 	'info_modifier_mot' => 'Moudificà lou mot clau',
 	'info_mots_cles' => 'Lu mot clau',
