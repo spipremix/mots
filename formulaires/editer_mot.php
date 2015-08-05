@@ -149,13 +149,17 @@ function formulaires_editer_mot_verifier_dist($id_mot='new', $id_groupe=0, $reto
 	// verifier qu'un mot du meme groupe n'existe pas avec le meme titre
 	// la comparaison accepte un numero absent ou different
 	// sinon avertir
-	if (!count($erreurs) AND !_request('confirm_titre_mot')){
-		if (sql_countsel("spip_mots", 
-						"titre REGEXP ".sql_quote("^([0-9]+[.] )?".preg_quote(supprimer_numero(_request('titre')))."$")
-						." AND id_mot<>".intval($id_mot)))
-			$erreurs['titre'] =
-						_T('mots:avis_doublon_mot_cle')
-						." <input type='hidden' name='confirm_titre_mot' value='1' />";
+	// on ne fait la verification que si c'est une creation de mot ou un retitrage
+	if (!intval($id_mot)
+	  OR supprimer_numero(_request('titre'))!==supprimer_numero(sql_getfetsel('titre','spip_mots','id_mot='.intval($id_mot)))){
+		if (!count($erreurs) AND !_request('confirm_titre_mot')){
+			if (sql_countsel("spip_mots",
+							"titre REGEXP ".sql_quote("^([0-9]+[.] )?".preg_quote(supprimer_numero(_request('titre')))."$")
+							." AND id_mot<>".intval($id_mot)))
+				$erreurs['titre'] =
+							_T('mots:avis_doublon_mot_cle')
+							." <input type='hidden' name='confirm_titre_mot' value='1' />";
+		}
 	}
 	return $erreurs;
 }
