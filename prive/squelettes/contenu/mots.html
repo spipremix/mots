@@ -9,7 +9,9 @@
 				[(#URL_ECRIRE{groupe_mots_edit,id_groupe=#ID_GROUPE}|icone_verticale{<:mots:icone_modif_groupe_mots:>,groupe_mots-24.png,edit,right})]
 			]
 			<div id="wysiwyg">
-			<INCLURE{fond=prive/objets/contenu/groupe_mots,id=#ID_GROUPE} />
+			[(#PIPELINE{afficher_contenu_objet,#ARRAY{
+				args,#ARRAY{type,groupe_mots,id,#ID_GROUPE,id_objet,#ID_GROUPE},
+				data,#INCLURE{fond=prive/objets/contenu/groupe_mots, id=#ID_GROUPE, id_groupe=#ID_GROUPE}}})]
 			</div>
 			<div class="nettoyeur"></div>
 			<INCLURE{fond=prive/objets/liste/mots-admin,id_groupe,par=titre,ajax,env} />
