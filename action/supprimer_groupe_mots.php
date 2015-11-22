@@ -31,7 +31,7 @@ include_spip('inc/filtres');
  *     Identifiant du groupe à supprimer. En absence utilise l'argument
  *     de l'action sécurisée.
  */
-function action_supprimer_groupe_mots_dist($id_groupe=null){
+function action_supprimer_groupe_mots_dist($id_groupe = null){
 
 	if (is_null($id_groupe)){
 		$securiser_action = charger_fonction('securiser_action', 'inc');

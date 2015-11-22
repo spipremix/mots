@@ -39,6 +39,6 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
  * @return string
  *     Code HTML de l'image de puce de statut à insérer
  */
-function puce_statut_mot_dist($id, $statut, $id_groupe, $type, $ajax='', $menu_rapide=_ACTIVER_PUCE_RAPIDE) {
+function puce_statut_mot_dist($id, $statut, $id_groupe, $type, $ajax = '', $menu_rapide = _ACTIVER_PUCE_RAPIDE) {
 	return "<img src='" . chemin_image("mot-16.png") . "' width='16' height='16' alt=''  />";
 }

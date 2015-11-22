@@ -239,7 +239,7 @@ function autoriser_mot_supprimer_dist($faire, $type, $id, $qui, $opt) {
  * @param  array  $opt   Options de cette autorisation
  * @return bool          true s'il a le droit, false sinon
  */
-function autoriser_associermots_dist($faire,$type,$id,$qui,$opt){
+function autoriser_associermots_dist($faire, $type, $id, $qui, $opt){
 	// jamais de mots sur des mots
 	if ($type=='mot') return false;
 	if ($type=='groupemots') return false;
@@ -291,7 +291,7 @@ function autoriser_associermots_dist($faire,$type,$id,$qui,$opt){
  * @param  array  $opt   Options de cette autorisation
  * @return bool          true s'il a le droit, false sinon
  */
-function autoriser_groupemots_afficherselecteurmots_dist($faire,$type,$id,$qui,$opt){
+function autoriser_groupemots_afficherselecteurmots_dist($faire, $type, $id, $qui, $opt){
 	if (!isset($opt['minirezo']) || !isset($opt['comite'])) {
 		$i = sql_fetsel(
 			array('minirezo', 'comite'),
@@ -322,7 +322,7 @@ function autoriser_groupemots_afficherselecteurmots_dist($faire,$type,$id,$qui,$
  * @param  array  $opt   Options de cette autorisation
  * @return bool          true s'il a le droit, false sinon
  */
-function autoriser_mot_iconifier_dist($faire,$type,$id,$qui,$opt){
+function autoriser_mot_iconifier_dist($faire, $type, $id, $qui, $opt){
 	return (($qui['statut'] == '0minirezo') AND !$qui['restreint']);
 }
 
@@ -336,7 +336,7 @@ function autoriser_mot_iconifier_dist($faire,$type,$id,$qui,$opt){
  * @param  array  $opt   Options de cette autorisation
  * @return bool          true s'il a le droit, false sinon
  */
-function autoriser_groupemots_iconifier_dist($faire,$type,$id,$qui,$opt){
+function autoriser_groupemots_iconifier_dist($faire, $type, $id, $qui, $opt){
 	return (($qui['statut'] == '0minirezo') AND !$qui['restreint']);
 }
 

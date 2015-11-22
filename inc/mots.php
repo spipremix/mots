@@ -34,7 +34,7 @@ include_spip('base/abstract_sql');
  * @return string[]
  *     Tableau de textes indiquant le nombre d'éléments tel que '3 articles'
 **/
-function filtre_objets_associes_mot_dist($id_mot,$id_groupe) {
+function filtre_objets_associes_mot_dist($id_mot, $id_groupe) {
 	static $occurrences = array();
 
 	// calculer tous les liens du groupe d'un coup

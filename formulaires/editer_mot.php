@@ -45,7 +45,7 @@ include_spip('inc/editer');
  * @return array
  *     Environnement du formulaire
 **/
-function formulaires_editer_mot_charger_dist($id_mot='new', $id_groupe=0, $retour='', $associer_objet='', $dummy1='', $dummy2='', $config_fonc='mots_edit_config', $row=array(), $hidden=''){
+function formulaires_editer_mot_charger_dist($id_mot = 'new', $id_groupe = 0, $retour = '', $associer_objet = '', $dummy1 = '', $dummy2 = '', $config_fonc = 'mots_edit_config', $row = array(), $hidden = ''){
 	$valeurs = formulaires_editer_objet_charger('mot',$id_mot,$id_groupe,'',$retour,$config_fonc,$row,$hidden);
 	if ($valeurs['id_parent'] && !$valeurs['id_groupe'])
 		$valeurs['id_groupe'] = $valeurs['id_parent'];
@@ -95,7 +95,7 @@ function formulaires_editer_mot_charger_dist($id_mot='new', $id_groupe=0, $retou
  * @return string
  *     Hash du formulaire
 **/
-function formulaires_editer_mot_identifier_dist($id_mot='new', $id_groupe=0, $retour='', $associer_objet='', $dummy1='', $dummy2='', $config_fonc='mots_edit_config', $row=array(), $hidden=''){
+function formulaires_editer_mot_identifier_dist($id_mot = 'new', $id_groupe = 0, $retour = '', $associer_objet = '', $dummy1 = '', $dummy2 = '', $config_fonc = 'mots_edit_config', $row = array(), $hidden = ''){
 	return serialize(array(intval($id_mot),$associer_objet));
 }
 
@@ -143,7 +143,7 @@ function mots_edit_config($row)
  * @return array
  *     Tableau des erreurs
 **/
-function formulaires_editer_mot_verifier_dist($id_mot='new', $id_groupe=0, $retour='', $associer_objet='', $dummy1='', $dummy2='', $config_fonc='mots_edit_config', $row=array(), $hidden=''){
+function formulaires_editer_mot_verifier_dist($id_mot = 'new', $id_groupe = 0, $retour = '', $associer_objet = '', $dummy1 = '', $dummy2 = '', $config_fonc = 'mots_edit_config', $row = array(), $hidden = ''){
 
 	$erreurs = formulaires_editer_objet_verifier('mot',$id_mot,array('titre'));
 	// verifier qu'un mot du meme groupe n'existe pas avec le meme titre
@@ -187,7 +187,7 @@ function formulaires_editer_mot_verifier_dist($id_mot='new', $id_groupe=0, $reto
  * @return array
  *     Retour des traitements
 **/
-function formulaires_editer_mot_traiter_dist($id_mot='new', $id_groupe=0, $retour='', $associer_objet='', $dummy1='', $dummy2='', $config_fonc='mots_edit_config', $row=array(), $hidden=''){
+function formulaires_editer_mot_traiter_dist($id_mot = 'new', $id_groupe = 0, $retour = '', $associer_objet = '', $dummy1 = '', $dummy2 = '', $config_fonc = 'mots_edit_config', $row = array(), $hidden = ''){
 	$res = array();
 	set_request('redirect','');
 	$action_editer = charger_fonction("editer_mot",'action');

@@ -26,7 +26,7 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
  *     Version du schéma de données dans ce plugin (déclaré dans paquet.xml)
  * @return void
  */
-function mots_upgrade($nom_meta_base_version,$version_cible){
+function mots_upgrade($nom_meta_base_version, $version_cible){
 
 	// cas particulier :
 	// si plugin pas installe mais que la table existe

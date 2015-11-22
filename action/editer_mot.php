@@ -32,7 +32,7 @@ include_spip('inc/filtres');
  * @return array
  *     Liste (identifiant du mot clé, Texte d'erreur éventuel)
 **/
-function action_editer_mot_dist($arg=null)
+function action_editer_mot_dist($arg = null)
 {
 	if (is_null($arg)){
 		$securiser_action = charger_fonction('securiser_action', 'inc');
@@ -63,7 +63,7 @@ function action_editer_mot_dist($arg=null)
  * @return int|bool
  *     Identifiant du nouveau mot clé, false si erreur.
  */
-function mot_inserer($id_groupe, $set=null) {
+function mot_inserer($id_groupe, $set = null) {
 
 	$champs = array();
 	$row = sql_fetsel("titre", "spip_groupes_mots", "id_groupe=".intval($id_groupe));
@@ -116,7 +116,7 @@ function mot_inserer($id_groupe, $set=null) {
  *     - Null si aucun champ n'est à modifier,
  *     - Chaîne contenant un texte d'erreur sinon.
  */
-function mot_modifier($id_mot, $set=null) {
+function mot_modifier($id_mot, $set = null) {
 	include_spip('inc/modifier');
 	$c = collecter_requests(
 		// white list
@@ -259,7 +259,7 @@ function mot_supprimer($id_mot) {
  * @return int|bool
  *     Nombre de modifications, false si erreur
  */
-function mot_associer($id_mot,$objets, $qualif = null){
+function mot_associer($id_mot, $objets, $qualif = null){
 
 	include_spip('action/editer_liens');
 
@@ -293,7 +293,7 @@ function mot_associer($id_mot,$objets, $qualif = null){
  * @return int|bool
  *     Nombre de modifications, false si erreur
  */
-function mot_dissocier($id_mot,$objets){
+function mot_dissocier($id_mot, $objets){
 	include_spip('action/editer_liens');
 	return objet_dissocier(array('mot'=>$id_mot), $objets);
 }
@@ -321,7 +321,7 @@ function mot_dissocier($id_mot,$objets){
  * @return int|bool
  *     Nombre de modifications, false si erreur
  */
-function mot_qualifier($id_mot,$objets,$qualif){
+function mot_qualifier($id_mot, $objets, $qualif){
 	include_spip('action/editer_liens');
 	return objet_qualifier(array('mot'=>$id_mot), $objets, $qualif);
 }
@@ -381,7 +381,7 @@ function insert_mot($id_groupe) {
  *     - Null si aucun champ à modifier,
  *     - Chaîne contenant un texte d'erreur sinon.
  */
-function mots_set($id_mot, $set=null) {
+function mots_set($id_mot, $set = null) {
 	return mot_modifier($id_mot, $set);
 }
 
@@ -402,7 +402,7 @@ function mots_set($id_mot, $set=null) {
  *     - Null si aucun champ à modifier,
  *     - Chaîne contenant un texte d'erreur sinon.
  */
-function revision_mot($id_mot, $c=false) {
+function revision_mot($id_mot, $c = false) {
 	return mot_modifier($id_mot, $c);
 }
 

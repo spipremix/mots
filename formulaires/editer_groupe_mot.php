@@ -36,7 +36,7 @@ include_spip('inc/editer');
  * @return array
  *     Environnement du formulaire
 **/
-function formulaires_editer_groupe_mot_charger_dist($id_groupe='new',$retour='', $config_fonc='groupes_mots_edit_config', $row=array(), $hidden=''){
+function formulaires_editer_groupe_mot_charger_dist($id_groupe = 'new', $retour = '', $config_fonc = 'groupes_mots_edit_config', $row = array(), $hidden = ''){
 	$valeurs = formulaires_editer_objet_charger('groupe_mots',$id_groupe,0,'',$retour,$config_fonc,$row,$hidden);
 
 	$valeurs['tables_liees'] = explode(',',$valeurs['tables_liees']);
@@ -68,7 +68,7 @@ function formulaires_editer_groupe_mot_charger_dist($id_groupe='new',$retour='',
  * @return string
  *     Hash du formulaire
  */
-function formulaires_editer_groupe_mot_identifier_dist($id_groupe='new',$retour='', $config_fonc='groupes_mots_edit_config', $row=array(), $hidden=''){
+function formulaires_editer_groupe_mot_identifier_dist($id_groupe = 'new', $retour = '', $config_fonc = 'groupes_mots_edit_config', $row = array(), $hidden = ''){
 	return serialize(array(intval($id_groupe)));
 }
 
@@ -106,7 +106,7 @@ function groupes_mots_edit_config($row)
  * @return array
  *     Tableau des erreurs
 **/
-function formulaires_editer_groupe_mot_verifier_dist($id_groupe='new',$retour='', $config_fonc='groupes_mots_edit_config', $row=array(), $hidden=''){
+function formulaires_editer_groupe_mot_verifier_dist($id_groupe = 'new', $retour = '', $config_fonc = 'groupes_mots_edit_config', $row = array(), $hidden = ''){
 
 	$erreurs = formulaires_editer_objet_verifier('groupe_mots',0,array('titre'));
 	return $erreurs;
@@ -128,7 +128,7 @@ function formulaires_editer_groupe_mot_verifier_dist($id_groupe='new',$retour=''
  * @return array
  *     Retour des traitements
 **/
-function formulaires_editer_groupe_mot_traiter_dist($id_groupe='new',$retour='', $config_fonc='groupes_mots_edit_config', $row=array(), $hidden=''){
+function formulaires_editer_groupe_mot_traiter_dist($id_groupe = 'new', $retour = '', $config_fonc = 'groupes_mots_edit_config', $row = array(), $hidden = ''){
 	set_request('redirect','');
 	// cas des checkbox : injecter la valeur non si rien de coche
 	foreach (array(

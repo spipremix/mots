@@ -33,7 +33,7 @@ include_spip('inc/filtres');
  * @return array
  *     Liste (identifiant du groupe de mot clé, Texte d'erreur éventuel)
 **/
-function action_editer_groupe_mots_dist($id_groupe=null)
+function action_editer_groupe_mots_dist($id_groupe = null)
 {
 	if (is_null($id_groupe)){
 		$securiser_action = charger_fonction('securiser_action', 'inc');
@@ -63,7 +63,7 @@ function action_editer_groupe_mots_dist($id_groupe=null)
  * @return int|bool
  *     Identifiant du nouveau groupe de mots clés.
  */
-function groupe_mots_inserer($id_parent=null, $set=null) {
+function groupe_mots_inserer($id_parent = null, $set = null) {
 
 	// support de la signature derogatoire pour compat
 	// groupe_mots_inserer($table='')
@@ -128,7 +128,7 @@ function groupe_mots_inserer($id_parent=null, $set=null) {
  *     Null si aucun champ à modifier,
  *     Chaîne contenant un texte d'erreur sinon.
  */
-function groupe_mots_modifier($id_groupe, $set=null) {
+function groupe_mots_modifier($id_groupe, $set = null) {
 	$err = '';
 
 	include_spip('inc/modifier');
@@ -184,7 +184,7 @@ function groupe_mots_modifier($id_groupe, $set=null) {
  *     Null si aucun champ à modifier,
  *     Chaîne contenant un texte d'erreur sinon.
  */
-function revision_groupe_mot($id_groupe, $c=false) {
+function revision_groupe_mot($id_groupe, $c = false) {
 	return groupe_mots_modifier($id_groupe,$c);
 }
 
@@ -201,7 +201,7 @@ function revision_groupe_mot($id_groupe, $c=false) {
  * @return int|bool
  *     Identifiant du nouveau groupe de mots clés.
  */
-function groupemots_inserer($table='', $set=null) {
+function groupemots_inserer($table = '', $set = null) {
 	return groupe_mots_inserer($table, $set);
 }
 
@@ -222,7 +222,7 @@ function groupemots_inserer($table='', $set=null) {
  *     Null si aucun champ à modifier,
  *     Chaîne contenant un texte d'erreur sinon.
  */
-function groupemots_modifier($id_groupe, $set=null) {
+function groupemots_modifier($id_groupe, $set = null) {
 	return groupe_mots_modifier($id_groupe, $set);
 }
 ?>
