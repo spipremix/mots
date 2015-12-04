@@ -8,8 +8,8 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// M
-	'mots_description' => 'Ключові слова та групи ключових слів',
-	'mots_slogan' => 'Управління ключовими словами та їх групами в SPIP'
+	'mots_description' => 'Ключі та групи ключів',
+	'mots_slogan' => 'Управління ключами та їх групами в SPIP'
 );
 
 ?>
