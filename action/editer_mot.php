@@ -131,6 +131,7 @@ function mot_modifier($id_mot, $set = null) {
 	
 	if ($err = objet_modifier_champs('mot', $id_mot,
 		array(
+			'data' => $set,
 			'nonvide' => array('titre' => _T('info_sans_titre'))
 		),
 		$c))

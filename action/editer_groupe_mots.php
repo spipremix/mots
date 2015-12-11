@@ -157,6 +157,7 @@ function groupe_mots_modifier($id_groupe, $set = null) {
 
 	$err = objet_modifier_champs('groupe_mot', $id_groupe,
 		array(
+			'data' => $set,
 			'nonvide' => array('titre' => _T('info_sans_titre'))
 		),
 		$c);
