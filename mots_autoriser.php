@@ -38,7 +38,7 @@ function mots_autoriser() { }
  **/
 function autoriser_mots_menu_dist($faire, $type, $id, $qui, $opt) {
 	if ($qui['statut'] == '0minirezo') {
-		return ($GLOBALS['meta']['articles_mots'] != 'non' OR sql_countsel('spip_groupes_mots'));
+		return ($GLOBALS['meta']['articles_mots'] != 'non' or sql_countsel('spip_groupes_mots'));
 	}
 	$where = "";
 	if ($qui['statut'] == '1comite') {
@@ -49,8 +49,8 @@ function autoriser_mots_menu_dist($faire, $type, $id, $qui, $opt) {
 	}
 
 	return ($where
-		AND $GLOBALS['meta']['articles_mots'] != 'non'
-		AND sql_countsel('spip_groupes_mots', $where));
+		and $GLOBALS['meta']['articles_mots'] != 'non'
+		and sql_countsel('spip_groupes_mots', $where));
 }
 
 /**
@@ -67,8 +67,8 @@ function autoriser_motcreer_menu_dist($faire, $type, $id, $qui, $opt) {
 	// [fixme] Meta 'article_mots' mal nommée maintenant
 	// car elle désigne l'activation ou non des mots clés, quelque soit l'objet.
 	return ($GLOBALS['meta']['articles_mots'] != 'non'
-		AND sql_countsel('spip_groupes_mots')
-		AND autoriser('creer', 'mot', null, $qui, $opt));
+		and sql_countsel('spip_groupes_mots')
+		and autoriser('creer', 'mot', null, $qui, $opt));
 }
 
 
@@ -90,10 +90,10 @@ function autoriser_groupemots_voir_dist($faire, $type, $id, $qui, $opt) {
 		return true;
 	}
 	$acces = sql_fetsel("comite,forum", "spip_groupes_mots", "id_groupe=" . intval($id));
-	if ($qui['statut'] == '1comite' AND ($acces['comite'] == 'oui' OR $acces['forum'] == 'oui')) {
+	if ($qui['statut'] == '1comite' and ($acces['comite'] == 'oui' or $acces['forum'] == 'oui')) {
 		return true;
 	}
-	if ($qui['statut'] == '6forum' AND $acces['forum'] == 'oui') {
+	if ($qui['statut'] == '6forum' and $acces['forum'] == 'oui') {
 		return true;
 	}
 
@@ -113,7 +113,7 @@ function autoriser_groupemots_voir_dist($faire, $type, $id, $qui, $opt) {
 function autoriser_groupemots_creer_dist($faire, $type, $id, $qui, $opt) {
 	return
 		$qui['statut'] == '0minirezo'
-		AND !$qui['restreint'];
+		and !$qui['restreint'];
 }
 
 
@@ -131,8 +131,8 @@ function autoriser_groupemots_creer_dist($faire, $type, $id, $qui, $opt) {
  **/
 function autoriser_groupemots_modifier_dist($faire, $type, $id, $qui, $opt) {
 	return
-		$qui['statut'] == '0minirezo' AND !$qui['restreint']
-		AND autoriser('voir', 'groupemots', $id, $qui, $opt);
+		$qui['statut'] == '0minirezo' and !$qui['restreint']
+		and autoriser('voir', 'groupemots', $id, $qui, $opt);
 }
 
 
@@ -175,7 +175,7 @@ function autoriser_mot_modifier_dist($faire, $type, $id, $qui, $opt) {
 			? autoriser('modifier', 'groupemots', $opt['id_groupe'], $qui, $opt)
 			: (
 			$t = sql_getfetsel("id_groupe", "spip_mots", "id_mot=" . intval($id))
-			AND autoriser('modifier', 'groupemots', $t, $qui, $opt)
+			and autoriser('modifier', 'groupemots', $t, $qui, $opt)
 		);
 }
 
@@ -196,7 +196,7 @@ function autoriser_mot_modifier_dist($faire, $type, $id, $qui, $opt) {
  * @return bool          true s'il a le droit, false sinon
  **/
 function autoriser_mot_creer_dist($faire, $type, $id, $qui, $opt) {
-	if ($qui['statut'] != '0minirezo' OR $qui['restreint']) {
+	if ($qui['statut'] != '0minirezo' or $qui['restreint']) {
 		return false;
 	}
 
@@ -204,7 +204,7 @@ function autoriser_mot_creer_dist($faire, $type, $id, $qui, $opt) {
 	// si objet associe, verifier qu'un groupe peut etre associe
 	// a la table correspondante
 	if (isset($opt['associer_objet'])
-		AND $associer_objet = $opt['associer_objet']
+		and $associer_objet = $opt['associer_objet']
 	) {
 		if (!preg_match(',^(\w+)\|[0-9]+$,', $associer_objet, $match)) {
 			return false;
@@ -269,7 +269,7 @@ function autoriser_associermots_dist($faire, $type, $id, $qui, $opt) {
 	}
 	$droit = substr($qui['statut'], 1);
 
-	if (!isset($opt['groupe_champs']) AND !isset($opt['id_groupe'])) {
+	if (!isset($opt['groupe_champs']) and !isset($opt['id_groupe'])) {
 		// chercher si un groupe est autorise pour mon statut
 		// et pour la table demandee
 		$table = addslashes(table_objet($type));
@@ -291,7 +291,7 @@ function autoriser_associermots_dist($faire, $type, $id, $qui, $opt) {
 
 		return
 			($droit == 'oui')
-			AND
+			and
 			// on verifie que l'objet demande est bien dans les tables liees
 			in_array(
 				table_objet($type),
@@ -356,7 +356,7 @@ function autoriser_groupemots_afficherselecteurmots_dist($faire, $type, $id, $qu
  * @return bool          true s'il a le droit, false sinon
  */
 function autoriser_mot_iconifier_dist($faire, $type, $id, $qui, $opt) {
-	return (($qui['statut'] == '0minirezo') AND !$qui['restreint']);
+	return (($qui['statut'] == '0minirezo') and !$qui['restreint']);
 }
 
 /**
@@ -370,7 +370,5 @@ function autoriser_mot_iconifier_dist($faire, $type, $id, $qui, $opt) {
  * @return bool          true s'il a le droit, false sinon
  */
 function autoriser_groupemots_iconifier_dist($faire, $type, $id, $qui, $opt) {
-	return (($qui['statut'] == '0minirezo') AND !$qui['restreint']);
+	return (($qui['statut'] == '0minirezo') and !$qui['restreint']);
 }
-
-?>

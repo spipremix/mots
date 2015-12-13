@@ -31,5 +31,3 @@ function action_supprimer_mot_dist() {
 	include_spip('action/editer_mot');
 	mot_supprimer($id_mot);
 }
-
-?>

@@ -174,6 +174,3 @@ function formulaires_editer_groupe_mot_traiter_dist(
 
 	return $res;
 }
-
-
-?>

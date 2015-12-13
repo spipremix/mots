@@ -61,4 +61,3 @@ function formulaires_configurer_mots_traiter_dist() {
 
 	return $res;
 }
-

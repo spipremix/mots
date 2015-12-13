@@ -76,7 +76,7 @@ function formulaires_editer_mot_charger_dist(
 
 	// Si nouveau et titre dans l'url : fixer le titre
 	if ($id_mot == 'oui'
-		AND strlen($titre = _request('titre'))
+		and strlen($titre = _request('titre'))
 	) {
 		$valeurs['titre'] = $titre;
 	}
@@ -185,10 +185,10 @@ function formulaires_editer_mot_verifier_dist(
 	// sinon avertir
 	// on ne fait la verification que si c'est une creation de mot ou un retitrage
 	if (!intval($id_mot)
-		OR supprimer_numero(_request('titre')) !== supprimer_numero(sql_getfetsel('titre', 'spip_mots',
+		or supprimer_numero(_request('titre')) !== supprimer_numero(sql_getfetsel('titre', 'spip_mots',
 			'id_mot=' . intval($id_mot)))
 	) {
-		if (!count($erreurs) AND !_request('confirm_titre_mot')) {
+		if (!count($erreurs) and !_request('confirm_titre_mot')) {
 			if (sql_countsel("spip_mots",
 				"titre REGEXP " . sql_quote("^([0-9]+[.] )?" . preg_quote(supprimer_numero(_request('titre'))) . "$")
 				. " AND id_mot<>" . intval($id_mot))) {
@@ -264,7 +264,7 @@ function formulaires_editer_mot_traiter_dist(
 			} else {
 				list($objet, $id_objet) = explode('|', $associer_objet);
 			}
-			if ($objet AND $id_objet AND autoriser('modifier', $objet, $id_objet)) {
+			if ($objet and $id_objet and autoriser('modifier', $objet, $id_objet)) {
 				include_spip('action/editer_mot');
 				mot_associer($id_mot, array($objet => $id_objet));
 				if (isset($res['redirect'])) {
@@ -277,6 +277,3 @@ function formulaires_editer_mot_traiter_dist(
 
 	return $res;
 }
-
-
-?>

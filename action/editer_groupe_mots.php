@@ -69,7 +69,7 @@ function groupe_mots_inserer($id_parent = null, $set = null) {
 
 	// support de la signature derogatoire pour compat
 	// groupe_mots_inserer($table='')
-	if (is_string($id_parent) AND strlen($id_parent)) {
+	if (is_string($id_parent) and strlen($id_parent)) {
 		if (is_null($set)) {
 			$set = array();
 		}
@@ -166,7 +166,7 @@ function groupe_mots_modifier($id_groupe, $set = null) {
 		}
 	}
 
-	if (isset($c['tables_liees']) AND is_array($c['tables_liees'])) {
+	if (isset($c['tables_liees']) and is_array($c['tables_liees'])) {
 		$c['tables_liees'] = implode(',', array_diff($c['tables_liees'], array('')));
 	}
 
@@ -241,5 +241,3 @@ function groupemots_inserer($table = '', $set = null) {
 function groupemots_modifier($id_groupe, $set = null) {
 	return groupe_mots_modifier($id_groupe, $set);
 }
-
-?>

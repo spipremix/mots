@@ -40,7 +40,7 @@ function filtre_objets_associes_mot_dist($id_mot, $id_groupe) {
 	static $occurrences = array();
 
 	// calculer tous les liens du groupe d'un coup
-	if (!isset ($occurrences[$id_groupe])) {
+	if (!isset($occurrences[$id_groupe])) {
 		$occurrences[$id_groupe] = calculer_utilisations_mots($id_groupe);
 	}
 
@@ -80,17 +80,17 @@ function calculer_utilisations_mots($id_groupe) {
 		$_id_objet = id_table_objet($objet);
 		$table_objet_sql = table_objet_sql($objet);
 		$infos = lister_tables_objets_sql($table_objet_sql);
-		if (isset($infos['field']) AND $infos['field']) {
+		if (isset($infos['field']) and $infos['field']) {
 			// uniquement certains statut d'objet,
 			// et uniquement si la table dispose du champ statut.
 			$statuts = "";
-			if (isset($infos['field']['statut']) OR isset($infos['statut'][0]['champ'])) {
+			if (isset($infos['field']['statut']) or isset($infos['statut'][0]['champ'])) {
 				// on s'approche au mieux de la declaration de l'objet.
 				// il faudrait ameliorer ce point.
 				$c_statut = isset($infos['statut'][0]['champ']) ? $infos['statut'][0]['champ'] : 'statut';
 
 				// bricoler les statuts d'apres la declaration de l'objet (champ previsu a defaut de mieux)
-				if (array_key_exists('previsu', $infos['statut'][0]) AND strlen($infos['statut'][0]['previsu']) > 1) {
+				if (array_key_exists('previsu', $infos['statut'][0]) and strlen($infos['statut'][0]['previsu']) > 1) {
 					$str_statuts = $infos['statut'][0]['previsu'];
 					if ($GLOBALS['connect_statut'] != "0minirezo") {
 						$str_statuts = str_replace('prepa', '', $str_statuts);
@@ -121,5 +121,3 @@ function calculer_utilisations_mots($id_groupe) {
 
 	return $retour;
 }
-
-?>

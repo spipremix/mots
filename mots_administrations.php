@@ -37,9 +37,9 @@ function mots_upgrade($nom_meta_base_version, $version_cible) {
 	if (!isset($GLOBALS['meta'][$nom_meta_base_version])) {
 		$trouver_table = charger_fonction('trouver_table', 'base');
 		if ($desc = $trouver_table('spip_mots')
-			AND isset($desc['exist']) AND $desc['exist']
-			AND $desc = $trouver_table('spip_mots_articles')
-			AND isset($desc['exist']) AND $desc['exist']
+			and isset($desc['exist']) and $desc['exist']
+			and $desc = $trouver_table('spip_mots_articles')
+			and isset($desc['exist']) and $desc['exist']
 		) {
 			ecrire_meta($nom_meta_base_version, '1.0.0');
 		}
@@ -104,5 +104,3 @@ function mots_vider_tables($nom_meta_base_version) {
 
 	effacer_meta($nom_meta_base_version);
 }
-
-?>

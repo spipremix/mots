@@ -42,7 +42,7 @@ function action_editer_mot_dist($arg = null) {
 	$id_mot = intval($arg);
 
 	$id_groupe = intval(_request('id_groupe'));
-	if (!$id_mot AND $id_groupe) {
+	if (!$id_mot and $id_groupe) {
 		$id_mot = mot_inserer($id_groupe);
 	}
 
@@ -168,7 +168,7 @@ function mot_modifier($id_mot, $set = null) {
 function mot_instituer($id_mot, $c) {
 	$champs = array();
 	// regler le groupe
-	if (isset($c['id_groupe']) OR isset($c['type'])) {
+	if (isset($c['id_groupe']) or isset($c['type'])) {
 		$row = sql_fetsel("titre", "spip_groupes_mots", "id_groupe=" . intval($c['id_groupe']));
 		if ($row) {
 			$champs['id_groupe'] = $c['id_groupe'];
@@ -415,5 +415,3 @@ function mots_set($id_mot, $set = null) {
 function revision_mot($id_mot, $c = false) {
 	return mot_modifier($id_mot, $c);
 }
-
-?>

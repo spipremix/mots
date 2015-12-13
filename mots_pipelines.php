@@ -56,11 +56,11 @@ function mots_affiche_milieu($flux) {
 
 	// si on est sur une page ou il faut inserer les mots cles...
 	if ($en_cours = trouver_objet_exec($flux['args']['exec'])
-		AND $en_cours['edition'] !== true // page visu
-		AND $type = $en_cours['type']
-		AND $id_table_objet = $en_cours['id_table_objet']
-		AND isset($flux['args'][$id_table_objet])
-		AND ($id = intval($flux['args'][$id_table_objet]))
+		and $en_cours['edition'] !== true // page visu
+		and $type = $en_cours['type']
+		and $id_table_objet = $en_cours['id_table_objet']
+		and isset($flux['args'][$id_table_objet])
+		and ($id = intval($flux['args'][$id_table_objet]))
 	) {
 		$texte = recuperer_fond(
 			'prive/objets/editer/liens',
@@ -129,5 +129,3 @@ function mots_post_edition($flux) {
 
 	return $flux;
 }
-
-?>

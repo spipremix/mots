@@ -47,6 +47,3 @@ function action_supprimer_groupe_mots_dist($id_groupe = null) {
 		spip_log("action_supprimer_groupe_mots_dist $id_groupe interdit", _LOG_INFO_IMPORTANTE);
 	}
 }
-
-
-?>
