@@ -14,9 +14,10 @@
  * Charger les fonctions mots
  *
  * @package SPIP\Mots\Fonctions
-**/
-if (!defined("_ECRIRE_INC_VERSION")) return;
-
+ **/
+if (!defined("_ECRIRE_INC_VERSION")) {
+	return;
+}
 
 
 include_spip('inc/mots');

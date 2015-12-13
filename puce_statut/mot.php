@@ -14,9 +14,11 @@
  * Puces d'actions rapides sur les mots clés
  *
  * @package SPIP\Mots\PucesStatut
-**/
+ **/
 
-if (!defined('_ECRIRE_INC_VERSION')) return;
+if (!defined('_ECRIRE_INC_VERSION')) {
+	return;
+}
 
 
 /**

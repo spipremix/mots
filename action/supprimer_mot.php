@@ -15,7 +15,9 @@
  *
  * @package SPIP\Mots\Actions
  */
-if (!defined("_ECRIRE_INC_VERSION")) return;
+if (!defined("_ECRIRE_INC_VERSION")) {
+	return;
+}
 
 /**
  * Action supprimant un mot clé dans la base de données dont l'identifiant

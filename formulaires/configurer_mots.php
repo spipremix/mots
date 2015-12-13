@@ -11,11 +11,13 @@
 \***************************************************************************/
 
 /**
- * Gestion du formulaire de configuration des groupes de mots 
+ * Gestion du formulaire de configuration des groupes de mots
  *
  * @package SPIP\Mots\Formulaires
-**/
-if (!defined("_ECRIRE_INC_VERSION")) return;
+ **/
+if (!defined("_ECRIRE_INC_VERSION")) {
+	return;
+}
 
 include_spip('inc/presentation');
 
@@ -24,14 +26,15 @@ include_spip('inc/presentation');
  *
  * @return array
  *     Environnement du formulaire
-**/
-function formulaires_configurer_mots_charger_dist(){
-	foreach(array(
-		"articles_mots",
-		"config_precise_groupes",
-		"mots_cles_forums",
-		) as $m)
+ **/
+function formulaires_configurer_mots_charger_dist() {
+	foreach (array(
+		         "articles_mots",
+		         "config_precise_groupes",
+		         "mots_cles_forums",
+	         ) as $m) {
 		$valeurs[$m] = $GLOBALS['meta'][$m];
+	}
 
 	return $valeurs;
 }
@@ -41,18 +44,21 @@ function formulaires_configurer_mots_charger_dist(){
  *
  * @return array
  *     Retours du traitement
-**/
-function formulaires_configurer_mots_traiter_dist(){
-	$res = array('editable'=>true);
-	foreach(array(
-		"articles_mots",
-		"config_precise_groupes",
-		"mots_cles_forums",
-		) as $m)
-		if (!is_null($v=_request($m)))
-			ecrire_meta($m, $v=='oui'?'oui':'non');
+ **/
+function formulaires_configurer_mots_traiter_dist() {
+	$res = array('editable' => true);
+	foreach (array(
+		         "articles_mots",
+		         "config_precise_groupes",
+		         "mots_cles_forums",
+	         ) as $m) {
+		if (!is_null($v = _request($m))) {
+			ecrire_meta($m, $v == 'oui' ? 'oui' : 'non');
+		}
+	}
 
 	$res['message_ok'] = _T('config_info_enregistree');
+
 	return $res;
 }
 
