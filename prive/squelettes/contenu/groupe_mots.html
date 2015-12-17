@@ -20,7 +20,7 @@
 	[ | (#TOTAL_BOUCLE|>{200}|oui) [(#SELF|parametre_url{nb,1000}|lien_ou_expose{1000,#ENV{nb}|=={1000},ajax})]]
 </p>
 ]<//B_cpt_mot>
-<INCLURE{fond=prive/objets/liste/mots-admin,id_groupe,par=titre,ajax,env} />
+<INCLURE{fond=prive/objets/liste/mots-admin,id_groupe,par=multi titre,ajax,env} />
 [(#AUTORISER{creer,mot,'','',#ARRAY{id_groupe,#ID_GROUPE}})
 	[(#URL_ECRIRE{mot_edit,new=oui&id_groupe=#ID_GROUPE}|parametre_url{redirect,#SELF}
 		|icone_verticale{<:mots:icone_creation_mots_cles:>,mot-24.png,new,right})]

@@ -14,7 +14,7 @@
 				data,#INCLURE{fond=prive/objets/contenu/groupe_mots, id=#ID_GROUPE, id_groupe=#ID_GROUPE}}})]
 			</div>
 			<div class="nettoyeur"></div>
-			<INCLURE{fond=prive/objets/liste/mots-admin,id_groupe,par=titre,ajax,env} />
+			<INCLURE{fond=prive/objets/liste/mots-admin,id_groupe,par=multi titre,ajax,env} />
 			[(#AUTORISER{voir,groupemots,#ID_GROUPE})
 				[(#URL_ECRIRE{groupe_mots,id_groupe=#ID_GROUPE}
 					|icone_verticale{<:mots:icone_voir_groupe_mots:>,groupe_mots-24.png,'',left})]
