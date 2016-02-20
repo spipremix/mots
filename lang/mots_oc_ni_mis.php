@@ -35,7 +35,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_aucun_groupe_mots' => 'Mìnga group de mot',
 	'info_aucun_mot_cle' => 'Mìnga mot clau',
 	'info_changer_nom_groupe' => 'Cambià lou noum d’aqueu goup :',
-	'info_creation_mots_cles' => 'Creàs e counfiguràs aquì lu mot clau dóu sit',
+	'info_creation_mots_cles' => 'Creas e counfiguras aquì lu mot clau dóu sit',
 	'info_dans_groupe' => 'En lou group :',
 	'info_delet_mots_cles' => 'Avès demandat de suprimà lou mot clau <b>@titre_mot@</b> (@type_mot@). Couma aqueu mot clau es ligat en <b>@texte_lie@</b> devès counfirmà aqueula dechisioun :',
 	'info_groupe_important' => 'Group empourtant',
@@ -44,7 +44,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_mots_cles_association' => 'Lu mot clau d’aqueu group pouòdon estre assouciat :',
 	'info_nb_groupe_mots' => '@nb@ group de mot',
 	'info_oui_suppression_mot_cle' => 'vouòli suprimà definitivamen aqueu mot clau.',
-	'info_question_mots_cles' => 'Auguràs utilisà lu mot clau sus lou vouòstre sit ?',
+	'info_question_mots_cles' => 'Vourìas utilisà lu mot clau sus lou vouòstre sit ?',
 	'info_qui_attribue_mot_cle' => 'Lu mot d’aqueu group pouòdon estre atribuit per :',
 	'info_remplacer_mot' => 'Remplaçà "@titre@"',
 	'info_retirer_mot' => 'Retirà aqueu mot',
@@ -67,12 +67,12 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'logo_mot_cle' => 'LOGOU DÓU MOT CLAU',
 
 	// T
-	'texte_config_groupe_mots_cles' => 'Auguràs d’ativà la counfiguracioun avançada dei mot clau, en endicant per isemple que si pòu seleciounà un mot soulet per group, qu’un group es empourtant… ?',
+	'texte_config_groupe_mots_cles' => 'Vourìas ativà la counfiguracioun avançada dei mot clau, en endicant per isemple que si pòu seleciounà un mot soulet per group, qu’un group es empourtant… ?',
 	'texte_mots_cles' => 'Lu mot clau permeton de creà dei estac temàticou tra lu vouòstre article
 		quauque que sigue la sieu plaça en li rùbrica. Acò vi permete
 		d’enriquì la navigacioun dóu vouòstre sit, e mai d’utilisà aqueli prouprietà
 		per persounalisà la presentacioun dei article en li esquèletrou.',
-	'texte_mots_cles_dans_forum' => 'Auguràs de permetre l’utilisacioun de mot clau seleciounable dai visitaire en lu fòrou dóu sit public ? (Mèfi : utilisà courretamen aquela oupcioun es proun coumplesse.)',
+	'texte_mots_cles_dans_forum' => 'Vourìas permetre l’utilisacioun de mot clau seleciounable dai visitaire en lu fòrou dóu sit public ? (Mèfi : utilisà courretamen aquela oupcioun es proun coumplesse.)',
 	'texte_nouveau_mot' => 'Mot nouvèu',
 	'titre_config_groupe_mots_cles' => 'Configuracioun dei group de mot clau',
 	'titre_gauche_mots_edit' => 'MOT NÙMERO :',
