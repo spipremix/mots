@@ -14,8 +14,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'avis_doublon_mot_cle' => 'Já existe uma palavra-chave com esse título. Quer criá-la mesmo assim?',
 
 	// B
-	'bouton_checkbox_qui_attribue_mot_cle_administrateurs' => 'os administradores do site',
-	'bouton_checkbox_qui_attribue_mot_cle_redacteurs' => 'os redatores',
+	'bouton_checkbox_qui_attribue_mot_cle_administrateurs' => 'administradores do site',
+	'bouton_checkbox_qui_attribue_mot_cle_redacteurs' => 'redatores',
 	'bouton_checkbox_qui_attribue_mot_cle_visiteurs' => 'os visitantes do site público desde que eles postem uma mensagem num fórum.',
 
 	// C
@@ -41,7 +41,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_groupe_important' => 'Grupo importante',
 	'info_modifier_mot' => 'Editar a palavra-chave:',
 	'info_mots_cles' => 'As palavras-chave',
-	'info_mots_cles_association' => 'As palavras-chave deste grupo podem ser associadas:',
+	'info_mots_cles_association' => 'As palavras-chave deste grupo podem ser associadas a:',
 	'info_nb_groupe_mots' => '@nb@ grupos de palavras-chave',
 	'info_oui_suppression_mot_cle' => 'Eu quero excluir definitivamente esta palavra-chave.',
 	'info_question_mots_cles' => 'Deseja utilizar palavras-chave no seu site?',
