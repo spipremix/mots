@@ -82,4 +82,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_objets_lies_mot' => 'Матеріали з цим ключем:',
 	'titre_page_mots_tous' => 'Ключі'
 );
-

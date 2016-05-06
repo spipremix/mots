@@ -33,4 +33,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_retirer_mot' => 'Aru apaqaña',
 	'info_retirer_mots' => 'Taqpach arunak apaqaña'
 );
-

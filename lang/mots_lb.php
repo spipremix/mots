@@ -82,4 +82,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_objets_lies_mot' => 'Mat dësem Schlësselwuert verbonnen:',
 	'titre_page_mots_tous' => 'Schlësselwierder'
 );
-

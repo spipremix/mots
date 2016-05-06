@@ -69,4 +69,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_nouveau_groupe' => 'Nyhedsgruppe',
 	'titre_page_mots_tous' => 'Nøgleord'
 );
-

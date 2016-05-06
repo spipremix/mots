@@ -66,4 +66,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_nouveau_groupe' => 'Talde berria',
 	'titre_page_mots_tous' => 'Gako-hitzak'
 );
-

@@ -71,4 +71,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_nouveau_groupe' => 'Нова група',
 	'titre_page_mots_tous' => 'Ключови думи'
 );
-

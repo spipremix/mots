@@ -87,4 +87,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_objets_lies_mot' => 'Linked to that keyword:',
 	'titre_page_mots_tous' => 'Keywords'
 );
-

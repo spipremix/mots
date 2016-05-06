@@ -71,4 +71,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_nouveau_groupe' => 'Kelompok baru',
 	'titre_page_mots_tous' => 'Kata kunci'
 );
-

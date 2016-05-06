@@ -85,4 +85,3 @@ van artikelen aanpassen aan hun inhoud.',
 	'titre_objets_lies_mot' => 'Gerelateerd aan dit trefwoord:',
 	'titre_page_mots_tous' => 'Trefwoorden'
 );
-

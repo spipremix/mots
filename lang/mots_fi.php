@@ -42,4 +42,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_nouveau_groupe' => 'Uusi ryhmä',
 	'titre_page_mots_tous' => 'Hakusanoja'
 );
-

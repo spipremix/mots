@@ -73,4 +73,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_nouveau_groupe' => 'Grup nou',
 	'titre_page_mots_tous' => 'Cuvinte-cheie'
 );
-

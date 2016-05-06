@@ -66,4 +66,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_nouveau_groupe' => 'Nhóm mới',
 	'titre_page_mots_tous' => 'Từ then chốt'
 );
-

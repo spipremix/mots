@@ -48,4 +48,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_mots_tous' => 'מילות מפתח',
 	'titre_page_mots_tous' => 'מילות מפתח'
 );
-

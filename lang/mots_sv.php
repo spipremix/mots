@@ -65,4 +65,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_mots_tous' => 'Nyckelord',
 	'titre_nouveau_groupe' => 'Ny grupp'
 );
-

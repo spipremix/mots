@@ -69,4 +69,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_nouveau_groupe' => '新组',
 	'titre_page_mots_tous' => '关键词'
 );
-

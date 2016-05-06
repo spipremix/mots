@@ -78,4 +78,3 @@ enriquir la navegació del vostre lloc, inclús utilitzar aquestes propietats
 	'titre_nouveau_groupe' => 'Grup nou',
 	'titre_page_mots_tous' => 'Paraules clau'
 );
-

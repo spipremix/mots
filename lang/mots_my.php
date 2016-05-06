@@ -66,4 +66,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_nouveau_groupe' => 'အုပ်စုအသစ်',
 	'titre_page_mots_tous' => 'သော့ချက်စကားလုံးများ'
 );
-

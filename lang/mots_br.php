@@ -71,4 +71,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_nouveau_groupe' => 'Strollad nevez',
 	'titre_page_mots_tous' => 'Gerioù-stur'
 );
-

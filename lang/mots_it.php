@@ -85,4 +85,3 @@ per personalizzare la presentazione degli articoli nei tuoi modelli di layout.',
 	'titre_objets_lies_mot' => 'Correlati a questa parola chiave :',
 	'titre_page_mots_tous' => 'Parole chiave'
 );
-

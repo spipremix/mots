@@ -71,4 +71,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_nouveau_groupe' => 'N3w gr0up',
 	'titre_page_mots_tous' => 'K3yw0rd5'
 );
-
