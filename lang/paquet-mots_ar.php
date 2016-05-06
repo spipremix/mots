@@ -14,4 +14,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'mots_slogan' => 'إدارة المفاتيح ومجموعات المفاتيح في SPIP'
 );
 
-?>

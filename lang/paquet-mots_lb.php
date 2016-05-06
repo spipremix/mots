@@ -14,4 +14,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'mots_slogan' => 'Gestioun vun de Schlësselwierder a Gruppen am SPIP'
 );
 
-?>

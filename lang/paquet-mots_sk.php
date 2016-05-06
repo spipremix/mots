@@ -14,4 +14,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'mots_slogan' => 'Riadenie kľúčových slov a skupín kľúčových slov v SPIPe'
 );
 
-?>

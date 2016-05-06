@@ -14,4 +14,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'mots_slogan' => 'مديريت واژه‌ها و گروه‌واژه‌ها در اسپيپ'
 );
 
-?>

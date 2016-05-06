@@ -14,4 +14,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'mots_slogan' => 'Beheer van trefwoorden en groepen van trefwoorden in SPIP'
 );
 
-?>
