@@ -67,4 +67,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_page_mots_tous' => 'ពាក្យ​គន្លឹះ'
 );
 
-?>

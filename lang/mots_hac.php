@@ -15,4 +15,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_retirer_mots' => 'تمام واژه ها را برداريد'
 );
 
-?>

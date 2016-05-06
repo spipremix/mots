@@ -86,4 +86,3 @@ van artikelen aanpassen aan hun inhoud.',
 	'titre_page_mots_tous' => 'Trefwoorden'
 );
 
-?>

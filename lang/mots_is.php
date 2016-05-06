@@ -20,4 +20,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'logo_mot_cle' => 'TÁKN LYKILORÐSINS'
 );
 
-?>

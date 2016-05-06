@@ -79,4 +79,3 @@ enriquir la navegació del vostre lloc, inclús utilitzar aquestes propietats
 	'titre_page_mots_tous' => 'Paraules clau'
 );
 
-?>

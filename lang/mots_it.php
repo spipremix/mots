@@ -86,4 +86,3 @@ per personalizzare la presentazione degli articoli nei tuoi modelli di layout.',
 	'titre_page_mots_tous' => 'Parole chiave'
 );
 
-?>

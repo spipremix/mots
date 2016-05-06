@@ -79,4 +79,3 @@ con <b>@texte_lie@</b> debes confirmar esta decisión:', # MODIF
 	'titre_page_mots_tous' => 'Pallabres-clave'
 );
 
-?>

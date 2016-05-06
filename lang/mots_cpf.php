@@ -73,4 +73,3 @@ Li pé permèt alor swazi inn  sèl molaklé sanm group, o rand inn group pli im
 	'titre_page_mots_tous' => 'Bann molaklé'
 );
 
-?>

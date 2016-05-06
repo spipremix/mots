@@ -67,4 +67,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_page_mots_tous' => 'သော့ချက်စကားလုံးများ'
 );
 
-?>
