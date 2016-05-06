@@ -13,4 +13,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'mots_description' => 'Ключі та групи ключів',
 	'mots_slogan' => 'Управління ключами та їх групами в SPIP'
 );
-
