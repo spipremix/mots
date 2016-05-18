@@ -24,10 +24,10 @@
 
 	Bouton voir en ligne
 
-][(#VAL{redirect}
+][(#VAL{mot}|objet_info{page}|oui)
+[(#VAL{redirect}
 	|generer_url_action{type=mot&id=#ID_MOT}
 	|parametre_url{var_mode,calcul}
-	|icone_horizontale{<:icone_voir_en_ligne:>,racine})]
-
+	|icone_horizontale{<:icone_voir_en_ligne:>,racine})]]
 </div>
 </BOUCLE_info>

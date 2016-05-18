@@ -15,7 +15,7 @@
  *
  * @package SPIP\Mots\Actions
  */
-if (!defined("_ECRIRE_INC_VERSION")) {
+if (!defined('_ECRIRE_INC_VERSION')) {
 	return;
 }
 
@@ -92,7 +92,8 @@ function groupe_mots_inserer($id_parent = null, $set = null) {
 	}
 
 	// Envoyer aux plugins
-	$champs = pipeline('pre_insertion',
+	$champs = pipeline(
+		'pre_insertion',
 		array(
 			'args' => array(
 				'table' => 'spip_groupes_mots',
@@ -101,9 +102,10 @@ function groupe_mots_inserer($id_parent = null, $set = null) {
 		)
 	);
 
-	$id_groupe = sql_insertq("spip_groupes_mots", $champs);
+	$id_groupe = sql_insertq('spip_groupes_mots', $champs);
 
-	pipeline('post_insertion',
+	pipeline(
+		'post_insertion',
 		array(
 			'args' => array(
 				'table' => 'spip_groupes_mots',
@@ -136,7 +138,7 @@ function groupe_mots_modifier($id_groupe, $set = null) {
 
 	include_spip('inc/modifier');
 	$c = collecter_requests(
-	// white list
+		// white list
 		array(
 			'titre',
 			'descriptif',
@@ -155,12 +157,12 @@ function groupe_mots_modifier($id_groupe, $set = null) {
 	);
 	// normaliser les champ oui/non
 	foreach (array(
-		         'obligatoire',
-		         'unseul',
-		         'comite',
-		         'forum',
-		         'minirezo'
-	         ) as $champ) {
+				'obligatoire',
+				'unseul',
+				'comite',
+				'forum',
+				'minirezo'
+			) as $champ) {
 		if (isset($c[$champ])) {
 			$c[$champ] = ($c[$champ] == 'oui' ? 'oui' : 'non');
 		}
@@ -170,12 +172,15 @@ function groupe_mots_modifier($id_groupe, $set = null) {
 		$c['tables_liees'] = implode(',', array_diff($c['tables_liees'], array('')));
 	}
 
-	$err = objet_modifier_champs('groupe_mot', $id_groupe,
+	$err = objet_modifier_champs(
+		'groupe_mot',
+		$id_groupe,
 		array(
 			'data' => $set,
 			'nonvide' => array('titre' => _T('info_sans_titre'))
 		),
-		$c);
+		$c
+	);
 
 	return $err;
 }

@@ -15,7 +15,7 @@
  *
  * @package SPIP\Mots\Actions
  */
-if (!defined("_ECRIRE_INC_VERSION")) {
+if (!defined('_ECRIRE_INC_VERSION')) {
 	return;
 }
 
@@ -42,7 +42,7 @@ function action_supprimer_groupe_mots_dist($id_groupe = null) {
 
 	include_spip('inc/autoriser');
 	if (autoriser('supprimer', 'groupemots', $id_groupe)) {
-		sql_delete("spip_groupes_mots", "id_groupe=" . intval($id_groupe));
+		sql_delete('spip_groupes_mots', 'id_groupe=' . intval($id_groupe));
 	} else {
 		spip_log("action_supprimer_groupe_mots_dist $id_groupe interdit", _LOG_INFO_IMPORTANTE);
 	}

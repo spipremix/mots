@@ -15,7 +15,7 @@
  *
  * @package SPIP\Mots\Formulaires
  **/
-if (!defined("_ECRIRE_INC_VERSION")) {
+if (!defined('_ECRIRE_INC_VERSION')) {
 	return;
 }
 
@@ -98,7 +98,7 @@ function groupes_mots_edit_config($row) {
 	global $spip_ecran, $spip_lang;
 
 	$config = $GLOBALS['meta'];
-	$config['lignes'] = ($spip_ecran == "large") ? 8 : 5;
+	$config['lignes'] = ($spip_ecran == 'large') ? 8 : 5;
 	$config['langue'] = $spip_lang;
 
 	return $config;

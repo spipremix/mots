@@ -50,8 +50,8 @@ function mots_configurer_liste_metas($metas) {
  *     Données du pipeline
  */
 function mots_affiche_milieu($flux) {
-	if ($flux["args"]["exec"] == "configurer_contenu") {
-		$flux["data"] .= recuperer_fond('prive/squelettes/inclure/configurer', array('configurer' => 'configurer_mots'));
+	if ($flux['args']['exec'] == 'configurer_contenu') {
+		$flux['data'] .= recuperer_fond('prive/squelettes/inclure/configurer', array('configurer' => 'configurer_mots'));
 	}
 
 	// si on est sur une page ou il faut inserer les mots cles...
@@ -70,7 +70,7 @@ function mots_affiche_milieu($flux) {
 				'id_objet' => $id,
 			)
 		);
-		if ($p = strpos($flux['data'], "<!--affiche_milieu-->")) {
+		if ($p = strpos($flux['data'], '<!--affiche_milieu-->')) {
 			$flux['data'] = substr_replace($flux['data'], $texte, $p, 0);
 		} else {
 			$flux['data'] .= $texte;
@@ -94,7 +94,7 @@ function mots_optimiser_base_disparus($flux) {
 	$n = &$flux['data'];
 	$mydate = $flux['args']['date'];
 
-	$result = sql_delete("spip_mots", "length(titre)=0 AND maj < " . sql_quote($mydate));
+	$result = sql_delete('spip_mots', 'length(titre)=0 AND maj < ' . sql_quote($mydate));
 
 	include_spip('action/editer_liens');
 	// optimiser les liens morts :
@@ -123,8 +123,7 @@ function mots_post_edition($flux) {
 		and ($flux['args']['table'] == 'spip_groupes_mots')
 		and isset($flux['data']['titre'])
 	) {
-		sql_updateq('spip_mots', array('type' => $flux['data']['titre']),
-			'id_groupe=' . $flux['args']['id_objet']);
+		sql_updateq('spip_mots', array('type' => $flux['data']['titre']), 'id_groupe=' . $flux['args']['id_objet']);
 	}
 
 	return $flux;

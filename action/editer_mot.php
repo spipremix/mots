@@ -15,7 +15,7 @@
  *
  * @package SPIP\Mots\Actions
  */
-if (!defined("_ECRIRE_INC_VERSION")) {
+if (!defined('_ECRIRE_INC_VERSION')) {
 	return;
 }
 
@@ -69,7 +69,7 @@ function action_editer_mot_dist($arg = null) {
 function mot_inserer($id_groupe, $set = null) {
 
 	$champs = array();
-	$row = sql_fetsel("titre", "spip_groupes_mots", "id_groupe=" . intval($id_groupe));
+	$row = sql_fetsel('titre', 'spip_groupes_mots', 'id_groupe=' . intval($id_groupe));
 	if ($row) {
 		$champs['id_groupe'] = $id_groupe;
 		$champs['type'] = $row['titre'];
@@ -82,7 +82,8 @@ function mot_inserer($id_groupe, $set = null) {
 	}
 
 	// Envoyer aux plugins
-	$champs = pipeline('pre_insertion',
+	$champs = pipeline(
+		'pre_insertion',
 		array(
 			'args' => array(
 				'table' => 'spip_mots',
@@ -91,9 +92,10 @@ function mot_inserer($id_groupe, $set = null) {
 		)
 	);
 
-	$id_mot = sql_insertq("spip_mots", $champs);
+	$id_mot = sql_insertq('spip_mots', $champs);
 
-	pipeline('post_insertion',
+	pipeline(
+		'post_insertion',
 		array(
 			'args' => array(
 				'table' => 'spip_mots',
@@ -123,7 +125,7 @@ function mot_inserer($id_groupe, $set = null) {
 function mot_modifier($id_mot, $set = null) {
 	include_spip('inc/modifier');
 	$c = collecter_requests(
-	// white list
+		// white list
 		array(
 			'titre',
 			'descriptif',
@@ -136,13 +138,15 @@ function mot_modifier($id_mot, $set = null) {
 		$set
 	);
 
-	if ($err = objet_modifier_champs('mot', $id_mot,
+	if ($err = objet_modifier_champs(
+		'mot',
+		$id_mot,
 		array(
 			'data' => $set,
 			'nonvide' => array('titre' => _T('info_sans_titre'))
 		),
-		$c)
-	) {
+		$c
+	)) {
 		return $err;
 	}
 
@@ -169,7 +173,7 @@ function mot_instituer($id_mot, $c) {
 	$champs = array();
 	// regler le groupe
 	if (isset($c['id_groupe']) or isset($c['type'])) {
-		$row = sql_fetsel("titre", "spip_groupes_mots", "id_groupe=" . intval($c['id_groupe']));
+		$row = sql_fetsel('titre', 'spip_groupes_mots', 'id_groupe=' . intval($c['id_groupe']));
 		if ($row) {
 			$champs['id_groupe'] = $c['id_groupe'];
 			$champs['type'] = $row['titre'];
@@ -177,7 +181,8 @@ function mot_instituer($id_mot, $c) {
 	}
 
 	// Envoyer aux plugins
-	$champs = pipeline('pre_edition',
+	$champs = pipeline(
+		'pre_edition',
 		array(
 			'args' => array(
 				'table' => 'spip_mots',
@@ -192,7 +197,7 @@ function mot_instituer($id_mot, $c) {
 		return;
 	}
 
-	sql_updateq('spip_mots', $champs, "id_mot=" . intval($id_mot));
+	sql_updateq('spip_mots', $champs, 'id_mot=' . intval($id_mot));
 
 	//
 	// Post-modifications
@@ -203,7 +208,8 @@ function mot_instituer($id_mot, $c) {
 	suivre_invalideur("id='mot/$id_mot'");
 
 	// Pipeline
-	pipeline('post_edition',
+	pipeline(
+		'post_edition',
 		array(
 			'args' => array(
 				'table' => 'spip_mots',
@@ -234,9 +240,10 @@ function mot_instituer($id_mot, $c) {
  * @return void
  */
 function mot_supprimer($id_mot) {
-	sql_delete("spip_mots", "id_mot=" . intval($id_mot));
+	sql_delete('spip_mots', 'id_mot=' . intval($id_mot));
 	mot_dissocier($id_mot, '*');
-	pipeline('trig_supprimer_objets_lies',
+	pipeline(
+		'trig_supprimer_objets_lies',
 		array(
 			array('type' => 'mot', 'id' => $id_mot)
 		)
@@ -279,7 +286,7 @@ function mot_associer($id_mot, $objets, $qualif = null) {
 	// mots de ce groupe associe a ces objets
 	$id_groupe = sql_getfetsel('id_groupe', 'spip_mots', 'id_mot=' . intval($id_mot));
 	if (un_seul_mot_dans_groupe($id_groupe)) {
-		$mots_groupe = sql_allfetsel("id_mot", "spip_mots", "id_groupe=" . intval($id_groupe));
+		$mots_groupe = sql_allfetsel('id_mot', 'spip_mots', 'id_groupe=' . intval($id_groupe));
 		$mots_groupe = array_map('reset', $mots_groupe);
 		objet_dissocier(array('mot' => $mots_groupe), $objets);
 	}

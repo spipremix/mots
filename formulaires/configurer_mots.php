@@ -15,7 +15,7 @@
  *
  * @package SPIP\Mots\Formulaires
  **/
-if (!defined("_ECRIRE_INC_VERSION")) {
+if (!defined('_ECRIRE_INC_VERSION')) {
 	return;
 }
 
@@ -29,10 +29,10 @@ include_spip('inc/presentation');
  **/
 function formulaires_configurer_mots_charger_dist() {
 	foreach (array(
-		         "articles_mots",
-		         "config_precise_groupes",
-		         "mots_cles_forums",
-	         ) as $m) {
+				'articles_mots',
+				'config_precise_groupes',
+				'mots_cles_forums',
+			) as $m) {
 		$valeurs[$m] = $GLOBALS['meta'][$m];
 	}
 
@@ -48,10 +48,10 @@ function formulaires_configurer_mots_charger_dist() {
 function formulaires_configurer_mots_traiter_dist() {
 	$res = array('editable' => true);
 	foreach (array(
-		         "articles_mots",
-		         "config_precise_groupes",
-		         "mots_cles_forums",
-	         ) as $m) {
+				'articles_mots',
+				'config_precise_groupes',
+				'mots_cles_forums',
+			) as $m) {
 		if (!is_null($v = _request($m))) {
 			ecrire_meta($m, $v == 'oui' ? 'oui' : 'non');
 		}

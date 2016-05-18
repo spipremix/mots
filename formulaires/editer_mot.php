@@ -15,7 +15,7 @@
  *
  * @package SPIP\Mots\Formulaires
  **/
-if (!defined("_ECRIRE_INC_VERSION")) {
+if (!defined('_ECRIRE_INC_VERSION')) {
 	return;
 }
 
@@ -135,7 +135,7 @@ function mots_edit_config($row) {
 	global $spip_ecran, $spip_lang;
 
 	$config = $GLOBALS['meta'];
-	$config['lignes'] = ($spip_ecran == "large") ? 8 : 5;
+	$config['lignes'] = ($spip_ecran == 'large') ? 8 : 5;
 	$config['langue'] = $spip_lang;
 	$config['restreint'] = false;
 
@@ -185,13 +185,15 @@ function formulaires_editer_mot_verifier_dist(
 	// sinon avertir
 	// on ne fait la verification que si c'est une creation de mot ou un retitrage
 	if (!intval($id_mot)
-		or supprimer_numero(_request('titre')) !== supprimer_numero(sql_getfetsel('titre', 'spip_mots',
-			'id_mot=' . intval($id_mot)))
+		or supprimer_numero(_request('titre'))
+			!== supprimer_numero(sql_getfetsel('titre', 'spip_mots', 'id_mot=' . intval($id_mot)))
 	) {
 		if (!count($erreurs) and !_request('confirm_titre_mot')) {
-			if (sql_countsel("spip_mots",
-				"titre REGEXP " . sql_quote("^([0-9]+[.] )?" . preg_quote(supprimer_numero(_request('titre'))) . "$")
-				. " AND id_mot<>" . intval($id_mot))) {
+			if (sql_countsel(
+				'spip_mots',
+				'titre REGEXP ' . sql_quote('^([0-9]+[.] )?' . preg_quote(supprimer_numero(_request('titre'))) . '$')
+				. ' AND id_mot<>' . intval($id_mot)
+			)) {
 				$erreurs['titre'] =
 					_T('mots:avis_doublon_mot_cle')
 					. " <input type='hidden' name='confirm_titre_mot' value='1' />";
@@ -238,12 +240,12 @@ function formulaires_editer_mot_traiter_dist(
 ) {
 	$res = array();
 	set_request('redirect', '');
-	$action_editer = charger_fonction("editer_mot", 'action');
+	$action_editer = charger_fonction('editer_mot', 'action');
 	list($id_mot, $err) = $action_editer();
 	if ($err) {
 		$res['message_erreur'] = $err;
 	} else {
-		$res['message_ok'] = "";
+		$res['message_ok'] = '';
 		if ($retour) {
 			if (strncmp($retour, 'javascript:', 11) == 0) {
 				$res['message_ok'] .= '<script type="text/javascript">/*<![CDATA[*/' . substr($retour, 11) . '/*]]>*/</script>';
@@ -268,11 +270,10 @@ function formulaires_editer_mot_traiter_dist(
 				include_spip('action/editer_mot');
 				mot_associer($id_mot, array($objet => $id_objet));
 				if (isset($res['redirect'])) {
-					$res['redirect'] = parametre_url($res['redirect'], "id_lien_ajoute", $id_mot, '&');
+					$res['redirect'] = parametre_url($res['redirect'], 'id_lien_ajoute', $id_mot, '&');
 				}
 			}
 		}
-
 	}
 
 	return $res;

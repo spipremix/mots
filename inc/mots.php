@@ -15,7 +15,7 @@
  *
  * @package SPIP\Mots\Filtres
  **/
-if (!defined("_ECRIRE_INC_VERSION")) {
+if (!defined('_ECRIRE_INC_VERSION')) {
 	return;
 }
 
@@ -53,8 +53,11 @@ function filtre_objets_associes_mot_dist($id_mot, $id_groupe) {
 		}
 	}
 
-	$associes = pipeline('afficher_nombre_objets_associes_a',
-		array('args' => array('objet' => 'mot', 'id_objet' => $id_mot), 'data' => $associes));
+	$associes = pipeline(
+		'afficher_nombre_objets_associes_a',
+		array('args' => array('objet' => 'mot', 'id_objet' => $id_mot),
+		'data' => $associes)
+	);
 
 	return $associes;
 
@@ -72,8 +75,11 @@ function filtre_objets_associes_mot_dist($id_mot, $id_groupe) {
  */
 function calculer_utilisations_mots($id_groupe) {
 	$retour = array();
-	$objets = sql_allfetsel('DISTINCT objet', array('spip_mots_liens AS L', 'spip_mots AS M'),
-		array('L.id_mot=M.id_mot', 'M.id_groupe=' . intval($id_groupe)));
+	$objets = sql_allfetsel(
+		'DISTINCT objet',
+		array('spip_mots_liens AS L', 'spip_mots AS M'),
+		array('L.id_mot=M.id_mot', 'M.id_groupe=' . intval($id_groupe))
+	);
 
 	foreach ($objets as $o) {
 		$objet = $o['objet'];
@@ -83,7 +89,7 @@ function calculer_utilisations_mots($id_groupe) {
 		if (isset($infos['field']) and $infos['field']) {
 			// uniquement certains statut d'objet,
 			// et uniquement si la table dispose du champ statut.
-			$statuts = "";
+			$statuts = '';
 			if (isset($infos['field']['statut']) or isset($infos['statut'][0]['champ'])) {
 				// on s'approche au mieux de la declaration de l'objet.
 				// il faudrait ameliorer ce point.
@@ -92,27 +98,30 @@ function calculer_utilisations_mots($id_groupe) {
 				// bricoler les statuts d'apres la declaration de l'objet (champ previsu a defaut de mieux)
 				if (array_key_exists('previsu', $infos['statut'][0]) and strlen($infos['statut'][0]['previsu']) > 1) {
 					$str_statuts = $infos['statut'][0]['previsu'];
-					if ($GLOBALS['connect_statut'] != "0minirezo") {
+					if ($GLOBALS['connect_statut'] != '0minirezo') {
 						$str_statuts = str_replace('prepa', '', $str_statuts);
 					}
 					$not = (substr($str_statuts, 0, 1) == '!' ? 'NOT' : '');
 					$str_statuts = str_replace('!', '', $str_statuts);
 					$Tstatuts = array_filter(explode(',', $str_statuts));
-					$statuts = " AND " . sql_in("O.$c_statut", $Tstatuts, $not);
+					$statuts = ' AND ' . sql_in("O.$c_statut", $Tstatuts, $not);
 				} // objets sans champ previsu ou avec un previsu == '!' (par ex les rubriques)
 				else {
-					$statuts = " AND " . sql_in("O.$c_statut",
-							($GLOBALS['connect_statut'] == "0minirezo") ? array('prepa', 'prop', 'publie') : array('prop', 'publie'));
+					$statuts = ' AND ' . sql_in(
+						"O.$c_statut",
+						($GLOBALS['connect_statut'] == '0minirezo') ? array('prepa', 'prop', 'publie') : array('prop', 'publie')
+					);
 				}
 			}
 			$res = sql_allfetsel(
-				"COUNT(*) AS cnt, L.id_mot",
-				"spip_mots_liens AS L
+				'COUNT(*) AS cnt, L.id_mot',
+				'spip_mots_liens AS L
 					LEFT JOIN spip_mots AS M ON L.id_mot=M.id_mot
-						AND L.objet=" . sql_quote($objet) . "
-					LEFT JOIN " . $table_objet_sql . " AS O ON L.id_objet=O.$_id_objet",
+						AND L.objet=' . sql_quote($objet) . '
+					LEFT JOIN ' . $table_objet_sql . " AS O ON L.id_objet=O.$_id_objet",
 				"M.id_groupe=$id_groupe$statuts",
-				"L.id_mot");
+				'L.id_mot'
+			);
 			foreach ($res as $row) {
 				$retour[$table_objet_sql][$row['id_mot']] = $row['cnt'];
 			}

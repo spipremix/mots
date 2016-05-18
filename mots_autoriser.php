@@ -24,7 +24,8 @@ if (!defined('_ECRIRE_INC_VERSION')) {
  *
  * @pipeline autoriser
  */
-function mots_autoriser() { }
+function mots_autoriser() {
+}
 
 /**
  * Autorisation de voir un élément de menu
@@ -40,7 +41,7 @@ function autoriser_mots_menu_dist($faire, $type, $id, $qui, $opt) {
 	if ($qui['statut'] == '0minirezo') {
 		return ($GLOBALS['meta']['articles_mots'] != 'non' or sql_countsel('spip_groupes_mots'));
 	}
-	$where = "";
+	$where = '';
 	if ($qui['statut'] == '1comite') {
 		$where = "comite='oui' OR forum='oui'";
 	}
@@ -89,7 +90,7 @@ function autoriser_groupemots_voir_dist($faire, $type, $id, $qui, $opt) {
 	if ($qui['statut'] == '0minirezo') {
 		return true;
 	}
-	$acces = sql_fetsel("comite,forum", "spip_groupes_mots", "id_groupe=" . intval($id));
+	$acces = sql_fetsel('comite,forum', 'spip_groupes_mots', 'id_groupe=' . intval($id));
 	if ($qui['statut'] == '1comite' and ($acces['comite'] == 'oui' or $acces['forum'] == 'oui')) {
 		return true;
 	}
@@ -174,7 +175,7 @@ function autoriser_mot_modifier_dist($faire, $type, $id, $qui, $opt) {
 		isset($opt['id_groupe'])
 			? autoriser('modifier', 'groupemots', $opt['id_groupe'], $qui, $opt)
 			: (
-			$t = sql_getfetsel("id_groupe", "spip_mots", "id_mot=" . intval($id))
+			$t = sql_getfetsel('id_groupe', 'spip_mots', 'id_mot=' . intval($id))
 			and autoriser('modifier', 'groupemots', $t, $qui, $opt)
 		);
 }
@@ -237,8 +238,8 @@ function autoriser_mot_creer_dist($faire, $type, $id, $qui, $opt) {
  **/
 function autoriser_mot_supprimer_dist($faire, $type, $id, $qui, $opt) {
 	// On cherche le groupe du mot
-	$id_groupe = $opt['id_groupe'] ? $opt['id_groupe'] : sql_getfetsel('id_groupe', 'spip_mots',
-		'id_mot = ' . intval($id));
+	$id_groupe = $opt['id_groupe'] ?
+		$opt['id_groupe'] : sql_getfetsel('id_groupe', 'spip_mots', 'id_mot = ' . intval($id));
 
 	return autoriser('creer', 'mot', $id, $qui, array('id_groupe' => $id_groupe));
 }
@@ -273,8 +274,7 @@ function autoriser_associermots_dist($faire, $type, $id, $qui, $opt) {
 		// chercher si un groupe est autorise pour mon statut
 		// et pour la table demandee
 		$table = addslashes(table_objet($type));
-		if (sql_countsel('spip_groupes_mots',
-			"tables_liees REGEXP '(^|,)$table($|,)' AND " . addslashes($droit) . "='oui'")) {
+		if (sql_countsel('spip_groupes_mots', "tables_liees REGEXP '(^|,)$table($|,)' AND " . addslashes($droit) . "='oui'")) {
 			return true;
 		}
 	} // cas d'un groupe en particulier
@@ -285,7 +285,7 @@ function autoriser_associermots_dist($faire, $type, $id, $qui, $opt) {
 				return false;
 			}
 			include_spip('base/abstract_sql');
-			$opt['groupe_champs'] = sql_fetsel("*", "spip_groupes_mots", "id_groupe=" . intval($id_groupe));
+			$opt['groupe_champs'] = sql_fetsel('*', 'spip_groupes_mots', 'id_groupe=' . intval($id_groupe));
 		}
 		$droit = $opt['groupe_champs'][$droit];
 
@@ -323,7 +323,8 @@ function autoriser_groupemots_afficherselecteurmots_dist($faire, $type, $id, $qu
 		$i = sql_fetsel(
 			array('minirezo', 'comite'),
 			'spip_groupes_mots',
-			'id_groupe=' . intval($id));
+			'id_groupe=' . intval($id)
+		);
 		if (!$i) {
 			return false;
 		} # le groupe n'existe pas

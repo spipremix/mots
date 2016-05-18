@@ -57,29 +57,29 @@ function mots_upgrade($nom_meta_base_version, $version_cible) {
 	$maj['2.0.0'] = array(
 		array('maj_liens', 'mot'), // creer la table liens
 		array('maj_liens', 'mot', 'breve'),
-		array('sql_drop_table', "spip_mots_breves"),
+		array('sql_drop_table', 'spip_mots_breves'),
 		array('maj_liens', 'mot', 'rubrique'),
-		array('sql_drop_table', "spip_mots_rubriques"),
+		array('sql_drop_table', 'spip_mots_rubriques'),
 		array('maj_liens', 'mot', 'syndic'),
-		array('sql_drop_table', "spip_mots_syndic"),
+		array('sql_drop_table', 'spip_mots_syndic'),
 		array('maj_liens', 'mot', 'forum'),
-		array('sql_drop_table', "spip_mots_forum"),
+		array('sql_drop_table', 'spip_mots_forum'),
 		array('maj_liens', 'mot', 'auteur'),
-		array('sql_drop_table', "spip_mots_auteurs"),
+		array('sql_drop_table', 'spip_mots_auteurs'),
 		array('maj_liens', 'mot', 'document'),
-		array('sql_drop_table', "spip_mots_documents"),
+		array('sql_drop_table', 'spip_mots_documents'),
 		array('maj_liens', 'mot', 'article'),
-		array('sql_drop_table', "spip_mots_articles"),
+		array('sql_drop_table', 'spip_mots_articles')
 	);
 	$maj['2.0.1'] = array(
-		array('sql_updateq', "spip_mots_liens", array('objet' => 'site'), "objet='syndic'"),
+		array('sql_updateq', 'spip_mots_liens', array('objet' => 'site'), "objet='syndic'"),
 	);
 	$maj['2.1.0'] = array(
-		array('sql_alter', "TABLE spip_mots_liens ADD INDEX id_objet (id_objet)"),
-		array('sql_alter', "TABLE spip_mots_liens ADD INDEX objet (objet)"),
+		array('sql_alter', 'TABLE spip_mots_liens ADD INDEX id_objet (id_objet)'),
+		array('sql_alter', 'TABLE spip_mots_liens ADD INDEX objet (objet)')
 	);
 	$maj['2.1.1'] = array(
-		array('sql_alter', "TABLE spip_mots ADD INDEX id_groupe (id_groupe)")
+		array('sql_alter', 'TABLE spip_mots ADD INDEX id_groupe (id_groupe)')
 	);
 
 	include_spip('base/upgrade');
@@ -95,9 +95,9 @@ function mots_upgrade($nom_meta_base_version, $version_cible) {
  * @return void
  */
 function mots_vider_tables($nom_meta_base_version) {
-	sql_drop_table("spip_mots");
-	sql_drop_table("spip_groupes_mots");
-	sql_drop_table("spip_mots_liens");
+	sql_drop_table('spip_mots');
+	sql_drop_table('spip_groupes_mots');
+	sql_drop_table('spip_mots_liens');
 
 	effacer_meta('articles_mots');
 	effacer_meta('config_precise_groupes');
