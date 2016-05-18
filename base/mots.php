@@ -61,16 +61,16 @@ function mots_declarer_tables_interfaces($interfaces) {
 function mots_declarer_tables_auxiliaires($tables_auxiliaires) {
 
 	$spip_mots_liens = array(
-		"id_mot" => "bigint(21) DEFAULT '0' NOT NULL",
-		"id_objet" => "bigint(21) DEFAULT '0' NOT NULL",
-		"objet" => "VARCHAR (25) DEFAULT '' NOT NULL"
+		'id_mot' => "bigint(21) DEFAULT '0' NOT NULL",
+		'id_objet' => "bigint(21) DEFAULT '0' NOT NULL",
+		'objet' => "VARCHAR (25) DEFAULT '' NOT NULL"
 	);
 
 	$spip_mots_liens_key = array(
-		"PRIMARY KEY" => "id_mot,id_objet,objet",
-		"KEY id_mot" => "id_mot",
-		"KEY id_objet" => "id_objet",
-		"KEY objet" => "objet",
+		'PRIMARY KEY' => 'id_mot,id_objet,objet',
+		'KEY id_mot' => 'id_mot',
+		'KEY id_objet' => 'id_objet',
+		'KEY objet' => 'objet',
 	);
 
 	$tables_auxiliaires['spip_mots_liens'] =
@@ -108,17 +108,17 @@ function mots_declarer_tables_objets_sql($tables) {
 		'date' => 'date',
 		'principale' => 'oui',
 		'field' => array(
-			"id_mot" => "bigint(21) NOT NULL",
-			"titre" => "text DEFAULT '' NOT NULL",
-			"descriptif" => "text DEFAULT '' NOT NULL",
-			"texte" => "longtext DEFAULT '' NOT NULL",
-			"id_groupe" => "bigint(21) DEFAULT 0 NOT NULL",
-			"type" => "text DEFAULT '' NOT NULL",
-			"maj" => "TIMESTAMP"
+			'id_mot' => 'bigint(21) NOT NULL',
+			'titre' => "text DEFAULT '' NOT NULL",
+			'descriptif' => "text DEFAULT '' NOT NULL",
+			'texte' => "longtext DEFAULT '' NOT NULL",
+			'id_groupe' => 'bigint(21) DEFAULT 0 NOT NULL',
+			'type' => "text DEFAULT '' NOT NULL",
+			'maj' => 'TIMESTAMP'
 		),
 		'key' => array(
-			"PRIMARY KEY" => "id_mot",
-			"KEY id_groupe" => "id_groupe"
+			'PRIMARY KEY' => 'id_mot',
+			'KEY id_groupe' => 'id_groupe'
 		),
 		'rechercher_champs' => array(
 			'titre' => 8,
@@ -156,20 +156,20 @@ function mots_declarer_tables_objets_sql($tables) {
 		'principale' => 'oui',
 		'page' => '', // pas de page publique pour les groupes
 		'field' => array(
-			"id_groupe" => "bigint(21) NOT NULL",
-			"titre" => "text DEFAULT '' NOT NULL",
-			"descriptif" => "text DEFAULT '' NOT NULL",
-			"texte" => "longtext DEFAULT '' NOT NULL",
-			"unseul" => "varchar(3) DEFAULT '' NOT NULL",
-			"obligatoire" => "varchar(3) DEFAULT '' NOT NULL",
-			"tables_liees" => "text DEFAULT '' NOT NULL",
-			"minirezo" => "varchar(3) DEFAULT '' NOT NULL",
-			"comite" => "varchar(3) DEFAULT '' NOT NULL",
-			"forum" => "varchar(3) DEFAULT '' NOT NULL",
-			"maj" => "TIMESTAMP"
+			'id_groupe' => 'bigint(21) NOT NULL',
+			'titre' => "text DEFAULT '' NOT NULL",
+			'descriptif' => "text DEFAULT '' NOT NULL",
+			'texte' => "longtext DEFAULT '' NOT NULL",
+			'unseul' => "varchar(3) DEFAULT '' NOT NULL",
+			'obligatoire' => "varchar(3) DEFAULT '' NOT NULL",
+			'tables_liees' => "text DEFAULT '' NOT NULL",
+			'minirezo' => "varchar(3) DEFAULT '' NOT NULL",
+			'comite' => "varchar(3) DEFAULT '' NOT NULL",
+			'forum' => "varchar(3) DEFAULT '' NOT NULL",
+			'maj' => 'TIMESTAMP'
 		),
 		'key' => array(
-			"PRIMARY KEY" => "id_groupe"
+			'PRIMARY KEY' => 'id_groupe'
 		),
 		'rechercher_champs' => array(
 			'titre' => 8,
