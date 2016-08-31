@@ -244,6 +244,7 @@ function formulaires_editer_mot_traiter_dist(
 		$res['message_erreur'] = $err;
 	} else {
 		$res['message_ok'] = "";
+		$res['id_mot'] = $id_mot;
 		if ($retour) {
 			if (strncmp($retour, 'javascript:', 11) == 0) {
 				$res['message_ok'] .= '<script type="text/javascript">/*<![CDATA[*/' . substr($retour, 11) . '/*]]>*/</script>';
