@@ -1,9 +1,9 @@
-<paquet
+$<paquet
 	prefix="mots"
 	categorie="edition"
-	version="2.7.8"
+	version="2.8.0"
 	etat="stable"
-	compatibilite="[3.1.0;3.1.*]"
+	compatibilite="[3.1.0;3.2.*]"
 	logo="prive/themes/spip/images/mot-32.png"
 	schema="2.1.1"
 >
