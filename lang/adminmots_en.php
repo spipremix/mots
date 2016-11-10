@@ -19,7 +19,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'erreur_mot_cle_deja' => 'Impossible: this is the same keyword.',
 
 	'label_confirm_fusion' => 'This operation can\'t be canceled.<br />
-<strong>This keyword #@id_mot@ will be deleted</strong> and following links will be moved on keyword @id_mot_new@: ',
+<strong>This keyword #@id_mot@ will be deleted</strong> and following links will be moved on keyword #@id_mot_new@: ',
 	'label_confirm_fusion_check' => 'Check to confirm merging keyword #@id_mot@ with keyword #@id_mot_new@',
 
 	'result_associer_ras' => 'Nothing to do: all objects are already linked to this keyword',

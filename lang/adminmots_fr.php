@@ -19,7 +19,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'erreur_mot_cle_deja' => 'Impossible : c\'est déjà le mot-clé sur lequel vous êtes.',
 
 	'label_confirm_fusion' => 'Cette opération n\'est pas annulable.<br />
-<strong>Le mot-clé courant #@id_mot@ sera supprimé</strong> et les liens suivants seront transférés sur le mot @id_mot_new@&nbsp;: ',
+<strong>Le mot-clé courant #@id_mot@ sera supprimé</strong> et les liens suivants seront transférés sur le mot #@id_mot_new@&nbsp;: ',
 	'label_confirm_fusion_check' => 'Cochez pour confirmer la fusion du mot #@id_mot@ avec le mot #@id_mot_new@',
 
 	'result_associer_ras' => 'Rien à faire : tous les objets ont déjà ce mot-clé',
