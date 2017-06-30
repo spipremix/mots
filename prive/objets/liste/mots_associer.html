@@ -1,5 +1,5 @@
 #SET{groupes_vus,'0'}
-[(#SET{_MAX_MOTS_LISTE,[(#VAL{_MAX_MOTS_LISTE}|defined|?{[(#VAL{_MAX_MOTS_LISTE}|constant)],50})]})]
+[(#SET{_MAX_MOTS_LISTE,[(#VAL{_MAX_MOTS_LISTE}|defined|?{#CONST{_MAX_MOTS_LISTE},50})]})]
 #SET{exclus,#ENV{objet_source}|lister_objets_lies{#ENV{objet},#ENV{id_objet},#ENV{_objet_lien}}}
 <BOUCLE_exclus(MOTS){id_mot IN #GET{exclus}}{tout}>[(#ID_GROUPE|unique|oui)#SET{groupes_vus,#GET{groupes_vus}|concat{',',#ID_GROUPE}} ]</BOUCLE_exclus>
 
