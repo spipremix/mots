@@ -11,7 +11,7 @@
 #SET{recherche,#ENV*{recherche}|table_valeur{#ID_GROUPE}}
 [(#GET{recherche}|non|et{#ENV*{recherche}|table_valeur{b#ID_GROUPE}})
 	#SET{recherche,'/./'}
-	<input type="hidden" name="recherche#EVAL{chr(91)}b#ID_GROUPE#EVAL{chr(93)}" value='x' />
+	<input type="hidden" name="recherche\[b#ID_GROUPE\]" value='x' />
 ]
 <B_liste_mot>
 #ANCRE_PAGINATION

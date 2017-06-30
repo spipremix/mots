@@ -27,7 +27,7 @@
 ]
 
 #PIPELINE{afficher_complement_objet,#ARRAY{args,#ARRAY{type,groupemots,id,#ID_GROUPE},data,'<div class="nettoyeur"></div>'}}
-[(#EVAL{_AJAX}|oui)
+[(#CONST{_AJAX}|oui)
 	<script type="text/javascript">/*<!\[CDATA\[*/reloadExecPage('#ENV{exec}','#navigation,#chemin');/*\]\]>*/</script>
 ]
 </BOUCLE_groupemots>
