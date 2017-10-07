@@ -120,6 +120,7 @@ function mots_declarer_tables_objets_sql($tables) {
 			'PRIMARY KEY' => 'id_mot',
 			'KEY id_groupe' => 'id_groupe'
 		),
+		'parent' => array('type' => 'groupe_mot', 'champ' => 'id_groupe'),
 		'rechercher_champs' => array(
 			'titre' => 8,
 			'texte' => 1,
