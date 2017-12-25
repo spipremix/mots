@@ -30,7 +30,7 @@
 		<tr class="[(#COMPTEUR_BOUCLE|alterner{row_odd,row_even})]">
 			<td class='picto'>[(#VAL|puce_statut{mot,#ID_MOT,#ID_GROUPE})]</td>
 			<td class='titre principale'>[(#LOGO_MOT|image_reduire{20,20})]<a href="[(#ID_MOT|generer_url_entite{mot})]"
-																																						title="<:info_numero_abbreviation|attribut_html:> #ID_MOT">[(#RANG). ]#TITRE</a></td>
+				title="<:info_numero_abbreviation|attribut_html:> #ID_MOT">[(#RANG). ]#TITRE</a></td>
 			<td class='action'><button type="submit" class="button link" name="#GET{action}[mot-#ID_MOT-#OBJET-#ID_OBJET]" value="+"><:mots:lien_ajouter_mot:> [(#CHEMIN_IMAGE{ajouter-12.png}|balise_img{'+'})]</button></td>
 		</tr>
 	</BOUCLE_liste_mot>
