@@ -30,6 +30,9 @@
 #PIPELINE{afficher_complement_objet,#ARRAY{args,#ARRAY{type,mot,id,#ID_MOT},data,'<div class="nettoyeur"></div>'}}
 <INCLURE{fond=prive/squelettes/inclure/administrer_mot,id_mot,administrer,ajax} />
 
+#SET{enfants,''}
+[(#PIPELINE{affiche_enfants,[(#ARRAY{args,#ARRAY{exec,#ENV**{exec},objet,mot,id_objet,#ID_MOT},data,#GET{enfants}})]})]
+
 [(#CONST{_AJAX}|oui)
 	<script type="text/javascript">/*<!\[CDATA\[*/reloadExecPage('#ENV{exec}','#navigation,#chemin');/*\]\]>*/</script>
 ]
