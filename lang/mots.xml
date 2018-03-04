@@ -38,7 +38,8 @@
 	</langue>
 	<langue code="en_hx" url="https://trad.spip.net/tradlang_module/mots?lang_cible=en_hx" total="61" traduits="42" relire="0" modifs="3" nouveaux="16" pourcent="68.85">
 	</langue>
-	<langue code="eo" url="https://trad.spip.net/tradlang_module/mots?lang_cible=eo" total="61" traduits="44" relire="0" modifs="3" nouveaux="14" pourcent="72.13">
+	<langue code="eo" url="https://trad.spip.net/tradlang_module/mots?lang_cible=eo" total="61" traduits="61" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
+		<traducteur nom="gpl" lien="https://trad.spip.net/auteur/gpl" />
 	</langue>
 	<langue code="es" url="https://trad.spip.net/tradlang_module/mots?lang_cible=es" total="61" traduits="61" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
 		<traducteur nom="dani" lien="https://trad.spip.net/auteur/dani" />
