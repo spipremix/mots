@@ -8,7 +8,7 @@
 <input type="text" class="text" name="recherche[#ID_GROUPE]" value="[(#ENV*{recherche}|table_valeur{#ID_GROUPE})]" />
 <input type="submit" class="submit" name="recherche[b#ID_GROUPE]" value="<:info_rechercher:>" />
 <input type="hidden" name="debutmota#ID_GROUPE" value='#ENV{debutmota#ID_GROUPE,#VAL{debutmotamota#ID_GROUPE}|_request}' />
-#SET{recherche,#ENV*{recherche}|table_valeur{#ID_GROUPE}}
+#SET{recherche,#ENV*{recherche}|table_valeur{#ID_GROUPE}|replace{","," "}}
 [(#GET{recherche}|non|et{#ENV*{recherche}|table_valeur{b#ID_GROUPE}})
 	#SET{recherche,'/./'}
 	<input type="hidden" name="recherche\[b#ID_GROUPE\]" value='x' />
@@ -26,7 +26,7 @@
 		</tr>
 	</thead>
 	<tbody>
-	<BOUCLE_liste_mot(MOTS){id_groupe}{id_mot !IN #ENV{exclus}}{recherche #GET{recherche}}{tri #ENV{par,titre},#GET{defaut_tri}}{par multi titre}{pagination 10 mota#ID_GROUPE}>
+	<BOUCLE_liste_mot(MOTS){id_groupe}{id_mot !IN #ENV{exclus}}{recherche #GET{recherche}}{tri #ENV{par,titre},#ENV{defaut_tri}}{par multi titre}{pagination 10 mota#ID_GROUPE}>
 		<tr class="[(#COMPTEUR_BOUCLE|alterner{row_odd,row_even})]">
 			<td class='picto'>[(#VAL|puce_statut{mot,#ID_MOT,#ID_GROUPE})]</td>
 			<td class='titre principale'>[(#LOGO_MOT|image_reduire{20,20})]<a href="[(#ID_MOT|generer_url_entite{mot})]"
