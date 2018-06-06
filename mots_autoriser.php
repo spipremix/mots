@@ -28,7 +28,7 @@ function mots_autoriser() {
 }
 
 /**
- * Autorisation de voir un élément de menu
+ * Autorisation de voir la page mots
  *
  * @param  string $faire Action demandée
  * @param  string $type Type d'objet sur lequel appliquer l'action
@@ -37,7 +37,7 @@ function mots_autoriser() {
  * @param  array $opt Options de cette autorisation
  * @return bool          true s'il a le droit, false sinon
  **/
-function autoriser_mots_menu_dist($faire, $type, $id, $qui, $opt) {
+function autoriser_mots_voir_dist($faire, $type, $id, $qui, $opt) {
 	if ($qui['statut'] == '0minirezo') {
 		return ($GLOBALS['meta']['articles_mots'] != 'non' or sql_countsel('spip_groupes_mots'));
 	}
@@ -52,6 +52,20 @@ function autoriser_mots_menu_dist($faire, $type, $id, $qui, $opt) {
 	return ($where
 		and $GLOBALS['meta']['articles_mots'] != 'non'
 		and sql_countsel('spip_groupes_mots', $where));
+}
+
+/**
+ * Autorisation de voir un élément de menu
+ *
+ * @param  string $faire Action demandée
+ * @param  string $type Type d'objet sur lequel appliquer l'action
+ * @param  int $id Identifiant de l'objet
+ * @param  array $qui Description de l'auteur demandant l'autorisation
+ * @param  array $opt Options de cette autorisation
+ * @return bool          true s'il a le droit, false sinon
+ **/
+function autoriser_mots_menu_dist($faire, $type, $id, $qui, $opt) {
+	return autoriser('voir', '_mots', $id, $qui, $opt);
 }
 
 /**
