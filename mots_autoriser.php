@@ -57,6 +57,7 @@ function autoriser_mots_voir_dist($faire, $type, $id, $qui, $opt) {
 /**
  * Autorisation de voir un élément de menu
  *
+ * @uses autoriser_mots_voir_dist()
  * @param  string $faire Action demandée
  * @param  string $type Type d'objet sur lequel appliquer l'action
  * @param  int $id Identifiant de l'objet
