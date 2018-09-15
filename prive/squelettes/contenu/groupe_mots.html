@@ -26,10 +26,10 @@
 		|icone_verticale{<:mots:icone_creation_mots_cles:>,mot-24.png,new,right})]
 ]
 
-#PIPELINE{afficher_complement_objet,#ARRAY{args,#ARRAY{type,groupemots,id,#ID_GROUPE},data,'<div class="nettoyeur"></div>'}}
+#PIPELINE{afficher_complement_objet,#ARRAY{args,#ARRAY{type,groupe_mots,id,#ID_GROUPE},data,'<div class="nettoyeur"></div>'}}
 
 #SET{enfants,''}
-[(#PIPELINE{affiche_enfants,[(#ARRAY{args,#ARRAY{exec,#ENV**{exec},objet,groupemots,id_objet,#ID_GROUPE},data,#GET{enfants}})]})]
+[(#PIPELINE{affiche_enfants,[(#ARRAY{args,#ARRAY{exec,#ENV**{exec},objet,groupe_mots,id_objet,#ID_GROUPE},data,#GET{enfants}})]})]
 
 [(#CONST{_AJAX}|oui)
 	<script type="text/javascript">/*<!\[CDATA\[*/reloadExecPage('#ENV{exec}','#navigation,#chemin');/*\]\]>*/</script>
