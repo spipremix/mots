@@ -1,7 +1,7 @@
 <paquet
 	prefix="mots"
 	categorie="edition"
-	version="2.9.2"
+	version="2.9.3"
 	etat="stable"
 	compatibilite="[3.3.0-dev;3.3.*]"
 	logo="prive/themes/spip/images/mot-32.png"
