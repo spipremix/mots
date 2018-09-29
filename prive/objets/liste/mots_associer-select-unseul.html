@@ -17,4 +17,4 @@ id="ajouter_lien-groupe#ID_GROUPE"
 	<option value="#GET{value}"[(#GET{value}|=={#GET{expose}}|oui)selected="selected" class="on"]>#TITRE</option>
 </BOUCLE_mots>
 </select>
-<input type="submit" class="submit" name="groupe#ID_GROUPE" value="<:bouton_changer:>"[(#GET{selected}|non)style="visibility:hidden;"]/>
+<input type="submit" class="btn submit" name="groupe#ID_GROUPE" value="<:bouton_changer:>"[(#GET{selected}|non)style="visibility:hidden;"]/>

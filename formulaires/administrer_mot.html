@@ -7,7 +7,7 @@
 		#ACTION_FORMULAIRE
 		#SET{fl,adminmots}
 		[<input name="revert_action" type="hidden" value="(#ENV{revert_action})" />
-		<input class='submit' type="submit" name="revert" value="Oooops" />]
+		<input class='btn submit' type="submit" name="revert" value="Oooops" />]
 		<fieldset>
 			<ul class="editer-groupe">
 				#SET{name,associer_objets_mot}#SET{obli,''}#SET{defaut,''}#SET{erreurs,#ENV**{erreurs}|table_valeur{#GET{name}}}
@@ -23,7 +23,7 @@
 					/>
 				</li>
 			</ul>
-			<p class='boutons'><input class='submit' type="submit" name="associer" value="<:adminmots:bouton_associer|attribut_html:>" /></p>
+			<p class='boutons'><input class='btn submit' type="submit" name="associer" value="<:adminmots:bouton_associer|attribut_html:>" /></p>
 		</fieldset>
 		<fieldset>
 			<ul class="editer-groupe">
@@ -40,7 +40,7 @@
 					/>
 				</li>
 			</ul>
-			<p class='boutons'><input class='submit' type="submit" name="dissocier" value="<:adminmots:bouton_dissocier|attribut_html:>" /></p>
+			<p class='boutons'><input class='btn submit' type="submit" name="dissocier" value="<:adminmots:bouton_dissocier|attribut_html:>" /></p>
 		</fieldset>
 		<fieldset>
 			<ul class="editer-groupe">
@@ -57,7 +57,7 @@
 					/>
 				</li>
 			</ul>
-			<p class='boutons'><input class='submit' type="submit" name="fusionner" value="<:adminmots:bouton_fusionner|attribut_html:>" /></p>
+			<p class='boutons'><input class='btn submit' type="submit" name="fusionner" value="<:adminmots:bouton_fusionner|attribut_html:>" /></p>
 		</fieldset>
 	</div></form>
 
