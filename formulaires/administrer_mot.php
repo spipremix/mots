@@ -20,8 +20,8 @@ function afficher_options_mots($id_selected) {
 	static $options;
 	if (is_null($options)){
 		// d'abord les count en 1 coup
-		$counts = sql_allfetsel('id_mot,count(id_objet) as n','spip_mots_liens','','id_mot','id_mot');
-		$counts = array_combine(array_map('reset',$counts), array_map('end',$counts));
+		$counts = sql_allfetsel('id_mot, count(id_objet) as n','spip_mots_liens','','id_mot','id_mot');
+		$counts = array_column($counts, 'n', 'id_mot');
 
 		// puis les groupes
 		$groupes = sql_allfetsel('*', 'spip_groupes_mots', '', '', '0+ titre, titre');
@@ -170,12 +170,12 @@ function formulaires_administrer_mot_traiter_dist($id_mot){
 			$revert = array();
 			$message = array();
 			$objets = sql_allfetsel("distinct objet","spip_mots_liens","id_mot=".intval($id),'','objet');
-			$objets = array_map('reset',$objets);
+			$objets = array_column($objets, 'objet');
 			foreach($objets as $objet) {
 				$all = sql_allfetsel("id_objet","spip_mots_liens","id_mot=".intval($id)." AND objet=".sql_quote($objet));
-				$all = array_map('reset',$all);
+				$all = array_column($all, 'id_objet');
 				$deja = sql_allfetsel("id_objet","spip_mots_liens","id_mot=".intval($id_mot)." AND objet=".sql_quote($objet)." AND ".sql_in('id_objet',$all));
-				$deja = array_map('reset',$deja);
+				$deja = array_column($deja, 'id_objet');
 				$add = array_diff($all,$deja);
 				if (count($add)){
 					$revert[] = "$objet:".implode(",",$add);
@@ -197,12 +197,12 @@ function formulaires_administrer_mot_traiter_dist($id_mot){
 			$revert = array();
 			$message = array();
 			$objets = sql_allfetsel("distinct objet","spip_mots_liens","id_mot=".intval($id),'','objet');
-			$objets = array_map('reset',$objets);
+			$objets = array_column($objets, 'objet');
 			foreach($objets as $objet){
 				$all = sql_allfetsel("id_objet", "spip_mots_liens", "id_mot=" . intval($id) . " AND objet=" . sql_quote($objet));
-				$all = array_map('reset', $all);
+				$all = array_column($all, 'id_objet');
 				$has = sql_allfetsel("id_objet", "spip_mots_liens", "id_mot=" . intval($id_mot) . " AND objet=" . sql_quote($objet) . " AND " . sql_in('id_objet', $all));
-				$has = array_map('reset', $has);
+				$has = array_column($has, 'id_objet');
 				if (count($has)){
 					$revert[] = "$objet:".implode(",",$has);
 					admot_dissocier_objets_mot($id_mot, $objet, $has);
