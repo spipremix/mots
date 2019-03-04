@@ -13,8 +13,8 @@
 <div class="liste">
 <BOUCLE_objetslies(spip_mots_liens){id_mot}{0,1}><h3><:mots:titre_objets_lies_mot:></h3></BOUCLE_objetslies>
 
-<INCLURE{fond=prive/objets/liste/rubriques-mot,id_mot,par=titre,ajax,env} />
-<INCLURE{fond=prive/objets/liste/articles-mot,id_mot,par=date,statut=(#SESSION{statut}|statuts_articles_visibles),ajax,env} />
+<INCLURE{fond=prive/objets/liste/rubriques,id_mot,par=titre,ajax,env} />
+<INCLURE{fond=prive/objets/liste/articles,id_mot,par=date,statut=(#SESSION{statut}|statuts_articles_visibles),ajax,env} />
 
 <BOUCLE_autresobjets(spip_mots_liens){id_mot}{objet !IN article,rubrique}{fusion objet}{par objet}>
 	#SET{table,#OBJET|table_objet}
