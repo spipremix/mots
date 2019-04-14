@@ -18,7 +18,7 @@
 		</tr>
 	</thead>
 	<tbody>
-	<BOUCLE_liste_mot(MOTS){id_mot?}{id_groupe?}{id_rubrique?}{id_article?}{where?}{tri #ENV{par,num titre},#GET{defaut_tri}}{par titre}{pagination #ENV{nb,10}}>
+	<BOUCLE_liste_mot(MOTS){id_?}{where?}{tri #ENV{par,num titre},#GET{defaut_tri}}{par titre}{pagination #ENV{nb,10}}>
 		#SET{url_voir,#AUTORISER{voir,mot,#ID_MOT}|?{#ID_MOT|generer_url_entite{mot}|parametre_url{redirect,#ENV{retour}},''}}
 		#SET{url_edit,#AUTORISER{modifier,mot,#ID_MOT}|?{#URL_ECRIRE{mot_edit,id_mot=#ID_MOT}|parametre_url{redirect,#ENV{retour}},''}}
 		<tr class="[(#COMPTEUR_BOUCLE|alterner{row_odd,row_even})]">

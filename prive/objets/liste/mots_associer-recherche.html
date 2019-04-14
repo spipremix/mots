@@ -6,7 +6,7 @@
 ]</BOUCLE_remplacer>
 
 <input type="text" class="text" name="recherche[#ID_GROUPE]" value="[(#ENV*{recherche}|table_valeur{#ID_GROUPE})]" />
-<input type="submit" class="submit" name="recherche[b#ID_GROUPE]" value="<:info_rechercher:>" />
+<input type="submit" class="btn submit" name="recherche[b#ID_GROUPE]" value="<:info_rechercher:>" />
 <input type="hidden" name="debutmota#ID_GROUPE" value='#ENV{debutmota#ID_GROUPE,#VAL{debutmotamota#ID_GROUPE}|_request}' />
 #SET{recherche,#ENV*{recherche}|table_valeur{#ID_GROUPE}|replace{","," "}}
 [(#GET{recherche}|non|et{#ENV*{recherche}|table_valeur{b#ID_GROUPE}})

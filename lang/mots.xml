@@ -78,7 +78,8 @@
 	</langue>
 	<langue code="it_fem" url="https://trad.spip.net/tradlang_module/mots?lang_cible=it_fem" total="61" traduits="44" relire="0" modifs="3" nouveaux="14" pourcent="72.13">
 	</langue>
-	<langue code="ja" url="https://trad.spip.net/tradlang_module/mots?lang_cible=ja" total="61" traduits="42" relire="0" modifs="3" nouveaux="16" pourcent="68.85">
+	<langue code="ja" url="https://trad.spip.net/tradlang_module/mots?lang_cible=ja" total="61" traduits="61" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
+		<traducteur nom="origenius" lien="https://trad.spip.net/auteur/origenius" />
 	</langue>
 	<langue code="km" url="https://trad.spip.net/tradlang_module/mots?lang_cible=km" total="61" traduits="43" relire="0" modifs="4" nouveaux="14" pourcent="70.49">
 	</langue>

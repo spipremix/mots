@@ -20,9 +20,9 @@ if (!defined('_ECRIRE_INC_VERSION')) {
  *     Déclaration des sauvegardes complétées
  **/
 function mots_ieconfig_metas($table) {
-	$table['mots']['titre'] = _T('mots:info_mots_cles');
-	$table['mots']['icone'] = 'mot-16.png';
-	$table['mots']['metas_brutes'] = 'articles_mots,config_precise_groupes,mots_cles_forums';
+	$table['mots_meta']['titre'] = _T('mots:info_mots_cles');
+	$table['mots_meta']['icone'] = 'mot-16.png';
+	$table['mots_meta']['metas_brutes'] = 'articles_mots,config_precise_groupes,mots_cles_forums';
 
 	return $table;
 }

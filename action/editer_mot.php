@@ -3,7 +3,7 @@
 /***************************************************************************\
  *  SPIP, Systeme de publication pour l'internet                           *
  *                                                                         *
- *  Copyright (c) 2001-2018                                                *
+ *  Copyright (c) 2001-2019                                                *
  *  Arnaud Martin, Antoine Pitrou, Philippe Riviere, Emmanuel Saint-James  *
  *                                                                         *
  *  Ce programme est un logiciel libre distribue sous licence GNU/GPL.     *
@@ -287,7 +287,7 @@ function mot_associer($id_mot, $objets, $qualif = null) {
 	$id_groupe = sql_getfetsel('id_groupe', 'spip_mots', 'id_mot=' . intval($id_mot));
 	if (un_seul_mot_dans_groupe($id_groupe)) {
 		$mots_groupe = sql_allfetsel('id_mot', 'spip_mots', 'id_groupe=' . intval($id_groupe));
-		$mots_groupe = array_map('reset', $mots_groupe);
+		$mots_groupe = array_column($mots_groupe, 'id_mot');
 		objet_dissocier(array('mot' => $mots_groupe), $objets);
 	}
 
