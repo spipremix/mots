@@ -1,0 +1,11 @@
+{
+    "name": "spip/mots",
+    "type": "spip-plugin",
+    "description": "Gestion des mots et groupes de mots dans SPIP",
+    "license": "GPL-3.0-or-later",
+    "authors": [{
+        "name": "Collectif SPIP",
+        "email": "spip-dev@rezo.net"
+    }],
+    "require": {}
+}
