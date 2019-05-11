@@ -6,7 +6,7 @@
 	<option value="x">&nbsp;</option>
 	<BOUCLE_mots(MOTS){id_groupe}{id_mot !IN #ENV{exclus}}{par num titre, multi titre}>
 		#SET{value,mot-#ID_MOT-#OBJET-#ID_OBJET}
-		<option value="#GET{value}"[(#GET{value}|=={#ENV{ajouter_lien}|table_valeur{groupe#ID_GROUPE}}|oui)selected="selected"#SET{selected,' '}]>#TITRE</option>
+		<option value="#GET{value}"[(#GET{value}|=={#ENV{ajouter_lien}|table_valeur{groupe#ID_GROUPE}}|oui)selected="selected"#SET{selected,' '}]>[(#RANG). ]#TITRE</option>
 	</BOUCLE_mots>
 	</select>
 	<input type="submit" class="submit" name="groupe#ID_GROUPE" value="<:bouton_ajouter:>"[(#GET{selected}|non)style="visibility:hidden;"]/>
